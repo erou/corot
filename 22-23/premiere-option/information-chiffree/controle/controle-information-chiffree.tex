@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\begin{center}
+  \textbf{\LARGE \textsc{Contrôle 2}}\\[3mm]
+Durée : 30 minutes
+\end{center}
+
+\noindent La calculatrice est \textbf{autorisée}. Le barême est donné à titre
+indicatif. Bon courage !
+\vspace{2mm}
+
+\paragraph{Exercice 1. \emph{(5 points)}}~\\[2mm]
+\begin{minipage}{.5\textwidth}
+On donne ci-contre les statistiques sur les accidents cyclistes en France
+métropolitaine en $2008$.
+\begin{enumerate}
+  \item Parmi les personnes blessées et non hospitalisées, est-il vrai que plus d'un
+    tiers a entre $25$ et $44$ ans ?
+  \item Quelle est la catégorie d'\^age qui a le moins de blessés ?
+  \item Quelle est la catégorie d'\^age dont la part de blessés avec
+    hospitalisations est la plus faible ?
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+  \def\arraystretch{1.5}
+  \begin{tabular}{ccc}
+    \toprule
+    \textbf{\^Age} & \makecell{\textbf{Blessés}\\\textbf{hospitalisés}} &
+    \makecell{\textbf{Blessés non}\\\textbf{hospitalisés}}\\
+    \midrule
+    \textbf{0 à 14 ans} & $275$ & $383$\\
+    \textbf{15 à 24 ans} & $245$ & $611$\\
+    \textbf{25 à 44 ans} & $337$ & $965$\\
+    \textbf{45 à 64 ans} & $458$ & $669$\\
+    \textbf{65 ans ou +} & $224$ & $219$\\
+    \textbf{Total} & $1539$ & $2847$\\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+\end{minipage}
+\begin{enumerate}
+    \setcounter{enumi}{3}
+  \item On considère qu'un accident est grave lorsqu'il y a une hospitalisation.
+    Est-il vrai qu'à partir de $25$ ans, la gravité des accidents cyclistes
+    augmente avec l'\^age ?
+\end{enumerate}
+
+\paragraph{Exercice 2. \emph{(5 points)}} Dans son rapport \emph{Stoppons le torrent de plastique
+!} datant de $2019$, la WWF (\emph{World Wildlife Fund}) écrit que sur les $4,5$
+Mt de déchets plastiques générés par la France en $2016$, il n'en a été
+collecté que $98$\%. Sur tous les déchets collectés, $41$\% sont incinérés,
+$37$\% enfouis et $22$\% recyclés.
+\begin{enumerate}
+  \item Calculer la masse des déchets plastiques collectés, exprimée en tonne.\\
+    \emph{Indication : $1$ Mt (Méga-tonne) représente $1\;000\;000$ tonnes.}
+  \item Calculer la masse, en tonne, des déchets plastiques
+    \begin{enumerate}
+      \item incinérés,
+      \item enfouis,
+      \item et recyclés.
+    \end{enumerate}
+  \item En $2016$, la population française s'élevait environ à $67$ millions de
+    personnes. Calculer la masse moyenne, exprimée en kilogramme, de déchets
+    plastiques générée par une personne en $2016$.\\
+    \emph{Indication : une tonne vaut $1\;000$ kilogrammes.}
+  \item On veut représenter par un diagramme circulaire la répartition des
+    déchets collectés en $3$ catégories (recyclés, incinérés et enfouis).
+    Calculer l'angle associé à chaque catégorie.
+\end{enumerate}
+
+\end{document}

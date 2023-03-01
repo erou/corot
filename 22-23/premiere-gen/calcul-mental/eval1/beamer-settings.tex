@@ -1,0 +1,54 @@
+\useoutertheme[subsection=false,shadow]{miniframes}
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{palatino}
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\setbeamercolor*{lower separation line head}{bg=DeepSkyBlue4} 
+\setbeamercolor*{page number in head/foot}{fg=gray} 
+
+% \setbeamercolor*{normal text}{fg=black,bg=white} 
+% \setbeamercolor*{alerted text}{fg=red} 
+% \setbeamercolor*{example text}{fg=black} 
+% \setbeamercolor*{structure}{fg=black} 
+  
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!10} 
+%\setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+\definecolor{mygreen}{rgb}{0.20,0.43,0.09}
+\newcommand{\bib}[2]{\textcolor{blue}{[#1 '#2]}}
+\newcommand{\fvb}[1]{\textcolor{violet}{\textbf{#1}}}
+\newcommand{\frb}[1]{\textcolor{red}{\mathbf{#1}}}
+\newcommand{\comp}[1]{\textcolor{purple}{$O(#1)$}}
+\newcommand{\softcomp}[1]{\textcolor{purple}{$\tilde O(#1)$}}
+\newcommand{\good}{\textcolor{mygreen}{\smiley{}}}
+\newcommand{\bad}{\textcolor{red}{\frownie{}}}
+\newcommand{\openquestion}{\includegraphics[scale=.03]{../logos/open-question.png}\fvb{Open
+question: }}
+
+% In order to have a slide dedicated to announcing the section
+%\AtBeginSection[]
+%{
+%    \begin{frame}
+%        \frametitle{Table of Contents}
+%        \tableofcontents[currentsection]
+%    \end{frame}
+%}
+
+%\AtBeginSection[]{
+%  \begin{frame}
+%  \vfill
+%  \centering
+%  \begin{beamercolorbox}[sep=8pt,center,shadow=false,rounded=true]{title}
+%    \usebeamerfont{title}\secname\par%
+%  \end{beamercolorbox}
+%  \vfill
+%  \end{frame}
+%}
+
+% So that alerted text is bold
+% \setbeamerfont{alerted text}{series=\bfseries}

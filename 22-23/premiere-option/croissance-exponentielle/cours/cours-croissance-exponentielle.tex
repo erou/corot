@@ -1,0 +1,288 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Croissance exponentielle -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 3 : Croissance exponentielle}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+% TODO:
+% =====
+%
+% Ajouter un rappel des notions de taux d'évolution et de coefficient
+% multiplicateur. Ces notions sont vues en seconde mais donnent de l'intérêt à
+% la notion de taux moyen qui est au programme dans ce cours.
+
+\section{Suites géométriques}
+\subsection{Définition}
+\begin{defi}{Suite géométrique}
+  Une suite $u$ est \textbf{géométrique} lorsqu'il existe un nombre réel
+  $q\in\mathbb{R}$, nommé \textbf{raison}, tel que pour tout entier naturel
+  $n\in\mathbb{N}$, on a
+  \[
+    u(n+1) = u(n)\times q.
+  \]
+\end{defi}
+\begin{rmq}
+  Dans ce chapitre, on se limite au cas où $u(0)>0$ et $q>0$. On voit donc des
+  suites à termes positifs uniquement.
+\end{rmq}~\\[-15mm]
+\begin{rmq}
+  Il ne faudra pas confondre la raison d'une suite arithmétique et la raison
+  d'une suite géométrique !
+\end{rmq}
+
+\begin{exemple}
+  Soit $u$ la suite définie par $u(0)=32$ et, pour tout entier $n$, par
+  $u(n+1)=u(n)\times0,5$. Alors la suite $u$ est une suite \textbf{géométrique}
+  de premier terme $8$ et de raison $q=0,5$.\\
+  Les premiers termes sont
+  \begin{align*}
+    u(0) &= 32 &
+    u(1) &= 32\times0,5=16 &
+    u(2) &= 16\times0,5=8 \\
+    u(3) &= 8\times0,5=4 &
+    u(4) &= 4\times0,5=2 &
+    u(5) &= 2\times0,5=1 \\
+    u(6) &= 1\times0,5=0,5 &
+    u(7) &= 0,5\times0,5=0,25 &
+    u(8) &= 0,25\times0,5=0,125 \\
+    u(9) &= \dots & & & &
+  \end{align*}
+\end{exemple}
+\begin{exemple}
+  Soit $u$ une suite géométrique de premier terme $0,1$ et de raison $q=3$. Les
+  premiers termes sont alors
+  \begin{align*}
+    u(0) &= 0,1 &
+    u(1) &= 0,3 &
+    u(2) &= 0,9 &
+    u(3) &= 2,7 &
+    u(4) &= 8,1 \\
+    u(5) &= 24,3 &
+    u(6) &= 72,9 &
+    u(7) &= 218,7 &
+    u(8) &= 656,1 &
+    u(9) &= \dots
+  \end{align*}
+\end{exemple}
+\begin{app}
+  Soit $u$ la suite définie par $u(0)=8$ et pour tout $n\in\mathbb{N}$, par
+  $u(n+1)=u(n)\times1,5$.
+  \begin{enumerate}
+    \item La suite $u$ est-elle géométrique ? Quel est son premier terme ? Sa
+      raison ?
+    \item Donner les termes $u(1)$, $u(2)$, $u(3)$ et $u(4)$.
+  \end{enumerate}
+\end{app}
+\begin{prop}
+  Si $u$ est une suite géométrique de raison $q>0$ et de premier terme
+  $u(0)>0$, alors pour tout entier naturel $n\in\mathbb{N}$, on a
+  \[
+    u(n) = u(0)\times q^n.
+  \]
+\end{prop}
+
+\begin{rmq}
+  Comme dans le cas des suites artihmétiques, la relation de récurrence
+  $u(n+1)=u(n)\times q$ permet de calculer les termes les uns après les autres,
+  alors que la forme explicite $u(n)=u(0)\times q^n$ permet de calculer
+  n'importe quel terme directement!
+\end{rmq}
+
+\subsection{Sens de variation}
+\begin{prop}
+  Une suite géométrique $u$ de premier terme $u(0)>0$ et de raison $q>0$ est
+  \begin{itemize}
+    \item \textbf{strictement croissante} si, et seulement si, $q>1$;
+    \item \textbf{strictement décroissante} si, et seulement si, $q<1$;
+    \item \textbf{constante} si, et seulement si, $q=1$.
+  \end{itemize}
+\end{prop}
+
+\begin{exemple}
+  \begin{minipage}{.4\textwidth}
+    \begin{itemize}
+      \item \textcolor{red!80!black}{\textbf{En rouge}}, le nuage de points associé à la
+    suite géométrique $u$ de premier terme $u(0)=3$ et de raison $q=0,5$. On a
+    $0<0,5<1$ donc la suite $u$ est décroissante. Cela se vérifie sur les
+    premiers termes : $u(0)=3$, $u(1)=1,5$, $u(2)=0,75$, \emph{etc}.
+  \item \textcolor{green!50!black}{\textbf{En vert}}, le nuage de points associé
+    à la suite géométrique $v$ de premier terme $v(0)=0,1$ et de raison $q=2$.
+    Ici, on a $2>1$ donc la suite $v$ est croissante. Cela se vérifie sur les
+    premiers termes : $v(0)=0,1$, $v(1)=0,2$, $v(2)=0,4$, \emph{etc}.
+    \end{itemize}
+  \end{minipage}
+  \begin{minipage}{.6\textwidth}
+    \begin{center}
+\includegraphics[scale=.25]{variations.png}
+    \end{center}
+  \end{minipage}
+\end{exemple}
+
+\begin{app}
+  \begin{enumerate}
+    \item Donner le sens de variation de la suite $u$ définie par $u(n+1)=u(n)\times
+  \frac{4}{3}$ pour tout $n\in\mathbb{N}$ et par $u(0)=0,9$.
+    \item Donner le sens de variation de la suite $v$ définie par $v(n+1)=v(n)\times
+  \frac{3}{4}$ pour tout $n\in\mathbb{N}$ et par $v(0)=1,1$.
+  \end{enumerate}
+\end{app}
+
+\section{Fonctions exponentielles}
+\subsection{Définitions et variations}
+\begin{defi}{Fonction exponentielle}
+  Soit $a>0$ un réel strictement positif. Une fonction $f$ définie pour tout
+  réel $x\geq0$ par
+  \[
+    f(x)=a^x
+  \]
+  est une \textbf{fonction exponentielle}.
+\end{defi}
+\begin{exemple}
+  Soit $f$ la fonction définie sur $\left[ 0;+\infty \right[$ par 
+  \[
+    f(x)=2^x.
+  \]
+  La fonction $f$ est une fonction exponentielle avec $a=2$. On a
+  \begin{align*}
+    f(0) &= 2^0 = 1 &
+    f(1) &= 2^1 = 2 &
+    f(2) &= 2^2 = 4 \\
+    f(1,5) &= 2^{1,5} \approx 2,83 &
+    f(2,1) &= 2^{2,1} \approx 4,29 &
+    f(19,81) &= 2^{19,81} \approx 919188
+  \end{align*}
+\end{exemple}
+\begin{app}
+  Soit $g$ la fonction définie sur $\mathbb{R}_+=[0;+\infty[$ par $g(x)=3^x$.
+    \begin{enumerate}
+      \item Sans la calculatrice, donner les valeurs $f(0)$, $f(1)$, $f(2)$ et
+        $f(3)$.
+      \item Avec la calculatrice, donner les valeurs $f(0,5)$, $f(1,9)$, et
+        $f(2,01)$.
+    \end{enumerate}
+\end{app}
+
+\begin{prop}
+  \begin{minipage}[]{.5\textwidth}
+    Une fonction exponentielle $f$ définie sur $[0;+\infty[$ par $f(x)=a^x$,
+      avec $a>0$ est :
+      \begin{enumerate}
+        \item \textbf{strictement croissante} sur $[0;+\infty[$ si, et seulement
+            si, $a>1$ ;
+        \item \textbf{strictement décroissante} sur $[0;+\infty[$ si, et seulement
+            si, $0<a<1$ ;
+          \item \textbf{constante} sur $[0;+\infty[$ si, et seulement si, $a=1$.
+      \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+\begin{tikzpicture}
+  \begin{axis}[x=1cm, y=1cm, xmin=-.1, ymin=-.1, ymax=3.1]
+    \addplot[thick, red, samples=101, domain=0:5.5] {(1.5)^x};
+    \addplot[thick, blue, samples=101, domain=0:5.5] {1^x};
+    \addplot[thick, green!50!black, samples=101, domain=0:5.5] {(.7)^x};
+  \end{axis}
+  \node[red] at (1.1, 2.3) {$y=(1,5)^x$};
+  \node[blue] at (4.5, 1.5) {$y=1^x$};
+  \node[green!50!black] at (1, .35) {$y=(0,7)^x$};
+\end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{prop}
+
+\subsection{Propriétés algébriques}
+\begin{prop}
+  Pour tous réels positifs $x$ et $y$ et pour tous réels strictement positifs
+  $a$ et $b$, on a:
+  \begin{align*}
+    \textbf{1.}&\; a^x\times a^y = a^{x+y} &
+    \textbf{2.}&\; \frac{a^x}{a^y}=a^{x-y} (\text{avec }x\geq y) &
+    \textbf{3.}&\; (a^x)^y=a^{x\times y} \\
+    \textbf{4.}&\; (a^x)\times b^x=(a\times b)^x &
+    \textbf{5.}&\; \frac{a^x}{b^x}=\left(\frac{a}{b}\right)^x &
+    &
+  \end{align*}
+\end{prop}
+\begin{exemple}
+  \begin{align*}
+    \textbf{1.}\;& 2^2\times2^{3,1}=2^{2+3,1}=2^{5,1} &
+    \textbf{2.}\;& \frac{3^{4}}{3^{2,7}}=3^{4-2,7} = 3^{1,3} &
+    \textbf{3.}\;& \left( 5^{1,5} \right)^2=5^{1,5\times2}=5^3 \\
+    \textbf{4.}\;& 2^{1,4}\times3^{1,4} = \left( 2\times3 \right)^{1,4} =
+    6^{1,4} &
+    \textbf{5.}\;& \frac{2^{0,5}}{3^{0,5}}=\left( \frac{2}{3} \right)^{0,5} &
+    &
+  \end{align*}
+\end{exemple}
+\begin{rmq}
+  Ces règles étaient déjà connues dans le cas où $x$ et $y$ sont des entiers, on
+  généralise les propriétés à n'importe quels nombres réels positifs.
+\end{rmq}
+
+\begin{propnom}{Cas particulier de la puissance $\frac{1}{n}$}
+  Soit $a>0$ et $x>0$ deux nombres réels strictement positifs et
+  $n\in\mathbb{N}^*$ un nombre
+  entier non nul. L'équation $x^n=a$ admet comme unique solution le réel
+  \[
+    x = \sqrt[n]{a}=a^{\frac{1}{n}}
+  \]
+  appelé \textbf{racine $n$-ième} de $a$.
+\end{propnom}
+\begin{exemple}
+  On considère l'équation
+  \[
+    x^3 = 7.
+  \]
+  Cette équation admet pour solution $x = 7^{\frac{1}{3}} =
+  \sqrt[3]{7}\approx1,91$.
+\end{exemple}
+\begin{app}
+  \begin{enumerate}
+    \item Résoudre (à l'aide de la calculatrice) l'équation $x^6=150$.
+    \item Résoudre (à l'aide de la calculatrice) l'équation $2x^3-25=75$.
+  \end{enumerate}
+\end{app}
+\begin{prop}
+  Si une grandeur subit une évolution de taux $t$, alors elle atteint la même
+  valeur en subissant $n$ évolutions successives de même taux $\left( 1+t
+  \right)^{\frac{1}{n}}-1$ où $n\in\mathbb{N}^*$ est un entier naturel non nul.
+\end{prop}
+\begin{defi}{Taux moyen}
+  Le nombre
+  \[
+    \left( 1+t \right)^{\frac{1}{n}}-1
+  \]
+  est appelé \textbf{taux moyen} des $n$ évolutions successives de taux global
+  $t$.
+\end{defi}
+\begin{exemple}
+  D'après l'association $60$ Millions de consommateurs, le prix des p\^ates a
+  augmenté d'environ $11,4$\% entre Février $2021$ et Février $2022$. On calcule
+  ainsi
+  \[
+    t_{\text{moyen}} = \left( 1+\frac{11,4}{100}
+    \right)^{\frac{1}{12}}-1\approx0,00904\approx0,904\%.
+  \]
+  Cela signifie qu'en moyenne, entre Février $2021$ et Février $2022$, le prix
+  des p\^ates a augmenté de $0,904$\% par mois.
+\end{exemple}
+\begin{app}
+ Esther a placé $1000$ euros en bourse en $2018$. Quatre ans plus tard, en $2022$, elle vend ses
+ actions et récupère $1427$ euros.
+ \begin{enumerate}
+   \item Calculer le taux d'évolution associé à son placement en bourse.
+   \item Calculer le taux moyen d'augmentation par année.
+ \end{enumerate}
+\end{app}
+
+\end{document}

@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Croissance linéaire -- Activité}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{}
+\date{}
+\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+On considère un carré de côté $1$. On réalise plusieurs figures successives en
+ajoutant des carrés identiques à chaque étape comme indiqué ci-dessous.
+
+\begin{center}
+\begin{tikzpicture}[baseline=(a.north)]
+  \node (a) at (0, 1) {\textbf{Figure initiale}};
+  \foreach \x in {0,...,0} \draw (\x-.5, -.5) -- (\x+.5, -.5) -- (\x+.5,.5) -- (\x-.5, .5);
+  \draw (-0.5, -.5) -- (-0.5, .5);
+\end{tikzpicture}
+\hspace{2cm}
+\begin{tikzpicture}[baseline=(a.north)]
+  \node (a) at (0, 1) {\textbf{Étape 1}};
+  \foreach \x in {-1,...,1} \draw (\x-.5, -.5) -- (\x+.5, -.5) -- (\x+.5,.5) -- (\x-.5, .5);
+  \foreach \x in {0,...,0} \draw (-.5, -\x-.5) -- (-.5, -\x-1.5) -- (.5,-\x-1.5)
+  -- (.5, -\x-.5);
+  \draw (-1.5, -.5) -- (-1.5, .5);
+\end{tikzpicture}
+\hspace{2cm}
+\begin{tikzpicture}[baseline=(a.north)]
+  \node (a) at (0, 1) {\textbf{Étape 2}};
+  \foreach \x in {-2,...,2} \draw (\x-.5, -.5) -- (\x+.5, -.5) -- (\x+.5,.5) -- (\x-.5, .5);
+  \foreach \x in {0,...,1} \draw (-.5, -\x-.5) -- (-.5, -\x-1.5) -- (.5,-\x-1.5)
+  -- (.5, -\x-.5);
+  \draw (-2.5, -.5) -- (-2.5, .5);
+\end{tikzpicture}
+\begin{tikzpicture}[baseline=(a.north)]
+  \node (a) at (0, 1) {\textbf{Étape 3}};
+  \foreach \x in {-3,...,3} \draw (\x-.5, -.5) -- (\x+.5, -.5) -- (\x+.5,.5) -- (\x-.5, .5);
+  \foreach \x in {0,...,2} \draw (-.5, -\x-.5) -- (-.5, -\x-1.5) -- (.5,-\x-1.5)
+  -- (.5, -\x-.5);
+  \draw (-3.5, -.5) -- (-3.5, .5);
+\end{tikzpicture}
+\end{center}
+
+\section*{Questions}
+
+\paragraph{Première partie : construction d'une suite.} On note $c(n)$ le nombre
+de carrés nécessaires pour construire la figure à l'étape $n$. La figure
+initiale correspond à l'étape $0$. Le premier terme est donc $c(0)=1$ et on a,
+par exemple, $c(2)=7$.
+\begin{enumerate}
+  \item En utilisant l'illustration ci-dessus, déterminer $c(1)$ et $c(3)$.
+  \item Combien de carrés ajoute-t-on pour passer d'une étape à la suivante ?
+    Calculer alors $c(4)$ et $c(5)$.
+\end{enumerate}
+En continuant ainsi, on obtient une suite denombres, notée $c$. Dans ce cas, on
+dit que la suite $c$ est une \textbf{suite arithmétique} de \textbf{premier
+terme} $c(0)=1$ et de \textbf{raison} $r=3$.
+\begin{enumerate}
+    \setcounter{enumi}{2}
+  \item Pour tout entier naturel $n$, écrire $c(n+1)$ en fonction de $c(n)$.
+    Cette relation s'appelle la \textbf{relation de récurrence} de la suite $c$.
+  \item Comment calculer $c(100)$ en fonction de $c(99)$ ? Est-ce facilement
+    réalisable ?
+\end{enumerate}
+
+\paragraph{Deuxième partie : une nouvelle suite.} On s'intéresse maintenant au
+périmètre de la figure à chaque étape. On note $p(n)$ le périmètre de la figure
+à l'étape $n$. On a ainsi $p(0)=4$ et $p(1)=10$.
+\begin{enumerate}
+    \setcounter{enumi}{4}
+  \item En utilisant l'illustration ci-dessus, déterminer $p(2)$ et $p(3)$.
+  \item Justifier que la suite $p$ est une suite arithmétique. Donner alors le
+    premier terme, la raison et la relation de récurrence de $p(n+1)$ en
+    fonction de $p(n)$.
+  \item \begin{enumerate}
+      \item De quelle longueur le périmètre a-t-il augmenté entre l'étape
+        initiale et l'étape $2$ ? Entre l'étape initiale et l'étape $3$ ?
+      \item Recopier et compléter les égalités suivantes
+        $p(2)=p(0)+\ldots\times6$; $p(3)=p(0)+\ldots\times6$.
+      \item Compléter la \textbf{forme explicite} de $p$ : pour tout entier
+        naturel $n$, $p(n) = p(0)+\ldots\times\ldots$.
+    \end{enumerate}
+  \item Calculer le périmètre de la figure à l'étape $100$.
+\end{enumerate}
+
+\section*{Bilan} 
+\noindent On considère une suite arithmétique $u$. Quels en sont les éléments
+caractéristiques ? Donner une relation de récurrence de $u$ et une forme
+explicite.
+
+\end{document}

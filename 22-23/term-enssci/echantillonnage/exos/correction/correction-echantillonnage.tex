@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+\newcommand{\titrechapitre}{Échantillonnage -- Correction}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+%\input{layout-nb.tex}
+
+\title{Éléments de correction}
+\date{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\paragraph{Exercice 5.}
+\begin{enumerate}
+  \item L'axe des abscisses représente le nombre de recaptures effectuées. L'axe
+    des ordonnées représente l'estimation de la proportion de renards infectés.
+  \item Les pointillés représentent la valeur que l'on cherche à estimer :
+    $30\%$.
+  \item Les disques représentent l'estimation $\frac{m}{n}$ donnée par chacune
+    des recaptures.
+  \item C'est ce qu'on appelle la fluctuation d'échantillonnage.
+  \item Il y a $19$ intervalles de confiance qui contiennent la proportion à
+    estimer. Cela correspond bien à $95\%$ des échantillons ($20\times 0,95=19$).
+  \item Pour estimer la valeur de $n$, on mesure la largeur d'un des intervalles
+    de confiance. On voit, par exemple sur l'échantillon numéro $5$, que
+    l'intervalle s'étend de $0,15$ à $0,32$ à peu près, donc que sa longueur est
+    de $0,17$. Or la longueur de l'intervalle de confiance est de
+    $\frac{2}{\sqrt n}$. On a donc
+    \begin{align*}
+     & & 0,17 &= \frac{2}{\sqrt n} \\
+      &\Leftrightarrow& \sqrt n \times 0,17 &= 2 \\
+      &\Leftrightarrow& \sqrt n &= \frac{2}{0,17} \\
+      &\Leftrightarrow& n &= \left( \frac{2}{0,17} \right)^2 \\
+      &\Leftrightarrow& n &\approx 138 
+    \end{align*}
+\end{enumerate}
+
+\paragraph{Exercice 6.} Dans cet exercice il faut compter le nombre de
+\texttt{1} pour
+connaître $m$, et compter le nombre total de \texttt{0} et \texttt{1} pour avoir $n$.
+Ensuite on fait comme dans les autres exercices.
+
+\paragraph{Exercice 7.}
+\begin{enumerate}
+  \item Dans cet exercice on a $M=232$, $n=400$, et $m=116$. Donc on a
+    $\frac{m}{n} = \frac{116}{400}=0,29$. On a aussi $\sqrt{400} = 20$ d'où
+    $\frac{1}{\sqrt{400}} = \frac{1}{20}=0,05$. L'intervalle de confiance au
+    niveau de confiance $95\%$ est donc $I=\left[ 0,24;0,34 \right]$.
+  \item Si on prend la valeur la plus petite de l'intervalle, on a
+    $\frac{M}{N} = 0,24$, ce qui donne $N=\frac{M}{0,24}\approx967$. Si on prend
+    la valeur la plus grande, on a $\frac{M}{N} = 0,34$ ce qui donne
+    $N=\frac{M}{0,34}\approx682$. On sait donc qu'il y a entre $682$ et $967$
+    manchots empereurs sur l'île.
+\end{enumerate}
+
+\paragraph{Exercice 8.}
+\begin{enumerate}
+  \item Si la marge d'erreur est d'au plus $3\%$, c'est-à-dire $0,03$, cela veut
+    dire que le pourcentage réel est entre $7\%$ et $13\%$, ou encore $0,07$ et
+    $0,13$, et
+    finalement un intervalle de confiance est $I=\left[ 0,07 ; 0,13 \right]$.
+  \item On sait que les bornes de l'intervalle de confiance sont données par
+    $\frac{m}{n}-\frac{1}{\sqrt n}$ et 
+    $\frac{m}{n}+\frac{1}{\sqrt n}$, donc cela veut dire que la longueur de
+    l'intervalle de confiance est donnée par $\frac{2}{\sqrt n}$. Et cette
+    longueur est ici de $0,06$.
+    \begin{align*}
+     & & 0,06 &= \frac{2}{\sqrt n} \\
+      &\Leftrightarrow& \sqrt n \times 0,06 &= 2 \\
+      &\Leftrightarrow& \sqrt n &= \frac{2}{0,06} \\
+      &\Leftrightarrow& n &= \left( \frac{2}{0,06} \right)^2 \\
+      &\Leftrightarrow& n &\approx 1111 
+    \end{align*}
+    De la même manière on peut dire que la marge d'erreur est donnée par
+    $\frac{1}{\sqrt n}$ et on sait ici qu'elle est de $0,03$. On a donc
+    $\frac{1}{\sqrt n}=0,03$ puis $n=(\frac{1}{0,03})^2$ ce qui redonne bien la même valeur pour $n$.
+\end{enumerate}
+
+\paragraph{Exercice 9.}
+\begin{enumerate}
+  \item La fréquence est $\frac{25}{145}=\frac{5}{29}\approx0,17$.
+  \item Ici on a pas de valeur exacte, alors on calcule
+    $\frac{5}{29}-\frac{1}{\sqrt{145}}\approx0,09$ et
+    $\frac{5}{29}+\frac{1}{\sqrt{145}}\approx0,26$. Et on obtient finalement l'intervalle de
+    confiance $I=\left[ 0,09;0,26 \right]$.
+  \item Cette question est classique : on voudrait que la
+    marge d'erreur soit plus petite que $4\%=0,04$, or la marge d'erreur est
+    $\frac{1}{\sqrt n}$. On veut donc
+    \begin{align*}
+     & & \frac{1}{\sqrt n} &\leq 0,04 \\
+     &\Leftrightarrow& 1 &\leq 0,04\times\sqrt n \\
+     &\Leftrightarrow& \frac{1}{0,04} &\leq \sqrt n \\
+     &\Leftrightarrow& \left(\frac{1}{0,04}\right)^2 &\leq n
+    \end{align*}
+    Or $\left( \frac{1}{0,04} \right)^2=625$. Donc $n$ doit être plus grand que
+    $625$ : on doit prélever au moins $625$ chatons.
+\end{enumerate}
+
+\paragraph{Exercice 10.} L'amplitude de l'intervalle est de $15\%-8\%=7\%$. Donc on
+a 
+\[
+  \frac{2}{\sqrt n} = 0,07.
+\]
+On fait comme dans les exercices précédents.
+
+\end{document}

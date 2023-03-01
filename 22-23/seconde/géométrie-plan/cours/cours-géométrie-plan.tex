@@ -1,0 +1,435 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Géométrie dans le plan -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot} -- Seconde $11$}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 3 : Géométrie dans le plan}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Coordonnées d'un point du plan}
+\subsection{Repères du plan}
+
+\begin{defi}{Repère, origine, et axes}
+  Soient $O$, $I$ et $J$ trois points distincts du plan. On dit que le triplet
+  $(O; I, J)$ forme un repère du plan lorsque les points $O$, $I$, et $J$ ne
+  sont pas alignés. Dans ce cas :
+  \begin{itemize}
+    \item le point $O$ est \textbf{l'origine} du repère ;
+    \item la droite orientée $(OI)$ est \textbf{l'axe des abscisses} et la
+      distance $OI$ donne l'unité sur cet axe ;
+    \item la droite orientée $(OJ)$ est \textbf{l'axe des ordonnées} et la
+      distance OJ donne l'unité sur cet axe.
+  \end{itemize}
+\end{defi}
+
+\begin{defi}{Coordonnées}
+  \label{defi1}
+  \begin{minipage}{.5\textwidth}
+  Repérer un point $M$ dans un repère $(O; I, J)$, c'est donner l'unique couple
+  de nombres réels $(x; y)$ appelé \textbf{coordonnées} du point $M$. Le nombre
+  $x$ est \textbf{l'abscisse} du point $M$ et le nombre $y$ est
+  \textbf{l'ordonnée} du point $M$.
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}[scale=.5]
+      \draw[thick] (0,-2.4) -- (0, 4.4);
+      \draw[thick] (-2.4,0) -- (6.6, 0);
+      \foreach \x in {-1, ..., 3}{
+      \draw[blue, opacity=.3] (2*\x, -2.4) -- (2*\x, 4.4);
+      \draw[thick] (2*\x, -.2) -- (2*\x, .2);
+      }
+      \foreach \x in {-1, ..., 2}{
+      \draw[blue, opacity=.3] (-2.4, 2*\x) -- (6.6, 2*\x);
+      \draw[black, thick] (-.2, 2*\x) -- (.2, 2*\x);
+      }
+      \node (O) at (-.5,-.5) {$O$};
+      \node (I) at (2,-.5) {$I$};
+      \node (J) at (-.5,2) {$J$};
+
+      \draw[thick] (3.8, -2) -- (4.2, -2) (4, -2.2) -- (4, -1.8);
+      \draw[thick, loosely dashed] (0, -2) -- (4, -2) -- (4, 0);
+
+      \node (M) at (4.4, -1.6) {$M$};
+      \node (x) at (4, .5) {$x$};
+      \node (y) at (-.5, -2) {$y$};
+    \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{defi}
+
+\begin{exemple}
+  % TODO: enlever les coordonnées pour la version élève
+  Dans le repère juste au-dessus, les coordonnées des points $O$, $I$, $J$, et
+  $M$ sont respectivement $(0;0)$, $(1;0)$, $(0;1)$ et $(2; -1)$.
+\end{exemple}
+
+\begin{rmq}
+  Si les droites $(OI)$ et $(OJ)$ sont perpendiculaires, le repère $(O; I, J)$
+  est \textbf{orthogonal}. Si, de plus, les longueurs $OI$ et $OJ$ sont égales,
+  alors $(O; I, J)$ est dit \textbf{orthonormé}.
+\end{rmq}
+
+\begin{notation}
+  On écrit souvent les coordonnées d'un point $A$ à l'aide de la notation
+  $A(x_A; y_A)$.
+\end{notation}
+
+\begin{exemple}
+  % TODO: enlever les coordonnées pour la version élève
+  \begin{minipage}{.5\textwidth}
+    \begin{itemize}
+      \item L'ordonnée du point $A$ est $2$.
+      \item L'abscisse du point $B$ est $0$.
+      \item Les coordonnées de $C$ sont $(-2; 0)$.
+      \item Les coordonnees de $D$ sont $(-1; 2)$.
+    \end{itemize}
+\end{minipage}
+  \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}[scale=.5]
+      \draw[semithick] (0,-4.4) -- (0, 4.4);
+      \draw[semithick] (-4.4,0) -- (4.4, 0);
+      \foreach \x in {-2, ..., 2}{
+      \draw[blue, thin, opacity=.3] (2*\x, -4.4) -- (2*\x, 4.4);
+      \draw[semithick] (2*\x, -.2) -- (2*\x, .2);
+      }
+      \foreach \x in {-2, ..., 2}{
+      \draw[blue, thin, opacity=.3] (-4.4, 2*\x) -- (4.4, 2*\x);
+      \draw[black, semithick] (-.2, 2*\x) -- (.2, 2*\x);
+      }
+      \node (O) at (-.5,-.5) {$O$};
+      \node (I) at (2,-.5) {$I$};
+      \node (J) at (-.5,2) {$J$};
+
+      \draw[ultra thick, red] (1.8, 4) -- (2.2, 4) (2, 4.2) -- (2, 3.8);
+      \node[red] (A) at (2.4, 3.5) {$A$};
+      \draw[ultra thick, red] (-.2, -4) -- (.2, -4) (0, -4.2) -- (0, -3.8);
+      \node[red] (B) at (.4, -3.5) {$B$};
+      \draw[ultra thick, red] (-4.2, 0) -- (-3.8, 0) (-4, -.2) -- (-4, .2);
+      \node[red] (C) at (-3.6, .5) {$C$};
+      \draw[ultra thick, red] (-2.2, 4) -- (-1.8, 4) (-2, 4.2) -- (-2, 3.8);
+      \node[red] (D) at (-1.6, 3.5) {$D$};
+    \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exemple}
+
+%TODO: autre exemple dans un repère non orthonormé, pour voir l'intérêt
+
+\subsection{Coordonnées du milieu d'un segment}
+\begin{prop}
+  Dans le plan muni d'un repère $(O; I, J)$, on considère les points $A(x_A;
+  y_A)$ et $B(x_B; y_B)$. Le milieu $K$ du segment $\left[ AB \right]$ a pour
+  coordonnées $(x_K; y_K)$ définies par
+  \[
+    x_K = \frac{x_A+x_B}{2}\text{ et }y_K = \frac{y_A+y_B}{2}.
+  \]
+\end{prop}
+\begin{rmq}
+  L'abscisse de $K$ est la moyenne des abscisses de $A$ et $B$. L'ordonnée de
+  $K$ est la moyenne des ordonnées de $A$ et $B$.
+\end{rmq}
+\begin{exemple}
+  \begin{minipage}{.6\textwidth}
+  %TODO: v eleve
+  Soient $A(1; 1)$, $B(-2; 0)$, $C(-1; -2)$ et $D(2; -1)$ quatre points dans un
+  repère $(O; I, J)$.
+  \begin{enumerate}
+    \item Placer ces points dans le repère ci-contre.
+    \item Calculer les coordonnées de $K$, le milieu de $\left[ AC \right]$.
+    \item Calculer les coordonnées de $L$, le milieu de $\left[ BD \right]$.
+    \item Le quadrilatère $ABCD$ est-il un parallélogramme ?
+  \end{enumerate}
+\end{minipage}
+  \begin{minipage}{.4\textwidth}
+    \begin{center}
+      \begin{tikzpicture}[scale=.5]
+      \draw[semithick] (0,-4.4) -- (0, 4.4);
+      \draw[semithick] (-4.4,0) -- (4.4, 0);
+      \foreach \x in {-2, ..., 2}{
+      \draw[blue, thin, opacity=.3] (2*\x, -4.4) -- (2*\x, 4.4);
+      \draw[semithick] (2*\x, -.2) -- (2*\x, .2);
+      }
+      \foreach \x in {-2, ..., 2}{
+      \draw[blue, thin, opacity=.3] (-4.4, 2*\x) -- (4.4, 2*\x);
+      \draw[black, semithick] (-.2, 2*\x) -- (.2, 2*\x);
+      }
+      \node (O) at (-.5,-.5) {$O$};
+      \node (I) at (2,-.5) {$I$};
+      \node (J) at (-.5,2) {$J$};
+    \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exemple}
+
+\section{Distance dans un repère orthonormé}
+\begin{prop}
+  %TODO: dessin pour voir ce que ça veut dire
+  Dans un repère orthonormé du plan, la distance entre deux points $A$ et $B$ de
+  coordonnées respectives $(x_A; y_A)$ et $(x_B; y_B)$ est donnée par
+  \[
+    AB = \sqrt{(x_B-x_A)^2+(y_B-y_A)^2}.
+  \]
+\end{prop}
+
+\begin{exemple}
+  Soit $(O; I, J)$ un repère orthonormé et $A(-1; 2)$ et $B(4; 3)$, on a :
+  \[
+    AB = \sqrt{(x_B-x_A)^2+(y_B-y_A)^2} = \sqrt{(4-(-1))^2+(3-2)^2} =
+    \sqrt{25+1}=\sqrt{26}.
+  \]
+\end{exemple}
+
+\begin{app}
+  Dans un repère orthonormé $(O; I, J)$ du plan, on considère les points $A$,
+  $B$, $C$ et $M$ de coordonnées respectives $(-2; 3)$, $(3; 4)$, $(3; -2)$ et
+  $(1; 1)$.\\
+  Montrer que $A$, $B$, et $C$ appartiennent à un même cercle de centre $M$.
+\end{app}
+
+\begin{prop}
+  Soient $A$, $B$ et $C$ trois points distincts du plan. Les points $A$, $B$ et
+  $C$ sont alignés dans cet ordre si, et seulement si, $AC = AB+BC$.
+\end{prop}
+
+\begin{exemple}
+  Soit $(O; I, J)$ un repère orthonormé et $A(-2; -2)$, $B(3; 1)$ et
+  $C(8; 4)$ trois points de ce repère.\\
+  Ces points sont-ils alignés ?
+\end{exemple}
+
+\begin{exemple}
+  \begin{minipage}[]{.5\textwidth}
+    Dans le repère orthonormé $(A; I, J)$, on considère la figure ci-contre
+    composée d'un carrée $ABCD$ et de deux points $E$ et $F$. Les points $E$,
+    $C$ et $F$ sont-ils alignés ?
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+       \begin{tikzpicture}[scale=.5]
+      \draw[semithick] (0,-.25) -- (0, 7.25);
+      \draw[semithick] (-.25,0) -- (10.75, 0);
+      \foreach \x in {1, ..., 21}{
+      \draw[blue, thin, opacity=.3] (.5*\x, -.25) -- (.5*\x, 7.25);
+      \draw[semithick] (.5*\x, -.1) -- (.5*\x, .1);
+      }
+      \foreach \x in {5, 10,..., 20}{
+      \node (\x) at (.5*\x, -.4) {$\x$};
+      }
+      \foreach \x in {0, 1, ..., 14}{
+      \draw[blue, thin, opacity=.3] (-.25, .5*\x) -- (10.75, .5*\x);
+      \draw[black, semithick] (-.1, .5*\x) -- (.1, .5*\x);
+      }
+      \foreach \x in {5, 10}{
+      \node (\x) at (-.4, .5*\x) {$\x$};
+      }
+      \node (O) at (-.5,-.5) {$A$};
+      \node (I) at (.5,-.5) {$I$};
+      \node (J) at (-.5,.5) {$J$};
+
+      \node (B) at (4,-.5) {$B$};
+      \node (D) at (-.5,4) {$D$};
+
+      \draw[semithick] (0, 6.5) -- (4, 4) -- (10.5, 0);
+
+      \draw[thick] (3.9, 4) -- (4.1, 4) (4, 4.1) -- (4, 3.9);
+      \node (C) at (4.3, 4.3) {$C$};
+      \node (E) at (.4, 6.8) {$E$};
+      \node (F) at (10.8, .3) {$F$};
+
+      \fill[draw=orange, yellow!50!white, opacity=.4] (0,0) rectangle (4, 4);
+    \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exemple}
+
+\section{Configurations du plan}
+\subsection{Propriétés dans le triangle}
+\begin{defi}{Cercle circonscrit}
+  Le \textbf{cercle circonscrit} à un triangle est le cercle passant par les
+  trois sommets du triangle.
+\end{defi}
+
+\begin{prop}
+  \begin{minipage}{.5\textwidth}
+  Dans un triangle, les médiatrices des côtés sont concourantes en un point $O$
+  qui est le centre du \href{https://www.geogebra.org/m/wv4ccwvu}{cercle
+  circonscrit} au triangle.
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+\begin{center}
+  \begin{tikzpicture}
+    \fill[green!50!black, opacity=.2] (-1,-1) -- (2, 1) -- (-2, 2);
+    \draw[green!50!black, opacity=.8] (-1,-1) -- (2, 1) -- (-2, 2) -- (-1, -1);
+    \draw[red!70!black] (-.14, .95) circle (2.138);
+
+    \draw[red!30!black, opacity=.5] (1.33, -1.25) -- (-1.69, 3.29);
+    \draw[red!30!black, opacity=.5] (.53, 3.62) -- (-.74, -1.45);
+    \draw[red!30!black, opacity=.5] (-2.48, .17) -- (2.36, 1.79);
+
+    \node[green!50!black] (A) at (-1.2, -1.2) {$A$};
+    \node[green!50!black] (B) at (2.2, 1.2) {$B$};
+    \node[green!50!black] (C) at (-2.2, 2.2) {$C$};
+
+    \node[red!70!black] (O) at (.16, .85) {$O$};
+  \end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{prop}
+
+\begin{defi}{Projeté orthogonal}
+  \begin{minipage}{.5\textwidth}
+  Soient $d$ une droite et $M$ un point extérieur à $d$. On dit que $M'$ est le
+  \href{https://www.geogebra.org/m/cdcutrsn}{\textbf{projeté
+  orthogonal}} de $M$ lorsque le point $M'$ appartient à la droit
+  $d$ et que les droites $(MM')$ et $d$ sont perpendiculaires.
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[red!70!black] (-.71, -.66) -- (1.65, 1.55);
+        \draw[blue!70!black, semithick] (-.53, 1.48) -- (-.33, 1.48) (-.43, 1.38) -- (-.43,
+        1.58);
+        \draw[dashed] (-.43, 1.48) -- (.5, .48);
+        \draw[blue!70!black, semithick] (.4, .48) -- (.6, .48) (.5, .38) -- (.5,.58);
+
+        \node[red!70!black] (d) at (1.6, 1.3) {$d$};
+        \node[blue!70!black] (M) at (-.8, 1.2) {$M$};
+        \node[blue!70!black] (M') at (1, .5) {$M'$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{defi}
+
+\begin{prop}
+  Le projeté orthogonal d'un point $M$ sur une droite $d$ est le point de $d$ le
+  plus proche de $M$.
+\end{prop}
+
+\begin{defi}{Hauteur}
+  \begin{minipage}{.5\textwidth}
+    Dans un triangle $ABC$, la \textbf{hauteur} issue du sommet $A$ est la
+    droite passant par $A$ et par $H$, le projeté orthogonal de $A$ sur $(BC)$ : il
+    s'agit de la droite $(AH)$.
+\end{minipage}
+  \begin{minipage}{.5\textwidth}
+\begin{center}
+  \begin{tikzpicture}
+    \fill[green!50!black, opacity=.2] (0,1) -- (-1.5, .5) -- (1, -1);
+    \draw[green!50!black, opacity=.8] (0,1) -- (-1.5, .5) -- (1, -1) -- (0,1);
+    \draw (-.78, -.3) -- (.26, 1.43);
+    \node[green!50!black] (A) at (.3, 1.1) {\small $A$};
+    \node[green!50!black] (B) at (-1.7, .6) {\small $B$};
+    \node[green!50!black] (C) at (1.3, -.9) {\small $C$};
+    \node (H) at (-.5, -.4) {\small $H$};
+    \draw (-.55, .08) -- (-.43, .01) -- (-.5, -.1);
+  \end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{defi}
+
+\begin{app}
+  \begin{minipage}{.7\textwidth}
+    On considère les points dans le repère ci-contre.
+    \begin{enumerate}
+      \item En utilisant les carreaux, justifier que la droite $(AT)$ est la
+        médiatrice du segment $\left[ BC \right]$.
+      \item Que peut-on déduire pour les droites $(BC)$ et $(AT)$ ?
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}{.3\textwidth}
+    \begin{center}
+      \begin{tikzpicture}[scale=.5]
+      \foreach \x in {-3, ..., 3}{
+      \draw[blue, thin, opacity=.3] (\x, -3.4) -- (\x, 3.4);
+      }
+      \foreach \x in {-3, ..., 3}{
+      \draw[blue, thin, opacity=.3] (-3.4, \x) -- (3.4, \x);
+      }
+
+      \draw[thick] (-2.2, 0) -- (-1.8, 0) (-2, -.2) -- (-2, .2);
+      \draw[thick] (-1.2, -3) -- (-0.8, -3) (-1, -3.2) -- (-1, -2.8);
+      \draw[thick] (1.8, -2) -- (2.2, -2) (2, -2.2) -- (2, -1.8);
+      \draw[thick] (1.8, 3) -- (2.2, 3) (2, 2.8) -- (2, 3.2);
+      \node (A) at (2.5, 2.7) {\small $A$};
+      \node (A) at (2.5, -1.4) {\small $B$};
+      \node (A) at (-1.5, .4) {\small $C$};
+      \node (A) at (-.5, -2.6) {\small $T$};
+    \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+
+\end{app}
+
+\subsection{Trigonométrie}
+\begin{defi}{Cosinus et sinus}
+  \begin{minipage}{.7\textwidth}
+  Soit $ABC$ un triangle rectangle en $A$. On définit alors le \textbf{cosinus}
+  et le \textbf{sinus} de l'angle $\widehat{ABC}$ de la façon suivante.
+  \[
+    \cos(\widehat{ABC})=\frac{AB}{BC}\text{ et }\sin(\widehat{ABC}) =
+    \frac{AC}{BC}.
+  \]
+\end{minipage}
+  \begin{minipage}{.3\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=1.5]
+    \fill[green!50!black, opacity=.2] (0,0) -- (0.95, .48) -- (-.5, 1);
+    \draw[green!50!black, opacity=.8] (0,0) -- (0.95, .48) -- (-.5, 1) -- (0,0);
+    \node[green!50!black] (A) at (-.4, 0) {\small $A$};
+    \node[green!50!black] (B) at (1.3, .5) {\small $B$};
+    \node[green!50!black] (C) at (-.7, 1) {\small $C$};
+    \draw (-.08, .15) -- (0.08, .23) -- (.15, .08);
+  \end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{defi}
+
+\begin{prop}
+  Si $\alpha$ est la mesure d'un angle aigu dans un triangle rectangle alors
+  $\cos^2(\alpha)+\sin^2(\alpha)=1$.
+\end{prop}
+
+\begin{app}
+  \begin{enumerate}
+    \item Démontrer que le triangle $ABC$ tel que $AB=12$, $BS=5$ et $AC=13$ est
+      rectangle.
+    \item Calculer la mesure de l'angle $\widehat{BAC}$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Quadrilatères}
+\noindent\begin{minipage}{.5\textwidth}
+  \begin{defi}{Parallélogramme}
+    Un parallélogramme $ABCD$ est un quadrilatère dont les côtés opposés sont
+    parallèles deux à deux.
+  \end{defi}
+  \begin{prop}
+    Les diagonales d'un parallélogramme se coupent en leur milieu. Ce point est
+    un centre de symétrie du quadrilatère. Ses côtés opposés sont de même
+    longueur deux à deux.
+  \end{prop}
+  \begin{defi}{Autres parallélogrammes}
+    Les carrés, les losanges et les rectangles sont des parallélogrammes. Toutes
+    les propriétés des parallélogrammes s'appliquent à eux, mais ils vérifient
+    aussi d'autres propriétés :\\
+    \textbf{Rectangle :} tous ses angles sont droits et ses diagonales sont de
+    même longueur.\\
+    \textbf{Losange :} les diagonales sont perpendiculaires et tous ses côtés
+    sont de même longueur.\\
+    \textbf{Carré :} c'est à la fois un rectangle et un losange.
+  \end{defi}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\includegraphics[scale=.4]{quadri.png}
+\end{minipage}
+\end{document}

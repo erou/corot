@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Équilibre de Hardy-Weinberg -- Exercices}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+\usepackage{numprint}
+%\input{layout-nb.tex}
+
+\title{Thème 3--1 : Équilibre de Hardy-Weinberg}
+\date{}
+\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+\paragraph{Exercice 1.}
+\begin{enumerate}[leftmargin=*]
+	\item
+	On considère un gène possédant deux allèles $A$ et $\Delta 32$, avec $f(A) =0,89$.\\
+	Compléter le tableau suivant et vérifier que la structure génétique de la population est conforme aux prédictions du modèle Hardy-Weinberg.
+	\begin{center}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
+		\hline
+		\textbf{Génotype} & $(A//A)$ & $(A//\Delta 32)$ & $(\Delta32//\Delta 32)$ & Total\\
+		\hline
+		\textbf{Nombre observé} & $795$ & $190$ & $15$ & ${1000}$\\
+		\hline
+		\textbf{Nombre théorique} & & & & \\
+		\hline
+	\end{tabular}
+	\end{center}
+	\item On considère le même gêne que précédemment mais chez des individus infectés avec $ f(A) =0,909$.\\
+	Compléter le tableau suivant et vérifier que la structure génétique de la population n'est pas conforme aux prédictions du modèle Hardy-Weinberg.
+	\begin{center}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
+		\hline
+		\textbf{Génotype} & $(A//A)$ & $(A//\Delta 32)$ & $(\Delta32//\Delta 32)$ & Total\\
+		\hline
+		\textbf{Nombre observé} & ${1988}$ & $440$ & $1$ & ${2429}$\\
+		\hline
+		\textbf{Nombre théorique} & &  & & \\
+		\hline
+	\end{tabular}
+	\end{center}
+\end{enumerate}
+
+\paragraph{Exerice 2.}
+La drépanocytose est une maladie génétique résultant d'une mutation d'un gène de
+l'hémoglobine. L'allèle $A$ code pour une hémoglobine saine $HbA$, tandis que
+l'allèle $S$ code pour une hémoglobine mutée $HbS$. Les individus $(A//A)$ et
+$(A//S)$ ne souffrent pas de la maladie. En revanche, les individus $(S//S)$
+sont malades.\\
+Il a été montré que les individus $(A//S)$ présentent une résistance accrue au
+paludisme. Cela explique que $S$ soit répandu en Afrique, en Inde et dans la
+péninsule arabique, où le paludisme est lui aussi présent.
+\begin{center}
+		\textbf{Répartition des génotypes en République démocratique du Congo}\\
+		\vspace{11pt}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|}
+			\hline
+			\textbf{Génotype}&$(A//A)$&$(A//S)$&$(S//S)$&Total\\
+			\hline
+			\textbf{Nombre d'individus}&$ {3182} $&$ 838 $&$ 96 $& \\
+			\hline
+			\textbf{Fréquences}& & & & \\
+			\hline
+		\end{tabular}\\
+		\vspace{11pt}
+		\textbf{Répartition des génotypes chez les nouveaux nés}\\
+		\vspace{11pt}
+		\begin{tabular}{|>{\centering\arraybackslash}m{4.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|}
+			\hline
+			\textbf{Génotype}&$(A//A)$&$(A//S)$&$(S//S)$&Total\\
+			\hline
+			\textbf{Nombre de naissances observées}  &$ {270550} $&${71400}$&${8050}$& \\
+			\hline
+			\textbf{Nombre de naissances prévu par la modèle}& & & & \\
+			\hline
+		\end{tabular}
+	\end{center}
+\begin{enumerate}
+	\item Calculer la fréquence de l'allèle $S$ et de l'allèle $A$ en République démocratique du Congo.
+	\item Utiliser l'équilibre de Hardy-Weinberg pour prédire le nombre d'enfants de chaque naissances par an.\\
+	\textit{Il faut multiplier les fréquences obtenues par ${350000}$ pour obtenir le nombre de naissances par modèle. }
+	\item Comparer le nombre d'enfants réellement malades à la prédiction calculée précédemment.
+\end{enumerate}
+
+\paragraph{Exercice 3.}
+Pour lutter contre les moustiques, des insecticides à base de carbamates sont répandus depuis les années $70$. Ces insecticides inhibent l'activité d'une enzyme produite par le moustique : l'acétylcholinestérase. \\
+Le gène codant pour cette enzyme existe sous deux formes : les allèles $R$ et $S$. Des scientifiques supposent que les individus portant l'allèle $R$ sont plus résistants aux carbamates. \\
+En 1980, un échantillonnage a été réalisé dans une population de moustiques exposés à ces insecticides afin d'étudier la structure génétique de cette population.
+Les résultats de cette étude sont résumés dans le tableau ci-dessous. \\
+Vérifier que la structure génétique de la population n'est pas conforme aux prédictions du modèle de Hardy-Weinberg et expliquer cet écart.
+\begin{center}
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|}
+		\hline
+		\textbf{Génotype}&$(R//R)$&$(R//S)$&$(S//S)$&Total\\
+		\hline
+		\textbf{Occurences}  &$90$&$284$&$70$&$444$\\
+		\hline
+	\end{tabular}
+\end{center}
+\textit{Il faut appliquer une méthode analogue à l'exercice précédent. Calculer les fréquences des génotypes puis la fréquence des allèles puis calculer ce qui se passe à la génération suivante.  }
+
+\paragraph{Exercice 4.}
+La phénylcétonurie est une maladie génétique rare. Elle est due à un défaut
+porté par un allèle $a$ récessif (c’est-à-dire que cet allèle ne s’exprime pas si l’autre chromosome homologue possède le caractère $A$ dit dominant). \\
+La maladie apparaît uniquement à l’état homozygote $(a//a)$, mais un sujet non malade hétérozygote (c’est-à-dire ayant pour génotype $(A//a)$ peut être porteur du gène défectueux.\\
+Dans la population, la fréquence de l’allèle $a$ est $\frac{1}{100}$.\\ En supposant que la population est à l’équilibre de Hardy-Weinberg pour ce gène,
+\begin{enumerate}%[leftmargin=*]
+	\item Calculer la proportion de sujets atteints par la phénylcétonurie ;
+	\item Calculer la proportion de porteurs de l’allèle défectueux mais non atteints par la maladie.
+\end{enumerate}
+
+\paragraph{Exerice 5.}
+La mucoviscidose est une maladie qui frappe $1$ enfant sur ${2500}$. \\
+L’étude de sa transmission a montré qu’elle est due à l’état homozygote $(a//a)$ d’un certain gène.\\
+Les individus hétérozygotes $(A//a)$ sont sains et il est même impossible de détecter chez eux l’allèle pathogène. On suppose que la population est à l’équilibre de Hardy-Weinberg pour ce gène.
+\begin{enumerate}
+	\item Calculer la fréquence de l’allèle pathogène.
+	\item Calculer la proportion de personnes qui portent un allèle $a$ sans être atteintes par la maladie.
+\end{enumerate}
+
+
+
+\end{document}

@@ -1,0 +1,218 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Second degré -- Exercices}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\begin{document}
+\begin{exo}
+  Préciser si la fonction définie sur $\mathbb{R}$ est une fonction polynôme du
+  second degré. Si oui, identifier les coefficients $a, b, c$ dans l'expression
+  $ax^2+bx+c$.
+  \begin{align*}
+    \textbf{a)}&\; f(x) = 3x(x+2)-5x &
+    \textbf{b)}&\; g(x) = (2x+1)^2-4x^2 \\
+    \textbf{c)}&\; h(x) = (x-2)^2-(x+2)^2 &
+    \textbf{d)}&\; k(x) = 5(x^2-3)
+  \end{align*}
+\end{exo}
+
+\begin{exo}
+  Compléter pour mettre sous forme canonique.
+  \begin{align*}
+    \textbf{a)}&\; x^2-2x+3 = (x-\ldots)^2+\ldots &
+    \textbf{b)}&\; x^2+2x+3 = (x-\ldots)^2+\ldots \\
+    \textbf{c)}&\; x^2+2x-3 = (x-\ldots)^2-\ldots & 
+    \textbf{d)}&\; 3x^2-6x+1 = \ldots(x-\ldots)^2+\ldots \\
+    \textbf{e)}&\; 3x^2+6x+1 = \ldots(x-\ldots)^2+\ldots &
+    \textbf{f)}&\; 3x^2-6x-1 = \ldots(x-\ldots)^2+\ldots
+  \end{align*}
+\end{exo}
+
+\begin{exo}
+  Pour les fonctions suivantes, déterminez la forme canonique, puis les
+  variations et le maximum ou minimum. Vérifiez vos résultats en regardant la
+  représentation graphique de la fonction.
+  \begin{enumerate}
+    \item La fonction $f_1$ définie sur $\mathbb{R}$ par $f_1(x)=x^2-2x+1$.
+    \item La fonction $f_2$ définie sur $\mathbb{R}$ par $f_2(x)=-x^2+4x-5$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  \begin{enumerate}
+    \item Montrer que $4(x-1,5)^2-9$ est la forme canonique de la fonction $g$ définie
+  sur $\mathbb{R}$ par
+  \[
+    g(x) = 4x^2-12x.
+  \]
+\item En déduire le tableau de variations de $g$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  \begin{minipage}{.47\textwidth}
+  Une fonction $f$ polynôme du second degré est représentée graphiquement
+  ci-contre sur l'intervalle $[0; 5]$.
+  \begin{itemize}
+    \item Déduire de cette représentation graphique la forme canonique de de la
+      fonction $f$.
+  \end{itemize}
+\end{minipage}
+\begin{minipage}{.47\textwidth}
+  \begin{center}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[red, very thick, samples=201, domain=0:5]{-.5*(x-2)^2+3};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\end{exo}
+
+\begin{exo}
+  La quantité de sucre $q(x)$ (en kg) présente dans $100$ kg de betteraves
+  sucrières est donnée par
+  \[
+    q(x) = -0,004x^2+x-40
+  \]
+  où $x$ est la masse (en kg) d'engrais répandue à l'hectare, avec $x\in[60;
+  180]$.
+  \begin{enumerate}
+    \item Montrer que, pour tout $x\in[60; 180]$, on a
+      \[
+        q(x) = -0,004(x-125)^2+22,5.
+      \]
+    \item En déduire, à l'aide du tableau de variations de $q$, la masse $x$
+      d'engrais répandue à l'hectare pour que la quantité du sucre soit
+      maximale.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Résoudre les équations suivantes dans $\mathbb{R}$ en utilisant la méthode la
+  plus pertinente.
+  \begin{align*}
+    \textbf{a)}\;& -2x^2 - 5x +3 = 0 &
+    \textbf{b)}\;& x^2 + 7x = 0 \\
+    \textbf{c)}\;& 5x^2 + 7x +18 = 0 &
+    \textbf{d)}\;& x^2 +x +1 = 0
+  \end{align*}
+\end{exo}
+
+\begin{exo}
+  \begin{enumerate}
+    \item Soit $f$ la fonction définie sur $\mathbb{R}$ par
+      \[
+        f(x) = x^2+3x-5.
+      \]
+      \begin{enumerate}
+        \item Tracer la courbe représentative de $f$ avec la calculatrice.
+        \item Donner les valeurs approchées des éventuelles solutions dans
+          $\mathbb{R}$ de l'équation $f(x)=0$.
+        \item Résoudre dans $\mathbb{R}$ l'équation $f(x)=0$.
+      \end{enumerate}
+    \item Soit $g$ la fonction définie sur $\mathbb{R}$ par
+      \[
+        g(x) = 2x^2+3.
+      \]
+      \begin{enumerate}
+        \item Résoudre dans $\mathbb{R}$ l'équation $f(x)=g(x)$.
+        \item Que peut-on déduire pour les courbes représentatives de $f$ et $g$
+          ? Vérifier à l'aide de la calculatrice.
+      \end{enumerate}
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Pour chacune des fonctions polynôme du second degré, déterminer ses racines
+  éventuelles et une forme factorisée le cas échéant.
+  \begin{align*}
+    \textbf{a)}&\; f:x\mapsto 4x^2+x+9 &
+    \textbf{b)}&\; g:x\mapsto 4x^2+13x+9
+  \end{align*}
+\end{exo}
+
+\begin{exo}
+  \begin{enumerate}
+    \item Dresser le tableau de variation des fonctions $f$ et $g$ suivantes définies
+  sur $\mathbb{R}$.
+\item Résoudre dans $\mathbb{R}$ les inéquations $f(x)\geq0$ et $g(x)<0$.
+  \end{enumerate}
+  \begin{align*}
+    \textbf{a)}&\; f(x) = \frac{1}{2}x^2-6x+18 &
+    \textbf{b)}&\; g(x) = -2x^2+8x-6
+  \end{align*}
+\end{exo}
+
+\begin{exo}
+  Résoudre les inéquations suivantes dans $\mathbb{R}$.
+  \begin{align*}
+    \textbf{a)}&\; 4x^2-7\leq 0 &
+    \textbf{b)}&\; 3x^2-5x < 4x+5
+  \end{align*}
+\end{exo}
+
+\begin{exo}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par
+  \[
+    f(x) = \frac{10x}{x^2+2x+4}.
+  \]
+  \begin{enumerate}
+    \item Justifier que $f$ est définie sur $\mathbb{R}$.
+    \item À l'aide de la calculatrice, conjecturer le signe de la fonction $f$.
+    \item Dresser le tableau de signes de $f(x)$, puis valider ou corriger la
+      conjecture émise à la question précédente.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  \begin{enumerate}
+    \item Soit $f$ la fonction définie sur $\mathbb{R}$ par
+      \[
+        f(x) = 3x^2-5x+2.
+      \]
+      On note $\mathscr C_f$ sa courbe représentative dans le plan muni d'un
+      repère.
+      \begin{enumerate}
+        \item Conjecturer, à l'aide de la calculatrice, la position relative de
+          la courbe $\mathscr C_f$ par rapport à l'axe des abscisses.
+        \item Dresser par le calcul le tableau de signes de la fonction $f$,
+          puis valider ou corriger la conjecture précédente.
+      \end{enumerate}
+    \item On considère maintenant la fonction $g$ définie sur $\mathbb{R}$ par
+      \[
+        g(x) = -x^2+x+1.
+      \]
+      \begin{enumerate}
+        \item Étudier le signe de $f(x)-g(x)$ suivant les valeurs du nombre réel
+          $x$.
+        \item Que peut-on déduire pour les représentations graphiques de $f$ et
+          $g$ ?
+        \item Vérifier à l'aide de la calculatrice.
+      \end{enumerate}
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par
+  \[
+    f(x) = 15x^3-34x^2-47x+42.
+  \]
+  \begin{enumerate}
+    \item À l'aide de la calculatrice, conjecturer une solution entière de
+      l'équation $f(x)=0$.
+    \item Déterminer les valeurs des nombres réels $a,b,c$ tels que, pour tout
+      réel $x$, on ait
+      \[
+        f(x) = (x-3)(ax^2+bx+c).
+      \]
+    \item Résoudre dans $\mathbb{R}$ l'équation $f(x)=0$.
+    \item Rechercher (sur internet, par exemple) s'il existe une méthode générale de résolution des
+      équations du troisième degré.
+  \end{enumerate}
+\end{exo}
+
+\end{document}

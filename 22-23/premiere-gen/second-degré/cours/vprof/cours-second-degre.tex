@@ -1,0 +1,822 @@
+\documentclass[11pt]{article}
+
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\newcommand{\titrechapitre}{Second degré -- Cours}
+
+\title{Chapitre 1 : second degré}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\abstract{Dans ce premier chapitre, nous allons étudier les fonctions et les
+  équations du \emph{second degré}, c'est-à-dire les expressions de la forme
+\[
+  ax^2 + bx + c,
+\]
+où $a$, $b$ et $c$ sont des nombres fixés, et où on considérera que $x$ est une
+variable. Le nom « second degré » vient du fait que la variable $x$ intervient
+avec un degré $2$ dans l'expression. Nous allons alterner entre deux visions
+différentes : les fonctions du second degré et les équations du second degré.
+Dans les deux cas, cela viendra compléter ce que nous savons déjà sur les
+fonctions et les équations, en allant \emph{un peu plus loin}. Les expressions
+du second degré sont très présentes dans les sciences, et permettent de
+modéliser de nombreux problèmes, comme nous le verrons par la suite.}
+
+
+\section{Fonctions polynômes du second degré}
+\subsection{Forme développée et forme canonique}
+
+On connaît déjà de nombreux types de fonctions, dont les fonctions affines, qui
+sont des fonctions de la forme
+\[
+  f:x\mapsto bx+c,
+\]
+où $b$ et $c$ sont des constantes. Les représentations graphiques de ces
+fonctions sont des droites.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}
+  \addplot[red, very thick, samples=201]{2*x-3};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+On va maintenant généraliser les fonctions affines
+en ajoutant un terme en $x^2$.
+
+\begin{defi}{Fonction polynôme du second degré}
+  Une fonction $f$ définie sur $\mathbb{R}$ est appelée \emph{fonction polynôme
+  du second degré} s'il existe $a, b, c\in\mathbb{R}$ des réels avec $a\neq0$ et
+  tels que, pour tout réel $x\in\mathbb{R}$, on ait
+  \[
+    f(x) = ax^2+bx+c.
+  \]
+\end{defi}
+
+\begin{defi}{Forme développée et coefficients}
+  Soit $f$ une fonction polynôme du second degré définie sur $\mathbb{R}$ par
+  \[
+    f(x) = ax^2+bx+c,
+  \]
+  où $a,b,c\in\mathbb{R}$ sont des réels et où $a\neq0$. Lorsque la fonction $f$
+  est écrite sous cette forme, on parle de \emph{forme développée}. Les réels
+  $a$, $b$, et $c$ sont appelés les \emph{coefficients} de $f$.
+\end{defi}
+
+\begin{exemple}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par
+  \[
+    f(x) = x^2+2x+1.
+  \]
+  La fonction $f$ est une fonction polynôme du second degré, donnée sous forme
+  développée. Ses coefficients $a$, $b$, et $c$ valent respectivement $1$, $2$,
+  et $1$.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[red, very thick, samples=201]{x^2+2*x+1};
+\end{axis}
+%\draw[color=red] (2,4) node {\LARGE{$y=x^2+2x+1$}};
+\end{tikzpicture}
+\end{center}
+
+\end{exemple}
+
+\begin{exemple}
+  La fonction $g$ définie sur $\mathbb{R}$ par
+  \[
+    g(x) = -3x^2+\sqrt 2
+  \]
+  est un autre exemple de fonction polynôme du second degré. Cette fois-ci le
+  coefficient devant $x$ est nul, c'est-à-dire que $b=0$, et on a $a=-3$ et
+  $c=\sqrt2$.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[red, very thick, samples=201]{-3*x^2+sqrt(2)};
+\end{axis}
+%\draw[color=red] (2,4) node {\LARGE{$y=x^2+2x+1$}};
+\end{tikzpicture}
+\end{center}
+
+\end{exemple}
+
+\begin{contrex}
+  La fonction $h$ définie sur $\mathbb{R}_+$ par
+  \[
+    h(x) = \sqrt x + 1
+  \]
+  n'est pas une fonction polynôme du second degré.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[red, very thick, samples=201,domain=0:5.5]{sqrt(x)+1};
+\end{axis}
+%\draw[color=red] (2,4) node {\LARGE{$y=x^2+2x+1$}};
+\end{tikzpicture}
+\end{center}
+
+\end{contrex}
+
+\begin{exo}
+  Les fonctions suivantes sont-elles des fonctions polynômes du second degré ?
+  \begin{enumerate}
+    \item La fonction $f_1$ définie sur $\mathbb{R}$ par $f_1(x) = -x^2-x+10$.
+    \item La fonction $f_2$ définie sur $\mathbb{R_+}$ par $f_2(x) = x^2+\sqrt x-1$.
+    \item La fonction $f_3$ définie sur $\mathbb{R}$ par $f_3(x) = x^2$.
+    \item La fonction $f_4$ définie sur $\mathbb{R}$ par $f_4(x) = x+2$.
+    \item La fonction $f_5$ définie sur $\mathbb{R}$ par $f_5(x) = x(x+1)$.
+    \item La fonction $f_6$ définie sur $\mathbb{R}$ par $f_6(x) = 0$.
+  \end{enumerate}
+\end{exo}
+\begin{exo}
+  Exercice $56$ page $90$.
+\end{exo}
+Si on parle de forme développée, c'est parce qu'il ne s'agit pas de la seule
+forme possible. Par exemple, la fonction $f$ définie sur $\mathbb{R}$ par
+\[
+  f(x) = x^2+2x+1
+\]
+peut aussi s'écrire, en utilisant une identité remarquable :
+\[
+  f(x) = (x+1)^2.
+\]
+Cette forme porte elle aussi un nom particulier.
+
+
+\begin{prop}
+  Soit $f$ une fonction polynôme du second degré définie sur $\mathbb{R}$ par
+  \[
+    f(x) = ax^2+bx+c.
+  \]
+  Alors $f$ peut s'écrire sous la forme
+  \[
+    f(x) = a(x-\alpha)^2+\beta,
+  \]
+  et on a $\alpha=-\cfrac{b}{2a}$ et $\beta=f(\alpha)$.
+\end{prop}
+
+\begin{proof}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par
+  \[
+    f(x) = ax^2+bx+c,
+  \]
+  avec $a,b,c\in\mathbb{R}$ trois réels et $a\neq0$. Comme on a $a\neq0$, on
+  peut écrire, pour tout $x\in\mathbb{R}$, que
+  \[
+    f(x) = a\left( x^2+\frac{b}{a}x+\frac{c}{a} \right).
+  \]
+  Puis on remarque que les termes $x^2+\frac{b}{a}x$ forment le début du
+  développement de
+  \[
+    \left(x+\frac{b}{2a}\right)^2 = x^2 +
+    \frac{b}{a}x+\left(\frac{b}{2a}\right)^2.
+  \]
+  On peut donc écrire que
+  \[
+    \left( x^2+\frac{b}{a}x \right) = \left( x+\frac{b}{2a} \right)^2-\left(
+    \frac{b}{2a} \right)^2
+  \]
+  puis que
+  \[
+    f(x) = a\left( \left( x+\frac{b}{2a} \right)^2-\left( \frac{b}{2a}
+    \right)^2+\frac{c}{a} \right).
+  \]
+  En mettant sur le même dénominateur, on remarque que
+  \begin{align*}
+    -\left( \frac{b}{2a} \right)^2+\frac{c}{a} &= -\frac{b^2}{4a^2} +
+    \frac{c}{a} \\
+    &= \frac{-b^2+4ac}{4a^2}.
+ \end{align*}
+ On retrouve alors
+ \begin{align*}
+   f(x) &= a\left( x+\frac{b}{2a} \right)^2+a\times\frac{-b^2+4ac}{4a^2} \\
+   &= a\left( x+\frac{b}{2a} \right)^2+\frac{-b^2+4ac}{4a} \\
+   &= a\left( x-\alpha \right)^2+\beta,
+ \end{align*}
+ où $\alpha=\cfrac{-b}{2a}$ et où $\beta=\cfrac{-b^2+4ac}{4a}$. De plus, on a
+ aussi 
+ \[
+   f(\alpha) = a\left( \alpha-\alpha \right)^2+\beta= a\times 0+\beta=\beta.
+ \]
+\end{proof}
+
+\begin{defi}{Forme canonique}
+  La forme $f(x) = a(x-\alpha)^2+\beta$ s'appelle la \emph{forme canonique}.
+\end{defi}
+
+\begin{rmq}
+  Les quantités $\cfrac{-b}{2a}$ et $b^2-4ac$, que l'on a rencontré dans la
+  démonstration de la propriété précédente, vont jouer un rôle important dans
+  la suite.
+\end{rmq}
+
+\begin{exemple}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par
+  \[
+    f(x) = x^2 + 2x + 1.
+  \]
+  La forme canonique de $f$ est 
+  \[
+    f(x) = (x+1)^2.
+  \]
+  En effet, on a dans ce cas $a=1$, $\alpha=-1$ et $\beta=0$.
+\end{exemple}
+\begin{exo}
+  Exercices $58$ et $59$ page $90$.
+\end{exo}
+
+\subsection{Variations et représentation graphique}
+
+Comme souvent lorsqu'on s'intéresse aux fonctions, on va essayer de comprendre
+comment elles se comportent, c'est-à-dire à quoi ressemble leur représentation
+graphique, comment elles varient, etc.
+
+\begin{prop}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x)=ax^2+bx+c$, de forme
+  canonique $f(x)=a(x-\alpha)^2+\beta$.
+
+  \noindent
+  \begin{minipage}[t]{.47\textwidth}
+    \begin{center}
+      {\bf Si} $\mathbf{a>0}$\vspace{.2cm}
+
+      \begin{tikzpicture}
+        \tkzTabInit[lgt=1, espcl=1.5]{$x$ / .7, $f(x)$ / 1.4}{$-\infty$, $\alpha$, $+\infty$}
+        \tkzTabVar{+/, -/$\beta$, +/}
+      \end{tikzpicture}
+    \end{center}
+  La fonction $f$ est strictement décroissante sur $]-\infty, \alpha]$,
+  strictement croissante sur $[\alpha, +\infty[$, et $f$ admet comme minimum
+    $\beta$ en $\alpha$.
+    \begin{center}
+\begin{tikzpicture}
+  \begin{axis}[x=.25cm, y=.25cm, xtick=\empty, ytick=\empty]
+    \addplot[red, very thick, samples=201]{x^2-x-3};
+  \end{axis}
+\end{tikzpicture}
+    \end{center}
+  \end{minipage}
+    \hfill
+  \begin{minipage}[t]{.47\textwidth}
+    \begin{center}
+      {\bf Si} $\mathbf{a<0}$\vspace{.2cm}
+
+      \begin{tikzpicture}
+        \tkzTabInit[lgt=1, espcl=1.5]{$x$ / .7, $f(x)$ / 1.4}{$-\infty$, $\alpha$, $+\infty$}
+        \tkzTabVar{-/, +/$\beta$, -/}
+      \end{tikzpicture}
+    \end{center}
+  La fonction $f$ est strictement croissante sur $]-\infty, \alpha]$,
+  strictement décroissante sur $[\alpha, +\infty[$, et $f$ admet comme maximum
+    $\beta$ en $\alpha$.
+    \begin{center}
+\begin{tikzpicture}
+  \begin{axis}[x=.25cm, y=.25cm, xtick=\empty, ytick=\empty]
+    \addplot[red, very thick, samples=201]{-x^2-2*x+2};
+  \end{axis}
+\end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{prop}
+
+\begin{proof}
+  Soit $a, b, c\in\mathbb{R}$ trois réels, avec $a\neq0$, et soit $f$ la
+  fonction définie sur $\mathbb{R}$ par
+  \[
+    f(x) = ax^2 + bx + c.
+  \]
+  On rappelle que $f$ admet alors une forme canonique
+  \[
+    f(x) = a(x-\alpha)^2+\beta,
+  \]
+  avec $\alpha=\frac{-b}{2a}$ et $\beta=f(\alpha)$.
+
+  Commençons par le cas où $a>0$. Nous allons d'abord démontrer que la fonction $f$ est
+  strictement décroissante sur $]-\infty, \alpha]$. Soit $x_1, x_2\in\mathbb{R}$
+  deux réels tels que 
+  \[
+    x_1 < x_2 \leq \alpha.
+  \]
+  En retranchant $\alpha$ dans cette inégalité, on obtient que
+  $x_1-\alpha<x_2-\alpha$. Le fonction carré étant strictement décroissante sur
+  $]-\infty, 0]$, on a donc
+  \[
+    (x_1-\alpha)^2 > (x_2-\alpha)^2.
+  \]
+  Puis, en multipliant par $a>0$, on obtient $a(x_1-\alpha)^2>a(x_2-\alpha)^2$,
+  et en ajoutant $\beta$ dans les deux membres de cette inéquation, on a
+  finalement
+  \[
+    a(x_1-\alpha)^2+\beta > a(x_2-\alpha)^2+\beta.
+  \]
+  On a bien prouvé que si $x_1<x_2\leq \alpha$, alors $f(x_1)>f(x_2)$,
+  c'est-à-dire que $f$ est strictement décroissante sur $]-\infty, \alpha]$.
+
+  Démontrons désormais que $f$ est strictement croissante sur $[\alpha,
+  +\infty[$. On va procédér de façon similaire à la première partie de la
+    preuve. Soit $x_1, x_2\in\mathbb{R}$ deux réels tels que
+  \[
+    \alpha\leq x_1 < x_2.
+  \]
+  En retranchant $\alpha$, il vient $0\leq x_1-\alpha < x_2-\alpha$. Puis, la
+  fonction carré est étant strictement croissante sur $[0, +\infty[$, on obtient
+  \[
+    (x_1-\alpha)^2 > (x_2-\alpha)^2.
+  \]
+  Ensuite, en multipliant par $a>0$ et en ajoutant $\beta$, ce qui ne change pas
+  le sens de l'inégalité, on a
+  \[
+    a(x_1-\alpha)^2+\beta > a(x_2-\alpha)^2+\beta,
+  \]
+  c'est-à-dire $f(x_1)>f(x_2)$. On a donc prouvé que la fonction $f$ est
+  strictement croissante sur $[\alpha, +\infty[$.
+
+  Le cas où $a<0$ est très similaire, la seule chose qui change est que lorsqu'on
+  multiplie par $a<0$, on change le sens des inégalités, ce qui intervertit 
+  finalement les zones où la fonction $f$ est croissante ou décroissante.
+\end{proof}
+
+\begin{exo}
+  Dans la preuve précédente, rédigez en détails le cas où $a<0$.
+\end{exo}
+
+\begin{defi}{Parabole}
+  La courbe représentative d'une fonction polynôme du second degré est appelée
+  une \emph{parabole}.
+\end{defi}
+
+\begin{exemple}
+  Reprennons l'exemple de la fonction polynôme du second degré définie sur
+  $\mathbb{R}$ par
+  \[
+    f(x) = x^2+2x+1.
+  \]
+  On peut retrouver la forme canonique gr\^ace à une identité remarquable, ou
+  bien retrouver la forme canonique en se servant des formules. Pour cette
+  fonction, on a les coefficients $a, b, c$ qui valent respectivement $1, 2$ et
+  $1$. On peut donc calculer
+  \[
+    \alpha =\frac{-b}{2a}=\frac{-2}{2\times 1} = \frac{-2}{2} = -1,
+  \]
+  puis on retrouve $\beta$:
+  \[
+    \beta = f(\alpha) = f(-1) = (-1)^2+2\times(-1)+1 = 1 - 2 + 1 = 0.
+  \]
+  On retombe bien sur la forme canonique
+  \[
+    f(x) = a(x-\alpha)^2+\beta = 1\times(x-(-1))^2+0=(x+1)^2.
+  \]
+  La proposition précédent nous donne alors les variations de la fonction $f$.
+  Tout d'abord il faut regarder le signe du coefficient $a$. Ici $a=1$ est
+  strictement positif, on est donc dans le cas de gauche. La proposition nous
+enseigne donc que la fonction est strictement décroissante sur $]-\infty, -1[$,
+puis strictement croissante sur $]-1, +\infty[$. Elle admet comme minimum $0$
+    en $-1$. Et, effectivement, on peut vérifier que tout cela est vrai en
+    regardant la représentation graphique de la fonction.
+ \begin{center}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[red, very thick, samples=201]{x^2+2*x+1};
+\end{axis}
+%\draw[color=red] (2,4) node {\LARGE{$y=x^2+2x+1$}};
+\end{tikzpicture}
+\end{center}
+\end{exemple}
+
+\begin{exo}
+  Pour les fonctions suivantes, déterminez la forme canonique, puis les
+  variations et le maximum ou minimum. Vérifiez vos résultats en regardant la
+  représentation graphique de la fonction.
+  \begin{enumerate}
+    \item La fonction $f_1$ définie sur $\mathbb{R}$ par $f_1(x)=x^2-2x+1$.
+    \item La fonction $f_2$ définie sur $\mathbb{R}$ par $f_2(x)=-x^2+4x-5$.
+  \end{enumerate}
+\end{exo}
+\begin{exo}
+  Exercice $64$ page $90$.
+\end{exo}
+
+\begin{prop}
+  Soit $f$ une fonction polynôme du second degré définie sur $\mathbb{R}$ par sa
+  forme canonique
+  \[
+    f(x) = a(x-\alpha)+\beta.
+  \]
+  Alors $f$ est représentée par une parabole dont le sommet a pour coordonnées
+  $(\alpha, \beta)$.
+\end{prop}
+\begin{exemple}
+  La fonction définie par $f(x)=(x+1)^2$ de l'exemple précédent admet une
+  parabole dont le sommet est le point $(-1, 0)$.
+\end{exemple}
+\begin{exo}
+  Exercice $68$ page $91$.
+\end{exo}
+\begin{exo}
+  Exercice $71$ page $91$.
+\end{exo}
+\begin{exo}
+  Exercice $73$ page $91$.
+\end{exo}
+
+\section{Équations du second degré}
+
+Jusqu'à maintenant, on s'est intéressé aux expressions du second degré
+\[
+  ax^2+bx+c
+\]
+comme des fonctions, et on a donc cherché à comprendre le sens de variation de
+ces expressions lorsque la variable $x$ varie. On va maintenant changer un peu
+de point de vue et considérer la variable $x$ comme une inconnue: l'expression
+sera alors considérée comme une équation
+\[
+  ax^2+bx+c = 0.
+\]
+
+\subsection{Définitions} 
+\begin{defi}{Équation du second degré}
+  Une \emph{équation du second degré} à coefficients réels est une équation de
+  la forme
+  \[
+    ax^2+bx+c = 0,
+  \]
+  avec $a,b,c\in\mathbb{R}$ trois réels et $a\neq0$.
+\end{defi}
+
+\begin{defi}{Racines d'une équation}
+  Les solutions de l'équation du second degré $ax^2+bx+c=0$ sont appelées les
+  \emph{racines} du trinôme $ax^2+bx+c$. De la même manière, on parle de racine
+  pour le polynôme défini par $f(x)=ax^2+bx+c$
+\end{defi}
+
+
+\begin{exemple}
+  L'équation $2x^2-x+3=0$ est une équation du second degré avec $a=2, b=-1, c=3$.
+\end{exemple}
+
+\begin{exemple}
+  L'équation $x^2-2=0$ est une équation du second degré avec $a=1, b=0, c=-2$.
+  Cette équation admet deux racines : $\sqrt 2$ et $-\sqrt 2$.
+\end{exemple}
+
+\begin{rmq}
+  Il y a (bien entendu) un lien entre les deux points de vue que nous avons
+  développé : si $f$ est une fonction polynôme du second degré définie sur
+  $\mathbb{R}$ par
+  \[
+    f(x) = ax^2+bx+c,
+  \]
+  alors les racines de l'équation du second degré
+  \[
+    ax^2+bx+c = 0
+  \]
+  correspondent aux abcisses des points où la courbe représentative de la
+  fonction $f$ passe par l'axe des abcisses. Ces points ont été mis en
+  évidence dans le graphique ci-dessous, qui correspond à la fonction définie
+  par $f(x) = x^2-1$.
+ \begin{center}
+  \begin{tikzpicture}
+    \begin{axis}
+      \addplot[red, very thick, samples=201]{x^2-1};
+    \end{axis}
+    \filldraw[blue] (2.25,2.75) circle (1.5pt);
+    \filldraw[blue] (3.25,2.75) circle (1.5pt);
+  \end{tikzpicture}
+\end{center}
+La parabole coupe l'axe des abcisses en les points de coordonnées $(-1, 0)$ et
+$(1, 0)$, et on remarque que $-1$ et $1$ sont des racines de l'équation du second
+degré
+\[
+  x^2-1 = 0.
+\]
+\end{rmq}
+La remarque ci-dessus induit aussi la définition suivante.
+\begin{defi}{Racine d'une fonction polynôme}
+  Soit $f$ la fonction polynôme définie sur $\mathbb{R}$ par
+  \[
+    f(x) = ax^2+bx+c.
+  \]
+  On dit que la valeur $x_0$ est une \emph{racine} de $f$ si
+  \[
+    f(x_0) = 0.
+  \]
+\end{defi}
+
+\begin{rmq}
+  Les deux définitions de racines sont équivalentes. Ainsi, quand on parle de racine d'un
+  trinôme $$ax^2+bx+c,$$ on peut parler indifféremment de racine de l'équation
+  associée au trinôme, ou de racine de la fonction polynôme associée, cela ne
+  change rien.
+\end{rmq}
+
+\subsection{Résolution des équations du second degré dans $\mathbb{R}$}
+
+On va maintenant apprendre à résoudre dans $\mathbb{R}$ les équations du second
+degré, c'est-à-dire à trouver des solutions réelles à nos équations.
+
+\begin{defi}{Discriminant}
+  Le \emph{discriminant} du trinôme $ax^2+bx+c$, noté $\Delta$ (delta
+  majuscule), est le nombre
+  \[
+    \Delta = b^2-4ac.
+  \]
+\end{defi}
+
+\begin{prop}
+  Soit $\Delta=b^2-4ac$ le discriminant du trinôme $ax^2+bx+c$.
+  \begin{itemize}
+    \item Si $\Delta<0$, alors l'équation $ax^2+bx+c=0$ n'a pas de solutions
+      dans $\mathbb{R}$.
+    \item Si $\Delta=0$, alors l'équation $ax^2+bx+c=0$ a une unique solution
+      \[x_0 = \frac{-b}{2a}.\] On dit que $x_0$ est \emph{racine double} du trinôme.
+    \item Si $\Delta>0$, alors l'équation $ax^2+bx+c=0$ admet deux solutions
+      distinctes : 
+      \[
+        x_1=\frac{-b-\sqrt\Delta}{2a}
+        \text{ et }
+        x_2=\frac{-b+\sqrt\Delta}{2a}.
+      \]
+  \end{itemize}
+\end{prop}
+
+\begin{proof}
+  Soit $f$ la fonction polynôme du second degré définie sur $\mathbb{R}$ par
+  \[
+    f(x) = ax^2+bx+c.
+  \]
+  On a vu au cours de la démonstration concernant la forme canonique que l'on
+  pouvait écrire
+  \[
+    f(x) = a\left(x+\frac{b}{2a}\right)^2-\frac{b^2-4ac}{4a} =
+    a\left(x+\frac{b}{2a}\right)^2-\frac{\Delta}{4a} .
+  \]
+  En raisonnant \emph{par équivalence}, on a ainsi
+  \begin{align*}
+    f(x) = 0 &\Longleftrightarrow a\left( x+\frac{b}{2a}
+    \right)^2-\frac{\Delta}{4a}=0 \\
+    &\Longleftrightarrow a\left( x+\frac{b}{2a}
+    \right)^2=\frac{\Delta}{4a} \\
+    &\Longleftrightarrow \left( x+\frac{b}{2a}
+    \right)^2=\frac{\Delta}{4a^2}.
+  \end{align*}
+  On peut alors différencier plusieurs cas.
+  \paragraph{Premier cas : $\Delta<0$.} Dans ce cas on a
+  $\frac{\Delta}{4a^2}<0$. Mais on a aussi $\left( x+\frac{b}{2a} \right)^2\geq0$
+  car un carré est toujours positif ou nul. L'équation n'a donc pas de solution.
+  \paragraph{Deuxième cas : $\Delta=0$.} Dans ce cas l'équation devient
+  \begin{align*}
+    f(x) = 0 &\Longleftrightarrow \left( x+\frac{b}{2a} \right)^2 = 0 \\
+    &\Longleftrightarrow \left( x+\frac{b}{2a} \right) = 0 \\
+    &\Longleftrightarrow x = \frac{-b}{2a}.
+  \end{align*}
+  L'équation a donc une unique solution, donnée par $x_0=\cfrac{-b}{2a}$.
+  \paragraph{Troisième cas : $\Delta>0$.} Cette fois-ci on a
+  \begin{align*}
+    f(x) = 0 &\Longleftrightarrow \left( x+\frac{b}{2a} \right)^2 =
+    \frac{\Delta}{4a^2} \\
+    &\Longleftrightarrow \left( x+\frac{b}{2a} \right)^2 =
+    \left( \frac{\sqrt\Delta}{2a} \right)^2 \\
+    &\Longleftrightarrow x+\frac{b}{2a}=\frac{\sqrt\Delta}{2a}\text{ ou
+    }x+\frac{b}{2a}=-\frac{\sqrt\Delta}{2a}\\
+    &\Longleftrightarrow x=-\frac{b}{2a}+\frac{\sqrt\Delta}{2a}\text{ ou
+    }x=-\frac{b}{2a}+\frac{\sqrt\Delta}{2a}.
+  \end{align*}
+  Et on obtient finalement deux solutions distinctes, données par
+  \[
+    x_1 = \frac{-b-\sqrt\Delta}{2a}\text{ et }x_2 =
+    \frac{-b+\sqrt\Delta}{2a}.
+  \]
+\end{proof}
+
+\begin{exemple}
+  Considérons l'équation du second degré
+  \[
+    x^2+2x-3 = 0.
+  \]
+  On a ici $a=1, b=2, c=-3$. On commence par calculer le discriminant de cette
+  équation, on obtient
+  \[
+    \Delta = b^2-4ac = 2^2 - 4\times1\times(-3)=16.
+  \]
+  On est dans le cas où $\Delta>0$ et on sait qu'on a ainsi deux solutions
+  distinctes:
+  \begin{align*}
+    x_1 &= \frac{-b-\sqrt\Delta}{2a} \\
+    &= \frac{-2-4}{2}\\
+    &= \frac{-6}{2}\\
+    &= -3
+  \end{align*}
+  et
+  \begin{align*}
+    x_2 &= \frac{-b+\sqrt\Delta}{2a} \\
+    &= \frac{-2+4}{2}\\
+    &= \frac{2}{2}\\
+    &= 1.
+  \end{align*}
+  L'ensemble des solutions de l'équation est donc $\mathscr S = \left\{ -3, 1
+  \right\}$.
+\end{exemple}
+
+\begin{exo}
+  Exercice $81$ page $92$.
+\end{exo}
+\begin{exo}
+  Exercice $90$ page $92$.
+\end{exo}
+
+\section{Propriétés d'un trinôme $ax^2+bx+c$}
+
+Maintenant que nous savons le comportement d'un trinôme vu comme un fonction et
+que nous savons résoudre une équation du second degré, nous allons donner
+quelques propriétés supplémentaires concernant les trinômes.
+
+\subsection{Factorisation}
+
+Nous avons pour
+l'instant étudié la forme développée et la forme canonique d'un trinôme, mais il
+en existe encore une autre : la forme \emph{factorisée}.
+
+\begin{prop}
+  Soit $f$ une fonction polynôme du second degré définie sur $\mathbb{R}$ par
+  \[
+    f(x) = ax^2+bx+c.
+  \]
+  \begin{itemize}
+    \item Si $\Delta>0$, alors $f(x)=a(x-x_1)(x-x_2)$ où $x_1$ et $x_2$ sont les
+      racines de $f$.
+    \item Si $\Delta=0$, alors $f(x)=a(x-x_0)^2$ où $x_0$ est la racine double de
+      $f$.
+    \item Si $\Delta<0$, alors la fonction $f$ ne peut pas s'écrire comme un
+      produit de deux polynômes de degré $1$.
+  \end{itemize}
+\end{prop}
+
+\begin{proof}
+  On a vu que l'on pouvait toujours écrire $f$ sous la forme
+\begin{align*}
+  f(x) &= a\left( x+\frac{b}{2a} \right)^2-\frac{\Delta}{4a} \\
+  &= a\left[ \left( x+\frac{b}{2a} \right)^2-\frac{\Delta}{4a^2} \right].
+\end{align*}
+\paragraph{Si $\Delta>0$,} on peut alors utiliser l'identité remarquable
+$y^2-z^2=(y+z)(y-z)$, et on a
+\begin{align*}
+  f(x) &= a\left[ \left( x+\frac{b}{2a} \right)^2-\frac{\Delta}{4a^2} \right] \\
+  &= a\left( x+\frac{b}{2a}+\frac{\sqrt\Delta}{2a} \right)\left(
+  x+\frac{b}{2a}-\frac{\sqrt\Delta}{2a}\right) \\
+  &= a\left( x-\frac{-b-\sqrt\Delta}{2a}\right)\left(
+  x-\frac{-b+\sqrt\Delta}{2a}\right) \\
+  &= a(x-x_1)(x-x_2).
+\end{align*}
+\paragraph{Si $\Delta=0$,} on a alors
+\begin{align*}
+  f(x) &= a\left(x+\frac{b}{2a}  \right)^2 \\
+  &= a\left(x-\frac{-b}{2a}  \right)^2 \\
+  &= a(x-x_0)^2.
+\end{align*}
+\end{proof}
+
+\begin{exemple}
+  On a vu précédemment que la fonction $f$ définie par
+  \[
+    f(x) = x^2+2x-3
+  \]
+  avait pour discriminant $\Delta=16$ et pour racines $x_1=-3$ et $x_2=1$. Cela
+  signifie que l'on peut aussi écrire $f$ sous la forme factorisée
+  \[
+    f(x) = (x+3)(x-1).
+  \]
+\end{exemple}
+
+\begin{exo}
+  Exercice $86$ page $92$.
+\end{exo}
+
+\subsection{Somme et produit de racines}
+\begin{prop}
+  Soit $a,b,c\in\mathbb{R}$ et soit $f$ une fonction polynôme de degré $2$
+  définie sur $\mathbb{R}$ par
+  \[
+    f(x)=ax^2+bx+c,
+  \]
+  dont le discriminant est strictement positif. La fonction $f$ a alors deux
+  racines distinctes $x_1$ et $x_2$ et on a
+  \[
+    x_1+x_2 = \frac{-b}{a}\text{ et }x_1\times x_2=\frac{c}{a}.
+  \]
+\end{prop}
+\begin{proof}
+  D'après la proposition sur la factorisation, on sait que l'on peut écrire
+  \[
+    f(x) = a(x-x_1)(x-x_2).
+  \]
+  En développant, on obtient ainsi
+  \begin{align*}
+    f(x) &= ax^2 - axx_1 - axx_2+ax_1x_2 \\
+    &= ax^2 - a(x_1+x_2)x + ax_1x_2
+  \end{align*}
+  D'autre part, on a $f(x) = ax^2+bx+c$, ainsi en identifiant les coefficients
+  des deux écritures, on obtient
+  \[
+    -a(x_1+x_2) = b\text{ et }ax_1x_2=c,
+  \]
+  puis on a bien
+  \[
+    x_1+x_2 = \frac{-b}{a}\text{ et }x_1\times x_2=\frac{c}{a}.
+  \]
+\end{proof}
+
+\subsection{Signe d'une fonction polynôme du second degré}
+\begin{prop}
+  Soit $f$ une fonction polynôme du second degré définie sur $\mathbb{R}$ par
+  \[
+    f(x)=ax^2+bx+c,
+  \]
+  de déterminant $\Delta$.
+  \begin{itemize}
+    \item Si $\Delta<0$, alors pour tout réel $x\in\mathbb{R}$, $f(x)$ est du
+      signe de $a$.
+    \item Si $\Delta=0$, alors pour tout réel $x\neq\frac{-b}{2a}$, $f(x)$ est
+      du signe de $a$, et $f(\frac{-b}{2a})=0$.
+    \item Si $\Delta>0$, alors on a les tableaux de signe suivants.
+
+      \noindent
+  \begin{minipage}[t]{.47\textwidth}
+    \begin{center}
+      {\bf Si} $\mathbf{a>0}$\vspace{.2cm}
+
+      \begin{tikzpicture}
+        \tkzTabInit[lgt=1, espcl=1.5]{$x$ / .7, $f(x)$ / 1.4}{$-\infty$, $x_1$,
+        $x_2$, $+\infty$}
+        \tkzTabLine{, +, z , -, z, +,}
+      \end{tikzpicture}
+    \end{center}
+  \vspace{.2cm}
+  \end{minipage}
+    \hfill
+  \begin{minipage}[t]{.47\textwidth}
+    \begin{center}
+      {\bf Si} $\mathbf{a<0}$\vspace{.2cm}
+
+      \begin{tikzpicture}
+        \tkzTabInit[lgt=1, espcl=1.5]{$x$ / .7, $f(x)$ / 1.4}{$-\infty$, $x_1$,
+        $x_2$, $+\infty$}
+        \tkzTabLine{, -, z , +, z, -,}
+      \end{tikzpicture}
+    \end{center}
+  \vspace{.2cm}
+  \end{minipage}
+  On peut retenir que dans ce cas, $f$ est du signe de $a$, sauf entre ses
+  racines.
+  \end{itemize}
+\end{prop}
+\begin{exemple}
+  On peut reprendre la fonction $f$ définie sur $\mathbb{R}$ par
+  \[
+    f(x) = x^2+2x-3.
+  \]
+  On a vu que le déterminant de $f$ vaut $16$ et que les deux racines de $f$
+  sont données par $x_1=-3$ et $x_2=1$. On a ainsi le tableau de signe suivant.
+  \begin{center}
+      \begin{tikzpicture}
+        \tkzTabInit[lgt=1, espcl=1.5]{$x$ / .7, $f(x)$ / 1.4}{$-\infty$, $-3$,
+        $1$, $+\infty$}
+        \tkzTabLine{, +, z , -, z, +,}
+      \end{tikzpicture}
+  \end{center}
+  Et, en effet, cela concorde avec la représentation graphique de $f$ donnée
+  ci-dessous.
+  \begin{center}
+\begin{tikzpicture}
+\begin{axis}
+  \addplot[red, very thick, samples=201, domain=-5:-3]{x^2+2*x-3};
+  \addplot[blue, very thick, samples=201, domain=-3:1]{x^2+2*x-3};
+  \addplot[red, very thick, samples=201, domain=1:5]{x^2+2*x-3};
+\end{axis}
+\filldraw[black] (1.25, 2.75) circle (2pt);
+\filldraw[black] (3.25, 2.75) circle (2pt);
+\end{tikzpicture}
+  \end{center}
+\end{exemple}
+
+\begin{exo}
+  Exercice $109$ page $94$.
+\end{exo}
+\begin{exo}
+  Exercice $114$ page $94$.
+\end{exo}
+\begin{exo}
+  Exercice $117$ page $94$.
+\end{exo}
+\begin{exo}
+  Exercice $118$ page $94$.
+\end{exo}
+\begin{exo}
+  Exercice $135$ page $98$.
+\end{exo}
+
+\end{document}

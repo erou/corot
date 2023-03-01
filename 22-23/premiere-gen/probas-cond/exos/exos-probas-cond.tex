@@ -1,0 +1,289 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Probabilités conditionnelles -- Exercices}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 2 : Information chiffrée}
+\date{}
+\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\paragraph{Exercice 1.} On considère $A$ et $B$ deux événements. On rappelle que
+\[
+  P(A\cup B)=P(A)+P(B)-P(A\cap B).
+\]
+\begin{enumerate}
+  \item Si $P(A)=0,5$, $P(\overline B)=0,7$ et $P(A\cap B)=0,12$, calculer
+    $P(B)$ puis $P(A\cup B)$.
+  \item Si $P(A)=\frac{1}{4}$, $P(B)=\frac{3}{5}$ et $P(A\cup
+    B)=\frac{7}{10}$, que vaut $P(A\cap B)$ ?
+\end{enumerate}
+
+\paragraph{Exercice 2.} Quand il commande une pizza à emporter, Jonas a remarqué
+que le temps d'attente annoncé est $5$, $10$, $15$ ou $20$ minutes avec les
+probabilités $p_5=0,3$, $p_{10}=0,2$, $p_{15} = 0,1$ et
+$p_{20}$.
+\begin{enumerate}
+  \item Déterminer la probabilité, notée $p_{20}$, que le temps d'attente soit de $20$ minutes.
+  \item Quelle est la probabilité d'attendre $10$ minutes ou moins ?
+\end{enumerate}
+
+\paragraph{Exercice 3.} {\small Dans son placard, Valérie a des bols et des tasses avec
+ou sans anse selon la répartition ci-dessous.}\\
+\begin{minipage}{.6\textwidth}
+Le matin, elle prend un de ces
+récipients au hasard pour prendre son café et on considère les événements
+\begin{itemize}
+  \item $A$ : « Le récipient a une anse. »
+  \item $B$ : « Le récipient est un bol. »
+\end{itemize}
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+  \begin{center}
+ \begin{tabular}{cccc}
+  \toprule
+  & \textbf{Bol} & \textbf{Tasse} & \textbf{Total} \\
+  \midrule
+  \textbf{Avec anse} & $2$ & $9$ & $11$ \\
+  \textbf{Sans anse} & $6$ & $3$ & $9$ \\
+  \textbf{Total} & $8$ & $12$ & $20$ \\
+  \bottomrule
+\end{tabular}
+  \end{center}
+\end{minipage}
+\begin{enumerate}
+  \item Déterminer les probabilités $P(A)$ et $P(B)$.
+  \item Décrire chacun des événements $A\cap B$, $A\cup B$, $\overline A\cap B$
+    par une phrase et donner sa probabilité.
+  \item Écrire l'événement « Le récipient est une tasse sans anse » à l'aise des
+    événements $A$ et $B$.
+  \item Associer chacune des phrases suivantes à la valeur qui lui correspond.\\
+    \begin{minipage}[]{.6\textwidth}
+      \begin{center}
+        \begin{enumerate}
+          \item Probabilité qu'une tasse ait une anse
+          \item Probabilité qu'un récipient à anse soit une tasse
+          \item Probabilité qu'un récipient soit une tasse à anse
+        \end{enumerate}
+      \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[]{.2\textwidth}
+      \begin{center}
+        \begin{enumerate}[label=(\arabic*)]
+          \item $\frac{9}{20}$ 
+          \item $\frac{9}{11}$ 
+          \item $\frac{9}{12}$ 
+        \end{enumerate}
+      \end{center}
+    \end{minipage}
+\end{enumerate}
+
+\paragraph{Exercice 4.}~\\
+\begin{minipage}{.5\textwidth}
+  Lors d'une enquête portant sur les $2000$ salariés d'une entreprise, on a
+  obtenu les informations suivantes :
+\begin{itemize}
+  \item $30$\% des salariés ont $40$ ans ou plus;
+\end{itemize}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+ \begin{tabular}{cccc}
+  \toprule
+  & \textbf{$<40$ ans} & \textbf{$\geq40$ ans} & \textbf{Total} \\
+  \midrule
+  \textbf{Cadres} &  &  &  \\
+  \textbf{Non cadres} &  &  &  \\
+  \textbf{Total} &  & & $2000$ \\
+  \bottomrule
+\end{tabular}
+  \end{center}
+\end{minipage}
+\begin{itemize}
+  \item $40$\% des salariés de plus de $40$ ans sont des cadres;
+  \item $25$\% des salariés de moins de $40$ ans sont des cadres;
+\end{itemize}
+\begin{enumerate}
+  \item Compléter le tableau ci-contre.
+  \item On interroge au hasard un employé de cette entreprise. On considère les
+    événements $A$ : « la personne interrogée a $40$ ans ou plus » et $B$ : « la
+    personne interrogée est cadre ».
+    \begin{enumerate}
+      \item Calculer les probabilités $P(A)$ et $P(B)$ des événements $A$ et
+        $B$.
+      \item Définir par une phrase chacun des événements $A\cap B$ et $A\cup B$.
+    \item Calculer les probabilités $P(A\cap B)$ et $P(A\cup B)$.
+    \end{enumerate}
+  \item Sachant que la personne a $40$ ans ou plus, quelle est la probabilité
+    que ce ne soit pas un cadre ?
+\end{enumerate}
+
+\paragraph{Exercice 5.} Soient $A$ et $B$ deux événements tels que $P_A(B)=0,8$,
+$P_B(A)=0,6$ et $P(A)=0,4$.
+\begin{enumerate}
+  \item Calculer $P(A\cap B)$.
+  \item En déduire $P(B)$.
+  \item Calculer alors $P(A\cup B)$.
+\end{enumerate}
+
+\paragraph{Exercice 6.} On lance un dé équilibré à six faces et on considère les
+événements $A$ : « obtenir $4, 5, 6$ » et $B$ : « obtenir un nombre pair ».
+\begin{enumerate}
+  \item Calculer $P_{B}(A)$.
+  \item Calculer $P_A(B)$.
+  \item Calculer $P_{A\cap B}(A\cup B)$.
+\end{enumerate}
+
+\paragraph{Exercice 7.}
+Dans une forêt, il y a $30$\% d'épicéas et $70$\% de sapins. Un parasite infecte
+$10$\% des arbres. Les épicéas représentent $20$\% des arbres touchés.
+\begin{enumerate}
+  \item Quelle est la probabilité qu'un épicéa soit touché par le parasite ?
+  \item Faire un tableau pour résumer l'ensemble de la situation.
+\end{enumerate}
+
+\paragraph{Exercice 8.}
+Vincent et Anne sont haltérophiles. La probabilité pour que Vincent soulève plus
+de $100$ kg est égale à $0,75$, alors que la probabilité pour qu'Anne soulève
+plus de $100$ kg est égale à $0,6$. La probabilité pour qu'au moins l'un des
+deux soulève plus de $100$ kg est égale à $0,85$.
+\begin{enumerate}
+  \item Quelle est la probabilité qu'ils soulèvent $100$ kg tous les deux ?
+  \item Anne vient de voir Vincent soulever $100$ kg. Quelle est la probabilité
+    qu'elle soulève $100$ kg ?
+\end{enumerate}
+
+\paragraph{Exercice 9.} Une urne opaque contient trois boules rouges, une boule
+noire et une boule verte, toutes indiscernables au toucher. On procède au
+tirage, sans remise, de trois boules dont on note la couleur.\\
+Déterminer la probabilité d'obtenir trois boules de couleurs différentes.
+
+\paragraph{Exercice 10.} Dans une crèche, chaque matin, Hapsatou fait la sieste
+avec une probabilité de $0,7$. Si elle a fait la sieste le matin, elle fera à
+nouveau la sieste l'après-midi avec une probabilité de $0,2$. Sinon, elle fera
+la sieste l'après-midi avec une probabilité de $0,9$.
+\begin{enumerate}
+  \item Représenter la situation avec un arbre de probabilité que l'on
+    complètera entièrement.
+  \item Calculer la probabilité qu'elle de fasse pas du tout la sieste dans la
+    journée.
+  \item Calculer la probabilité qu'elle fasse la sieste l'après-midi.
+\end{enumerate}
+
+\paragraph{Exercice 11.}
+Une maladie est
+présente dans la population, dans la proportion d'une personne malade sur
+$10000$. Un responsable d'un grand laboratoire pharmaceutique vient
+vanter son nouveau test de dépistage : si une personne est malade, le test est
+positif à $99\%$. Si une personne n'est pas malade, le test est positif à
+$0,1\%$.
+\begin{enumerate}
+  \item Sans faire de calculs (intuitivement), ce test semble-t-il performant ?
+  \item Représenter la situation par un arbre de probabilité.
+  \item Calculer la probabilité qu'une personne soit malade sachant que son test
+    est positif.
+  \item Que penser de ce test ?
+\end{enumerate}
+
+\paragraph{Exercice 12.} On jette un dé non truqué  $20$ faces numérotées de $1$
+à $20$. On note
+\begin{itemize}
+  \item $A$ : « Le résultat est pair. »
+  \item $B$ : « Le résultat est l'un des nombres $1; 3; 5; 7; 11; 13; 17; 19$. »
+  \item $C$ : « Le résultat est impair. »
+  \item $D$ : « Le résultat est l'un des nombres $9$ ou $15$. »
+  \item $E$ : « Le résultat est un nombre premier. »
+\end{itemize}
+\begin{enumerate}
+  \item Les événements $E$ et $A$ forment-ils une partition de l'univers ?
+  \item Les événements $C$ et $\overline B$ forment-ils une partition de l'univers ?
+  \item Parmi ces cinq événements, en donner deux qui forment une partition de
+    l'univers.
+  \item Parmi ces cinq événements, en donner trois qui forment une partition de
+    l'univers.
+\end{enumerate}
+
+\paragraph{Exercice 13.} Lorsqu'elle est exposée au virus de la grippe, une
+personne peut développer la grippe. Quand elle est vaccinée, la personne exposé
+ne développe pas la maladie avec une probabilité $\alpha$. Le nombre $\alpha$
+s'appelle l'efficacité du vaccin. De plus, on constate que, parmi les personnes
+exposées, $20$\% ne sont ni vaccinnées, ni malades. Cette année, la probabilité
+qu'une personne exposée soit vaccinée est de $0,4$.
+\begin{enumerate}
+  \item Exprimer, en fonction de $\alpha$, la probabilité qu'une personne
+    exposée soit vaccinnée et ne soit pas malade.
+  \item Exprimer, en fonction de $\alpha$, la probabilité qu'une personne
+    exposée soit vaccinée et malade.
+  \item Pour quelle valeur de $\alpha$ la proportion de personnes exposées qui
+    ne sont pas malades est égale à $50$\% ?
+\end{enumerate}
+
+\paragraph{Exercice 14.} Dans chacun des cas suivants, dire si les événements
+$A$ et $B$ sont indépendants.
+\begin{enumerate}
+  \item $P(A)=0,2$, $P(B)=0,8$, et $P(A\cap B)=0,2$.
+  \item $P(A)=0,4$, $P(B)=0,8$, et $P(A\cap B)=0,32$.
+  \item $P(A)=0,5$, $P(B)=0,3$, et $P(A\cup B)=0,65$.
+  \item $P(A)=0,48$, $P(B)=0,8$, et $P(A\cap B)=0$.
+\end{enumerate}
+
+\paragraph{Exercice 15.} On tire une carte dans un jeu de $32$ cartes. Dans
+chacun des cas suivants, dire si les événements sont indépendants.
+\begin{enumerate}
+  \item $A$ : « tirer un roi » et $B$ : « tirer un rouge »
+  \item $A$ : « tirer un roi » et $B$ : « ne pas tirer un as »
+  \item $A$ : « tirer un roi ou tirer une dame rouge » et $B$ : « tirer un rouge »
+\end{enumerate}
+
+\paragraph{Exercice 16.} Soient $A$ et $B$ deux événements incompatibles
+($P(A\cap B)=0$) de probabilité non nulle.\\Démontrer que $A$ et $B$ ne sont pas
+indépendants.
+
+\paragraph{Exercice 17.} On considère deux événements $A$ et $B$ tels que
+$P(A\cap B)=0,8$ et $P(A\cup B)=0,9$.
+\begin{enumerate}
+  \item Montrer que, pour tout $x\in\mathbb{R}$,
+    $x^2-1,7x+0,8=(x-0,85)^2+0,0775$.
+  \item Montrer que $A$ et $B$ ne peuvent pas être indépendants.
+\end{enumerate}
+
+\paragraph{Exercice 18.} On considère $A$ un événement indépendant de 
+lui-même. Démontrer que $P(A)=0$ ou $P(A)=1$.
+
+\paragraph{Exercice 19.} On considère que la probabilité de donner naissance à
+une fille est la même que celle de donner naissance à un garçon. De plus, on
+admet que le sexe d'un enfant à la naissance est indépendant du sexe des enfants
+nés avant.\\
+Manuel a deux enfants. Lorsque le facteur est venu sonner à sa porte pour lui
+apporter un colis, c'est une fille qui a répondu. On ne sait pas si cette fille
+est l'aînée des deux enfants ou pas. Quelle est la probabilité que l'autre
+enfant de Manuel soit un garçon : $\frac{1}{2}$ ou $\frac{2}{3}$ ? Justifier.
+
+\paragraph{Exercice 20 (paradoxe de Monty-Hall).} Lors d'un jeu télévisé, une
+candidate est placée devant trois portes fermées. Derrière l'une d'elle se trouve
+une voiture, tandis que derrière chacune des deux autres portes il n'y a rien.
+Le jeu se déroule en trois étapes :
+\begin{enumerate}[label=(\alph*)]
+  \item La candidate choisit d'abord une première porte.
+  \item\label{choix} Le présentateur va alors ouvrir une autre porte, différente de celle
+    choisie par la candidate, derrière laquelle il n'y a rien.
+  \item Le présentateur propose à la candidate de modifier son choix, et ouvre
+    la porte finalement choisie par la candidate, qui gagne la voiture si elle
+    est derrière la porte choisie.
+\end{enumerate}
+\begin{enumerate}
+  \item Intuitivement, quelle est la probabilité que la voiture soit derrière la
+    porte choisie par la candidate au début du jeu ? À l'issue de l'étape
+    \ref{choix} ? Vérifier par le calcul (un arbre peut être utile !).
+  \item La candidate a-t-elle intérêt à modifier son choix lorsque le présentateur lui
+propose de le faire ?
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\begin{center}
+\textbf{\LARGE \textsc{Contrôle 2}}\\[2mm]
+
+{\large Lundi 28 Novembre 2022, durée : 1h00}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+\paragraph{Exercice 1. \emph{(7 points)}}À l’occasion d’une cérémonie, un pâtissier confectionne
+un assortiment de $180$ pâtisseries composé d’éclairs et de religieuses qui sont
+soit au chocolat, soit au café. Les deux tiers de ces pâtisseries sont des
+éclairs. On sait également qu’il y a $100$ pâtisseries au chocolat parmi
+lesquels un quart sont des religieuses.
+Soit $E$ l'événement : « la pâtisserie est un éclair » et $C$ l'événement : « la
+pâtisserie est au chocolat ».
+\begin{enumerate}
+  \item À partir des indications de l'énoncé, compléter le tableau suivant.
+    \begin{center}
+      \def\arraystretch{1.5}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      & \textbf{Chocolat} & \textbf{Café} & \textbf{Total} \\
+      \hline
+      \textbf{Éclairs} & & & \\
+      \hline
+      \textbf{Religieuses} & & & \\
+      \hline
+      \textbf{Total} & & & \\
+      \hline
+    \end{tabular}
+    \end{center}
+  \item Antoine choisit au hasard un g\^ateau parmi toutes les p\^atisseries.
+    Calculer la probabilité qu'il s'agisse :
+    \begin{enumerate}
+      \item d'une religieuse ;
+      \item d'une p\^atisserie au café.
+    \end{enumerate}
+  \item Décrire en français l'événement $E\cap C$, puis calculer sa probabilité.
+  \item Calculer la probabilité de l'événement : « la p\^atisserie est un éclair
+    ou est une p\^atisserie au chocolat ».
+  \item Calculer $P_E(\overline C)$. Interpréter ce résultat.
+  \item Les événements $E$ et $C$ sont-ils indépendants ? Justifier.
+\end{enumerate}
+\newpage
+\paragraph{Exercice 2. \emph{(8 points)}}
+En prévision d’une élection entre deux candidats A et B, un institut de
+sondage recueille les intentions de vote de futurs électeurs. Parmi les $1\;200$
+personnes qui ont répondu au sondage, $47$\% affirment vouloir voter pour le
+candidat A et les autres pour le candidat B.
+Compte-tenu du profil des candidats, l’institut de sondage estime que $10$\% des personnes déclarant
+vouloir voter pour le candidat A ne disent pas la vérité et votent en réalité
+pour le candidat B, tandis que $20$\% des personnes déclarant vouloir voter
+pour le candidat B ne disent pas la vérité et votent en réalité
+pour le candidat A.\\[5mm]
+On choisit au hasard une personne ayant répondu au sondage et on note :
+\begin{itemize}
+  \item $A$ l'événement « la personne interrogée affirme vouloir voter pour le
+    candidat A » ;
+  \item $B$ l'événement « la personne interrogée affirme vouloir voter pour le
+    candidat B » ;
+  \item $V$ l'événement « la personne interrogée dit la vérité ».
+\end{itemize}
+\begin{enumerate}
+  \item Construire un arbre de probabilités traduisant la situation.
+  \item Donner $P_A(V)$ et $P_B(\overline V)$.
+  \item Calculer la probabilité qu'une personne interrogée vote pour le candidat
+    A et dise la vérité.
+  \item \begin{enumerate}
+      \item Calculer la probabilité que la personne interrogée dise la vérité.
+      \item En déduire le nombre de personnes qui disent la vérité à ce sondage.
+      \item Sachant que la personne interrogée dit la vérité, calculer la
+        probabilité qu'elle affirme vouloir voter pour le candidat A.
+    \end{enumerate}
+  \item \begin{enumerate}
+      \item On note $E$ l'événement « la personne choisie vote effectivement
+        pour le candidat A ». Exprimer $E$ en fonction des événements $A$, $B$
+        et $V$.
+      \item Montrer que la probabilité de l'événement $E$ est $0,529$.
+    \end{enumerate}
+\end{enumerate}
+
+\paragraph{Exercice 3. \emph{(5 points)}} Pour chacune des fonctions, donner l'ensemble de
+dérivabilité et l'expression de la fonction dérivée.
+\begin{align*}
+  \textbf{1)}\;& f:x\mapsto\sqrt{7x+1} &
+  \textbf{2)}\;& g:x\mapsto (x+1)(\sqrt{x}-1)&
+  \textbf{3)}\;& h:x\mapsto \frac{1+x}{1-x}
+\end{align*}
+
+\end{document}

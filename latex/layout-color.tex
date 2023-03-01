@@ -1,0 +1,737 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% PACKAGES
+% ========
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english, french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm,amsopn}
+\usepackage{hyperref}
+
+% Pour avoir l'écriture \mathscr (math script)
+% ============================================
+
+\usepackage{mathrsfs}
+
+% Deal with coma as a decimal separator
+% =====================================
+
+\usepackage{icomma}
+
+% Package Geometry
+% ================
+
+\usepackage[a4paper, lmargin=2cm, rmargin=2cm, top=\topbotmargins, bottom=\topbotmargins]{geometry}
+
+% Package multicol
+% ================
+
+\usepackage{multicol}
+
+% Redefine abstract
+% =================
+
+% Note
+% ====
+%
+% Le reste a été commenté pour ne pas charger trop de choses au démarrage. On
+% verra si on en a besoin plus tard.
+%
+% --------
+%
+%\usepackage{mathrsfs}
+%\usepackage{multirow}
+%\usepackage{bm}
+%\hypersetup{
+%    colorlinks=true,
+%    linkcolor=blue,
+%    citecolor=red,
+%}
+%\usepackage{diagbox}
+%
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TIKZ
+% ====
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{tkz-tab} % Variation tables
+
+\usepackage{pgfplots}
+%\usepackage{pgf-pie} % Pie charts
+
+\pgfplotsset{
+%\newcommand{\settingsgraph}{
+x=.5cm,y=.5cm,
+xticklabel style = {font=\scriptsize, yshift=.1cm},
+yticklabel style = {font=\scriptsize, xshift=.1cm},
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+major grid style = {color=white!80!blue},
+xmin=-5.5,
+xmax=5.5,
+ymin=-5.5,
+ymax=5.5,
+xtick={-5.0,-4.0,...,5.0},
+ytick={-5.0,-4.0,...,5.0},
+}
+
+% Tikz style
+
+\tikzset{round/.style={circle, draw=black, very thick, scale = 0.7}}
+\tikzset{arrow/.style={->, >=latex}}
+\tikzset{dashed-arrow/.style={->, >=latex, dashed}}
+
+\newcommand{\point}[3]{\draw[very thick, #3] (#1-.1, #2)--(#1+.1, #2)
+(#1, #2-.1)--(#1, #2+.1)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% FANCY HEADER
+% ============
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\newcommand{\changefont}{\fontsize{9}{9}\selectfont}
+\renewcommand{\headrulewidth}{0mm}
+\renewcommand{\footrulewidth}{0mm}
+
+\fancyhead[C]{}
+\fancyhead[L]{\titreclasse}
+\fancyhead[R]{\titrechapitre}
+\fancyfoot[C]{}
+\fancyfoot[L]{}
+\fancyfoot[R]{\pagination}
+\addtolength{\skip\footins}{20pt} % distance between text and footnotes
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% THEOREM STYLE
+% =============
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[tikz]{bclogo}
+\usepackage{mdframed}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings, breakable, theorems, skins}
+
+%\newtheoremstyle{break}%
+%{}{}%
+%{\itshape}{}%
+%{\bfseries}{}%  % Note that final punctuation is omitted.
+%{\newline}{}
+
+\newtheoremstyle{scbf}%
+{}{}%
+{}{}%
+%{\scshape}{}%  % Note that final punctuation is omitted.
+{\bfseries\scshape}{}%  % Note that final punctuation is omitted.
+{\newline}{}
+
+%\theoremstyle{break}
+%\theoremstyle{plain}
+%\newtheorem{thm}{Theorem}[section]
+%\newtheorem{lm}[thm]{Lemma}
+%\newtheorem{prop}[thm]{Proposition}
+%\newtheorem{cor}[thm]{Corollary}
+
+%\theoremstyle{scbf}
+%\newtheorem{exo}{$\star$ Exercice}
+
+%\theoremstyle{definition}
+%\newtheorem{defi}[thm]{Definition}
+%\newtheorem{ex}[thm]{Example}
+
+%\theoremstyle{remark}
+%\newtheorem{rem}[thm]{Remark}
+
+% Defining the Remark environment
+% ===============================
+
+\newenvironment{rmq}
+  {
+    \begin{bclogo}[logo=\bcinfo, noborder=true]{Remarque}
+  }
+  {
+    \end{bclogo}
+  }
+
+% Defining the exercise environment
+% =================================
+
+\newcounter{exos}
+\setcounter{exos}{1}
+
+\newenvironment{exo}
+  {
+    \begin{bclogo}[logo=\bccrayon, noborder=true]{Exercice \theexos}
+  }
+  {
+    \end{bclogo}
+    \addtocounter{exos}{1}
+  }
+
+
+% Redefining the proof environment from amsthm
+% ============================================
+
+\tcolorboxenvironment{proof}{
+  blanker, breakable, before skip=10pt,after skip=10pt,
+  borderline west={1mm}{0pt}{red},
+  left=5mm,
+}
+
+% Defining the definition environment
+% ===================================
+
+\colorlet{coldef}{black!50!green}
+
+\newcounter{defis}
+\setcounter{defis}{1}
+
+\newenvironment{defi}[1]
+  {
+    \begin{defihid}{{#1}}{\thedefis}
+  }
+  {
+    \end{defihid}
+    \addtocounter{defis}{1}
+  }
+
+\newtcolorbox{defihid}[2]{%
+  empty,title={ {\bfseries Définition {#2}} ({#1})},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[coldef,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=coldef,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[coldef,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[coldef,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[coldef,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[coldef,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\newenvironment{notation}
+  {
+    \begin{notationhid}{\thedefis}
+  }
+  {
+    \end{notationhid}
+    \addtocounter{defis}{1}
+  }
+
+\newtcolorbox{notationhid}[1]{%
+  empty,title={Notation {#1}},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[coldef,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=coldef,fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[coldef,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[coldef,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[coldef,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[coldef,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+
+% Defining the proposition, theorem, etc. environment
+% ===================================================
+
+\colorlet{colprop}{red!75!black}
+
+\newcounter{props}
+\setcounter{props}{1}
+
+\newenvironment{prop}
+  {
+    \begin{prophid}{\theprops}
+  }
+  {
+    \end{prophid}
+    \refstepcounter{props}
+  }
+
+\newtcolorbox{prophid}[1]{%
+empty,title={Propriété {#1}},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colprop,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colprop,fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\newenvironment{propadm}
+  {
+    \begin{propadmhid}{\theprops}
+  }
+  {
+    \end{propadmhid}
+    \refstepcounter{props}
+  }
+
+  \newtcolorbox{propadmhid}[1]{%
+    empty,title={{\bfseries Propriété {#1}} (admise)},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colprop,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colprop,%fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\newenvironment{propnom}[1]
+  {
+    \begin{propnomhid}{#1}{\theprops}
+  }
+  {
+    \end{propnomhid}
+    \refstepcounter{props}
+  }
+
+\newtcolorbox{propnomhid}[2]{%
+empty,title={{\bfseries Propriété {#2}} ({#1})},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colprop,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colprop,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+
+
+
+\newenvironment{thm}
+  {
+    \begin{thmhid}{\theprops}
+  }
+  {
+    \end{thmhid}
+    \refstepcounter{props}
+  }
+
+\newtcolorbox{thmhid}[1]{%
+empty,title={Théorème {#1}},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colprop,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colprop,fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\newenvironment{thmadm}
+  {
+    \begin{thmadmhid}{\theprops}
+  }
+  {
+    \end{thmadmhid}
+    \refstepcounter{props}
+  }
+
+  \newtcolorbox{thmadmhid}[1]{%
+    empty,title={{\bfseries Théorème {#1}} (admis)},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colprop,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colprop,%fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\newenvironment{thmnom}[1]
+  {
+    \begin{thmnomhid}{#1}{\theprops}
+  }
+  {
+    \end{thmnomhid}
+    \refstepcounter{props}
+  }
+
+\newtcolorbox{thmnomhid}[2]{%
+empty,title={{\bfseries Théorème {#2}} ({#1})},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colprop,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colprop,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\newenvironment{coro}
+  {
+    \begin{corohid}{\theprops}
+  }
+  {
+    \end{corohid}
+    \refstepcounter{props}
+  }
+
+  \newtcolorbox{corohid}[1]{%
+  empty,title={Corollaire {#1}},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colprop,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colprop,fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\newenvironment{lemme}
+  {
+    \begin{lemmehid}{\theprops}
+  }
+  {
+    \end{lemmehid}
+    \refstepcounter{props}
+  }
+
+  \newtcolorbox{lemmehid}[1]{%
+  empty,title={Lemme {#1}},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colprop,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colprop,fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colprop,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colprop,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\colorlet{colexemple}{blue!50!black}
+%\newtcolorbox{exemple}{empty, title=Exemple, attach boxed title to top left,
+%  boxed title style={empty, size=minimal, toprule=2pt, top=4pt,
+%    overlay={\draw[colexemple,line width=2pt]
+%([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+%coltitle=colexemple,fonttitle=\bfseries,%\large\bfseries,
+%before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+%overlay={\draw[colexemple,line width=1pt]
+%([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+%--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+%}
+
+\newcounter{exemples}
+\setcounter{exemples}{1}
+
+\newenvironment{exemple}
+  {
+    \begin{exemplehid}{\theexemples}
+  }
+  {
+    \end{exemplehid}
+    \addtocounter{exemples}{1}
+  }
+
+\newtcolorbox{exemplehid}[1]{%
+empty,title={Exemple {#1}},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colexemple,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colexemple,fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colexemple,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colexemple,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colexemple,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colexemple,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\newenvironment{contrex}
+  {
+    \begin{contrexhid}{\theexemples}
+  }
+  {
+    \end{contrexhid}
+    \addtocounter{exemples}{1}
+  }
+
+\newtcolorbox{contrexhid}[1]{%
+empty,title={Contre-exemple {#1}},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colexemple,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colexemple,fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colexemple,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colexemple,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colexemple,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colexemple,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+\newenvironment{app}
+  {
+    \begin{apphid}{\theexemples}
+  }
+  {
+    \end{apphid}
+    \addtocounter{exemples}{1}
+  }
+
+\newtcolorbox{apphid}[1]{%
+empty,title={Application {#1}},attach boxed title to top left,
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+overlay={\draw[colexemple,line width=2pt]
+([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+coltitle=colexemple,fonttitle=\bfseries,
+before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
+breakable,pad at break*=0mm,vfill before first,
+overlay unbroken={\draw[colexemple,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west); },
+overlay first={\draw[colexemple,line width=1pt]
+([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+--([xshift=-0.5pt]frame.south east); },
+overlay middle={\draw[colexemple,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east); },
+overlay last={\draw[colexemple,line width=1pt] ([xshift=-0.5pt]frame.north east)
+--([xshift=-0.5pt]frame.south east)--(frame.south west);},%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ENUMERATE
+% =========
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+% To have special enumerate items like
+%
+% 1/
+% 2/
+% 3/
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ARRAYS
+% ======
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{array}
+\usepackage{makecell} % Used to break lines within arrays
+\usepackage{multirow}
+\usepackage{booktabs} % Used to have nice arrays with headrules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% WRITE CODE
+% ==========
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{python}{
+  %backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+\lstset{style=python}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Tabular 
+% =======
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% In order to obtain a tabular with given width.
+
+\usepackage{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% MACROS
+% ======
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Math Operators
+
+\DeclareMathOperator{\Card}{Card}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Minpoly}{Minpoly}
+\DeclareMathOperator{\Mod}{mod}
+\DeclareMathOperator{\Ord}{Ord}
+\DeclareMathOperator{\ppcm}{ppcm}
+\DeclareMathOperator{\pgcd}{pgcd}
+\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\Vect}{Vect}
+\DeclareMathOperator{\Span}{Span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\ev}{ev}
+
+% Shortcuts
+
+\newcommand{\eg}{\emph{e.g. }}
+\newcommand{\ent}[2]{[\![#1,#2]\!]}
+\newcommand{\ie}{\emph{i.e. }}
+\newcommand{\ps}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\eqdef}{\overset{\text{def}}{=}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\K}{\mathbf{k}}

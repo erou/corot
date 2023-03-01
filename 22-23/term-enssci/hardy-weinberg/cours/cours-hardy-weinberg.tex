@@ -1,0 +1,264 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Équilibre de Hardy-Weinberg -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Thème 3--1 : Équilibre de Hardy-Weinberg}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+% TODO
+% ====
+%
+% Changer les notations p et q de la propriété 6 et après pour remplacer par
+% f_A et f_a, ce qui aurait plus de sens avec ce qui précède.
+
+\section{Théorie des probabilités}
+\begin{prop}
+  Soit
+  \begin{itemize}
+    \item $f$ la \textbf{fréquence} d'individus associés à une donnée (ou à une
+      caractéristique)
+    \item $n$ l'\textbf{effectif} de cette donnée
+    \item $N$ la \textbf{population totale} de l'échantillon
+  \end{itemize}
+  on a alors
+  \begin{align*}
+    f &= \frac{n}{N} &
+    \Leftrightarrow & &
+    n &= f\times N &
+    \Leftrightarrow & &
+     N &= \frac{n}{f}
+  \end{align*}
+\end{prop}
+\begin{exemple}
+  On considère une classe de $30$ élèves dont $5$ sont gauchers. La donnée (ou
+  caractéristique) est ici le fait d'être gaucher, et on on a donc $n=5$ et
+  $N=30$. On calcule la fréquence des gauchers comme suit :
+  \[
+    f = \frac{n}{N} = \frac{5}{30} = \frac{1}{6} \approx 0,17.
+  \]
+\end{exemple}
+\begin{app}
+  D'après l'INSEE (Institut national de la statistique et des études
+  économiques), en 2019, en France métropolitaine, $9,2$ millions de
+  personnes vivent sous le seuil de pauvreté monétaire. Le taux de pauvreté est
+  ainsi de $14,6$\%.\\Combien y avait-il d'habitants en France métropolitaine en $2019$ ?
+\end{app}
+
+\begin{defi}{Expérience aléatoire}
+  Dans la théorie des probabilités, on s'intéresse à des \textbf{expériences
+  aléatoires}, c'est-à-dire dont on ne connaît pas l'issue avant d'avoir fait
+  l'expérience.
+\end{defi}
+\begin{exemple}
+  Jeter un dé équilibré à six faces (numérotées de $1$ à $6$) constitue une
+  expérience aléatoire : on ne sait pas à l'avance quel nombre on va obtenir.
+\end{exemple}
+\begin{defi}{Événement et probabilité}
+  Un \textbf{événement} $A$ est un ensemble d'issues de l'expérience aléatoire, on note
+  généralement $P(A)$ (parfois aussi $\mathbb{P}(A)$, $p(A)$, $p_A$,
+  \emph{etc.}) sa \textbf{probabilité}, c'est-à-dire la chance que l'événement
+  se réalise.
+\end{defi}
+\begin{exemple}
+  On considère l'expérience suivante : on jette une pièce de monnaie
+  parfaitement équilibré et on s'intéresse au fait d'obtenir pile ou face.
+  On considère l'événement $A$ : « la pièce tombe sur pile ». Alors la
+  probabilité $P(A)$ de l'événement $A$ est
+  \[
+    \frac{1}{2} = 0,5 = 50\%.
+  \]
+  En d'autres termes, on a une chance sur deux d'obtenir pile.
+\end{exemple}
+\begin{app}
+  On lance un dé équilibré à $6$ faces.
+  \begin{enumerate}
+    \item Quelle est la probabilité d'obtenir un $5$ ?
+    \item Quelle est la probabilité d'obtenir un nombre supérieur ou égale à $5$
+      ?
+  \end{enumerate}
+\end{app}
+
+\begin{prop}
+  Soit $f$ la fréquence d'individus associés à une donnée, dans une population.
+  Alors, la probabilité $p$ de choisir un individu correspondant à la donnée
+  étudiée lorsqu'on choisit quelqu'un au hasard dans la population est
+  \[
+    p = f.
+  \]
+\end{prop}
+\begin{exemple}
+  On reprend l'exemple de la classe avec $30$ personnes dont $5$ personnes
+  gauchères. On considère l'expérience suivante : on choisit une personne au
+  hasard dans la classe. Alors la probabilité $p$ de chosir une personne gauchère
+  est égale à
+  \[
+    p=f=\frac{5}{30}=\frac{1}{6}\approx0,17\approx17\%.
+  \]
+\end{exemple}
+\begin{prop}
+  Soit $A$ et $B$ deux événements. Si $A$ et $B$ sont deux événements
+  \textbf{indépendants}, alors la probabilité que $A$ et $B$ aient soient
+  réalisés simultanément, notée $P(A\cap B)$, est donnée par
+  \[
+    P(A\cap B) = P(A)\times P(B).
+  \]
+\end{prop}
+\begin{exemple}
+  Toujours dans la même classe de $30$ personnes, on suppose que $60$\% des
+  élèves sont demi-pensionnaire. On suppose que le fait d'être demi-pensionnaire
+  est indépendant du fait d'être gaucher ou droitier. On note $A$ l'événement «
+  choisir au hasard une personne gauchère » et $B$ « choisir une personne
+  demi-pensionnaire ». Alors la probabilité de choisir au hasard une personne
+  qui soit gauchère et demi-pensionnaire est
+  \[
+    P(A\cap B) = P(A)\times
+    P(B)=\frac{1}{6}\times\frac{60}{100}=\frac{1}{6}\times\frac{3}{5}=\frac{1}{10}=0,1=10\%.
+  \]
+\end{exemple}
+\begin{app}
+  On réalise le jeu suivant : on jette un dé équilibré à $6$ faces
+  numérotées de $1$ à $6$ puis une pièce de monnaie parfaitement équilibrée. On
+  suppose que le jet de dé n'a aucune influence sur le jet de pièce,
+  c'est-à-dire que les deux lancers sont indépendants. On
+  gagne le jeu si on obtient un nombre supérieur ou égale à $4$ avec le dé et
+  que la pièce tombe sur « face ».\\Quelle est la probabilité de gagner ce jeu ?
+\end{app}
+
+\section{Équilibre de Hardy-Weinberg}
+\subsection{Hypothèses}
+\noindent\begin{minipage}{.5\textwidth}
+  On rappelle que
+  \begin{itemize}
+    \item les chromosomes viennent \textbf{par paire} ;
+    \item les \textbf{gènes} sont situés sur les chromosomes et permettent de «
+      coder » les informations qui nous caractérisent (groupe sanguin,
+      \emph{etc.});
+    \item plusieurs « versions » d'un gène peuvent exister, on appelle ces
+      versions des \textbf{allèles} ;
+    \item le \textbf{génotype} d'un individu est sa composition allélique : la
+      donnée des deux allèles présents sur ses gènes.
+  \end{itemize}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{center}
+\includegraphics[scale=.5]{gene.jpg}
+\end{center}
+\end{minipage}\\[5mm]
+Dans notre modèle, on supposera aussi que
+\begin{itemize}
+  \item on considère un gène possédant \textbf{uniquement deux allèles}, notées
+    $a$ et $A$;
+  \item on étudie une \textbf{population de grande taille} ;
+  \item il n'y a \textbf{aucune migration} parmi la population ;
+  \item il n'y a \textbf{pas de mutation} ;
+  \item il n'y a \textbf{pas de sélection naturelle} ;
+  \item on est dans un cas de \textbf{panmixie} (reproduction aléatoire des
+    individus).
+\end{itemize}
+\begin{prop}
+  Il y a dans ce cas uniquement trois génotypes différents : $\left( a//a
+  \right)$, $(a//A)$ et $(A//A)$.
+\end{prop}
+Lors d'une étude génétique d'une population de $N$ individus, ce qui nous
+intéressera sera alors le nombre $n_{(a//a)}$ d'individus portant le génotype
+$(a//a)$, mais aussi les nombres $n_{(a//A)}$ et $n_{(A//A)}$ d'individus
+portant les génotypes $(a//A)$ et $(A//A)$. On s'intéresse aussi aux fréquences
+associées
+\begin{align*}
+  f_{(a//a)} &= \frac{n_{(a//a)}}{N} &
+  f_{(a//A)} &= \frac{n_{(a//A)}}{N} &
+  f_{(A//A)} &= \frac{n_{(A//A)}}{N}.
+\end{align*}
+On peut déduire de ces informations le nombre d'allèles $a$ et $A$ présents dans
+la population. Chaque
+génotype $(a//a)$ présente $2$ allèles $a$, chaque génotype $(A//A)$ présente
+deux allèles $A$, et le génotype $(a//A)$ présente un allèle de chaque type. Le
+nombre d'allèle total est donc
+\begin{align*}
+  n_a = 2\times n_{(a//a)}+n_{(a//A)} &
+  n_A = 2\times n_{(A//A)}+n_{(a//A)}
+\end{align*}
+Puisqu'il y a $N$ individus, il y aura $2\times N$ gènes, les fréquences
+associées sont donc
+\begin{align*}
+  f_{a} &= \frac{n_a}{2N} & 
+  f_{A} &= \frac{n_A}{2N} \\
+  &= \frac{2n_{(a//a)}+n_{(a//A)}}{2N} &
+  &= \frac{2n_{(A//A)}+n_{(a//A)}}{2N} \\
+  &= \frac{n_{(a//a)}}{N}+\frac{1}{2}\times\frac{n_{(a//A)}}{N} &
+  &= \frac{n_{(A//A)}}{N}+\frac{1}{2}\times\frac{n_{(a//A)}}{N} \\
+  &= f_{(a//a)}+\frac{1}{2}f_{(a//A)} &
+  &= f_{(A//A)}+\frac{1}{2}f_{(a//A)}
+\end{align*}
+On résume tout cela dans la propriété suivante, qui est à retenir.
+\begin{prop}
+  On peut calculer les fréquences alléliques $f_a$ et $f_A$ à partir des fréquences
+  génotypiques $f_{(a//a)}$, $f_{(a//A)}$ et $f_{(A//A)}$. On a en effet les
+  formules suivantes.
+  \begin{align*}
+    f_a &= f_{(a//a)}+\frac{1}{2}f_{(a//A)} &
+    f_A &= f_{(A//A)}+\frac{1}{2}f_{(a//A)}
+  \end{align*}
+\end{prop}
+
+\subsection{Équilibre de Hardy-Weinberg}
+Lors de la reproduction, la transmission de l'un ou l'autre des allèles se fait
+au hasard. On suppose que la probabilité de transmission d'un allèle est égale à
+sa fréquence, ce qui donne le résultat suivant.
+\begin{prop}
+  Soit $p$ la fréquence de l'allèle $a$ à la génération $0$ et $q=1-p$ celle de
+  $A$. Alors les fréquences génotypiques à la génération $1$ (la suivante) sont
+  données par le tableau suivant.
+  \[
+    \renewcommand{\arraystretch}{1.5}
+    \begin{array}{ccc}
+      \toprule
+     & a\;(p) & A\;(q) \\
+     \midrule
+     a\;(p) & (a//a)\;(p^2) & (a//A)\;(pq)\\
+     A\;(q) & (A//a)\;(pq) & (A//A)\;(q^2)\\
+     \bottomrule
+    \end{array}
+  \]
+\end{prop}
+\noindent On en déduit les fréquences génotypiques
+\begin{align*}
+  f_{(a//a)} &= p^2 &
+  f_{(a//A)} &= 2pq &
+  f_{(A//A)} &= q^2.
+\end{align*}
+puis les fréquences alléliques
+\begin{align*}
+  f_{a} &= p^2+pq & 
+  f_{A} &= q^2+pq \\
+  &= p^2 + p(1-p) &
+  &= q^2 + q(1-q) \\
+  &= p^2 + p-p^2 &
+  &= q^2 + q-q^2 \\
+  &= p &
+  &= q
+\end{align*}
+\begin{prop}
+  Les fréquences alléliques restent les mêmes d'une génération à une autre,
+  c'est ce qu'on appelle \textbf{l'équilibre de Hardy-Weinberg}.
+\end{prop}
+\noindent Si jamais les résultats théoriques ne correspondent pas aux résultats
+observés, cela signifie qu'une des hypothèses du modèle n'est pas vérifiée. Cela
+peut-être dû à
+\begin{itemize}
+  \item de la sélection naturelle ;
+  \item de la migration ;
+  \item une sélection des partenaires sexuels (hypothèse de panmixie incorrecte) ;
+  \item \emph{etc.}
+\end{itemize}
+
+\end{document}

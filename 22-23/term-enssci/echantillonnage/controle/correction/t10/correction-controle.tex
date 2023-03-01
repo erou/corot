@@ -1,0 +1,126 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\begin{center}
+\textbf{\LARGE \textsc{Test d'enseignement scientifique}}\\[1mm]
+
+{\Large Éléments de correction}\\
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\paragraph{Exercice 1.}
+La correction du premier exercice est disponible sur chaque copie, étant donné
+que j'ai indiqué la réponse correcte en cas d'erreur.
+
+\paragraph{Exercice 2.} Un apiculteur souhaite estimer le nombre d'abeilles dans
+ses ruches. Il utilise la méthode CMR. L'apiculteur capture $160$ abeilles, les
+marque, puis les rel\^ache. Quotidiennement, il recapture $45$ abeilles, note le
+nombre d'individus marqués et les rel\^ache. Ses relevés sont notés dans le
+tableau ci-dessous.
+\begin{center}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}[]{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Jours} & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
+    \hline
+    \textbf{Nombre d'individus marqués} & $7$ & $4$ & $3$ & $7$ & $11$ & $5$ &
+    $6$ \\
+    \hline
+  \end{tabular}
+\end{center}
+\begin{enumerate}
+  \item Présenter les principes de la méthode CMR.
+\end{enumerate}
+C'est du cours. Dans cette question je voulais que vous énonciez clairement : 
+\begin{itemize}
+  \item le but de la méthode ;
+  \item les étapes qui composent la m\'ethode ;
+  \item l'explication de la formule pour trouver l'estimation du nombre
+    d'individus.
+\end{itemize}
+\begin{enumerate}
+    \setcounter{enumi}{1}
+  \item Calculer le nombre d'individus marqués moyen sur ces sept jours.
+    \emph{On arrondira à $0,01$ près.}
+\end{enumerate}
+Il faut calculer la moyenne des nombres dans le tableau : on fait la somme de
+tous les nombres et on divise par $7$. On obtient
+\[
+  m=\frac{7+4+3+7+11+5+6}{7}=\frac{43}{7}\approx6,14.
+\]
+\begin{enumerate}
+    \setcounter{enumi}{2}
+  \item En déduire par le calcul une estimation de l'abondance de l'élevage.
+\end{enumerate}
+On utilise la méthode habituelle :
+\[
+  N = \frac{M\times n}{m}
+\]
+où $M=160$, $n=45$, et $m=\frac{43}{7}$ a été calculé à la question précédente.
+On trouve $N\approx1172$.
+\begin{enumerate}
+    \setcounter{enumi}{3}
+  \item Donner un moyen d'augmenter la précision de l'estimation.
+\end{enumerate}
+Pour augmenter la précision, il faut augmenter $n$, c'est-à-dire le nombre
+d'abeilles capturées lors de la recapture.\\[5mm]
+\noindent Chez un autre apiculteur, un comptage exhaustif a été réalisé et on a dénombré
+$1947$ abeilles. Une partie des abeilles de cet élevage souffre d'une maladie
+parasitaire. L'éleveur souhaite connaître le pourcentage d'individus affectés.
+Pour cela, il réalise un échantillonnage dans ses ruches et prélève $214$
+abeilles, dont $65$ portent le parasite.
+\begin{enumerate}
+    \setcounter{enumi}{4}
+  \item Déterminer l'intervalle de confiance au niveau de confiance $95$\% pour
+    l'estimation de la proportion d'abeilles affectées par le parasite.
+\end{enumerate}
+La formule de l'intervalle de confiance est
+\[
+  I=\left[ \frac{m}{n}-\frac{1}{\sqrt n};\frac{m}{n}+\frac{1}{\sqrt n} \right].
+\]
+Attention, car ici on est chez un autre apiculteur et on utilise donc de
+nouvelles valeurs pour $m$ et $n$. Maintenant on a $n=214$ et $m=65$, et on
+obtient
+\[
+  I\approx\left[ 0,24; 0,37 \right].
+\]
+\begin{enumerate}
+    \setcounter{enumi}{5}
+  \item En déduire un encadrement du nombre d'abeilles parasitées.
+\end{enumerate}
+Dans la question précédente, on a montré que la proportion d'abeilles porteuses
+du parasite se situe avec $95$\% de chance entre $24$\% et $37$\% du nombre
+total d'abeilles. Cela nous donne un encadrement du nombre d'abeilles
+parasitées entre $0,24\times1947\approx467$ et $0,37\times1947\approx720$
+abeilles.
+\begin{enumerate}
+    \setcounter{enumi}{6}
+  \item L'amplitude de l'intervalle de confiance étant trop grande, on décide de prélever un
+    autre échantillon. Quelle devrait être la taille du nouvel échantillon pour
+    que la marge d'erreur soit inférieur à $5$\% ?
+\end{enumerate}
+On fait exactement comme dans la correction des exercices que j'avais donné. On
+ne l'avait jamais vraiment fait en classe donc cette question était en bonus,
+c'est pour ça que le barême était sur $22$. La marge d'erreur est égale à
+$\frac{1}{\sqrt n}$, on a donc
+\begin{align*}
+  \frac{1}{\sqrt n} \leq 0,05 &\Longleftrightarrow 1\leq0,05\sqrt n \\
+  &\Longleftrightarrow\frac{1}{0,05}\leq\sqrt n \\
+  &\Longleftrightarrow\left( \frac{1}{0,05} \right)^2\leq n \\
+  &\Longleftrightarrow400\leq n
+\end{align*}
+c'est-à-dire que $n$ doit être supérieur à $400$.
+\end{document}

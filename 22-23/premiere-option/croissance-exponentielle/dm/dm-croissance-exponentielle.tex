@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\begin{center}
+\textbf{\LARGE \textsc{Devoir Maison 1}}\\[2mm]
+
+{\large À rendre pour le vendredi 20 à midi au plus tard (dans mon casier)}\\[1mm]
+\noindent\rule{10cm}{0.4pt}
+\end{center}
+La calculatrice est \textbf{autorisée.}
+
+\paragraph{Une histoire de nénuphar.} On observe la croissance d'un nénuphar
+dans un étang de $200$ m$^2$. Au début de l'observation, son aire vaut $0,5$
+m$^2$ et sa surface augmente de $10\%$ par jour.
+\begin{enumerate}
+  \item Rappeler par quel nombre il faut multiplier une quantité lorsqu'elle
+    augmente de $10\%$.
+  \item Justifier que l'on peut modéliser la taille du nénuphar par une suite
+    géométrique dont on précisera le premier terme et la raison.
+  \item Calculer l'aire du nénuphar au bout de $10$ jours.
+  \item À l'aide de la calculatrice, déterminer au bout de combien de temps
+    l'étang sera entièrement recouvert par le nénuphar selon cette modélisation.
+\end{enumerate}
+
+\paragraph{Un problème de radioactivité.}
+
+Un échantillon de noyaux radioactifs voit son nombre de noyaux diminuer en
+fonction du temps en raison de leur désintégration. On a mesuré que la période
+de demi-vie de l'iode $131$ était environ de $8$ jours; autrement dit, la moitié
+des noyaux se sont désintégrés au bout de $8$ jours. On considère un échantillon
+de $1\;000\;000$ noyaux d'iode $131$.
+\begin{enumerate}
+  \item Combien en restera-t-il après $8$ jours ? 
+  \item Au bout de combien de temps le nombre de noyaux aura-t-il été divisé par
+    $4$ ?
+  \item Quel outil mathématique (vu dans ce chapitre) peut-on utiliser pour
+    modéliser le nombre de noyaux d'iode $131$ ?
+  \item Calculer le taux d'évolution de la quantité de noyaux d'iode $131$ entre
+    le premier et le neuvième jour.
+  \item Calculer le taux d'évolution moyen par jour.
+\end{enumerate}
+On admet qu'on peut modéliser le nombre de noyaux d'iode $131$ présents dans
+l'échantillon au bout de $t$ jours par $f(t)=1\,000\,000\times (0,917)^t$.
+L'iode $131$ peut être administré à des patients dans le cadre d'un traitement
+de radiothérapie : on injecte alors un échantillon de $1\,000\,000$ noyaux dans
+le corps.
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item Compléter le tableau de valeurs suivant (arrondir à l'unité).
+\end{enumerate}
+\begin{tabularx}{\textwidth}{|c|>{\centering}X|>{\centering}X|>{\centering}X|>{\centering}X|>{\centering}X|>{\centering}X|>{\centering\arraybackslash}X|}
+    \hline
+     $t$ & $0$ & $5$ & $10$ & $15$ & $20$ & $25$ & $30$ \\ 
+    \hline
+     $f(t)$ & & & & & & & \\
+   \hline
+\end{tabularx}
+\begin{enumerate}
+    \setcounter{enumi}{6}
+  \item Faire un repère et donner la représentation graphique de la fonction
+    $f$. On choisira des graduations adaptées pour que le graphique ait une
+    taille raisonnable.
+\end{enumerate}
+On estime qu'un patient émet trop de radiations lorsqu'il a plus de
+$70\,000$ noyaux d'iode $131$ dans le corps. Le patient doit donc s'isoler tant
+qu'il est au-dessus de ce seuil.
+\begin{enumerate}
+    \setcounter{enumi}{7}
+  \item Combien de jours le patient doit-il s'isoler ?
+  \item Combien de jours le patient doit-il attendre pour que l'ensemble des
+    noyaux se soit désintégré, c'est-à-dire pour qu'il ait strictement moins de
+    $1$ noyau d'iode $131$ dans le corps ?
+\end{enumerate}
+
+\end{document}

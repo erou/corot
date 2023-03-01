@@ -1,0 +1,205 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Applications de la dérivation -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 5 : Applications de la dérivation}
+\date{}
+\author{}
+
+\newcommand{\Cf}{\mathscr C_{f}}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+Soit $I$ un intervalle et $f$ une fonction dérivable sur $I$. On note $\Cf$ la
+courbe représentative de $f$ dans le plan muni d'un repère.
+\section{Dérivée et sens de variation}
+\noindent\begin{minipage}{.6\textwidth}
+\begin{thm}
+  \begin{itemize}
+    \item Si $f$ est \textbf{\textcolor{red}{croissante}} sur $I$, alors, pour tout
+      nombre réel $x$ de $I$, \textcolor{red}{$f'(x)\geq 0$}.
+    \item Si $f$ est \textbf{\textcolor{blue}{décroissante}} sur $I$, alors, pour tout
+      nombre réel $x$ de $I$, \textcolor{blue}{$f'(x)\leq 0$}.
+    \item Si $f$ est \textbf{\textcolor{green!50!black}{constante}} sur $I$, alors, pour tout
+      nombre réel $x$ de $I$, \textcolor{green!50!black}{$f'(x) = 0$}.
+  \end{itemize}
+\end{thm}
+\begin{exemple}
+    Soit $f$ la fonction définie sur $\mathbb{R}$ par, pour tout
+    $x\in\mathbb{R}$, $f(x)=x^2-3$, dont la courbe $\Cf$ est donnée ci-contre.
+    \begin{itemize}
+    \item La fonction est décroissante sur $]-\infty; 0]$, donc en chaque point
+        de la courbe $\Cf$ sur cet intervalle, la pente de la tangente est
+        \textbf{négative}.
+      \item La fonction est croissante sur $[0;+\infty[$, donc en chaque point
+          de la courbe $\Cf$ sur cet intervalle, la pente de la tangente est
+          \textbf{positive}.
+    \end{itemize}
+\end{exemple}
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}[x=1cm, y=1cm, ymin=-4.1, xmin=-3.1, xmax=3.1]
+          \addplot[very thick, red, samples=101, dashed] {4*x-7};
+          \addplot[very thick, blue, samples=101, dashed] {-2*x-4};
+          \addplot[thick, green!50!black, samples=101] {x^2-3};
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\begin{app}
+  \begin{minipage}{.5\textwidth}
+    Soit $\mathscr C_g$ la courbe représentative d'une fonction $g$ définie et
+    dérivable sur $[-3;4]$.\\
+    Donner graphiquement, suivant les valeurs de $x$, le signe de $g'(x)$.
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \includegraphics[scale=.25]{thm1.png}
+    \end{center}
+  \end{minipage}
+  
+\end{app}
+
+
+\begin{thmadm}
+   \begin{itemize}
+    \item Si, pour tout réel $x$ de $I$, \textcolor{red}{$f'(x)\geq 0$}, alors
+      $f$ est \textbf{\textcolor{red}{croissante}} sur $I$.
+    \item Si, pour tout réel $x$ de $I$, \textcolor{blue}{$f'(x)\leq 0$}, alors
+      $f$ est \textbf{\textcolor{blue}{d\'ecroissante}} sur $I$.
+    \item Si, pour tout réel $x$ de $I$, \textcolor{green!50!black}{$f'(x)= 0$}, alors
+      $f$ est \textbf{\textcolor{green!50!black}{constante}} sur $I$.
+  \end{itemize}
+\end{thmadm}
+\begin{exemple}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par, pour tout $x\in\mathbb{R}$,
+  $f(x)=x^3-3x$. La fonction $f$ est un polynôme donc est dérivable sur
+  $\mathbb{R}$ et pour tout $x\in\mathbb{R}$, on a
+  \begin{align*}
+    f'(x) &= 3x^2-3 \\
+    &= 3(x^2-1) \\
+    &= 3(x-1)(x+1).
+  \end{align*}
+  On en déduit le tableau de signe suivant.\\
+\begin{minipage}{.6\textwidth}
+  \begin{center}
+    \begin{tikzpicture}[scale=.8]
+   \tkzTabInit{$x$ / .8 , $f'(x)$ / .8}{$-\infty$, $-1$, $1$, $+\infty$}
+   \tkzTabLine{, +, z, -, z, +}
+\end{tikzpicture}
+  \end{center}
+  Puis, en utilisant le Théorème~2, on en déduit le tableau de variation
+  suivant.
+  \begin{center}
+    \begin{tikzpicture}[scale=.8]
+   \tkzTabInit{$x$/.8, $f(x)$/2}{$-\infty$, $-1$, $1$, $+\infty$}
+   \tkzTabVar{-/, +/$f(-1)$, -/$f(1)$, +/}
+\end{tikzpicture}
+  \end{center}
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+  \begin{center}
+\begin{tikzpicture}
+  \begin{axis}%[x=1cm, y=1cm]
+    \addplot[red, very thick, samples=101] {x^3-3*x};
+   \end{axis}
+\end{tikzpicture}
+  \end{center}
+\end{minipage}
+\end{exemple}
+\begin{app}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par, pour tout $x\in\mathbb{R}$, $f(x)=-x^3-2x+5$.
+  \begin{enumerate}
+    \item Calculer la dérivée de $f$.
+    \item Donner le signe de $f'$.
+    \item Donner le tableau de variations de $f$.
+  \end{enumerate}
+\end{app}
+
+\section{Extremums d'une fonction}
+\subsection{Extremum local}
+\begin{defi}{Extremum local}
+  Soient $I$ un intervalle ouvert et $c\in I$. On considère une fonction $f$
+  définie sur $I$. On dit que $f(c)$ est un \textbf{maximum local} (respectivement
+  \textbf{minimum local}) de $f$ au voisinage de $c$ si et seulement si il
+existe deux réels $a$ et $b$ dans $I$ tels que $c\in]a;b[$ et, pour tout réel
+$x\in]a;b[$, $f(x)\leq f(c)$ (respectivement $f(x)\geq f(c)$).\\
+  Un \textbf{extremum local} est un maximum ou un mimumum local.
+\end{defi}
+\begin{exemple}~\\[-6mm]
+  \begin{minipage}{.6\textwidth}
+    Soit $h$ une fonction définie sur $\mathbb{R}$ dont on donne la courbe
+    représentative ci-contre.
+    \begin{itemize}
+      \item Le nombre $h(2)$ est un minimum local de $h$.
+      \item Le nombre $h(1)=2$ est un maximum local de $h$.
+      \item Le nombre $h(-1)$ est un autre minimum local de $h$, il est aussi le
+        minimum global de la fonction $h$.
+      \item Il ne semble pas y avoir de maximum global.
+    \end{itemize}
+  \end{minipage}
+  \begin{minipage}{.4\textwidth}
+    \begin{center}
+      \includegraphics[scale=.22]{extremum.png}
+    \end{center}
+  \end{minipage}
+\end{exemple}
+\subsection{Lien avec la dérivation}
+\begin{propadm}
+  Soient $I$ un intervalle ouvert, $f$ une fonction dérivable sur $I$ et $c$
+  un réel de $I$.
+  \begin{itemize}
+    \item Si $f(c)$ est un extremum local de $f$, alors $f'(c)=0$.
+    \item Si $f'$ s'annule en $c$ \textbf{en changeant de signe}, alors $f(c)$
+      est un extremum local de $f$.
+  \end{itemize}
+\end{propadm}
+\begin{rmq}
+  Attention, la condition de changement de signe est importante. Par exemple la
+  fonction $f:x\mapsto x^3$ a une dérivée qui s'annule en $0$ mais n'admet pas
+  d'extremum local en $0$.
+\end{rmq}
+\begin{exemple}
+  \begin{minipage}{.6\textwidth}
+    On reprend l'exemple de la fonction $f:x\mapsto x^3-3x$ vu précédemment,
+    dont on a donné le tableau de variation ci-dessous et la représentation
+    graphique ci-contre.
+  \begin{center}
+    \begin{tikzpicture}[scale=.8]
+   \tkzTabInit{$x$ / .8 , $f'(x)$ / .8, $f(x)$/2}{$-\infty$, $-1$, $1$, $+\infty$}
+   \tkzTabLine{, +, z, -, z, +}
+   \tkzTabVar{-/, +/$f(-1)$, -/$f(1)$, +/}
+\end{tikzpicture}
+  \end{center}
+On voit que $f(-1)=f(1)=0$, et que la dérivée change de signe aux points $-1$ et
+$1$. On en conclut que $f$ admet deux extremum locaux.
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+  \begin{center}
+\begin{tikzpicture}
+  \begin{axis}%[x=1cm, y=1cm]
+    \addplot[red, very thick, samples=101] {x^3-3*x};
+   \end{axis}
+\end{tikzpicture}
+  \end{center}
+\end{minipage}
+\end{exemple}
+
+\begin{app}
+  On pose $f:x\mapsto\cfrac{3-x}{x-2}$.
+  \begin{enumerate}
+    \item Donner l'ensemble de définition et l'ensemble de dérivabilité de $f$.
+    \item Dériver $f$ sur son ensemble de dérivabilité.
+    \item Faire le tableau de signe de $f'$ et en déduire le tableau de
+      variations de $f$.
+    \item La fonction $f$ admet-elle des extremums locaux ?
+  \end{enumerate}
+\end{app}
+\end{document}

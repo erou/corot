@@ -1,0 +1,219 @@
+\documentclass[11pt]{article}
+
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\newcommand{\titrechapitre}{Dérivation -- Exercices}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+
+\title{Chapitre 2 : Dérivation}
+\date{}
+\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\newcommand{\Cf}{\mathscr{C}_f}
+
+\paragraph{Exercice 1.} Soit $f$ la fonction définie sur $\mathbb{R}$ par
+$f(x)=x^2$.
+\begin{enumerate}
+  \item Soit $h$ un réel non nul. Exprimer $f(1+h)-f(1)$ en fonction de $h$.
+  \item Montrer que $f$ est dérivable en $1$ et donner la valeur du nombre
+    dérivé de $f$ en $1$.
+\end{enumerate}
+
+\paragraph{Exercice 2.} Soit $f$ la fonction définie sur $\mathbb{R}$ par
+$f(x)=-x^2+x$.
+\begin{enumerate}
+  \item Soit $h$ un réel non nul. Exprimer $f(2+h)-f(2)$ en fonction de $h$.
+  \item Montrer que $f$ est dérivable en $2$ et donner la valeur du nombre
+    dérivé de $f$ en $2$.
+\end{enumerate}
+
+\paragraph{Exercice 3.} Soit $f$ la fonction définie sur $\mathbb{R}$ par
+$f(x)=x^3$.
+\begin{enumerate}
+  \item Vérifier que pour tous réels $a$ et $b$, on a
+    $(a+b)^3=a^3+3a^2b+3ab^2+b^3$.
+  \item Soit $h$ un réel non nul. Exprimer le quotient
+    $\frac{(2+h)^3-2^3}{h}$ en fonction de $h$.
+  \item En déduire que $f$ est dérivable en $2$ et calculer $f'(2)$.
+\end{enumerate}
+
+\paragraph{Exercice 4.} On considère une fonction $f$ définie et dérivable sur
+l'intervalle $\left[ -3; 3 \right]$ dont on donne le tableau de valeurs suivant.
+\[
+  \def\arraystretch{2}
+  \begin{array}{|c|c|c|c|c|c|}
+    \hline
+    \mathbf{x} & -3 & -2 & 0 & \frac{3}{2} & 3 \\
+    \hline
+    \mathbf{f(x)} & -2 & 0 & 2 & 0 & -4 \\
+    \hline
+    \mathbf{f'(x)} & 0 & 2 & 0 & -\frac{5}{2} & 0 \\
+    \hline
+  \end{array}
+\]
+Tracer une courbe représentative possible pour la fonction $f$ dans un repère
+orthonormé.
+
+\paragraph{Exercice 5.}~\\
+\begin{minipage}{.5\textwidth}
+  Soit $f$ une fonction définie et dérivable sur $[-2;4]$ dont on donne une
+  représentation graphique $\Cf$ ci-contre. Les doites $T_A$ et $T_B$ sont les
+  tangentes respectives en $A$ et en $B$ à $\Cf$.
+  \begin{enumerate}
+    \item Par lecture graphique, déterminer la valeur du nombre dérivé de $f$ en
+      $0$.
+    \item Déterminer $f'(3)$ graphiquement.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[x=1cm, y=1cm, ymin=-.5, xmin=-2.5]
+      \addplot[red, samples=101, semithick]{x^2-2*x+1};
+      \addplot[blue, samples=101]{1-2*x};
+      \addplot[green!50!black, samples=101]{4*x-8};
+    \end{axis}
+    \draw[very thick, blue] (2.5-.1, 1.5)--(2.5+.1, 1.5) (2.5, 1.5-.1)--(2.5,
+    1.5+.1);
+    \draw[very thick, green!50!black] (5.5-.1, 4.5)--(5.5+.1, 4.5) (5.5, 4.5-.1)--(5.5,
+    4.5+.1);
+    \node[blue] (a) at (2.8, 1.8) {$A$};
+    \node[green!50!black] (b) at (5.8, 4.8) {$B$};
+    \node[red] (Cf) at (1.8, 4.8) {$\Cf$};
+    \node[blue] (TA) at (.4, 4.8) {$T_A$};
+    \node[green!50!black] (TB) at (5., .8) {$T_B$};
+  \end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\paragraph{Exercice 6.} Soit $f$ la fonction définie sur $]0; +\infty[$ par
+  $f(x)=\frac{1}{x}$. Soient deux réels $a>0$ et $h\neq0$ tels que $a+h>0$.
+  \begin{enumerate}
+    \item Déterminer $f(a+h)-f(a)$ en fonction de $h$.
+    \item En déduire une expression du taux de variation $\tau(h)$ de $f$ en
+      $a$.
+    \item Que peut-on dire de $\tau(h)$ lorsque $h$ devient de plus en plus
+      proche de $0$ ?
+  \item Justifier alors que $f$ est dérivable sur $]0; +\infty[$ et exprimer
+      $f'(a)$.
+  \item Démontrer que $f$ est dérivable sur $]-\infty; 0[$ et exprimer $f'(a)$
+      lorsque $a$ est un réel strictement négatif.
+  \end{enumerate}
+
+\paragraph{Exercice 7.} On considère la fonction $f$ définie sur
+$\mathbb{R}_+$ par $f(x)=3\sqrt x$. On admet que $f$ est dérivable sur $]0;
++\infty[$ et on donne $f'(1)=\frac{3}{2}$ et $f'(2)=\frac{3\sqrt{2}}{4}$.
+Déterminer l'équation réduite de chacune des tangentes à la courbe de $f$ aux
+points d'abscisses $1$ et $2$.
+
+\paragraph{Exercice 8.} Pour les fonctions suivantes, donner l'ensemble de
+dérivabilité et la fonction dérivée.
+\begin{align*}
+  \textbf{a)}\;& f:x\mapsto 4x-7 &
+  \textbf{b)}\;& g:x\mapsto x^4 &
+  \textbf{c)}\;& h:x\mapsto (2x-1)(x+3) &
+  \textbf{d)}\;& t:x\mapsto (x^2-x+2)(2x^3-4)
+\end{align*}
+
+\paragraph{Exercice 9.}
+\begin{enumerate}
+  \item \begin{enumerate}
+      \item Calculer $f'(x)$ pour $f(x)=(2x+3)(1-4x)$ définie sur $\mathbb{R}$.
+      \item Déveloper et réduire $f(x)$ et calculer la dérivée de l'expression
+        obtenue.
+    \end{enumerate}
+  \item \begin{enumerate}
+      \item Calculer $g'(x)$ pour $g(x)=(x^2-1)(x^3+x)$ définie sur
+        $\mathbb{R}$.
+      \item Déveloper et réduire $g(x)$ et calculer la dérivée de l'expression
+        obtenue.
+    \end{enumerate}
+\end{enumerate}
+
+\paragraph{Exercice 10.} Soit $f$ et $g$ les fonctions définies par $f(x)=\sqrt
+x(x+1)$ et $g(x)=\sqrt x(x^2-x+1)$.
+\begin{enumerate}
+  \item Déterminer l'ensemble de définition et de dérivabilité des fonctions $f$
+    et $g$.
+  \item Calculer $f'(x)$ et $g'(x)$.
+\end{enumerate}
+
+\paragraph{Exercice 11.}
+\begin{enumerate}
+  \item Soit $f$ la fonction définie sur $I=\mathbb{R}\setminus\left\{
+      \frac{3}{2}\right\}$ par $f(x)=\frac{4}{2x-3}$. Calculer $f'(x)$ pour
+      $x\in I$.
+  \item Soit $g$ la fonction définie sur $J=\mathbb{R}\setminus\left\{
+      \frac{1}{4}\right\}$ par $g(x)=\frac{2}{1-4x}$. Calculer $g'(x)$ pour
+      $x\in J$.
+\end{enumerate}
+
+\paragraph{Exercice 12.}
+\begin{enumerate}
+  \item Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x)=2x^2-3x+1$.
+    Calculer $f'(x)$ pour $x\in\mathbb{R}$.
+  \item Soit $g$ la fonction définie sur $\mathbb{R}$ par $g(x)=x^3+4x^2+5x-6$.
+    Calculer $g'(x)$ pour $x\in\mathbb{R}$.
+\end{enumerate}
+
+\paragraph{Exercice 13.}
+\begin{enumerate}
+  \item Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x)=(3x-1)^5$.
+    Calculer $f'(x)$ pour $x\in\mathbb{R}$.
+  \item Soit $g$ la fonction définie sur $\mathbb{R}$ par $g(x)=(7x+2)^4$.
+    Calculer $g'(x)$ pour $x\in\mathbb{R}$.
+  \item Soit $h$ la fonction définie sur $\mathbb{R_+}$ par
+    $h(x)=\sqrt{3x}$.
+    Calculer $h'(x)$ pour $x\in\mathbb{R_+^*}$.
+\end{enumerate}
+
+\paragraph{Exercice 14.}
+\begin{enumerate}
+  \item Soit $f$ la fonction définie sur $\mathbb{R}$ par
+    $f(x)=\frac{-2}{x^2+x+1}$. Calculer $f'(x)$ pour $x\in\mathbb{R}$.
+  \item Soit $g$ la fonction définie sur $\mathbb{R}$ par
+    $g(x)=\frac{3}{x^4+1}$. Calculer $g'(x)$ pour $x\in\mathbb{R}$.
+\end{enumerate}
+
+\paragraph{Exercice 15.}
+Soit $f$ une fonction définie sur un ensemble $I$ de $\mathbb{R}$. Dans chaque
+cas, préciser l'ensemble de dérivabilité de $f$ et calculer $f'(x)$.
+\begin{enumerate}
+  \item $f(x)=\sqrt{2x+3}+\frac{1}{x}$;
+    $I=\left[-\frac{3}{2};0\right[\cup]0;+\infty[$.
+  \item $f(x)=\sqrt{x-2}(x^2-1)$;
+    $I=[2;+\infty[$.
+    \item $f(x)=\frac{1}{\sqrt{1-2x}}$;
+      $I=\left[-\infty;\frac{1}{2}\right[$.
+      \item $f(x)=\frac{\sqrt{3-x}}{x^3}$;
+    $I=\left[-\infty;0\right[\cup]0;3]$.
+\end{enumerate}
+
+\begin{center}
+  \LARGE
+  \textbf{Exercices d'approfondissement}
+\end{center}
+
+\paragraph{Exercice A.}
+Soient deux fonctions $u$ et $v$ définies et dérivables sur un intervalle $I$ de
+$\mathbb{R}$. On considère la fonction $f$ définie sur $I$ par
+$f(x)=u(x)+v(x)$. À l'aide du taux de variation, démontrer que la fonction $f$ est dérivable sur
+$I$ de dérivée $f'$ définie par $f'(x)=u'(x)+v'(x)$.
+
+\paragraph{Exercice B.}
+Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x)=k$ où $k$ est un réel.
+Soit $g$ la fonction définie sur $\mathbb{R}$ par $g(x)=mx+p$ où $m$ et $p$ sont
+des réels.
+\begin{enumerate}
+  \item Démontrer que $f$ est dérivable sur $\mathbb{R}$ et que sa fonction
+    dérivée $f'$ est la fonction constante égale à $0$.
+  \item Démontrer que $g$ est dérivable sur $\mathbb{R}$ et que sa fonction
+    dérivée $g'$ est la fonction constante égale à $m$.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,233 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Information chiffrée -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 2 : Information chiffrée}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+% TODO
+% =
+%
+% Faire un point de rappel sur les taux d'évolutions, à moins que cela soit
+% plus adapté dans le chapitre sur les fonctions exponentielles ?
+
+\section{Tableaux croisés d'effectifs}
+\begin{defi}{Tableau croisé d'effectifs}
+  Un \textbf{tableau croisé d'effectifs}, aussi appelé \textbf{tableau à double
+  entrée}, est un tableau donnant conjointement en lignes et en colonnes les
+  effectifs des différentes valeurs de deux caractères dans une même population.
+\end{defi}
+
+\begin{exemple}
+  \begin{minipage}{.5\textwidth}
+  Un restaurant étudie les plats commandés par ses clients. Deux caractères sont
+  étudiés : la composition du plat (viande ou poisson) et l'accompagnement
+  (frites ou légumes). Dans cet exemple :
+  \begin{itemize}
+    \item $31$ personne ont pris à la fois du poisson et des légumes ;
+    \item $32$ personnes ont pris des frites ;
+    \item $80$ personnes ont commandé à manger.
+  \end{itemize}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|}
+  \cline{2-4}
+  \multicolumn{1}{c|}{} & \textbf{Poisson} & \textbf{Viande} & \textbf{Total} \\
+  \hline
+  \textbf{Frites} & $10$ & $22$ & $32$ \\
+  \hline
+  \textbf{Légumes} & $31$ & $17$ & $48$ \\
+  \hline
+  \textbf{Total} & $41$ & $39$ & $80$ \\
+  \hline
+\end{tabular}
+\end{center}
+  \end{minipage}
+\end{exemple}
+
+\begin{rmq}
+  \begin{minipage}{.5\textwidth}
+  Parfois les tableaux à double entrée sont présentés légèrement différemment,
+  comme dans le tableau ci-contre. Cela ne change rien ! Le tableau se lit de la
+  même manière.
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{cccc}
+  \toprule
+  & \textbf{Poisson} & \textbf{Viande} & \textbf{Total} \\ \midrule
+  \textbf{Frites} & $10$ & $22$ & $32$ \\
+  \textbf{Légumes} & $31$ & $17$ & $48$ \\
+  \textbf{Total} & $41$ & $39$ & $80$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{rmq}
+
+\begin{exemple}
+  \begin{minipage}{.5\textwidth}
+    Le lendemain, dans le même restaurant, on compte de nouveau les plats
+    commandés par les clients.
+    \begin{enumerate}
+      \item Quel est l'accompagnement le plus populaire ? Quel pourcentage
+        des commandes représente-t-il ?
+      \item Parmi les plats servis avec des frites, quelle part des plats
+        contenait de la viande ?
+      \item Quel pourcentage de client a commandé du poisson ?
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|}
+  \cline{2-4}
+  \multicolumn{1}{c|}{} & \textbf{Poisson} & \textbf{Viande} & \textbf{Total} \\
+  \hline
+  \textbf{Frites} & $40$ & $80$ & $120$ \\
+  \hline
+  \textbf{Légumes} & $50$ & $30$ & $80$ \\
+  \hline
+  \textbf{Total} & $90$ & $110$ & $200$ \\
+  \hline
+\end{tabular}
+\end{center}
+  \end{minipage}
+  \begin{enumerate}
+      \setcounter{enumi}{3}
+    \item Donnez une valeur arrondie du pourcentage de clients ayant commandé
+      des légumes parmi les clients ayant commandé de la viande.
+  \end{enumerate}
+\end{exemple}
+
+\section{Représentation graphique des données statistiques}
+\subsection{Diagrammes en b\^atons}
+\begin{defi}{Diagrame en b\^atons}
+  Un \textbf{diagramme en b\^atons} ou \textbf{en barres} est un graphique
+  représentant les effectifs ou les fréquences des différentes valeurs prises
+  par un plusieurs caractères.\\
+  Les valeurs du (ou des) caractère(s) sont placées en abscisses et les hauteurs
+  des b\^atons ou des barres sont proportionnelles aux effectifs et aux
+  fréquences qui leur correspondent.
+\end{defi}
+
+\begin{exemple}
+  \begin{minipage}{.62\textwidth}
+    Un supermarché a effectué un sondage auprès de ses clients à propos du type
+    de fromage qu'ils consomment le plus. Les résultats du sondage sont donnés
+    dans le tableau ci-dessous et représentés par le diagramme en b\^atons
+    ci-contre.
+    \begin{center}
+      \begin{tabular}[]{|c|c|c|c|c|}
+        \hline
+        \textbf{Fromage} & Camembert & Gruyère & Chèvre & Mozzarella \\
+        \hline
+        \textbf{Effectif} & $25$ & $30$ & $15$ & $22$ \\
+        \hline
+      \end{tabular}
+    \end{center}
+  \end{minipage}
+  \begin{minipage}{.38\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=.8]
+    \begin{axis}[symbolic x coords={Camembert, Gruyère, Chèvre, Mozzarella},
+      xtick=data, ymin=0]
+      \addplot[ybar, fill=blue!50!white] coordinates{
+        (Camembert, 25)
+        (Gruyère, 30)
+        (Chèvre, 15)
+        (Mozzarella, 22)
+      };
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{exemple}
+
+\subsection{Diagrammes circulaires}
+\begin{defi}{Diagramme circulaire}
+  Un \textbf{diagramme circulaire} est un disque partagé en secteurs angulaires
+  représentant chacun une valeur du caractère étudié. Les mesures des secteurs
+  angulaires sont donc proportionnelles aux effectifs des différentes valeurs.
+  La somme totale des mesure des secteurs angulaires est donc égale à
+  $360^\circ$.\\[2mm]
+  Un \textbf{diagramme semi-circulaire} représente les données de la même façon
+  mais sur un demi-disque. La somme totale des mesures des secteurs angulaires
+  est donc égale à $180^\circ$.
+\end{defi}
+
+\begin{exemple}
+  À partir du tableau d'effectifs de l'exemple précédent, on rélise les
+  diagrammes circulaire et semi-circulaire ci-dessous. Par exemple, il y a $25$
+  personnes qui préfèrent le camembert sur un total de $92$, le secteur
+  angulaire correspondant est donc $\frac{25\times 360}{92}\approx97,8^\circ$.
+  \begin{center}
+\includegraphics[scale=.4]{pies.png}
+  \end{center}
+\end{exemple}
+
+\subsection{Nuages de points}
+\begin{defi}{Nuage de points}
+  Étant donnés deux caractères d'une série statistique, le \textbf{nuage de
+  points} associé est, dans un repère, l'ensemble des points ayant pour
+  abscisses les valeurs du premier caractère et pour ordonnées les valeurs du
+  second.
+\end{defi}
+
+\begin{exemple}
+  \begin{minipage}{.5\textwidth}
+    Le nuage de points ci-contre représente les températures moyennes, en degré
+    Celsius, à Savigny-sur-Orge, au cours d'une semaine.\\
+    On peut lire sur le graphique qu'il a fait $22^\circ$C en moyenne le
+    mercredi et le vendredi.
+    \begin{enumerate}
+      \item Quel(s) jour(s) a-t-il fait le plus froid ?
+      \item Quel(s) jour(s) a-t-il fait le plus chaud ?
+      \item Quelle a été la moyenne de la température sur la semaine ?
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+\begin{center}
+  \includegraphics[scale=.25]{nuage1.png}
+\end{center}
+  \end{minipage}
+\end{exemple}
+\begin{exemple}
+    Une librairie a dressé le tableau de la moyenne des prix payés par ses
+    clients, en euro, en fonction du nombre de livres achetés.\\
+    \begin{center}
+    \begin{tabular}[]{cccccc}
+      \toprule
+      \textbf{Nombre de livres achetés} & $1$ & $2$ & $3$ & $4$ & $5$ \\
+      \midrule
+      \textbf{Prix moyen (en euros)} & $14$ & $22$ & $32$ & $40$ & $45$\\
+      \bottomrule
+    \end{tabular}
+    \end{center}
+\begin{center}
+  \includegraphics[scale=.25]{nuage2.png}
+\end{center}
+\begin{enumerate}
+  \item Quel est le prix moyen d'un livre lorsqu'un client achète $2$ livres ?
+  \item Quel est le prix moyen d'un livre lorsqu'un client achète $5$ livres ?
+  \item Le gérant de la librairie déclare « Plus les clients achètent de livres,
+    moins ils les paient. » Est-ce vrai ?
+  \item Tracer le nuage de points donnant le prix moyen par livre (en euros) en
+    ordonnée et le nombre de livres achetés en abscisse.
+\end{enumerate}
+\end{exemple}
+
+
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%{Information chiffrée -- Exercices}
+\newcommand{\titreclasse}{}%{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{1cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 2 : Information chiffrée}
+\date{}
+\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\paragraph{Exercice 3.}
+Le tableau ci-dessous regroupe les seuils de niveau de vie annuels, en euro
+$2019$ constant. Cela signifie que les données correspondent à la valeur de
+l'euro en $2019$. Les valeurs des autres années sont des valeurs corrigées en
+prenant compte de l'inflation.
+\[
+\begin{array}[]{ccccc}
+  \toprule
+ & 2016 &  2017 & 2018 & 2019 \\ \midrule
+ 1^{\text{ier}}\text{\textbf{ décile D1}} & 11480 & 11530 & 11340 & 11660 \\
+ \text{\textbf{Médiane}} & 21350 & 21440 & 21490 & 22040 \\
+ 9^{\text{e}}\text{\textbf{ décile D9}} & 39080 & 39350 & 39560 & 39930 \\
+ \bottomrule
+\end{array}
+\]
+Le premier décile représente les $10$\% de la population les plus pauvres alors
+que le neuvième décile représente les $10$\% les plus riches.
+\begin{enumerate}
+  \item Calculer et interpréter le taux d'évolution des seuils de niveau de vie
+    entre $2016$ et $2019$ pour chaque catégorie. Arrondir à $0,1$\% près.
+  \item Pour chaque année, calculer et interpréter $\frac{D9}{D1}$. Arrondir les
+    résultats au centième près.
+\end{enumerate}
+\paragraph{Exercice 4.}~\\
+\begin{minipage}{.5\textwidth}
+En seconde A, Mme Mendez a regroupé les résultats des élèves dans le
+diagramme en barres ci-contre.
+  \begin{enumerate}
+    \item Combien y a-t-il d'élèves en seconde A ?
+    \item Combien d'élèves ont obtenu une note supérieure ou égale à $5$ ?
+    \item Combien d'élèves ont obtenu une note entre $6$ et $8$ inclus ?
+    \item Calculer la moyenne de la classe à ce devoir.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+\includegraphics[scale=.4]{notes.png}
+  \end{center}
+\end{minipage}
+\begin{enumerate}
+    \setcounter{enumi}{4}
+  \item Faire un tableau présentant le nombre d'élèves dont les compétences sont
+    \begin{itemize}
+      \item non acquises (notes inférieures ou égale à $2,5$)
+      \item en voie d'acquisition (note supérieure strictement à $2,5$ et
+        inférieure ou égale à $5$)
+      \item acquises (notes supérieure strictement à $5$ et inférieure ou égale
+        à $7,5$)
+      \item bien acquises (notes strictement supérieure à $7,5$.
+    \end{itemize}
+      \item Construire le diagramme circulaire correspondant au tableau.
+\end{enumerate}
+
+\paragraph{Exercice 5.}~\\[2mm]
+\begin{minipage}{.45\textwidth}
+  Dans son rapport \emph{Mitigation of Climate Change} d'avril $2022$, le GIEC
+  (Groupe intergouvernemental sur l'évolution du climat) donne le tableau
+  suivant, présentant la répartition des émissions de gaz à effet de serre (GES)
+  par zone géographique en $2019$.
+  \begin{enumerate}
+    \item Quelle est la zone ayant émis le plus de GES en $2019$ ? Celle ayant
+      émis le moins ?
+    \item \begin{enumerate}
+        \item Quelle proportion de la population mondiale regroupe l'Asie de
+          l'Est ? L'Asie du Sud ?
+        \item Commenter le résultat précédent en le comparant au pourcentage
+          d'émission de GES.
+      \end{enumerate}
+  \item Le GIEC estime à $59$ Gt la quantité de GES émis en $2019$. Calculer la
+    quantité de gaz émis par zone.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.55\textwidth}
+\begin{center}
+  \begin{tabular}[]{ccc}
+    \toprule
+    & \makecell{\small\textbf{Population}\\\small\textbf{(en million)}} &
+    \makecell{\small\textbf{Emission}\\\small\textbf{de GES}}\\\midrule
+    \textbf{Afrique} & $1292$ & $9$\%\\
+    \makecell{\textbf{Amérique latine}\\\textbf{et caraïbes}} & $646$ & $10$\%
+    \\
+    \textbf{Amérique du Nord} & $366$ & $12$\% \\
+    \textbf{Asie de l'Est} & $1471$ & $27$\% \\
+    \textbf{Asie du Sud} & $1836$ & $8$\% \\
+    \makecell{\textbf{Asie du Sud-Est}\\\textbf{et Pacifique}} & $674$ & $9\%$
+    \\
+    \makecell{\textbf{Australie, Japon,}\\\textbf{Nouvelle-Zélande}} & $157$ &
+    $3$\%\\
+    \textbf{Europe} & $620$ & $8$\% \\
+    \makecell{\textbf{Europe de l'Est, Asie}\\\textbf{centrale et de l'Ouest}} &
+    $291$ & $6\%$ \\
+    \textbf{Moyen-Orient} & $252$ & $5$\% \\
+    \textbf{Commerce et aviation} & -- & $3$\%\\
+    \bottomrule
+  \end{tabular}
+\end{center}
+\end{minipage}
+\begin{enumerate}
+    \setcounter{enumi}{3}
+  \item Calculer la quantité de GES, en tonne, émis par habitant. Quelle est la
+    zone émettant le plus de GES par habitant ? Quelle est celle en émettant le
+    moins ?
+\end{enumerate}
+\end{document}

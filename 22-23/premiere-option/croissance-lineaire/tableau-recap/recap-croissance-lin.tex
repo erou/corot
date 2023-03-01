@@ -1,0 +1,154 @@
+\documentclass[11pt]{article}
+
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\newcommand{\titrechapitre}{}
+\newcommand{\titreclasse}{}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+
+%\title{Chapitre 1 : Croissance linéaire}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+\begin{center}
+  {\Large \bfseries Tableau récapitulatif}
+
+  \vspace{.3cm}
+  \renewcommand{\arraystretch}{2}
+\begin{tabular}[]{|c|c|c|}
+  \hline
+  \textbf{Modèle} & Discret & Continu \\
+  \hline
+  \textbf{Modélisation} & Suite arithmétique $u$ définie sur $\mathbb{N}$ &
+  Fonction affine $f$ définie sur $\mathbb{R}$.\\
+  \hline
+  \textbf{Expression} & $u(n)=u(0) + r\times n$ & $f(x) = f(0) + m\times x$\\
+  \hline
+  \makecell[b]{\textbf{Représentation}\\\textbf{graphique}} &
+     \begin{tikzpicture}[scale=.7]
+ \draw (0, -.2) -- (0, 3.7);
+ \foreach \x in {1, ..., 7} \draw (-.1, .5*\x) -- (0, .5*\x);
+ \foreach \x in {1, ..., 7} \draw[blue!20!white] (0, .5*\x) -- (6.2, .5*\x);
+ \foreach \x in {1, ..., 6} \draw[blue!20!white] (\x, 0) -- (\x, 3.7);
+ \draw (-.1, 0) -- (6.2, 0);
+ \foreach \x in {1, 3,..., 7} \node (\x) at (-.7, .5*\x) {$\x$};
+ \foreach \x in {1,...,6} \draw (\x, -.1) node[below] {$\x$} -- (\x, 0);
+ \foreach \x in {0, ..., 6} \draw[thick, red!80!black] (\x-.1, .5+.5*\x) -- (\x+.1,
+ .5+.5*\x) (\x, .5+.5*\x-.1) -- (\x, .5+.5*\x+.1);
+ \node (0) at (-.3, -.3) {$0$};
+\end{tikzpicture} &
+     \begin{tikzpicture}[scale=.7]
+ \draw (0, -.5) -- (0, 3.7);
+ \draw (-1, 0) -- (6.2, 0);
+ \foreach \x in {1, ..., 7} \draw (-.1, .5*\x) -- (0, .5*\x);
+ \foreach \x in {1, ..., 7} \draw[blue!20!white] (0, .5*\x) -- (6.2, .5*\x);
+ \foreach \x in {1, ..., 6} \draw[blue!20!white] (\x, 0) -- (\x, 3.7);
+ \foreach \x in {1, 3,..., 7} \node (\x) at (-.7, .5*\x) {$\x$};
+ \foreach \x in {1,...,6} \draw (\x, -.1) node[below] {$\x$} -- (\x, 0);
+ \draw[thick, red!80!black] (-.8,.1) -- (6.2, 3.6);
+ \node (0) at (-.3, -.3) {$0$};
+\end{tikzpicture} \\
+\hline
+\textbf{Caractérisation} & \makecell{Pour tout $n\in\mathbb{N}$,\\ $u(n+1)-u(n)$ est
+constant} & \makecell{Pour tous réels $a$ et $b$
+  distincts,\\$\frac{f(b)-f(a)}{b-a}$ est constant.}\\
+\hline
+\end{tabular}
+\end{center}
+  \vspace{.7cm}
+\begin{center}
+  {\Large \bfseries Tableau récapitulatif}
+
+  \vspace{.3cm}
+  \renewcommand{\arraystretch}{2}
+\begin{tabular}[]{|c|c|c|}
+  \hline
+  \textbf{Modèle} & Discret & Continu \\
+  \hline
+  \textbf{Modélisation} & Suite arithmétique $u$ définie sur $\mathbb{N}$ &
+  Fonction affine $f$ définie sur $\mathbb{R}$.\\
+  \hline
+  \textbf{Expression} & $u(n)=u(0) + r\times n$ & $f(x) = f(0) + m\times x$\\
+  \hline
+  \makecell[b]{\textbf{Représentation}\\\textbf{graphique}} &
+     \begin{tikzpicture}[scale=.7]
+ \draw (0, -.2) -- (0, 3.7);
+ \foreach \x in {1, ..., 7} \draw (-.1, .5*\x) -- (0, .5*\x);
+ \foreach \x in {1, ..., 7} \draw[blue!20!white] (0, .5*\x) -- (6.2, .5*\x);
+ \foreach \x in {1, ..., 6} \draw[blue!20!white] (\x, 0) -- (\x, 3.7);
+ \draw (-.1, 0) -- (6.2, 0);
+ \foreach \x in {1, 3,..., 7} \node (\x) at (-.7, .5*\x) {$\x$};
+ \foreach \x in {1,...,6} \draw (\x, -.1) node[below] {$\x$} -- (\x, 0);
+ \foreach \x in {0, ..., 6} \draw[thick, red!80!black] (\x-.1, .5+.5*\x) -- (\x+.1,
+ .5+.5*\x) (\x, .5+.5*\x-.1) -- (\x, .5+.5*\x+.1);
+ \node (0) at (-.3, -.3) {$0$};
+\end{tikzpicture} &
+     \begin{tikzpicture}[scale=.7]
+ \draw (0, -.5) -- (0, 3.7);
+ \draw (-1, 0) -- (6.2, 0);
+ \foreach \x in {1, ..., 7} \draw (-.1, .5*\x) -- (0, .5*\x);
+ \foreach \x in {1, ..., 7} \draw[blue!20!white] (0, .5*\x) -- (6.2, .5*\x);
+ \foreach \x in {1, ..., 6} \draw[blue!20!white] (\x, 0) -- (\x, 3.7);
+ \foreach \x in {1, 3,..., 7} \node (\x) at (-.7, .5*\x) {$\x$};
+ \foreach \x in {1,...,6} \draw (\x, -.1) node[below] {$\x$} -- (\x, 0);
+ \draw[thick, red!80!black] (-.8,.1) -- (6.2, 3.6);
+ \node (0) at (-.3, -.3) {$0$};
+\end{tikzpicture} \\
+\hline
+\textbf{Caractérisation} & \makecell{Pour tout $n\in\mathbb{N}$,\\ $u(n+1)-u(n)$ est
+constant} & \makecell{Pour tous réels $a$ et $b$
+  distincts,\\$\frac{f(b)-f(a)}{b-a}$ est constant.}\\
+\hline
+\end{tabular}
+\end{center}
+  \vspace{.7cm}
+\begin{center}
+  {\Large \bfseries Tableau récapitulatif}
+
+  \vspace{.3cm}
+  \renewcommand{\arraystretch}{2}
+\begin{tabular}[]{|c|c|c|}
+  \hline
+  \textbf{Modèle} & Discret & Continu \\
+  \hline
+  \textbf{Modélisation} & Suite arithmétique $u$ définie sur $\mathbb{N}$ &
+  Fonction affine $f$ définie sur $\mathbb{R}$.\\
+  \hline
+  \textbf{Expression} & $u(n)=u(0) + r\times n$ & $f(x) = f(0) + m\times x$\\
+  \hline
+  \makecell[b]{\textbf{Représentation}\\\textbf{graphique}} &
+     \begin{tikzpicture}[scale=.7]
+ \draw (0, -.2) -- (0, 3.7);
+ \foreach \x in {1, ..., 7} \draw (-.1, .5*\x) -- (0, .5*\x);
+ \foreach \x in {1, ..., 7} \draw[blue!20!white] (0, .5*\x) -- (6.2, .5*\x);
+ \foreach \x in {1, ..., 6} \draw[blue!20!white] (\x, 0) -- (\x, 3.7);
+ \draw (-.1, 0) -- (6.2, 0);
+ \foreach \x in {1, 3,..., 7} \node (\x) at (-.7, .5*\x) {$\x$};
+ \foreach \x in {1,...,6} \draw (\x, -.1) node[below] {$\x$} -- (\x, 0);
+ \foreach \x in {0, ..., 6} \draw[thick, red!80!black] (\x-.1, .5+.5*\x) -- (\x+.1,
+ .5+.5*\x) (\x, .5+.5*\x-.1) -- (\x, .5+.5*\x+.1);
+ \node (0) at (-.3, -.3) {$0$};
+\end{tikzpicture} &
+     \begin{tikzpicture}[scale=.7]
+ \draw (0, -.5) -- (0, 3.7);
+ \draw (-1, 0) -- (6.2, 0);
+ \foreach \x in {1, ..., 7} \draw (-.1, .5*\x) -- (0, .5*\x);
+ \foreach \x in {1, ..., 7} \draw[blue!20!white] (0, .5*\x) -- (6.2, .5*\x);
+ \foreach \x in {1, ..., 6} \draw[blue!20!white] (\x, 0) -- (\x, 3.7);
+ \foreach \x in {1, 3,..., 7} \node (\x) at (-.7, .5*\x) {$\x$};
+ \foreach \x in {1,...,6} \draw (\x, -.1) node[below] {$\x$} -- (\x, 0);
+ \draw[thick, red!80!black] (-.8,.1) -- (6.2, 3.6);
+ \node (0) at (-.3, -.3) {$0$};
+\end{tikzpicture} \\
+\hline
+\textbf{Caractérisation} & \makecell{Pour tout $n\in\mathbb{N}$,\\ $u(n+1)-u(n)$ est
+constant} & \makecell{Pour tous réels $a$ et $b$
+  distincts,\\$\frac{f(b)-f(a)}{b-a}$ est constant.}\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

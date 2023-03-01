@@ -1,0 +1,301 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Probabilités conditionnelles -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 4 : Trigonométrie}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Cercle trigonométrique et radian}
+\subsection{Cercle trigonométrique}
+
+\begin{defi}{Cercle trigonométrique}
+  \begin{minipage}{.5\textwidth}
+    Dans un repère orthonormé $(O; I, J)$, le \textbf{cercle trigonométrique}
+    $C$ est le cercle de centre $O$ et de rayon $1$, orienté dans le sens
+    inverse des aiguilles d'une montre, appelé \textbf{sens direct} ou encore
+    \textbf{sens trigonométrique}.
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[thick, red] (0,0) circle (2cm);
+        \draw (-2.2, 0) -- (2.2, 0);
+        \draw (0, -2.2) -- (0, 2.2);
+        \draw[->] (2.2, 1) to[out=90, in=0] (1.8, 1.6);
+
+        \node at (2.4, 1.5) {$+$};
+        \node at (-.4, .4) {$O$};
+        \node at (2.2, -.4) {$I$};
+        \node at (0.2, 1.6) {$J$};
+        \node at (0.2, 1.6) {$J$};
+        \node[red] at (-2, 1.2) {$C$};
+
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{defi}
+
+\subsection{Enroulement de la droite numérique}
+
+\noindent\begin{minipage}{.7\textwidth}
+  On place la droite numérique perpendiculaire à $(OI)$ telle que le $0$ de la
+  droite numérique coïncide avec le point $I$ et on l'oriente dans le sens de
+  $O$ vers $J$ (vers le haut). On enroule la demi-droite des réels positifs sur
+  le cercle $C$ dans le sens trigonométrique et la demi-droite des réels
+  négatifs sur le cercle $C$ dans le sens indirect.
+  \begin{defi}{Point image}
+    À chaque nombre réel $x\in\mathbb{R}$ de la droite numérique, on associe un
+    unique point $M$ du cercle trigonométrique que l'on appelle
+    \textbf{point image}.
+  \end{defi}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+  \begin{center}
+    \href{https://www.geogebra.org/m/xx3zcwut}{\includegraphics[scale=.32]{enroulement.png}}
+  \end{center}
+\end{minipage}
+
+\begin{prop}
+  Deux nombres réels $x$ et $x'$ de la droite numérique ont le même point image
+  sur $C$ si et seulement si 
+  \[
+    x = x' + k\times2\pi
+  \]
+  avec $k\in\mathbb{Z}$.
+\end{prop}
+
+\begin{exemple}
+  En remarquant que
+  \[
+    \pi = 3\pi-1\times2\pi = -5\pi+3\times2\pi,
+  \]
+  on en déduit que $\pi$, $3\pi$ et $-5\pi$ ont le même point image sur le
+  cercle trigonométrique : le point de coordonnées $(-1;0)$.
+\end{exemple}
+
+\begin{app}
+  Relier les nombres qui ont le même point image.\\
+  \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \begin{enumerate}[label=(\arabic*)]
+        \item $\frac{-3\pi}{2}$
+        \item $-\frac{\pi}{4}$
+        \item $0$
+        \item $-\pi$
+      \end{enumerate}
+    \end{center}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \begin{enumerate}[label=(\alph*)]
+        \item $2\pi$
+        \item $\frac{\pi}{2}$
+        \item $\pi$
+        \item $\frac{7\pi}{4}$
+      \end{enumerate}
+    \end{center}
+  \end{minipage}
+\end{app}
+
+\begin{app}
+  \begin{minipage}{.5\textwidth}
+   Placer les points associés aux réels suivants : 
+   \begin{align*}
+     & 0 &
+     & \pi &
+     & 2\pi \\
+     & \frac{\pi}{2} &
+     & \frac{3\pi}{2} &
+     & \frac{\pi}{4} \\
+     & \frac{3\pi}{4} &
+     & \frac{-\pi}{4} &
+     & \frac{\pi}{3} \\
+     & \frac{2\pi}{3} &
+     & \frac{-\pi}{3} &
+     & \frac{\pi}{6} \\
+     &-\frac{\pi}{6}&
+     & & &
+   \end{align*}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \includegraphics[scale=.3]{images.png}
+    \end{center}
+  \end{minipage}
+\end{app}
+
+\subsection{Angle en radian}
+
+%\begin{defi}{Mesure}
+%  Soit $x\in\mathbb{R}$ un nombre réel, auquel correspond un point $M$ du cercle
+%  trigonométrique après enroulement de la droite numérique. Alors $x$ est une
+%  \textbf{mesure} de l'angle $\widehat{IOM}$.
+%\end{defi}
+
+\begin{defi}{Mesure en radian}
+  \begin{minipage}{.6\textwidth}
+  Soit $M$ un point du cercle trigonométrique. On appelle \textbf{mesure en
+  radian de l'angle orienté} $(\overrightarrow{OI}, \overrightarrow{OM})$ tout
+  nombre réel $x\in\mathbb{R}$ associé au point $M$.
+    \end{minipage}
+  \begin{minipage}{.4\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0,0) circle (2cm);
+        \draw[thick, red, fill, opacity=1] (.5,0) arc (0:60:.5);
+        \draw[thick, red, fill, opacity=1] (0,0) -- (.5, 0) --(60:.5);
+        \draw (-2.2, 0) -- (2.2, 0);
+        \draw (0, -2.2) -- (0, 2.2);
+
+        \draw[thick, red] (2,0) arc (0:60:2);
+        \draw[thick, red] (0,0) -- (1, 1.732);
+        \draw[thick, red] (0,0) -- (2, 0);
+
+        \node at (-.4, .4) {$O$};
+        \node at (2.2, -.4) {$I$};
+        \node at (0.3, 2.2) {$J$};
+        \node at (-2, 1.2) {$C$};
+        \node[red] at (2, 1.2) {$x$};
+        \node[red] at (1.3, 1.92) {$M$};
+        \node[red] at (1.2, .5) {$\widehat{IOM}$};
+      \end{tikzpicture}
+    \end{center}
+    \end{minipage}
+
+\end{defi}
+
+\begin{prop}
+  \begin{minipage}{.6\textwidth}
+  Les mesures, en degrés ou en radians, d'un angle géométrique, sont
+  \textbf{proportionnelles.} On a ainsi le tableau de proportionnalité
+  ci-contre. On a donc $\pi d=180\alpha$ ou
+  $\frac{\alpha}{\pi}=\frac{d}{180}$.
+\end{minipage}
+  \begin{minipage}{.4\textwidth}
+  \begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}[]{|c|c|c|}
+  \hline
+  Mesure en degrés & $180$ & $d$ \\
+  \hline
+  Mesure en radians & $\pi$ & $\alpha$ \\
+  \hline
+\end{tabular}
+  \end{center}
+\end{minipage}
+\end{prop}
+
+\begin{app}
+ Compléter le tableau suivant. 
+\def\arraystretch{1.5}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+  \hline
+  Mesure en degrés & $0$ & $30$ & $45$ & $60$ & $90$ & $180$ & $270$ & $360$ \\
+  \hline
+  Mesure en radians & & & & & & $\pi$ & & \\
+  \hline
+\end{tabular}
+\end{app}
+
+\begin{app}
+  \begin{enumerate}
+    \item Exprimer, en radians, une mesure de $50^\circ$.
+    \item Exprimer, en degrés, une mesure de $\frac{7\pi}{16}$ radians.
+  \end{enumerate}
+\end{app}
+
+\section{Cosinus et sinus}
+\subsection{Généralités}
+\begin{defi}{Cosinus et sinus}~\\[-5mm]
+  \begin{minipage}{.6\textwidth}
+  On considère un réel $x\in\mathbb{R}$ ayant pout image le point $M$ sur le
+  cercle trigonométrique.
+  \begin{itemize}
+    \item L'abscisse du point $M$ est appelée \textbf{cosinus} de $x$. On la
+      note $\cos(x)$.
+    \item L'ordonnée du point $M$ est appelée \textbf{sinus} de $x$. On la note
+      $\sin(x)$.
+  \end{itemize}
+  Les coordonnées du point $M$ sont donc $M(\cos(x); \sin(x))$.
+\end{minipage}
+  \begin{minipage}{.4\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0,0) circle (2cm);
+        \draw[thick, red] (2,0) arc (0:60:2);
+        \draw (-2.2, 0) -- (2.2, 0);
+        \draw (0, -2.2) -- (0, 2.2);
+
+        \draw[thick, dashed] (1, 0) -- (1, 1.732) -- (0, 1.732);
+
+        \node at (-.4, .4) {$O$};
+        \node at (2.2, -.4) {$I$};
+        \node at (0.3, 2.2) {$J$};
+        \node at (-2, 1.2) {$C$};
+        \node[red] at (2, 1.2) {$x$};
+        \node[red] at (1.3, 1.92) {$M$};
+        \node at (1, -.3) {$\cos(x)$};
+        \node at (-.6, 1.532) {$\sin(x)$};
+      \end{tikzpicture}
+    \end{center}
+    \end{minipage}
+\end{defi}
+
+\begin{prop}
+  Pour tout nombre réel $x\in\mathbb{R}$, on a :\\[-7mm]
+  \begin{align*}
+    \bullet&\; -1\leq\cos(x)\leq 1 &
+    \bullet&\; -1\leq\sin(x)\leq 1 &
+    \bullet&\; \cos^2(x)+\sin^2(x) = 1.
+  \end{align*}
+  Et pour tout entier relatif $k\in\mathbb{Z}$, on a\\[-7mm]
+  \begin{align*}
+    \bullet&\cos(x+2k\pi) = \cos(x) &
+    \bullet&\;\sin(x+2k\pi)=\sin(x)
+  \end{align*}
+\end{prop}
+
+\subsection{Valeurs remarquables}
+\noindent Certaines valeurs du cosinus et du sinus sont à connaître
+\textbf{par cœur $\heartsuit$}.
+\begin{center}
+\includegraphics[scale=.42]{valeurs.png}
+\end{center}
+Les valeurs sont aussi rappelées dans ce tableau (également à connaître).
+\[
+  \def\arraystretch{2}
+  \begin{array}[]{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Angle} & 0 & \frac{\pi}{6} & \frac{\pi}{4} & \frac{\pi}{3} &
+    \frac{\pi}{2} & \pi & \frac{3\pi}{2} & 2\pi \\
+    \hline
+    \cos(x) & 1 & \frac{\sqrt3}{2} & \frac{\sqrt2}{2} &
+    \frac{1}{2} & 0 & -1 & 0 & 1 \\
+    \hline
+    \sin(x) & 0 & \frac{1}{2} & \frac{\sqrt2}{2} & \frac{\sqrt3}{2} & 1 & 0 & -1
+    & 0 \\
+    \hline
+  \end{array}
+\]
+\begin{app}
+  \begin{enumerate}
+    \item Donner les coordonnées du point image associé au réel
+      $\frac{3\pi}{4}$.
+    \item Donner les coordonnées du point image associé au réel
+      $\frac{5\pi}{6}$.
+    \item Donner les coordonnées du point image associé au réel
+      $-\frac{\pi}{2}$.
+  \end{enumerate}
+\end{app}
+
+
+\end{document}

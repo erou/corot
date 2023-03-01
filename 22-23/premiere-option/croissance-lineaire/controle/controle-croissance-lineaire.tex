@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\begin{center}
+\textbf{\LARGE \textsc{Contrôle 1}}\\[2mm]
+
+{\large Mardi 04 Octobre 2022, durée : 0h45}\\[1mm]
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+La calculatrice est \textbf{autorisée.}
+
+\paragraph{Exercice 1.} Soit $u$ la suite arithmétique de premier terme $u(0)=3$
+et de raison $r=0,75$.
+\begin{enumerate}
+  \item Calculer $u(0)$, $u(1)$ et $u(2)$.
+  \item Donner la relation de récurence vérifiée par la suite $u$.
+  \item Donner la forme explicite de la suite $u$.
+  \item Calculer $u(100)$ et $u(2022)$.
+\end{enumerate}
+
+\paragraph{Exercice 2.}~\\
+\begin{minipage}{.5\textwidth}
+  On représente une suite par le nuage de points ci-contre.
+  \begin{enumerate}
+    \item Lire graphiquement les valeurs $u(1)$ et $u(3)$.
+    \item Justifier qu'il s'agit d'une suite arithmétique.
+    \item Quel est le premier terme de la suite $u$ ?
+    \item Quelle est la raison de la suite $u$ ?
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=1]
+ \draw (0, -1.6) -- (0, 5.7);
+ \foreach \x in {-3, ..., 11} \draw (-.1, .5*\x) -- (0, .5*\x);
+ \foreach \x in {-3, ..., 11} \draw[blue!20!white] (0, .5*\x) -- (4.7, .5*\x);
+ \foreach \x in {1, ..., 4} \draw[blue!20!white] (\x, -1.6) -- (\x, 5.7);
+ \draw (-.1, 0) -- (4.7, 0);
+ \foreach \x in {-3, -1,..., 11} \node (\x) at (-.7, .5*\x) {$\x$};
+ \foreach \x in {1,...,4} \draw (\x, -.1) node[below] {$\x$} -- (\x, 0);
+ \foreach \x in {0, ..., 4} \draw[ultra thick, red!80!black] (\x-.1, -1+1.5*\x) -- (\x+.1,
+ -1+1.5*\x) (\x, -1+1.5*\x-.1) -- (\x, -1+1.5*\x+.1);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\paragraph{Exercice 3.}~\\
+\begin{minipage}{.5\textwidth}
+  On représente une fonction $f$ sur le graphique ci-contre.
+  \begin{enumerate}
+    \item Lire graphiquement $f(-2)$ et $f(4)$.
+    \item Justifier qu'il s'agit d'une fonction affine.
+    \item Quelle est l'ordonnée à l'origine de cette fonction ?
+    \item Quel est le coefficient directeur de cette fonction ?
+    \item Donner une expression de la fonction.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}
+        \addplot[very thick, red, samples=101, domain=-5.5:5.5]{2-.5*x};
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+\end{minipage}
+
+\paragraph{Exercice 4.} Une famille décide d'épargner afin de pouvoir acheter un
+appartement. En $2022$, la famille a déjà épargné $41 000$ euros. Elle réussit à
+épargner $18\;000$ euros par an. On note $u(n)$ la somme épargnée en $2022+n$.
+\begin{enumerate}
+  \item Justifier que la suite $u$ est arithmétique.
+  \item Quel est le premier terme de la suite $u$ ?
+  \item Quelle est la raison de la suite $u$ ?
+  \item En déduire une expression de $u(n)$ en fonction de $n$.
+  \item L'appartement coûte $160\;000$ euros. Au bout de combien d'années la
+    famille pourra-t-elle acheter l'appartement ?
+\end{enumerate}
+
+
+\end{document}

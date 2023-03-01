@@ -1,0 +1,410 @@
+\documentclass[11pt]{article}
+
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\newcommand{\titrechapitre}{Dérivation -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+
+\title{Chapitre 2 : Dérivation}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\newcommand{\Cf}{\mathscr{C}_f}
+
+\section{Nombre dérivé et tangente}
+On considère $f$ une fonction définie sur un intervalle $I$ de $\mathbb{R}$ et
+on note $\Cf$ sa courbe représentative dans un repère du plan. Soit $a$ un réel
+appartenant à $I$ et $A$ le point de $\Cf$ d'abscisse $a$.
+
+\subsection{Nombre dérivé et taux de variation}
+Soient $h\in\mathbb{R}$ un réel non nul tel que $a+h\in I$ et $H$ le point de
+$\Cf$ d'abscisse $a+h$. En particulier : $a\neq a+h$. 
+\begin{defi}{Taux de variation}
+  \begin{minipage}{.6\textwidth}
+    Le nombre $\tau(h) =\frac{f(a+h)-f(a)}{h}$ est appelé \textbf{taux de
+    variation} de $f$ entre $a$ et $a+h$. Sur la
+    \href{https://www.geogebra.org/m/bj5pnzvr}{figure} ci-contre,
+    le point $A$ a pour coordonnées $(a; f(a))$ et le point $H$ a pour coordonnés
+    $(a+h; f(a+h))$.\\
+    Le coefficient directeur de la droite $(AH)$ est
+    \[
+      \frac{f(a+h)-f(a)}{a+h-a};
+    \]
+    autrement dit, le coefficient directeur est $\tau(h)$. Le nombre $\tau(h)$
+    dépend de $a$.
+  \end{minipage}
+  \begin{minipage}{.4\textwidth}
+    \begin{center}
+      \begin{tikzpicture}[scale=.85]
+        \begin{axis}[x=1cm, y=1cm, xmin=-2.5, ymin=-.5, xmax=3.5]
+          \addplot[red, semithick, samples=101]{x^2-x+1};
+        \end{axis}
+        \draw[blue!80!black] (2.75, 0) -- (5.75, 6);
+        \node[blue!80!black] (H) at (4.8, 3.2) {$H$};
+        \node[blue!80!black] (A) at (3.7, 1.3) {$A$};
+
+        \draw[blue!80!black, semithick, dashed] (3.5, 1.5) -- (3.5, .5);
+        \draw[blue!80!black, semithick, dashed] (4.5, 3.5) -- (4.5, .5);
+        \draw[blue!80!black, semithick, dashed] (3.5, 1.5) -- (2.5, 1.5);
+        \draw[blue!80!black, semithick, dashed] (4.5, 3.5) -- (2.5, 3.5);
+
+        \node[blue!80!black] (a) at (3.5, 0) {\scriptsize $a$};
+        \node[blue!80!black] (ah) at (4.5, 0) {\scriptsize $a+h$};
+        \node[blue!80!black] (fa) at (1.6, 1.5) {\scriptsize $f(a)$};
+        \node[blue!80!black] (fah) at (1.6, 3.5) {\scriptsize $f(a+h)$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{defi}
+\begin{rmq}
+  Le taux de variation est aussi appelé \textbf{taux d'accroissement} entre $a$
+  et $a+h$.
+\end{rmq}
+
+\begin{defi}{Nombre dérivée et dérivabilité}
+  On dit que $f$ est \textbf{dérivable} en $a$ lorsque $\tau(h)$ tend vers un
+  nombre réel quand $h$ prend des valeurs proches de $0$. Ce réel est appelé
+  \textbf{nombre dérivée} de $f$ en $a$ et est noté $f'(a)$. On écrit alors
+  \[
+    f'(a) = \underset{h\to0}{\lim}\frac{f(a+h)-f(a)}{h}.
+  \]
+\end{defi}
+
+\begin{exemple}
+  Soit $f:x\mapsto 2x+1$. Soit $a\in\mathbb{R}$ un réel quelconque. Alors
+  $f(a)=2a+1$ et $f(a+h)=2(a+h)+1=2a+2h+1$. Ainsi,
+  pour tout $h\neq0$ et tout $a\in I$, on a
+  \[
+    \tau(h) = \frac{f(a+h)-f(a)}{h} = \frac{2a+2h+1-(2a+1)}{h} =
+    \frac{2h}{h}=2.
+  \]
+  On a ainsi $\underset{h\to0}{\lim}\tau(h)=2$. On dit que la fonction $f$ est
+  dérivable au point $a$ et que son nombre dérivé en $a$ vaut $f'(a)=2$.
+\end{exemple}
+
+\begin{exemple}
+  Soit $f:x\mapsto x^2$. Pour $h\neq0$ et $a=0$,
+  $\tau(h)=\frac{f(0+h)-f(0)}{h}=\frac{h^2}{h}=h$. On a
+  $\underset{h\to0}{\lim}\tau(h)=0$ donc $f$ est dérivable en $0$ et $f'(0)=0$.
+\end{exemple}
+
+\begin{exemple}
+  \begin{minipage}{.7\textwidth}
+  Soit $g$ la fonction définie sur $\mathbb{R}$ par $g(x)=|x|$. Pour $h\neq0$ et
+  $a=0$,
+  \[
+    \tau(h)=\frac{g(0+h)-g(0)}{h}=\frac{|h|-|0|}{h}=\frac{|h|-|0|}{h}=\frac{|h|}{h}.
+  \]
+  Pour $h>0$, $\tau(h)=\frac{h}{h}=1$, et pour $h<0$,
+  $\tau(h)=\frac{-h}{h}=-1$. On obtient deux nombres différents quand $h$ prend
+  des valeurs proches de $0$, donc $g$ n'est pas dérivable en $0$.
+\end{minipage}
+  \begin{minipage}{.3\textwidth}
+  \begin{center}
+    \begin{tikzpicture}[scale=.8]
+      \begin{axis}
+        \addplot[red, semithick, samples=101, domain=-5.5:5.5]{abs(x)};
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+\end{minipage}
+\end{exemple}
+\begin{app}
+  On considère la fonction $f$ définie sur $\mathbb{R}$ par
+  $f(x)=-\frac{1}{3}x+1$.
+  \begin{enumerate}
+    \item Soit $h$ un réel non nul. Calculer $f(3+h)$ et $f(3)$.
+    \item Montrer que $f$ est dérivable en $3$ et déterminer le nombre dérivé de
+      $f$ en $3$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Tangente à une courbe}
+
+\begin{defi}{Tangente}
+  \begin{minipage}{.6\textwidth}
+    Lorsque $f$ est dérivable en $a$, on appelle
+    \href{https://www.geogebra.org/m/bunmvhxv}{\textbf{tangente}} à la courbe
+    $\Cf$ au point d'abscisse $a$ la droite $T$ passant par $A(a; f(a))$ dont le
+    coefficient directeur est le nombre dérivé $f'(a)$.
+  \end{minipage}
+  \begin{minipage}{.4\textwidth}
+\begin{center}
+      \begin{tikzpicture}[scale=.85]
+        \begin{axis}[x=1cm, y=1cm, xmin=-2.5, ymin=-.5, xmax=3.5]
+          \addplot[red, semithick, samples=101]{-x^2+2*x+1};
+        \end{axis}
+        \draw[blue!80!black] (1.46, 0) -- (5.46, 6);
+        \node[blue!80!black] (A) at (3, 1.8) {$A$};
+
+        \draw[blue!80!black, semithick, dashed] (2.75, 1.94) -- (2.75, .5);
+        \draw[blue!80!black, semithick, densely dashed] (2.75, 1.94) -- (2.5, 1.94);
+
+        \node[blue!80!black] (a) at (2.75, 0.25) {\scriptsize $a$};
+        \node[blue!80!black] (fa) at (2, 1.94) {\scriptsize $f(a)$};
+
+        \draw[blue!80!black, semithick, densely dashed] (3.5, 3) -- (4.5, 3) --
+        (4.5, 4.5);
+
+        \node[blue!80!black] (1) at (4, 2.8) {\scriptsize $1$};
+        \node[blue!80!black] (f'a) at (5, 3.75) {\scriptsize $f'(a)$};
+        \node[red!80!black] (Cf) at (5.2, 1) {$\Cf$};
+        \node[blue!80!black] (T) at (4.7, 5.2) {$T$};
+      \end{tikzpicture}
+\end{center}
+\end{minipage}
+\end{defi}
+
+\begin{exemple}
+   \begin{minipage}{.6\textwidth}
+     On donne la courbe d'une fonction $f$ dérivable en $3$, dont on a tracé la
+     tangente $T_A$ au point d'abscisse $3$. Par lecture graphique, on a
+     $f'(3)=2$.
+  \end{minipage}
+  \begin{minipage}{.4\textwidth}
+\begin{center}
+      \begin{tikzpicture}[scale=.85]
+        \begin{axis}[x=1cm, y=1cm, xmin=-.5, ymin=-.5, xmax=5.5]
+          \addplot[red, semithick, samples=101]{x^2-4*x+5};
+        \end{axis}
+        \draw[blue!80!black] (2.25, 0) -- (5.25, 6);
+        \node[blue!80!black] (A) at (3.3, 2.8) {$A$};
+
+        \draw[blue!80!black, semithick, densely dashed] (3.5, 2.5) -- (4.5, 2.5) --
+        (4.5, 4.5);
+
+        \node[blue!80!black] (1) at (4, 2.3) {\scriptsize $+1$};
+        \node[blue!80!black] (f'a) at (4.8, 3.75) {\scriptsize $+2$};
+        \node[blue!80!black] (T) at (5.3, 5.2) {$T_A$};
+        \node[red!80!black] (Cf) at (1.2, 4.2) {$\Cf$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exemple}
+
+\begin{app}
+    \begin{minipage}{.6\textwidth}
+    On considère la fonction $f$ définie sur $]0;+\infty[$ par
+      $f(x)=\frac{1}{x}$ dont on a tracé la courbe représentative $\Cf$. La
+      doite $(AB)$ est la tangente à $\Cf$ au point $A$ d'abscisse $2$.\\
+      Déterminer graphiquement $f'(2)$.
+  \end{minipage}
+  \begin{minipage}{.4\textwidth}
+\begin{center}
+      \begin{tikzpicture}[scale=.85]
+        \begin{axis}[x=1cm, y=1cm, xmin=-.5, ymin=-.5, xmax=5.5, ymax=2.5]
+          \addplot[red, semithick, samples=101, domain=0:5.5]{1/x};
+        \end{axis}
+
+        \draw[blue!80!black] (0, 1.625) -- (6, .125);
+        \node[blue!80!black] (A) at (2.7, 1.3) {$A$};
+        \node[blue!80!black] (B) at (4.8, .8) {$B$};
+
+        \draw[blue!80!black, thick] (2.5-.1, 1)--(2.5+.1, 1) (2.5, 1-.1)--(2.5,
+        1+.1);
+        \draw[blue!80!black, thick] (4.5-.1, .5)--(4.5+.1, .5) (4.5, .5-.1)--(4.5,
+        .5+.1);
+
+        \node[red!80!black] (Cf) at (1.7, 2.2) {$\Cf$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{app}
+
+\section{Équation de tangente}
+\begin{prop}
+  Soit $f$ une fonction dérivable en $a$. L'équation réduite de la tangente
+  $T_A$ à la courbe de $f$ au point d'abscisse $a$ est
+  \[
+    y = f'(a)(x-a)+f(a).
+  \]
+\end{prop}
+\begin{proof}
+  Soit $T_A$ la tangente au point $A$ d'abscisse $a$ de $\Cf$. Par définition,
+  le nombre dérivé $f'(a)$ est le coefficient directeur de cette tangente, et
+  elle a donc pour équation
+  \[
+    y = f'(a)x + p,
+  \]
+  où le nombre $p$ est l'ordonnée à l'origine et reste à déterminer. Comme le
+  point $A(a; f(a))$ appartient à $T_A$, ses coordonnées vérifient l'équation
+  réduite de $T_A$. On a donc
+  \[
+    f(a) = f'(a)\times a+p\Longleftrightarrow p=f(a)-f'(a)\times
+  a.
+  \]
+En remplaçant cette valeur dans l'équation réduite de $T_A$ et en
+  factorisant par $f'(a)$, on a bien
+  \[
+    y = f'(a)(x-a)+f(a).
+  \]
+\end{proof}
+\begin{exemple}
+  Soit $f$ une fonction telle que $f(1)2$ et $f'(1)=\frac{1}{3}$. La tangente
+  $T$ à la courbe de $f$ au point d'abscisse $1$ a donc pour équation réduite
+  \[
+    y = f'(1)(x-1)+f(1).
+  \]
+  Cela donne
+  \begin{align*}
+   y &= \frac{1}{3}(x-1)+2 \\
+    \Leftrightarrow y &= \frac{1}{3}x-\frac{1}{3}+2 \\
+    \Leftrightarrow y &= \frac{1}{3}x+\frac{5}{3}.
+  \end{align*}
+\end{exemple}
+\begin{app}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x) = x^3-x^2+x-1$. En
+  remarquant que, pour tout $x\in\mathbb{R}$, $f(x)=(x-1)(x^2+1)$ :
+  \begin{enumerate}
+    \item déterminer la tangente $T$ à la courbe représentative de $f$ au point
+      d'abscisse $1$;
+    \item en déduire les coordonnées du point d'intersection de $T$ avec l'axe
+      des ordonnées.
+  \end{enumerate}
+\end{app}
+
+\section{Fonctions dérivées}
+\begin{defi}{Fonction dérivée}
+  On dit que $f$ est \textbf{dérivable sur un intervalle} $I$ lorsque $f$ est
+  dérivable en tout réel $a$ de $I$. On appelle \textbf{fonction dérivée} de $f$
+  la fonction qui, à tout réel $x$ de $I$, associe le réel $f'(x)$. On la note
+  $f'$.
+\end{defi}
+\subsection{Fonctions dérivées des fonctions usuelles}
+\begin{prop}
+  \[
+    \def\arraystretch{2}
+    \begin{array}{|c|c|c|c|}
+      \hline
+      \text{Fonction }f\text{ définie par :} & \makecell{\text{Ensemble
+      de}\\\text{définition }D_f} & \makecell{\text{Fonction dérivée}\\f'\text{
+      définie par :}} & \makecell{\text{Ensemble de }\\\text{dérivabilité
+      }D_{f'}}
+      \\
+      \hline
+      f(x)=k\text{, avec }k\in\mathbb{R} & \mathbb{R} & f'(x)=0 & \mathbb{R} \\
+      \hline
+      \makecell{f(x)=mx+p\\\text{avec }m, p\in\mathbb{R}} & \mathbb{R} & f'(x)=m
+      & \mathbb{R} \\
+      \hline
+      f(x)= x^2 & \mathbb{R} & f'(x)=2x & \mathbb{R} \\
+      \hline
+      f(x)= x^n\text{, avec }n\in\mathbb{N}^* & \mathbb{R} & f'(x)=nx^{n-1} & \mathbb{R} \\
+      \hline
+      f(x)= \frac{1}{x} & \mathbb{R}\setminus\left\{ 0 \right\} &
+      f'(x)=-\frac{1}{x^2} & \mathbb{R}\setminus\left\{ 0 \right\} \\
+      \hline
+      f(x)= \frac{1}{x^n} & \mathbb{R}\setminus\left\{ 0 \right\} &
+      f'(x)=-\frac{n}{x^{n+1}} & \mathbb{R}\setminus\left\{ 0 \right\} \\
+      \hline
+      f(x)= \sqrt x & [0; +\infty[ & f'(x)=\frac{1}{2\sqrt x} & ]0; +\infty[ \\
+      \hline
+    \end{array}
+  \]
+\end{prop}
+
+\begin{exemple}
+  La fonction $g$ est définie sur $\mathbb{R}\setminus\left\{ 0 \right\}$ par
+  $g(x)=\frac{1}{x^2}$. La fonction $g$ est dérivable sur $\mathbb{R}^*$ et pour
+  tout $x\neq0$, on a
+  \[
+    g'(x) = -\frac{2}{x^{2+1}}=-\frac{2}{x^3}.
+  \]
+\end{exemple}
+
+\begin{exemple}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x)=4x+5$. Alors
+  \[
+    f'(x) = 4.
+  \]
+\end{exemple}
+
+\begin{exemple}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x)=x^3$. Alors
+  \[
+    f'(x) = 3x^2.
+  \]
+\end{exemple}
+
+\begin{exemple}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x)=x^5$. Alors
+  \[
+    f'(x) = 5x^4.
+  \]
+\end{exemple}
+
+\begin{rmq}
+  Attention, la fonction racine carrée n'est pas dérivable sur tout son ensemble
+  de définition ! Elle est définie sur $[0;+\infty[$ mais elle est dérivable sur
+  $]0;+\infty[$. Autrement dit, elle n'est pas dérivable en $0$.
+\end{rmq}
+
+\subsection{Opérations sur les fonctions dérivées}
+\begin{prop}
+  Soient $u, v$ et $g$ des fonctions définies et dérivables sur un intervalle
+  $I$. Soient $k, a$ et $b$ des réels.
+  \begin{center}
+  \def\arraystretch{2}
+\begin{tabular}{|c|c|c|}
+  \hline
+  \textbf{Type d'opération} & \textbf{Fonction à dériver} & \textbf{Fonction
+  dérivée} \\
+  \hline
+  Dérivée d'une somme & $u+v$ & $(u+v)' = u'+v'$ \\
+  \hline
+  Dérivée d'un produit par une constante & $k\times u$ & $(k\times u)' = k\times
+  u'$ \\
+  \hline
+  Dérivée d'un produit & $u\times v$ & $(u\times v)'=u'\times v+u\times v'$ \\
+  \hline
+  Dérivée d'un inverse & \makecell{$\frac{1}{v}$ avec $v(x)\neq0$\\pour tout
+$x\in I$} & $\left( \cfrac{1}{v} \right)'=-\cfrac{v'}{v^2}$\\
+\hline
+  Dérivée d'un quotient & \makecell{$\frac{u}{v}$ avec $v(x)\neq0$\\pour tout
+$x\in I$} & $\left( \cfrac{u}{v} \right)'=\cfrac{u'\times v-u\times v'}{v^2}$\\
+\hline
+\multicolumn{3}{|c|}{\makecell{Dérivée de $f(x)=g(ax+b)$ : soit $J$ l'intervalle tel que
+pour tout $x\in J$, $ax+b\in I$.\\ La fonction $f$ est définie et dérivable sur
+$J$ et $f'(x)=a\times g'(ax+b)$.}}\\
+\hline
+\end{tabular}
+  \end{center}
+\end{prop}
+\begin{exemple}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x)=4x^3-5x^2+2x-1$. En
+  tant que fonction polynôme, $f$ est dérivable sur $\mathbb{R}$, et pour tout
+  $x\in\mathbb{R}$, on a
+  \[
+    f'(x) = 12x^2-10x+2.
+  \]
+\end{exemple}
+\begin{exemple}
+  Soit $g$ la fonction définie sur $\mathbb{R}\setminus\left\{ 1 \right\}$ par
+  $g(x) = \frac{4+x^2}{x+1}$. La fonction $g$ est dérivable sur
+  $\mathbb{R}\setminus\left\{ 1 \right\}$ en tant que fonction rationnelle, et
+  pour tout $x\in\mathbb{R}\setminus\left\{ 1 \right\}$, on a
+  \[
+    g'(x) = \frac{2x(x+1)-(4+x^2)\times 1}{(x+1)^2} = \frac{x^2+2x-4}{(x+1)^2}.
+  \]
+\end{exemple}
+
+\begin{app}
+  Soit $f$ la fonction définie sur $[0;+\infty[$ par $f(x)=x\sqrt x$.\\
+    Donner l'ensemble de dérivabilité et la fonction dérivée de la fonction $f$.
+\end{app}
+
+\begin{app}
+  Soit $f$ la fonction définie sur $I$ par $f(x)=\frac{\sqrt x}{x+1}$.
+  \begin{enumerate}
+    \item Déterminer l'ensemble $I$.
+    \item Justifier que $f$ est dérivable en précisant l'ensemble de
+      dérivabilité et déterminer sa fonction dérivée.
+  \end{enumerate}
+\end{app}
+
+\end{document}

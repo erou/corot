@@ -1,0 +1,247 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Croissance linéaire -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 1 : Croissance linéaire}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Suites arithmétiques}
+\begin{defi}{Suite}
+  Une \textbf{suite} $u$ est une fonction dont la variable, notée $n$ plutôt que
+  $x$, est un entier naturel. Le nombre $u(n)$ est appelé \textbf{terme de
+  rang} $n$ de la suite $u$.
+\end{defi}
+
+\begin{defi}{Suite arithmétique}
+  Une suite $u$ est $\ldots\ldots\ldots\ldots\ldots\ldots$ lorsqu'il existe un nombre réel $r$,
+  nommé $\ldots\ldots\ldots\ldots$, tel que pour tout entier naturel $n$, on a
+  \[
+    u(n+1) = u(n) + r.
+  \]
+  L'écriture du terme de rang $n+1$ en fonction du terme de rang $n$ donne une
+  $\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots$ $\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots$ vérifiée par la suite.
+\end{defi}
+
+\begin{exemple}
+  Soit $u$ une suite vérifiant $u(0)=5$ et pour tout entier naturel $n$,
+  $u(n+1)=u(n)+4$.
+  On a alors
+  \begin{align*}
+    u(1) &= &
+    u(2) &= &
+    u(3) &=
+  \end{align*}
+\end{exemple}
+
+\begin{rmq}
+  Attention, le \textbf{premier terme} de la suite est $u(0)$, le
+  \textbf{deuxième terme} $u(1)$, etc. Donc le dixième terme est $u(9)$.
+\end{rmq}
+
+\begin{prop}
+  Une suite $u$ est une suite arithmétique de raison $r$ et de premier terme
+  $u(0)$ si et seulement si, pour tout entier naturel $n$, on a
+  \[
+    u(n) = \ldots\ldots\ldots\ldots\ldots
+  \]
+  Cette écriture est la $\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots$ de la suite $u$.
+\end{prop}
+
+\begin{exemple}
+  Soit $u$ la suite de raison $r=3$ et de premier terme $u(0)=-1$. On a alors
+  \begin{align*}
+    u(1) &= -1 + \ldots\times\ldots = & 
+    u(2) &= -1 + \ldots\times\ldots = \\ 
+    u(3) &= -1 + \ldots\times\ldots = & 
+    u(4) &= -1 + \ldots\times\ldots = \\
+    u(37) &= -1 + \ldots\times\ldots = & 
+    u(100) &= -1 + \ldots\times\ldots =
+  \end{align*}
+\end{exemple}
+
+\begin{rmq}
+  La \textbf{forme explicite} permet de calculer n'importe quel terme
+  \textbf{directement.} Au contraire, la \textbf{relation de récurrence} permet
+  de calculer les termes \textbf{les uns à la suite des autres}.
+\end{rmq}
+
+\begin{prop}
+  Dans un repère, une suite peut être représentée par le nuage de points de
+  coordonnées $(n, u(n))$, $n\in\mathbb{N}$. Dans le cas d'une suite
+  arithmétique, ce nuage de points forme un ensemble de points alignés.
+\end{prop}
+
+\begin{exemple}
+  Soit $u$ une suite arithmétique de premier terme $u(0)=2$ et de raison $r=3$.
+  Elle est donc définie par la relation de récurrence
+  \[
+    u(n+1) = u(n) + \ldots.
+  \]
+  Sa forme explicite est donnée, pour tout entier naturel $n$, par
+  \[
+    u(n) = \ldots +\ldots\times\ldots.
+  \]
+  On a aussi
+  \begin{align*}
+    u(1) &= &
+    u(2) &= &
+    u(3) &=
+  \end{align*}
+  Les quatre premiers termes de cette suite sont représentés dans le graphique
+  ci-dessous. Ils sont alignés sur la droite d'équation $y=3x+2$.
+  \begin{center}
+\begin{tikzpicture}
+ \draw (-.1, 0) -- (6.2, 0); 
+ \draw (0, -.1) -- (0, 5.7); 
+ \foreach \x in {1, ..., 11} \draw (-.1, .5*\x) -- (0, .5*\x);
+ \foreach \x in {1, ..., 11} \draw[blue!20!white] (0, .5*\x) -- (6.2, .5*\x);
+ \foreach \x in {1, 3,..., 11} \node (\x) at (-.3, .5*\x) {$\x$};
+ \foreach \x in {1,...,3} \draw (2*\x, -.1) node[below] {$\x$} -- (2*\x, 0);
+ \foreach \x in {1, ..., 3} \draw[blue!20!white] (2*\x, 0) -- (2*\x, 5.7);
+ \foreach \x in {0,...,3} \draw[fill, opacity=.3] (2*\x, 1+1.5*\x) circle (.05);
+ \draw[dashed, black, opacity=.3] (0,1) -- (6, 5.5);
+ \foreach \x in {0,...,2} \draw[-stealth, red!70!black] (2*\x, 1+1.5*\x) -- (2*\x+2, 1+1.5*\x);
+ \foreach \x in {0, ..., 2} \node[red!70!black] (\x) at (1+2*\x, .7+1.5*\x) {\small{$+1$}};
+ \foreach \x in {1,...,3} \draw[-stealth, blue!70!black] (2*\x, -.5+1.5*\x) -- (2*\x, 1+1.5*\x);
+ \foreach \x in {1, ...,3} \node[blue!70!black] (\x) at (2*\x+.3, .25+1.5*\x) {\small{$+r$}};
+ \node (u0) at (-.8, 1) {$u(0)$};
+\end{tikzpicture}
+  \end{center}
+\end{exemple}
+
+\begin{rmq}
+  Une suite arithmétique permet de modéliser un phénomène \textbf{discret à
+  croissance linéaire}.
+\end{rmq}
+
+\begin{prop}
+  \begin{enumerate}
+    \item Une suite arithmétique $u$ de raison $r$ est \textbf{strictement
+      croissante} si, et seulement si, $r>0$.
+    \item Une suite arithmétique $u$ de raison $r$ est \textbf{strictement
+      d\'ecroissante} si, et seulement si, $r<0$.
+    \item Une suite arithmétique $u$ de raison $r$ est \textbf{constante} si, et
+      seulement si, $r=0$.
+  \end{enumerate}
+\end{prop}
+
+\begin{exemple}
+  Soit $u$ la suite arithmétique de raison $r=-2$ et de premier terme $u(0)=5$. On
+  a alors
+  \begin{align*}
+    u(1) &= &
+    u(2) &= &
+    u(3) &= \\
+    u(4) &= &
+    u(5) &= &
+    u(6) &=
+  \end{align*}
+  Cette suite est $\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots$
+\end{exemple}
+
+\section{Fonctions affines}
+\begin{defi}{Fonction affine}
+  \begin{minipage}{.47\textwidth}
+  Une fonction $f$ est dite \textbf{affine} lorsqu'il existe deux réels $m$ et
+  $p$ tels que pour tout $x\in\mathbb{R}$, on a
+  \[
+    f(x) = mx + p.
+  \]
+  La représentation graphique d'une fonction affine dans un repère du plan est
+  une droite dont $m$ est le \textbf{coefficient directeur} et $p$ est
+  l'\textbf{ordonnée à l'origine}. On a $p=f(0)$.
+\end{minipage}
+\hfill
+  \begin{minipage}{.47\textwidth}
+  \begin{center}
+    \begin{tikzpicture}[scale=.8]
+      \draw (0,-4.4) -- (0, 2.4);
+      \draw (-2.4,0) -- (4.4, 0);
+      \draw (-.2, 2) node[left] {$1$} -- (.2, 2);
+      \draw (-.2, -4) node[left] {$-2$} -- (.2, -4);
+      \foreach \x in {-1, ..., 2} \draw[blue, opacity=.3] (2*\x, -4.4) --
+      (2*\x, 2.4);
+      \foreach \x in {-2, ..., 1} \draw[blue, opacity=.3] (-2.4, 2*\x) --
+      (4.4, 2*\x);
+      \draw[thick, red!80!black] (-1.2, -4.4) -- (2.2, 2.4);
+      \draw[-latex, thick, orange!80!black] (0, -2) -- (2, -2);
+      \draw[-latex, thick, orange!80!black] (2, -2) -- (2, 2);
+      \node[orange!80!black] (1) at (1, -2.3) {$1$};
+      \node[orange!80!black] (1) at (2.7, 1) {$m=2$};
+      \node[red!80!black] (1) at (-1, -1.8) {$p=-1$};
+      \node[black] (1) at (3.3, -3)
+      {$f(x)=\textcolor{orange!80!black}{2}x\textcolor{red!80!black}{-1}$};
+    \end{tikzpicture}
+  \end{center}
+\end{minipage}
+\end{defi}
+
+\begin{exemple}
+  \begin{minipage}{.47\textwidth}
+  Soit $f$ la fonction affine définie sur $\mathbb{R}$ par
+  \[
+    f(x) = 3-2x.
+  \]
+  Dans ce cas le coefficient directeur de $f$ est
+  \[
+    m =
+  \]
+  et son ordonnée à l'origine vaut
+  \[
+    p =
+  \]
+  La représentation graphique de $f$ est donnée ci-contre.
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.47\textwidth}
+\begin{center}
+  \begin{tikzpicture}
+\begin{axis}
+  \addplot[red, very thick, samples=201]{3-2*x};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{exemple}
+
+\begin{rmq}
+  Une fonction affine permet de modéliser un phénomène \textbf{continu à
+  croissance linéaire}.
+\end{rmq}
+
+\begin{prop}
+  Soit $:x\mapsto mx+p$ une fonction affine dont on note $d$ la droite
+  représentative.
+  \begin{enumerate}
+    \item Pour tous réels distincts $a$ et $b$, on a
+      \[
+        m = \frac{f(b)-f(a)}{b-a}.
+      \]
+    \item Pour tous points distincts $A(x_A;y_A)$ et $B(x_B;y_B)$ appartenant à
+      $d$, on a
+      \[
+        m = \frac{y_B-y_A}{x_B-x_A}.
+      \]
+  \end{enumerate}
+\end{prop}
+
+\begin{prop}
+  \begin{enumerate}
+    \item Une fonction affine $f$ est \textbf{strictement croissante} sur
+      $\mathbb{R}$ si, et seulement si, $m>0$.
+    \item Une fonction affine $f$ est \textbf{strictement d\'ecroissante} sur
+      $\mathbb{R}$ si, et seulement si, $m<0$.
+    \item Une fonction affine $f$ est \textbf{constante} sur
+      $\mathbb{R}$ si, et seulement si, $m=0$.
+  \end{enumerate}
+\end{prop}
+
+\end{document}

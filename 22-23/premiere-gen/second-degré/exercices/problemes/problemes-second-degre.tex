@@ -1,0 +1,165 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Second degré -- Problèmes}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\pagestyle{empty}
+
+\begin{document}
+\paragraph{Exercice 1.}~\\
+\begin{minipage}{.7\textwidth}
+  La figure ci-contre représente le logo d'une entreprise. Le quadrilatère $ABCD$ est un carré
+  de côté $4$ cm. Les quadrilatères $AFKE$ et $KHCG$ sont aussi des carrés. Le
+  créateur du logo souhaite que l'aire de la surface en bleu soit la plus petite
+  possible.\\
+  Pour quelle valeur de $x$ la partie bleue a-t-elle la plus petite aire ?
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=.5]
+  \node[label={$A$}] (A) at (0, 4) {};
+  \node[label={$B$}] (B) at (4, 4) {};
+  \node[label={[shift={(0, -.8)}]$C$}] (C) at (4, 0) {};
+  \node[label={[shift={(0,-.8)}]$D$}] (D) at (0, 0) {};
+
+
+  \node[blue!70!black, label={$F$}] (F) at (1, 4) {};
+  \node[blue!70!black, label={[shift={(0, -.8)}]$G$}] (G) at (1, 0) {};
+  \node[blue!70!black, label={[shift={(-.3, -.6)}]$E$}] (E) at (0, 3) {};
+  \node[blue!70!black, label={[shift={(-.3, -.6)}]$K$}] (K) at (1, 3) {};
+  \node[blue!70!black, label={[shift={(.3, -.6)}]$H$}] (H) at (4, 3) {};
+
+  \draw[thick] (A.center) -- (B.center) -- (C.center) -- (D.center) -- (A.center);
+  \draw[thick, blue!70!black] (G.center) -- (F.center) -- (E.center) -- (H.center);
+  \fill[blue!70!black, opacity=.1] (E.center) -- (F.center) -- (K.center);
+  \fill[blue!70!black, opacity=.1] (G.center) -- (K.center) -- (H.center) --
+  (C.center);
+
+  \draw[stealth-stealth] (A.north) -- node[above] {$x$} (F.north);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\paragraph{Exercice 2.} Grégoire, $10$ ans, veut délimiter dans son jardin un
+enclos rectangulaire pour son lapin nain. Son père lui donne $18$m de grillage.
+\begin{enumerate}
+  \item Déterminer les dimensions de cet enclos rectangulaire qui donnent une
+    aire maximale.
+  \item Quelle est alors la valeur de cette aire ?
+\end{enumerate}
+
+\paragraph{Exercice 3.} Un club de vacances organise un weekend avec des
+activités de plein air. Le nombre maximum de participants est fixé à $60$. Le
+prix par personne est de $50$ euros pour les $30$ premiers. Pour tout participant
+supplémentaire, chaque personne bénéficie d'une remise de $1$ euro. Par exemple, si
+$35$ personnes s'inscrivent à ce weekend, le prix par personne sera de $45$
+euros.\\
+Pour quel nombre de participants le club gagnera-t-il le plus d'argent ?
+\paragraph{Exercice 4.}~\\
+\begin{minipage}{.7\textwidth}
+  $ABCD$ est un carré de côté $4$. Soit $x\in\left[ 0; 4 \right]$ et $E$ le
+  point de $\left[ AB \right]$ tel que $AE=x$. Soit aussi $F$ le point de
+  $\left[ AD \right]$ tel que $DF=x$.\\
+  Déterminer la valeur de $x$ pour que l'aire du triangle $FEC$ soit minimale.
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=.5]
+  \node[label={$A$}] (A) at (0, 4) {};
+  \node[label={$B$}] (B) at (4, 4) {};
+  \node[label={[shift={(0, -.8)}]$C$}] (C) at (4, 0) {};
+  \node[label={[shift={(0,-.8)}]$D$}] (D) at (0, 0) {};
+
+
+  \node[blue!70!black, label={$E$}] (E) at (1, 4) {};
+  \node[blue!70!black, label={[shift={(-.2, -.2)}]$F$}] (F) at (0, 1) {};
+
+  \draw[thick] (A.center) -- (B.center) -- (C.center) -- (D.center) -- (A.center);
+  \draw[thick, blue!70!black] (C.center) -- (F.center) -- (E.center) -- (C.center);
+  \fill[blue!70!black, opacity=.1] (C.center) -- (F.center) -- (E.center);
+
+  \draw[stealth-stealth] (A.north) -- node[above] {$x$} (E.north);
+  \draw[stealth-stealth] (F.west) -- node[left] {$x$} (D.west);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\paragraph{Exercice 1.}~\\
+\begin{minipage}{.7\textwidth}
+  La figure ci-contre représente le logo d'une entreprise. Le quadrilatère $ABCD$ est un carré
+  de côté $4$ cm. Les quadrilatères $AFKE$ et $KHCG$ sont aussi des carrés. Le
+  créateur du logo souhaite que l'aire de la surface en bleu soit la plus petite
+  possible.\\
+  Pour quelle valeur de $x$ la partie bleue a-t-elle la plus petite aire ?
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=.5]
+  \node[label={$A$}] (A) at (0, 4) {};
+  \node[label={$B$}] (B) at (4, 4) {};
+  \node[label={[shift={(0, -.8)}]$C$}] (C) at (4, 0) {};
+  \node[label={[shift={(0,-.8)}]$D$}] (D) at (0, 0) {};
+
+
+  \node[blue!70!black, label={$F$}] (F) at (1, 4) {};
+  \node[blue!70!black, label={[shift={(0, -.8)}]$G$}] (G) at (1, 0) {};
+  \node[blue!70!black, label={[shift={(-.3, -.6)}]$E$}] (E) at (0, 3) {};
+  \node[blue!70!black, label={[shift={(-.3, -.6)}]$K$}] (K) at (1, 3) {};
+  \node[blue!70!black, label={[shift={(.3, -.6)}]$H$}] (H) at (4, 3) {};
+
+  \draw[thick] (A.center) -- (B.center) -- (C.center) -- (D.center) -- (A.center);
+  \draw[thick, blue!70!black] (G.center) -- (F.center) -- (E.center) -- (H.center);
+  \fill[blue!70!black, opacity=.1] (E.center) -- (F.center) -- (K.center);
+  \fill[blue!70!black, opacity=.1] (G.center) -- (K.center) -- (H.center) --
+  (C.center);
+
+  \draw[stealth-stealth] (A.north) -- node[above] {$x$} (F.north);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\paragraph{Exercice 2.} Grégoire, $10$ ans, veut délimiter dans son jardin un
+enclos rectangulaire pour son lapin nain. Son père lui donne $18$m de grillage.
+\begin{enumerate}
+  \item Déterminer les dimensions de cet enclos rectangulaire qui donnent une
+    aire maximale.
+  \item Quelle est alors la valeur de cette aire ?
+\end{enumerate}
+
+\paragraph{Exercice 3.} Un club de vacances organise un weekend avec des
+activités de plein air. Le nombre maximum de participants est fixé à $60$. Le
+prix par personne est de $50$ euros pour les $30$ premiers. Pour tout participant
+supplémentaire, chaque personne bénéficie d'une remise de $1$ euro. Par exemple, si
+$35$ personnes s'inscrivent à ce weekend, le prix par personne sera de $45$
+euros.\\
+Pour quel nombre de participants le club gagnera-t-il le plus d'argent ?
+\paragraph{Exercice 4.}~\\
+\begin{minipage}{.7\textwidth}
+  $ABCD$ est un carré de côté $4$. Soit $x\in\left[ 0; 4 \right]$ et $E$ le
+  point de $\left[ AB \right]$ tel que $AE=x$. Soit aussi $F$ le point de
+  $\left[ AD \right]$ tel que $DF=x$.\\
+  Déterminer la valeur de $x$ pour que l'aire du triangle $FEC$ soit minimale.
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=.5]
+  \node[label={$A$}] (A) at (0, 4) {};
+  \node[label={$B$}] (B) at (4, 4) {};
+  \node[label={[shift={(0, -.8)}]$C$}] (C) at (4, 0) {};
+  \node[label={[shift={(0,-.8)}]$D$}] (D) at (0, 0) {};
+
+
+  \node[blue!70!black, label={$E$}] (E) at (1, 4) {};
+  \node[blue!70!black, label={[shift={(-.2, -.2)}]$F$}] (F) at (0, 1) {};
+
+  \draw[thick] (A.center) -- (B.center) -- (C.center) -- (D.center) -- (A.center);
+  \draw[thick, blue!70!black] (C.center) -- (F.center) -- (E.center) -- (C.center);
+  \fill[blue!70!black, opacity=.1] (C.center) -- (F.center) -- (E.center);
+
+  \draw[stealth-stealth] (A.north) -- node[above] {$x$} (E.north);
+  \draw[stealth-stealth] (F.west) -- node[left] {$x$} (D.west);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\end{document}

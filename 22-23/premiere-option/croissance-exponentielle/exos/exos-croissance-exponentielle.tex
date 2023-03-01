@@ -1,0 +1,276 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Croissance exponentielle -- Exercices}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 3 : Croissance exponentielle}
+\date{}
+\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\paragraph{Exerice 1.}
+\begin{enumerate}
+  \item Déterminer les trois premiers termes de la suite géométrique $u$ définie
+    par son premier terme $u(0)=7$ et la relation de récurrence, valable pour
+    tout entier naturel $n\in\mathbb{N}$, $u(n+1)=0,5\times u(n)$.
+  \item Calculer les trois premiers termes de la suite géométrique $v$ définie,
+    pour tout $n\in\mathbb{N}$, par sa forme explicite $v(n)=3\times 2^n$.
+\end{enumerate}
+
+\paragraph{Exercice 2.} Après avoir déterminé les quatre premiers termes de
+la suite géométrique de premier terme $u(0)=0,5$ et de raison $2$, représenter
+graphiquement le nuage de points $(n, u(n))$ pour $0\leq n\leq 3$.
+
+\paragraph{Exercice 3.} On considère la suite géométrique $w$ dont la raison est
+$q=3$.
+\begin{enumerate}
+  \item Sachant que $w(6)=243$, calculer $w(5)$ et $w(7)$.
+  \item Calculer ensuite $w(4)$ et $w(8)$.
+  \item Quelle est la relation de récurrence satisfaite par la suite $w$ ?
+  \item[4. ($\star$)] Retrouver la forme explicite de la suite $w$.
+\end{enumerate}
+
+\paragraph{Exercice 4.}
+\begin{enumerate}
+  \item Déterminer les six premiers termes de la suite géométrique $u$ de
+    premier terme $u(0)=8$ et de raison $q=0,5$.
+  \item Représenter graphiquement le nuage de points $(n; u(n))$ pour $0\leq n
+    \leq5$.
+\end{enumerate}
+
+\paragraph{Exercice 5.} On considère la suite $u$ définie par
+$u(0)=\frac{1}{2}$ et, pour tout entier naturel $n\in\mathbb{N}$,
+$u(n+1)=3u(n)$.
+\begin{enumerate}
+  \item Calculer $u(1)$, $u(2)$ et $u(3)$.
+  \item Exprimer, pour tout entier naturel $n$, $u(n)$ en fonction de $n$.
+  \item En déduire $u(7)$.
+  \item[4. ($\star\star$)] Avec la calculatrice, calculer $u(100)$ et $u(300)$. Que
+    veulent dire ces résultats ?
+\end{enumerate}
+
+\paragraph{Exercice 6. (Exercice inversé)} Écrire l'énoncé d'un exercice sur les
+suites géométriques dont les réponses sont les suivantes.
+\begin{enumerate}
+  \item $u(1)=10$, $u(2)=50$ et $u(3)=250$.
+  \item $w(1)=3$, $w(4,5)$ et $w(3)=6,75$.
+\end{enumerate}
+
+\paragraph{Exercice 7. ($\star\star$)} Lorsqu'une personne prend connaissance d'une rumeur,
+elle partage cette rumeur avec deux autres personnes, qui ne la connaissaient
+pas.
+\begin{enumerate}
+  \item Montrer que la propagation d'une rumeur peut être modélisée par une
+    suite géométrique dont on précisera la raison.
+  \item Dans la situation de l'énoncé, la rumeur va-t-elle gagner ou perdre en
+    intensité ? Justifier.
+  \item En étudiant de plus près le comportement des personnes, on remarque que
+    $80$\% des personnes qui prennent connaissance de la rumeur ne la partagent
+    pas. On suppose que $10\;000$ sont au courant de la rumeur. Justifier que la
+    modélisation de la rumeur est toujours une suite géométrique et en donner la
+    nouvelle raison.
+  \item La rumeur va-t-elle gagner ou perdre en intensité ? Justifier.
+\end{enumerate}
+
+\paragraph{Exerice 8.} Soit $u$ une suite géométrique telle que $u(0)=2$ et
+$u(2)=8$.
+\begin{enumerate}
+  \item Retrouver $u(1)$, puis $u(3)$.
+  \item Donner la raison de $u$.
+  \item Donner la forme explicite de $u$.
+\end{enumerate}
+
+\paragraph{Exercice 9. ($\star\star\star$)}~\\[2mm]
+\begin{minipage}{.5\textwidth}
+  Le triangle de Sierpinski se dessine en commençant par tracer un triangle
+  équilatéral dont l'aire vaut $1$. À la première étape, on marque le milieu de
+  ses côtés et on enlève le triangle au centre. Puis on répète l'opération avec
+  les trois triangles restants et ainsi de suite.
+  \begin{enumerate}
+    \item Quelle est l'aire de la partie colorée à l'étape initiale ? À l'étape
+      $1$ ? À l'étape $2$ ?
+    \item Par quelle opération passe-t-on de l'aire colorée de l'étape $n$ à
+      l'aire colorée de l'étape $n+1$ ?
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+\includegraphics[scale=.35]{sierpinski.png}
+  \end{center}
+\end{minipage}\\[2mm]
+On note $A$ la suite qui modélise l'aire colorée à chaque étape.
+  \begin{enumerate}
+      \setcounter{enumi}{2}
+    \item Justifier que $A$ est une suite géométrique dont on précisera le premier
+      terme et la raison.
+    \item Exprimer, pour tout entier naturel $n\in\mathbb{N}$, $A(n)$ en
+      fonction de $n$.
+    \item En utilisant la calculatrice, déterminer la plus petite valeur de $n$
+      telle que $A(n)<0,1$.
+  \end{enumerate}
+
+\paragraph{Exercice 10.} On considère les fonctions $f$, $g$, $h$ et $k$
+définies sur $[0; +\infty[$. Déterminer le sens de variation de chacune d'entre
+elles.
+\begin{align*}
+  \textbf{1)}\;& f(x)=0,3^x &
+  \textbf{2)}\;& g(x)=2^x &
+  \textbf{3)}\;& h(x)=\left( \frac{3}{4} \right)^x &
+  \textbf{4)}\;& k(x)= \left( \frac{16}{5} \right)^x
+\end{align*}
+
+\paragraph{Exercice 11.}~\\[-7mm]
+\begin{minipage}{.6\textwidth}
+  On considère les fonctions $f$ et $g$ définies sur $[0;+\infty[$ par
+    $f(x)=1,5^x$ et $g(x)=2\times0,5^x$.\\
+    En justifiant, associer chacune de ces fonctions à sa représentation
+    graphique.
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[x=1cm, y=1cm, xmin=-.1, xmax=3.2, ymin=-.1, ymax=3.1]
+      \addplot[thick, red, domain=0:4] {1.5^x};
+      \addplot[thick, blue, domain=0:4] {2*.5^x};
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\paragraph{Exercice 12.}
+\begin{enumerate}
+  \item Dans chacun des cas, classe $A$, $B$, $C$ et $D$ dans l'ordre croissant,
+    sans utiliser la calculatrice.
+    \begin{enumerate}
+      \item $A=2^{3,1}$, $B=2^{2,5}$, $C=2^{7,3}$ et $D=2^{\pi}$.
+      \item $A=0,5^{3,1}$, $B=0,5^{2,5}$, $C=0,5^{7,3}$ et $0,5=2^{\pi}$.
+    \end{enumerate}
+  \item Utiliser maintenant la calculatrice pour vérifier l'ordre obtenu.
+\end{enumerate}
+
+\paragraph{Exercice 13.}~\\[-5mm]
+\begin{minipage}{.6\textwidth}
+  On a représenté sur le graphique ci-contre les fonctions $f$, $g$, $h$ et $k$
+  définies, pour tout réel $x$ positif, par $f(x)=1,2^x$, $g(x)=0,7^x$,
+  $h(x)=0,3^x$ et $k(x)=2^x$.\\
+  Associer en justifiant chacune de ces fonctions à sa représentation graphique.
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[x=1cm, y=1cm, xmin=-.1, xmax=3.2, ymin=-.1, ymax=3.1]
+      \addplot[thick, yellow!50!orange, domain=0:4] {2^x};
+      \addplot[thick, green!50!black, domain=0:4] {1.2^x};
+      \addplot[thick, red, domain=0:4] {.7^x};
+      \addplot[thick, blue, domain=0:4] {.3^x};
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\paragraph{Exercice 14.} Sans calculatrice, montrer que les opérations suivantes
+ont toutes pour résultat $8$.
+\begin{align*}
+  \textbf{1)}\;& \cfrac{8^{3,2}}{8^{0,4}\times8^{1,8}} &
+  \textbf{2)}\;& \cfrac{2^{4,1}\times5^{1,1}}{10^{1,1}}
+\end{align*}
+
+\paragraph{Exercice 15.} Simplifier les calculs suivants.
+\begin{align*}
+  \textbf{1)}\;& \left( \frac{1}{10} \right)^{3,2}\times5^{3,2} & 
+  \textbf{2)}\;& 3,5^{1,2}\times3,5^{4,1} &
+  \textbf{3)}\;& 0,8^{6,2}\div0,8^{5,1}
+\end{align*}
+
+
+
+\paragraph{Exercice 16.} Un saule pleureur mesure $2$ mètres. On s'attend à ce
+que, en un an, sa hauteur augmente de $50$\%.
+Quel sera le taux moyen de croissance par mois durant cette année-là ?
+
+\paragraph{Exercice 17.} D'après l'Insee, le nombre de naissances en France
+métropolitaine est passé de $802\;224$ en 2010 à $696\;800$ en 2020.
+\begin{enumerate}
+  \item Vérifier que le taux d'évolution (en pourcentage) associé à cette baisse
+    est d'environ $-13\%$.
+  \item Calculer l'évolution annuelle moyenne arrondie à $0,01\%$ du nombre de
+    naissance en France métropolitaine entre $2010$ et $2020$.
+\end{enumerate}
+
+\paragraph{Exercice 18.} D'après l'Insee, le nombre de mariages en France
+est passé de $252\;000$ en 2010 à $155\;000$ en 2020.
+\begin{enumerate}
+  \item Vérifier que le taux d'évolution (en pourcentage) associé à cette baisse
+    est d'environ $-38,5\%$.
+  \item Calculer l'évolution annuelle moyenne arrondie à $0,01\%$ du nombre de
+    mariages en France entre $2010$ et $2020$.
+\end{enumerate}
+
+\paragraph{Exercice 19. ($\star$)} Un prix augmente de $15\%$ puis diminue de $1\%$.
+\begin{enumerate}
+  \item De quel pourcentage global ce prix a-t-il évolué ?
+  \item Déterminer le taux d'évolution moyen.
+  \item Obtient-on le même taux d'évolution moyen si le prix diminue de $1\%$
+    puis augmente de $15\%$ ? Justifier.
+\end{enumerate}
+
+\paragraph{Exercice 20.}~\\[2mm]
+\begin{minipage}{.5\textwidth}
+  En France, le SMIC est le salaire minimum mensuel pour un contrat de $35$
+  heures par semaine. Les données ci-contre sont les valeurs du SMIC mensuel
+  brut en euro.
+  \begin{enumerate}
+    \item Quel est le coefficient multiplicateur associé  l'évolution du SMIC
+      entre 2015 et 2021 ?
+    \item Déterminer le taux d'augmentation annuel moyen du SMIC, arrondi à
+      $0,001\%$, entre 2015 et 2021.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{center}
+\begin{tabular}{ccc}
+  \toprule
+  \textbf{Date} & \textbf{Valeur du SMIC} & \textbf{Augmentation (\%)} \\
+  \midrule
+  2015 & $1457,52$ & \\
+  2016 & $1466,62$ & $0,62$ \\
+  2017 & $1480,27$ & $0,93$ \\
+  2018 & $1498,47$ & $1,23$ \\
+  2019 & $1521,22$ & $1,52$ \\
+  2020 & $1539,42$ & $1,20$ \\
+  2021 & $1554,58$ & $0,98$ \\
+  \bottomrule
+\end{tabular}
+\end{center}
+\end{minipage}
+
+\paragraph{Exercice 21.} Un article subit une hausse de $6\%$ puis une hausse de
+$14\%$.
+\begin{enumerate}
+  \item Calculer le coefficient multiplicateur associé à cette hausse.
+  \item En déduire le taux d'évolution global.
+  \item Calculer le taux d'évolution moyen.
+  \item Si l'article coûte $30$ euros au départ, quel sera son prix final (au
+    centime près) ?
+\end{enumerate}
+
+\paragraph{Exercice 22.} Une banque propose deux placements.
+\begin{itemize}
+  \item Le premier placement permet d'obtenir $+100\%$ de son capital initial en
+    un an.
+  \item Le second placement permet d'obtenir $+50\%$ de son capital initial au
+    bout de six mois, puis de nouveau $+50\%$ les six mois suivants.
+\end{itemize}
+\begin{enumerate}
+  \item Quel placement est le plus intéressant ?
+  \item Une autre banque propose un placement qui permet d'obtenir $+25\%$ tous
+    les trois mois. Quel est le taux d'évolution global sur une année ?
+\end{enumerate}
+
+\end{document}
