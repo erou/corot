@@ -257,6 +257,7 @@ TSWLatexianTemp*
 
 # Pdf files
 *.pdf
+*.pdf#
 
 # CSV
 *.csv

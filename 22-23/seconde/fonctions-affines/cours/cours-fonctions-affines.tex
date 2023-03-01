@@ -161,17 +161,58 @@ $p$ sont des nombres réels.
 
 \subsection{Sens de variation}
 \begin{prop}
-  \begin{itemize}
-    \item Si $m\geq 0$, alors $f$ est une fonction croissante.
-    \item Si $m\leq 0$, alors $f$ est une fonction décroissante.
-  \end{itemize}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      {\LARGE Si $m\geq0$}
+    \end{center}
+      La fonction $f$ est croissante.
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[red, very thick, samples=101] {1.2*x-.5};
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      {\LARGE Si $m\leq0$}
+    \end{center}
+      La fonction $f$ est décroissante.
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[red, very thick, samples=101,domain=-5.5:5.5] {-.2*x+.3};
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+
+  \end{minipage}
 \end{prop}
 
 \subsection{Signes}
+\begin{prop}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      {\LARGE Si $m\geq0$}\\
+      \begin{tikzpicture}[scale=.9]
+      \tkzTabInit{$x$/1, $f(x)$/1}{$-\infty$, $-\frac{p}{m}$, $+\infty$}
+      \tkzTabLine{, -, z, +, }
+    \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      {\LARGE Si $m\geq0$}\\
+    \begin{tikzpicture}[scale=.9]
+      \tkzTabInit{$x$/1, $f(x)$/1}{$-\infty$, $-\frac{p}{m}$, $+\infty$}
+      \tkzTabLine{, +, z, -, }
+    \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+
+\end{prop}
+
   \begin{center}
-    \begin{tikzpicture}[scale=.8]
-   \tkzTabInit{$x$/.8, $f(x)$/2}{$-\infty$, $-1$, $1$, $+\infty$}
-   \tkzTabVar{-/, +/$f(-1)$, -/$f(1)$, +/}
-\end{tikzpicture}
   \end{center}
 \end{document}
