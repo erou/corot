@@ -3,7 +3,7 @@
 \newcommand{\titrechapitre}{Fonctions affines -- Cours}
 \newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
 \newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
-\newcommand{\topbotmargins}{2cm}
+\newcommand{\topbotmargins}{1.4cm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 %\input{layout-nb.tex}
 
@@ -17,14 +17,7 @@
 \begin{document}
 \maketitle\thispagestyle{fancy}
 
-% TODO
-% ====
-%
-% Dans les exercices : ajouter un exercice avec une fonction et demander son
-% tableau de variation, car ce n'était pas bien compris en 2022-2023. En outre,
-% insister sur le fait que +inf et -inf ne sont pas des nombres et ne devraient
-% jamais être utilisés dans des phrases du type ``Le maximum est +inf,
-% d'antécédent 2.''.
+
 
 \section{Caractérisation des fonctions affines}
 \subsection{Définitions}
@@ -131,11 +124,27 @@
 \end{app}
 
 \begin{prop}
+  \begin{minipage}[]{.5\textwidth}
   Soient $f$ une fonction affine définie sur $\mathbb{R}$ par $f(x)=mx+p$ et $a,
   b$ deux réels distincts. Alors
   \[
     m=\frac{f(b)-f(a)}{b-a}\text{ et } p = f(0).
   \]
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[red, thick, samples=101] {2*x-2};
+        \end{axis}
+        \draw[thick] (3.75, 3.75) -- (4.25, 3.75) -- (4.25, 4.75);
+        \node at (4, 3.5) {$1$};
+        \node at (4.5, 4.25) {$m$};
+        \node at (3.15, 1.75) {$p$};
+        \fill (2.75, 1.75) circle (1mm);
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
 \end{prop}
 
 \begin{app}
@@ -153,6 +162,7 @@
 
 
 
+\newpage
 \section{Étude d'une fonction affine}
 
 Soit $f$ une fonction affine définie sur $\mathbb{R}$ par $f(x)=mx+p$ où $m$ et
@@ -160,11 +170,11 @@ $p$ sont des nombres réels.
 
 
 \subsection{Sens de variation}
-\begin{prop}
+\begin{prop}~\\[-5mm]
   \begin{minipage}[]{.5\textwidth}
     \begin{center}
       {\LARGE Si $m\geq0$}
-    \end{center}
+    \end{center}~\\[-7mm]
       La fonction $f$ est croissante.
     \begin{center}
       \begin{tikzpicture}
@@ -177,7 +187,7 @@ $p$ sont des nombres réels.
   \begin{minipage}[]{.5\textwidth}
     \begin{center}
       {\LARGE Si $m\leq0$}
-    \end{center}
+    \end{center}~\\[-7mm]
       La fonction $f$ est décroissante.
     \begin{center}
       \begin{tikzpicture}
@@ -190,29 +200,64 @@ $p$ sont des nombres réels.
   \end{minipage}
 \end{prop}
 
+\begin{app}
+  Soit $a\in\left[ -3;-2 \right]$ et $g$ une fonction affine définie sur
+  $\mathbb{R}$ par $g(x)=-4x+5$. Déterminer un encadrement de $g(a)$.
+\end{app}
+
 \subsection{Signes}
 \begin{prop}
+  Si $m\neq0$, alors $f(x)=0\Longleftrightarrow mx+p = 0 \Longleftrightarrow x =
+  -\frac{p}{m}$. On a ainsi les tableaux de signes suivants.\\[2mm]
   \begin{minipage}[]{.5\textwidth}
     \begin{center}
-      {\LARGE Si $m\geq0$}\\
+      {\LARGE Si $m>0$}\\[2mm]
+
       \begin{tikzpicture}[scale=.9]
       \tkzTabInit{$x$/1, $f(x)$/1}{$-\infty$, $-\frac{p}{m}$, $+\infty$}
       \tkzTabLine{, -, z, +, }
     \end{tikzpicture}
+
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[blue, very thick, samples=101,domain=-5.5:1.43] {0.7*x-1};
+          \addplot[red, very thick, samples=101,domain=1.43:5.5] {0.7*x-1};
+        \end{axis}
+        \node[blue, circle, draw, minimum size=1cm] at (.75, 1.75) {\Large \textbf{-}};
+        \node[red, circle, draw, minimum size=1cm] at (4.75, 4.5) {\Large \textbf{+}};
+      \end{tikzpicture}
+
     \end{center}
   \end{minipage}
   \begin{minipage}[]{.5\textwidth}
     \begin{center}
-      {\LARGE Si $m\geq0$}\\
+      {\LARGE Si $m<0$}\\[2mm]
     \begin{tikzpicture}[scale=.9]
       \tkzTabInit{$x$/1, $f(x)$/1}{$-\infty$, $-\frac{p}{m}$, $+\infty$}
       \tkzTabLine{, +, z, -, }
     \end{tikzpicture}
+
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[red, very thick, samples=101,domain=-5.5:-1] {-1.5*x-1.5};
+          \addplot[blue, very thick, samples=101,domain=-1:5.5] {-1.5*x-1.5};
+        \end{axis}
+        \node[blue, circle, draw, minimum size=1cm] at (3.75, 1.75) {\Large \textbf{-}};
+        \node[red, circle, draw, minimum size=1cm] at (.75, 3.5) {\Large \textbf{+}};
+      \end{tikzpicture}
+
     \end{center}
   \end{minipage}
-
 \end{prop}
 
-  \begin{center}
-  \end{center}
+\begin{app}
+  Dresser le tableau de signes de la fonction $h$ définie sur $\mathbb{R}$ par
+  $h(x)=-3x+4$.
+\end{app}
+
+\begin{app}
+  Résoudre l'inéquation $(3x+2)(-2x-1)\leq 0$. \emph{On pourra faire un tableau
+  de signes.}
+\end{app}
+
 \end{document}
