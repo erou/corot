@@ -2,8 +2,8 @@
 
 \newcommand{\titrechapitre}{Fonctions affines -- Exercices}
 \newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
-\newcommand{\pagination}{}%{\thepage/\pageref{LastPage}}
-\newcommand{\topbotmargins}{1.5cm}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 %\input{layout-nb.tex}
 
@@ -13,6 +13,120 @@
 \begin{document}
 %\maketitle\thispagestyle{fancy}
 
-AH
+\paragraph{Exercice 1.} Les fonctions suivantes sont-elles affines ? Si oui,
+identifier les coefficents $m$ et $p$.
+\begin{align*}
+  \textbf{a)}\;& f(x) = 5x-3 &
+  \textbf{b)}\;& g(x) = x^2-1 &
+  \textbf{c)}\;& h(x) = 9-x &
+  \textbf{d)}\;& t(x) = \frac{7-4x}{6}
+\end{align*}
+
+\paragraph{Exercice 2.} Déterminer le coefficient directeur $m$ et l'ordonnée à
+l'origine $p$ de chaque fonctionaffine suivante.
+\begin{align*}
+  \textbf{a)}\;& f(x) = -2x+3 &
+  \textbf{b)}\;& g(x) = x+4 &
+  \textbf{c)}\;& h(x) = 7-11x \\
+  \textbf{d)}\;& t(x) = -\frac{1}{2} &
+  \textbf{e)}\;& u(x) = 3x &
+  \textbf{f)}\;& v(x) = \frac{6-x}{3}
+\end{align*}
+
+\paragraph{Exercice 3.} Tracer les courbes représentatives des fonctions
+suivantes.\\
+\begin{minipage}[]{.5\textwidth}
+  \begin{center}
+    \textbf{a)} $f(x)=2x-3$\\
+    \begin{tikzpicture}
+      \begin{axis}[x=.7cm,y=.7cm]
+      \end{axis}
+    \end{tikzpicture}\\
+    \textbf{c)} $h(x)=\frac{1}{2}x$\\
+    \begin{tikzpicture}
+      \begin{axis}[x=.7cm,y=.7cm]
+      \end{axis}
+    \end{tikzpicture}\\
+  \end{center}
+\end{minipage}
+\begin{minipage}[]{.5\textwidth}
+  \begin{center}
+    \textbf{b)} $g(x)=-3x+4$\\
+    \begin{tikzpicture}
+      \begin{axis}[x=.7cm,y=.7cm]
+      \end{axis}
+    \end{tikzpicture}\\
+    \textbf{d)} $t(x)=4-\frac{3}{5}x$\\
+    \begin{tikzpicture}
+      \begin{axis}[x=.7cm,y=.7cm]
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+\end{minipage}
+
+\paragraph{Exercice 4.}
+Soit $g$ la fonction affine définie pour tout $x\in\mathbb{R}$ par $g(x)=-7+4x$.
+Recopier et compléter le tableau de valeurs ci-dessous avec des valeurs exactes.
+
+\begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|>{\centering}X|>{\centering}X|>{\centering}X|
+    >{\centering}X|>{\centering}X|>{\centering}X|>{\centering}X|>{\centering}X|
+    >{\centering\arraybackslash}X|}
+    \hline
+    $x$ & $-9$ & & $0$ & & $3$ & & $\frac{10}{3}$ & \\
+    \hline
+    $f(x)$ & & $-9$ & & $0$ & & $3$ & & $\frac{10}{3}$ \\
+    \hline
+  \end{tabularx}
+\end{center}
+
+\paragraph{Exercice 5.}
+Soit $h$ la fonction affine définie pour tout $x\in\mathbb{R}$ par
+$h(x)=-\frac{7}{3}x-1$. Recopier et compléter le tableau de valeurs ci-dessous
+avec les valeurs exactes.
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabularx}{\textwidth}{|Y|Y|Y|Y|Y|Y|}
+ \hline
+ $x$ & $-3$ & $-\frac{5}{7}$ & & & \\
+ \hline
+ $f(x)$ & & & $0$ & $\frac{4}{3}$ & $\pi$ \\
+ \hline
+\end{tabularx}
+\end{center}
+
+\paragraph{Exercice 6.}~\\
+\begin{minipage}[]{.5\textwidth}
+  Deux fonctions $f$ et $g$ ont été représentées dans le repère $(O; I, J)$
+  ci-contre.
+  \begin{enumerate}
+    \item Retrouver l'expression algébrique de chacune de ces fonctions.
+    \item Déterminer graphiquement les soltions de $f(x)=g(x)$ sur $\mathbb{R}$.
+    \item Déterminer graphiquement les soltions de $f(x)>g(x)$ sur $\mathbb{R}$.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}[]{.5\textwidth}
+  \begin{center}
+    \includegraphics[scale=.25]{exo3.png}
+  \end{center}
+\end{minipage}
+
+\paragraph{Exercice 7.}~\\
+\begin{minipage}[]{.5\textwidth}
+  Deux fonctions $f$ et $g$ ont été représentées dans le repère $(O; I, J)$
+  ci-contre.
+  \begin{enumerate}
+    \item Retrouver l'expression algébrique de chacune de ces fonctions.
+    \item Déterminer graphiquement les soltions de $f(x)=g(x)$ sur $\mathbb{R}$.
+    \item Déterminer graphiquement les soltions de $f(x)>g(x)$ sur $\mathbb{R}$.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}[]{.5\textwidth}
+  \begin{center}
+    \includegraphics[scale=.25]{exo4.png}
+  \end{center}
+\end{minipage}
+
 
 \end{document}
