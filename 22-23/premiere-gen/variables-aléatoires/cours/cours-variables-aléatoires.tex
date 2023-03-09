@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Variables aléatoires -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 8 : Variables aléatoires}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Notion de variable aléatoire réelle}
+
+\begin{defi}{Variable aléatoire}
+  Soit $\Omega$ l'ensemble des issues d'une expérience aléatoire ($\Omega$ est
+  l'\textbf{univers}). Une \textbf{variable aléatoire} sur $\Omega$ est une
+  fonction définie sur $\Omega$ à valeurs dans $\mathbb{R}$.
+\end{defi}
+
+\begin{defi}{Événement défini à partir d'une variable aléatoire}
+  Soient $X$ une variable aléatoire définie sur $\Omega$ et $x\in\mathbb{R}$ un
+  nombre réel.
+  \begin{itemize}
+    \item L'événement « \textbf{$X$ prend la valeur $x$} » est l'ensemble des
+      issues de $\Omega$ auxquelles on associe le réel $x$.
+    \item L'événement « \textbf{$X$ prend des valeurs supérieures ou égales
+      à $x$} » est l'ensemble des
+      issues de $\Omega$ auxquelles on associe un réel inférieur ou égal à $x$.
+    \item L'événement « \textbf{$X$ prend des valeurs inférieures ou égales
+      à $x$} » est l'ensemble des
+      issues de $\Omega$ auxquelles on associe un réel inférieur ou égal à $x$.
+  \end{itemize}
+\end{defi}
+
+\end{document}
