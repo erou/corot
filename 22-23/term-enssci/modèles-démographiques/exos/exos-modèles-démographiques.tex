@@ -1,131 +1,222 @@
 \documentclass[11pt]{article}
 
-\newcommand{\titrechapitre}{Équilibre de Hardy-Weinberg -- Exercices}
+\newcommand{\titrechapitre}{Modèles démographiques -- Exercices}
 \newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
-\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
 \newcommand{\topbotmargins}{2cm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 \usepackage{numprint}
 %\input{layout-nb.tex}
 
-\title{Thème 3--1 : Équilibre de Hardy-Weinberg}
-\date{}
-\author{}
-
 \begin{document}
-%\maketitle\thispagestyle{fancy}
+
 \paragraph{Exercice 1.}
-\begin{enumerate}[leftmargin=*]
-	\item
-	On considère un gène possédant deux allèles $A$ et $\Delta 32$, avec $f(A) =0,89$.\\
-	Compléter le tableau suivant et vérifier que la structure génétique de la population est conforme aux prédictions du modèle Hardy-Weinberg.
-	\begin{center}
-		\renewcommand{\arraystretch}{2}
-		\begin{tabular}{|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
-		\hline
-		\textbf{Génotype} & $(A//A)$ & $(A//\Delta 32)$ & $(\Delta32//\Delta 32)$ & Total\\
-		\hline
-		\textbf{Nombre observé} & $795$ & $190$ & $15$ & ${1000}$\\
-		\hline
-		\textbf{Nombre théorique} & & & & \\
-		\hline
-	\end{tabular}
-	\end{center}
-	\item On considère le même gêne que précédemment mais chez des individus infectés avec $ f(A) =0,909$.\\
-	Compléter le tableau suivant et vérifier que la structure génétique de la population n'est pas conforme aux prédictions du modèle Hardy-Weinberg.
-	\begin{center}
-		\renewcommand{\arraystretch}{2}
-		\begin{tabular}{|>{\centering\arraybackslash}m{3.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
-		\hline
-		\textbf{Génotype} & $(A//A)$ & $(A//\Delta 32)$ & $(\Delta32//\Delta 32)$ & Total\\
-		\hline
-		\textbf{Nombre observé} & ${1988}$ & $440$ & $1$ & ${2429}$\\
-		\hline
-		\textbf{Nombre théorique} & &  & & \\
-		\hline
-	\end{tabular}
-	\end{center}
+Le tableau ci-dessous donne de $2012$ à $2016$ l'évolution comparée de la
+production de riz dans le monde et de la population mondiale.
+\begin{center}
+	\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|
+      >{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|}
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} \textbf{Année} & \textbf{Riz} & \textbf{Population} \\
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} $2012$ & $737$ & $709$ \\
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} $2013$ & $743$ & $717$ \\
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} $2014$ & $743$ & $726$ \\
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} $2015$ & $746$ & $734$ \\
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} $2016$ & $752$ & $743$ \\
+			\hline
+		\end{tabular}
+\end{center}
+En  $2017$, la FAO (Food and Agriculture Organization) a annoncé que « la
+production de riz a atteint $752$ millions de tonnes en $2016$, soit une hausse
+de $0,8$ \% par rapport à $2015$ : elle est donc inférieur à la croissance
+démographique pour la $4$\up{ème} année consécutive, entrainant ainsi au niveau
+mondial une régression de la production par habitant.»
+\begin{enumerate}
+  \item Calculer les taux de variations de la population mondiale et de la
+    production de riz entre $2013$ et $2016$.
+  \item Expliquer le commentaire de la FAO.
 \end{enumerate}
 
-\paragraph{Exerice 2.}
-La drépanocytose est une maladie génétique résultant d'une mutation d'un gène de
-l'hémoglobine. L'allèle $A$ code pour une hémoglobine saine $HbA$, tandis que
-l'allèle $S$ code pour une hémoglobine mutée $HbS$. Les individus $(A//A)$ et
-$(A//S)$ ne souffrent pas de la maladie. En revanche, les individus $(S//S)$
-sont malades.\\
-Il a été montré que les individus $(A//S)$ présentent une résistance accrue au
-paludisme. Cela explique que $S$ soit répandu en Afrique, en Inde et dans la
-péninsule arabique, où le paludisme est lui aussi présent.
-\begin{center}
-		\textbf{Répartition des génotypes en République démocratique du Congo}\\
-		\vspace{11pt}
-		\renewcommand{\arraystretch}{2}
-		\begin{tabular}{|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|}
+\paragraph{Exercice 2.}
+Le tableau suivant donne l'évolution de la population de la Turquie, en millions
+d'habitants, l'année $2010$ étant prise comme année de rang $0$.
+	\begin{center}
+		\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|
+          >{\centering\arraybackslash}m{2cm}|
+          >{\centering\arraybackslash}m{2cm}|}
 			\hline
-			\textbf{Génotype}&$(A//A)$&$(A//S)$&$(S//S)$&Total\\
+			\rule[-1ex]{0pt}{2.5ex} \textbf{Année} & \textbf{Rang} & \textbf{Population} \\
 			\hline
-			\textbf{Nombre d'individus}&$ {3182} $&$ 838 $&$ 96 $& \\
+			\rule[-1ex]{0pt}{2.5ex} $2010$ & $0$ & $72,3$ \\
 			\hline
-			\textbf{Fréquences}& & & & \\
+			\rule[-1ex]{0pt}{2.5ex} $2011$ & $1$ & $73,4$ \\
 			\hline
-		\end{tabular}\\
-		\vspace{11pt}
-		\textbf{Répartition des génotypes chez les nouveaux nés}\\
-		\vspace{11pt}
-		\begin{tabular}{|>{\centering\arraybackslash}m{4.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|}
+			\rule[-1ex]{0pt}{2.5ex} $2012$ & $2$ & $74,7$ \\
 			\hline
-			\textbf{Génotype}&$(A//A)$&$(A//S)$&$(S//S)$&Total\\
+			\rule[-1ex]{0pt}{2.5ex} $2013$ & $3$ & $75,9$ \\
 			\hline
-			\textbf{Nombre de naissances observées}  &$ {270550} $&${71400}$&${8050}$& \\
+			\rule[-1ex]{0pt}{2.5ex} $2014$ & $4$ & $77,2$ \\
 			\hline
-			\textbf{Nombre de naissances prévu par la modèle}& & & & \\
+			\rule[-1ex]{0pt}{2.5ex} $2015$ & $5$ & $78,5$ \\
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} $2016$ & $6$ & $79,8$ \\
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} $2017$ & $7$ & $81,1$ \\
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} $2018$ & $8$ & $82,3$ \\
 			\hline
 		\end{tabular}
 	\end{center}
 \begin{enumerate}
-	\item Calculer la fréquence de l'allèle $S$ et de l'allèle $A$ en République démocratique du Congo.
-	\item Utiliser l'équilibre de Hardy-Weinberg pour prédire le nombre d'enfants de chaque naissances par an.\\
-	\textit{Il faut multiplier les fréquences obtenues par ${350000}$ pour obtenir le nombre de naissances par modèle. }
-	\item Comparer le nombre d'enfants réellement malades à la prédiction calculée précédemment.
+  \item On note $u(n)$ la population de la Turquie pour l’année de rang $n$.
+    Pour caractériser l’évolution de cette population, représenter le nuage
+    de points coordonnées $(n;u(n))$ dans un repère adapté.
+  \item Tracer une droite au plus près de ces points.
+  \item À quoi peut servir une telle droite ?
 \end{enumerate}
 
 \paragraph{Exercice 3.}
-Pour lutter contre les moustiques, des insecticides à base de carbamates sont répandus depuis les années $70$. Ces insecticides inhibent l'activité d'une enzyme produite par le moustique : l'acétylcholinestérase. \\
-Le gène codant pour cette enzyme existe sous deux formes : les allèles $R$ et $S$. Des scientifiques supposent que les individus portant l'allèle $R$ sont plus résistants aux carbamates. \\
-En 1980, un échantillonnage a été réalisé dans une population de moustiques exposés à ces insecticides afin d'étudier la structure génétique de cette population.
-Les résultats de cette étude sont résumés dans le tableau ci-dessous. \\
-Vérifier que la structure génétique de la population n'est pas conforme aux prédictions du modèle de Hardy-Weinberg et expliquer cet écart.
-\begin{center}
-	\renewcommand{\arraystretch}{2}
-	\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|}
-		\hline
-		\textbf{Génotype}&$(R//R)$&$(R//S)$&$(S//S)$&Total\\
-		\hline
-		\textbf{Occurences}  &$90$&$284$&$70$&$444$\\
-		\hline
-	\end{tabular}
-\end{center}
-\textit{Il faut appliquer une méthode analogue à l'exercice précédent. Calculer les fréquences des génotypes puis la fréquence des allèles puis calculer ce qui se passe à la génération suivante.  }
+Soit $u$ une suite arithmétique telle que $u(5)=7$ et $u(9)=19$.
+	\begin{enumerate}
+		\item Déterminer la raison de cette suite.
+		\item Déterminer le premier terme de la suite $u$.
+		\item Exprimer alors $u(n)$ en fonction de $n$.
+	\end{enumerate}
 
 \paragraph{Exercice 4.}
-La phénylcétonurie est une maladie génétique rare. Elle est due à un défaut
-porté par un allèle $a$ récessif (c’est-à-dire que cet allèle ne s’exprime pas si l’autre chromosome homologue possède le caractère $A$ dit dominant). \\
-La maladie apparaît uniquement à l’état homozygote $(a//a)$, mais un sujet non malade hétérozygote (c’est-à-dire ayant pour génotype $(A//a)$ peut être porteur du gène défectueux.\\
-Dans la population, la fréquence de l’allèle $a$ est $\frac{1}{100}$.\\ En supposant que la population est à l’équilibre de Hardy-Weinberg pour ce gène,
-\begin{enumerate}%[leftmargin=*]
-	\item Calculer la proportion de sujets atteints par la phénylcétonurie ;
-	\item Calculer la proportion de porteurs de l’allèle défectueux mais non atteints par la maladie.
+La population des Hauts-de-France a augmenté d'environ $9400$ personnes par an entre $1990$ et $1999$. En $1990$, la population était de $5770671$.
+\begin{enumerate}
+	\item Justifier que l'on est dans une situation où le modèle linéaire est
+      adapté.
+	\item On prend l'année $1990$ comme année $0$ et on considère la suite $u$
+      telle que $u(n)$ modélise la population des Hauts-de-France à l'année $n$.
+	\begin{enumerate}
+		\item Déterminer l'expression de $u(n)$ en fonction de $n$ pour tout
+          nombre entier $n$.
+		\item Calculer la population des Hauts-de-France en $1999$.
+		\item En $2008$, la population des Hauts-de-France est de
+          $5931091$. L'évolution de la population semble-t-elle suivre le
+          même modèle au-delà de $1999$ ?
+	\end{enumerate}
 \end{enumerate}
 
 \paragraph{Exerice 5.}
-La mucoviscidose est une maladie qui frappe $1$ enfant sur ${2500}$. \\
-L’étude de sa transmission a montré qu’elle est due à l’état homozygote $(a//a)$ d’un certain gène.\\
-Les individus hétérozygotes $(A//a)$ sont sains et il est même impossible de détecter chez eux l’allèle pathogène. On suppose que la population est à l’équilibre de Hardy-Weinberg pour ce gène.
+Une population a une évolution linéaire. Cette population est de $352000$
+individus en $2010$ et de $356000$ en $2014$. Quelle est la population en
+$2021$ ?
+
+\paragraph{Exercice 6.}
+Le tableau suivant donne la population européenne, exprimée en millions d’habitants, entre $1980$ et $1988$ (les valeurs ont été arrondies au dixième près).
+\begin{center}
+	\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{1.1cm}|>{\centering\arraybackslash}m{1.1cm}|>{\centering\arraybackslash}m{1.1cm}|>{\centering\arraybackslash}m{1.1cm}|>{\centering\arraybackslash}m{1.1cm}|>{\centering\arraybackslash}m{1.1cm}|>{\centering\arraybackslash}m{1.1cm}|>{\centering\arraybackslash}m{1.1cm}|>{\centering\arraybackslash}m{1.1cm}|}
+		\hline
+		\textbf{Année} & $1980$ & $1981$ & $1982$ & $1983$ & $1984$ & $1985$ & $1986$ & $1987$ & $1988$  \\
+		\hline
+		\textbf{Population} & $693,6$ & $696,5$ & $699,3$ & $702,1$ & $704,8$ & $707,6$ & $710,4$ & $713,3$ & $716,1$ \\
+		\hline
+	\end{tabular}
+\end{center}
 \begin{enumerate}
-	\item Calculer la fréquence de l’allèle pathogène.
-	\item Calculer la proportion de personnes qui portent un allèle $a$ sans être atteintes par la maladie.
+	\item Justifier que le modèle linéaire est adapté à l’évolution de cette population. Dans la suite, on se place dans ce modèle.
+	\item On note $u(n)$ la population européenne à l’année $1980 + n$ (c’est-à-dire on prend $1980$ comme année $0$).
+	\begin{enumerate}
+		\item Quelle est la nature de la suite $u$ ?
+		\item Déterminer, pour tout entier naturel $n$, $u(n)$ en fonction de $n$.
+		\item Dans ce modèle, quelle serait la population européenne en $2000$ ?
+		\item La population européenne en $2000$ était en fait d’environ $725,6$ millions d’individus.
+		Que peut-on en déduire ?
+	\end{enumerate}
 \end{enumerate}
 
+\paragraph{Exercice 7.}
+Une population a une évolution exponentielle. Cette population est de ${25 600}$
+individus en $2010$ et de ${30 976}$ individus en $2012$. On note $u(n)$ la
+population de cette ville à l’année $2010 + n$.
+\begin{enumerate}
+	\item Donner la nature de la suite $u$ et déterminer sa raison.
+	\item Quel est le taux de variation annuel de cette population ?
+	\item Donner une estimation de la population en 2020.
+\end{enumerate}
+
+\paragraph{Exercice 8.}
+La population de la région Occitanie a été multipliée par ${1,0071}$ chaque année
+entre $1990$ et $1999$. En $1990$, la population de la région était de ${4 546 249}$.
+\begin{enumerate}
+	\item Justifier que l’on est dans une situation où le modèle exponentiel est adapté.
+	\item On prend l’année $1990$ comme année $0$ et on considère la suite $u$ telle que $u(n)$ modélise la population de l’Occitanie à l’année $n$.
+	\begin{enumerate}[leftmargin=*,label=\alph*)]
+		\item Déterminer l’expression de $u(n)$ en fonction de $n$ pour tout entier naturel $n$.
+		\item Calculer la population de l’Occitanie en $1999$.
+		\item En 2008, la population de l’Occitanie est ${5 419 946}$.
+		L’évolution de la population semble-t-elle suivre le même modèle au-delà
+        de $1999$ ?
+	\end{enumerate}
+\end{enumerate}
+
+\paragraph{Exercice 9.}
+La perruche à collier est une espèce originaire d’Afrique centrale et
+occidentale, d’Asie, d’Inde et du Pakistan. Elle a été importée en Europe comme
+oiseau domestique mais certains individus de cette espèce se sont échappés des
+conteneurs de transport et ont commencé à nicher près des zones aéroportuaires.
+Ainsi, on commence à en signaler en Île-de-France à partir de $1990$. Différents
+comptages ont permis d’obtenir les résultats suivants :
+\begin{center}
+	\begin{tabular}{|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|}
+		\hline
+		\rule[-1ex]{0pt}{2.5ex}  \textbf{Année} & $2006$ & $2008$ & $2012$ & $2014$  \\
+		\hline
+		\rule[-1ex]{0pt}{2.5ex}  \textbf{Population} & $500$ & ${1 050}$ & ${2 700}$ & ${5 000}$ \\
+		\hline
+	\end{tabular}
+\end{center}
+Dans « Dynamique de population de la perruche à collier \textit{Psittacula
+krameri} introduite en Île-de-France », les auteurs écrivent : « on observe
+une tendance de type exponentielle ».
+Déterminer si cette affirmation est justifiée ou non.
+
+\paragraph{Exercice 10.}
+
+\begin{enumerate}
+	\item La population en France métropolitaine en $2006$ était de $61,4$ millions et la population en France métropolitaine en $2013$ était de $63,7$ millions.
+	\begin{enumerate}
+		\item Quel est le taux de variation de la population entre $2006$ et $2013$ ?
+		\item En se plaçant dans le modèle de Malthus, évaluer la population française en $2020$.
+	\end{enumerate}
+	\item La population française vivant dans les départements d’Outre-Mer (DOM) était de $1,787$ millions en $2006$ et elle a augmenté de $4,2$ \% en $7$ ans.
+	\begin{enumerate}
+		\item Déterminer la population des DOM en $2013$.
+		\item En se plaçant dans le modèle de Mathus, évaluer la population des DOM en $2020$.
+		\item Cette population était en réalité de $2,172$ millions d’habitants. Que peut-on en déduire ?
+	\end{enumerate}
+\end{enumerate}
+
+\paragraph{Exercice 11.}
+\begin{enumerate}
+	\item En Argentine, la population totale est de $45,6$ millions d’habitants. Dans cette population, on estime que le taux de natalité est de $16,5$ \textperthousand \hspace{0.2em} et que le taux de mortalité est de $7,6$ \textperthousand.
+	\begin{enumerate}
+		\item Calculer le taux de variation de la population argentine.
+		\item En suivant le modèle de Malthus, à combien peut-on évaluer la
+          population argentine en $2030$ ?
+	\end{enumerate}
+	\item Au Japon, le taux de variation de la population est de $-3,5$ \textperthousand \hspace{0.2em} pour une population totale de $126$ millions d’habitants. En suivant le modèle de Malthus, estimer la population japonaise en $2030$.
+\end{enumerate}
+
+\paragraph{Exercice 12.}
+
+Au Canada, le taux de natalité est estimé à $10,2$ \textperthousand \hspace{0.2em} et le taux de mortalité à $7,9$ \textperthousand.
+\begin{enumerate}
+	\item Calculer le taux de variation de la population en suivant la méthode de Malthus.
+	\item Le taux de variation de la population canadienne est estimé à 8,5 \textperthousand.
+	\begin{enumerate}[leftmargin=*,label=\alph*)]
+		\item Comparer cette valeur au résultat du calcul précédent. Que constate-t-on ?
+		\item Proposer une explication.
+	\end{enumerate}
+\end{enumerate}
 
 
 \end{document}
