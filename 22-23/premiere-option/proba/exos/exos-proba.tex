@@ -1,0 +1,169 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Croissance exponentielle -- Exercices}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\paragraph{Exercice 1.}~\\
+\begin{minipage}{.4\textwidth}
+  Le tableau ci-contre présente les activités préférées d'un groupe de
+  personnes.
+  \begin{enumerate}
+    \item Compléter ce tableau croisé.
+    \item Calculer les cinq fréquences marginales, et interpréter les résultats.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.6\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|c|}
+  \cline{2-5}
+  \multicolumn{1}{c|}{} & \textbf{Pétanque} & \textbf{Piscine} &
+  \textbf{Cartes} & \textbf{Total} \\
+  \hline
+  \textbf{Femmes} & $6$ & $16$ & $8$ & \\
+  \hline
+  \textbf{Hommes} & $10$ & $2$ & $8$ & \\
+  \hline
+  \textbf{Total} & & & & \\
+  \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{enumerate}
+    \setcounter{enumi}{2}
+    \item \begin{enumerate}
+        \item Calculer la fréquence conditionnelle des femmes parmi joueurs de
+          cartes.
+        \item Parmi les femmes, quelles est la fréquence des joueuses de
+          pétanque ?
+  \end{enumerate}
+\end{enumerate}
+
+\paragraph{Exercice 2.}~\\
+\begin{minipage}{.4\textwidth}
+  Le tableau ci-contre présente la répartition des élèves d'un groupe en
+  fonction de la langue étudiée.
+  \begin{enumerate}
+    \item Compléter ce tableau croisé.
+    \item Parmi tous les élèves, quelle est la fréquence marginale des garçons ?
+      Des élèves étudiant l'espagnol ?
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.6\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|}
+  \cline{2-4}
+  \multicolumn{1}{c|}{} & \textbf{Espagnol} & \textbf{Allemand} &
+  \textbf{Total} \\
+  \hline
+  \textbf{Garçons} & $3$ & $6$ & \\
+  \hline
+  \textbf{Filles} & $9$ & $6$ & \\
+  \hline
+  \textbf{Total} & & & \\
+  \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{enumerate}
+    \setcounter{enumi}{2}
+    \item \begin{enumerate}
+        \item Parmi les garçons, quelle est la fréquence des élèves suivant
+          l'espagnol ?
+        \item Parmi les élèves étudiant l'espagnol, quelle est la fréquence des
+          garçons ?
+    \end{enumerate}
+\end{enumerate}
+
+\paragraph{Exercice 3.}~\\
+\begin{minipage}{.5\textwidth}
+  Le club de badminton de la commune souhaite organiser une coupe loisir et
+  sonde les adhérents pour savoir s'ils comptent y participer. On choisit un
+  adhérent du club au hasard et on note
+  \begin{itemize}
+    \item $P$ l'événement : «L'adhérent souhaite participer à la coupe loisir»;
+  \end{itemize}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|}
+  \cline{2-3}
+  \multicolumn{1}{c|}{} & \makecell{\textbf{Souhaitent}\\\textbf{participer}} &
+  \makecell{\textbf{Ne souhaitent}\\\textbf{pas participer}} \\
+  \hline
+  \textbf{Hommes} & $25$ & $5$ \\
+  \hline
+  \textbf{Femmes} & $20$ & $2$ \\
+  \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{itemize}
+  \item $H$ l'événement : «L'adhérent est un homme».
+\end{itemize}
+
+\paragraph{Exercice 4.}~\\
+\begin{minipage}{.35\textwidth}
+  Dans un lycée, $1200$ élèves ont répondu à un sondage pour savoir s'ils
+  viennent de manière autonome (à vélo ou à pied) ou s'ils sont conduits
+  (transport en commun ou voiture)
+\end{minipage}
+\begin{minipage}{.65\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|}
+  \cline{2-4}
+  \multicolumn{1}{c|}{} & \textbf{Autonomes} & \textbf{Conduits} &
+  \textbf{Total} \\
+  \hline
+  \textbf{Externes} & & & \\
+  \hline
+  \textbf{Demi-pensionnaires} & & & \\
+  \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+ainsi que pour savoir s'ils sont demi-pensionnaires ou externes :
+\begin{itemize}
+  \item $40$\% des élèves sont externes ;
+  \item $40$\% des élèves demi-pensionnaires sont conduits ;
+  \item $85$\% des élèves externes sont autonomes.
+\end{itemize}
+\begin{enumerate}
+  \item Compléter le tableau ci-dessus.
+  \item En déduire la fréquence marginale des élèves autonomes.
+  \item On choisit une personne au hasard dans ce lycée. Quelle est la
+    probabilité pour que la personne choisie soit externe et conduite ?
+  \item On choisit une personne au hasard parmi les personnes autonomes, quelle
+    est la probabilité que cette personne soit demi-pensionnaire ?
+\end{enumerate}
+
+\paragraph{Exercice 5. ($\star$)}~\\
+\begin{minipage}[]{.5\textwidth}
+  En $2015$, les donneurs de sang en France étaient composés de $52$\% de femmes
+  et de $48$\% d'hommes.
+  \begin{enumerate}
+    \item Interpréter la donnée de $46$\% apparaissant sur ce graphique.
+      S'agit-il d'une fréquence conditionnelle ou d'une fréquence marginale ?
+    \item En utilisant le graphique, construire un tableau croisé de fréquence
+      liant le sexe et l'\^age des donneurs.
+    \item Quelle est la fréquence conditionnelle, à $1$\% près, des femmes parmi
+      les donneurs de moins de $40$ ans ?
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}[]{.5\textwidth}
+  \begin{center}
+    \includegraphics[scale=.5]{hf.png}
+  \end{center}
+\end{minipage}
+
+\end{document}
