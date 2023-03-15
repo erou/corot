@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Produit scalaire -- Problèmes}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\paragraph{Problème A.}~\\
+\begin{minipage}[]{.6\textwidth}
+  On se place dans un repère orthonormé $(A; \vect{AB}, \vect{AC})$. Les points
+  $D$, $E$ et $F$ sont placés sur les segments $\left[ AB \right]$, $\left[
+  BC \right]$ et $\left[ CA \right]$ tels que 
+  \[
+    AB = BE = CF = k,
+  \]
+  avec $k\in\left[ 0;1 \right]$.
+  \begin{enumerate}
+    \item Déterminer en fonction de $k$ les coordonnées des différents
+      points de la figure dans le repère. En particulier montrer que $E$ a pour
+      coordonnées
+      $$
+      \left( \frac{2-\sqrt2k}{2};\frac{\sqrt2k}{2} \right).
+      $$
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}[]{.4\textwidth}
+  \begin{center}
+    \includegraphics[scale=.3]{pb1.png}
+  \end{center}
+\end{minipage}
+\begin{enumerate}
+    \setcounter{enumi}{1}
+  \item Calculer le produit scalaire $\vect{DE}\cdot\vect{DF}$.
+  \item Existe-il une valeur de $k$ telle que le triangle $DEF$ soit rectangle
+    en $D$ ?
+\end{enumerate}
+
+\paragraph{Problème B.}~\\
+\begin{minipage}[]{.6\textwidth}
+  On se place dans un carré $ABCD$. Les points $E$, $F$, $G$ et $H$ sont placés
+  sur les côtés $\left[ AB \right]$, $\left[ BC \right]$, $\left[ CD
+  \right]$ et $\left[ DA \right]$ tels que
+  \[
+    AE = BF = CG = DH = k\times AB
+  \]
+  avec $k\in\left[ 0;1 \right]$. Montrer que, quelle que soit la valeur de $k$,
+  le quadrilatère $EFGH$ est un carré.
+\end{minipage}
+\begin{minipage}[]{.4\textwidth}
+  \begin{center}
+    \includegraphics[scale=.3]{pb2.png}
+  \end{center}
+\end{minipage}
+
+\paragraph{Problème C.}~\\
+\begin{minipage}[]{.6\textwidth}
+  On considère un cube $ABCDEFGH$ d'arête de longueur $c$. Le point $I$ est le
+  centre de la face $EFGH$. Déterminer la mesure de l'angle $\widehat{AIC}$ au
+  degré près.
+\end{minipage}
+\begin{minipage}[]{.4\textwidth}
+  \begin{center}
+    \includegraphics[scale=.2]{pb3.png}
+  \end{center}
+\end{minipage}
+
+\paragraph{Problème D.}~\\
+\begin{minipage}[]{.6\textwidth}
+  Soit $ABCD$ un rectangle de longueur $AD=b$ et de largeur $AB=a$. Le point $I$
+  est le milieu du côté $\left[ BC \right]$. On notera $M$ le point
+  d'intersection des droites $\left( AI \right)$ et $\left( BD \right)$. On
+  cherche à démontrer que les droites $\left( AI \right)$ et $\left( BD
+  \right)$ sont perpendiculaires si et seulement si $b=a\sqrt2$.
+  \begin{enumerate}
+    \item Calculer $\vect{AI}\cdot\vect{BD}$ en fonction de $a$ et de $b$.
+    \item Démontrer alors l'équivalence.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}[]{.4\textwidth}
+  \begin{center}
+    \includegraphics[scale=.2]{pb4.png}
+  \end{center}
+\end{minipage}
+
+
+\end{document}
