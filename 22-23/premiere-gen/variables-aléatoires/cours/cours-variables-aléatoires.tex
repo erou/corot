@@ -82,4 +82,50 @@
   \end{enumerate}
 \end{app}
 
+\section{Loi de probabilité d'une variable aléatoire réelle}
+
+\begin{defi}{Probabilité d'un événement $\left\{ X=x_i \right\}$}
+  La \textbf{probabilité d'un événement} $\left\{ X=x_i \right\}$ est la somme
+  des probabilités des issues de $\Omega$ auxquelles on associe le réel $x_i$.
+\end{defi}
+
+\begin{defi}{Loi de probabilité}
+  Soit $X$ une variable aléatoire définie sur $\Omega$ et prenant les valeurs
+  $x_1, x_2, \ldots, x_n$. Définir la
+  \textbf{loi de probabilité} de la variable aléatoire $X$, c'est associer à
+  chaque valeur $x_i$ prise par $X$ la probabilité de l'événement $P\left(
+  \left\{ X=x_i \right\}\right)$.
+\end{defi}
+
+\begin{rmq}
+  \begin{itemize}
+    \item On présente souvent la loi de probabilité d'une variable aléatoire
+      sous la forme d'un tableau.
+      \begin{center}
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabularx}{.7\textwidth}{|Y|Y|Y|Y|Y|}
+          \hline
+          $x_i$ & $x_1$ & $x_2$ & $\cdots$ & $x_n$ \\
+          \hline
+          $P\left( X=x_i \right)$ & $p_1$ & $p_2$ & $\cdots$ & $p_n$ \\
+          \hline
+        \end{tabularx}
+      \end{center}
+    \item On note souvent uniquement $P(X=x_i)$ au lieu de $P\left( \left\{
+        X=x_i\right\}\right)$ afin de simplifier les notations.
+  \end{itemize}
+\end{rmq}
+
+\begin{app}
+  Un jeu consiste à lancer deux fois de suite une pièce de monnaie. On gagne $5$
+  euros chaque fois qu'on obtient pile et on perd $2$ euros à chaque fois qu'on
+  obtient face. Soit $X$ la variable aléatoire qui, à chaque partie, associe le
+  gain, éventuellement négatif, obtenu à la fin.
+  \begin{enumerate}
+    \item Quelles sont les valeurs prises par $X$ ?
+    \item Déterminer la loi de probabilité de $X$.
+    \item En déduire $P\left( X\leq3 \right)$ puis $P\left( X>3 \right)$.
+  \end{enumerate}
+\end{app}
+
 \end{document}
