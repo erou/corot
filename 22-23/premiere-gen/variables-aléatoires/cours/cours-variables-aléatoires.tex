@@ -128,4 +128,105 @@
   \end{enumerate}
 \end{app}
 
+\section{Espérance, variance et écart-type}
+Dans toute cette partie, $X$ est une variable aléatoire réelle définie sur un
+univers $\Omega$ prenant les valeurs $x_1, x_2, \ldots, x_n$ avec les
+probabilités respectives $p_1, p_2, \ldots, p_n$.
+
+\subsection{Espérance d'une variable aléatoire}
+
+\begin{defi}{Espérance}
+  L'\textbf{espérance} de $X$ est le nombre réel, noté $E\left( X \right)$,
+  défini par
+  \begin{align*}
+    E\left( X \right) &= \sum_{i=1}^n p_ix_i \\
+    &= p_1x_1+p_2x_2+\cdots+p_nx_n.
+  \end{align*}
+\end{defi}
+
+\begin{rmq}
+  Le nombre $E\left( X \right)$ peut s'interpréter comme la moyenne des valeurs
+  prises par $X$ lorsque l'expérience aléatoire est répétée \textbf{un très
+  grand nombre de fois}.
+\end{rmq}
+
+\begin{app}
+  On considère une variable aléatoire $X$ dont la loi de probabilité est donnée
+  ci-dessous.
+  \begin{center}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{.7\textwidth}{|Y|Y|Y|Y|}
+      \hline
+      $x_i$ & $-2$ & $1$ & $4$ \\
+      \hline
+      $P\left( X = x_i \right)$ & $\frac{1}{6}$ & $\frac{1}{2}$ &
+      $\frac{1}{3}$ \\
+      \hline
+    \end{tabularx}
+  \end{center}
+  Donner l'espérance de $X$.
+\end{app}
+
+\begin{app}
+  On lance deux dés cubiques équilibrés et on additionne les nombres obtenus sur
+  chacune des faces. On définit $X$ comme la variable aléatoire égale à la somme
+  des deux résultats.
+  \begin{enumerate}
+    \item Quelles sont les valeurs prises par $X$ ?
+    \item En utilisant un tableau à double entrée, déterminer la loi de
+      probabilité de $X$.
+    \item On décide de jouer au jeu suivant : si le nombre obtenu est multiple
+      de $3$, le joueur gagne $4$ euros; sinon il perd $2$ euros. On note $Y$ la
+      variable aléatoire égale au gain du joueur.
+      \begin{enumerate}
+        \item Donner la loi de probabilité de $Y$.
+        \item Calculer l'espérance de $Y$.
+      \end{enumerate}
+  \end{enumerate}
+\end{app}
+
+\begin{rmq}
+  Lorsque les valeurs prises par $X$ représentent les gains (ou pertes) à un
+  jeu, alors $E\left( X \right)$ représente le gain moyen par partie.
+  \begin{itemize}
+    \item Si $E\left( X \right)>0$, alors le jeu est \textbf{favorable} au
+      joueur;
+    \item Si $E\left( X \right)<0$, alors le jeu est \textbf{défavorable} au
+      joueur;
+    \item Si $E\left( X \right)=0$, alors le jeu est \textbf{équitable}.
+  \end{itemize}
+\end{rmq}
+
+\subsection{Variance et écart-type d'une variable aléatoire}
+
+\begin{defi}{Variance et écart-type}
+  La \textbf{variance} de $X$ est le réel positif, noté $\Var\left( X
+  \right)$, défini par
+  \begin{align*}
+    \Var\left( X \right) &= \sum_{i=1}^n p_i(x_i-E\left( X \right))^2 \\
+    &= p_1\left(
+    x_1-E\left( X \right) \right)^2+\cdots+p_n\left( x_n-E\left( X
+    \right) \right)^2.
+  \end{align*}
+  L'\textbf{écart-type} de $X$ est le nombre positif, noté $\sigma\left( X
+  \right)$, défini par $\sigma\left( X \right)=\sqrt{\Var\left( X \right)}$.
+\end{defi}
+
+\begin{app}
+  Une roue est partagée en $10$ secteurs angulaires dont $5$ sont colorés en
+  rouges, $3$ en vert et $2$ en jaune. On mise $3$ euros pour tourner la roue et
+  elle s'arrête au hasard sur un secteur angulaire. Si celui-ci est vert, on
+  gagne $5$ euros, s'il est jaune, on gagne $10$ euros et s'il est rouge, on ne
+  gagne rien.
+  \begin{enumerate}
+    \item Donner les différentes valeurs de $X$.
+    \item Déterminer la loi de probabilité de $X$.
+    \item Calculer $E\left( X \right)$.
+    \item Interpréter le résultat précédent. Ce jeu est-il équitable ?
+    \item À l'aide de la calculatrice, déterminer $\Var\left( X \right)$ et
+      $\sigma\left( X \right)$.
+  \end{enumerate}
+\end{app}
+
+
 \end{document}
