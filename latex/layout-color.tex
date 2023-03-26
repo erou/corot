@@ -151,6 +151,17 @@ ytick={-5.0,-4.0,...,5.0},
 {\bfseries\scshape}{}%  % Note that final punctuation is omitted.
 {\newline}{}
 
+\newtheoremstyle{exostyle}%
+{}% space above thm
+{5mm}% space below thm
+{}% body font
+{}% body indentation
+{\bfseries}% head font
+{.}% punctuation between head and body
+{3mm}% space after head 
+{}% ?
+
+
 %\theoremstyle{break}
 %\theoremstyle{plain}
 %\newtheorem{thm}{Theorem}[section]
@@ -158,8 +169,8 @@ ytick={-5.0,-4.0,...,5.0},
 %\newtheorem{prop}[thm]{Proposition}
 %\newtheorem{cor}[thm]{Corollary}
 
-%\theoremstyle{scbf}
-%\newtheorem{exo}{$\star$ Exercice}
+\theoremstyle{exostyle}
+\newtheorem{exo}{Exercice}
 
 %\theoremstyle{definition}
 %\newtheorem{defi}[thm]{Definition}
@@ -185,7 +196,7 @@ ytick={-5.0,-4.0,...,5.0},
 \newcounter{exos}
 \setcounter{exos}{1}
 
-\newenvironment{exo}
+\newenvironment{oldexo}
   {
     \begin{bclogo}[logo=\bccrayon, noborder=true]{Exercice \theexos}
   }
