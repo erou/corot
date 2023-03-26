@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Équilibre de Hardy-Weinberg -- Contrôle}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+%Numéro d'exercices
+\newcounter{numexos}%Création d'un compteur qui s'appelle numexos
+\setcounter{numexos}{0}%initialisation du compteur
+\newcommand{\exercice}[1]{%Création d'une macro ayant un paramètre
+	\addtocounter{numexos}{1}%chaque fois que cette macro est appelée, elle ajoute 1 au compteur numexos
+	\textcolor{black}{\underline{\textbf{Exercice}\,\textbf{\thenumexos}}\,\textbf{:}}\,#1%Met en rouge Exercice et la valeur du compteur appelée par \thenumeexos
+}
+
+%Corps du texte
+
+\noindent\textbf{Prénom :}\hfill\textbf{Nom :}\hfill\textbf{Classe :}\\[1cm]
+\begin{center}
+\textbf{\LARGE \textsc{Test d'enseignement scientifique}}\\[2mm]
+
+{\large Lundi 27 Mars 2023, durée : 0h55}\\[1mm]
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+La calculatrice est \textbf{autorisée.} Si nécessaire, on arrondira les
+résultats à $0,01$\% près.\\[1cm]
+
+\exercice \\
+
+Le gène de la calpastatine a un effet majeur sur la croissance musculaire des animaux. Chez le mouton, il est situé sur le cinquième chromosome et possède deux allèles $M$ et $N$. L’allèle $M$ provoque une croissance plus importante des muscles.\\
+Certaines populations de moutons ont subi une sélection afin d’obtenir des animaux ayant un poids plus important. En particulier, il a été montré que les individus possédant le génotype $NN$ avait un poids inférieur en moyenne à ceux des autres génotypes.\\
+Une étude a été menée en Turquie sur deux espèces de moutons : les moutons de Kivircik
+($KIV$) et les moutons Karacabey Merino ($KM$). Voici les résultats obtenus :
+\begin{center}
+	\begin{tabular}{|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|}
+		\hline
+		\rule[-1ex]{0pt}{2.5ex}  \textbf{Génotype} & $MM$ & $MN$ & $NN$  \\
+		\hline
+		\rule[-1ex]{0pt}{2.5ex}  $KIV$ & $245$ & $79$ & $12$  \\
+		\hline
+		\rule[-1ex]{0pt}{2.5ex} $KM$ & $166$ & $65$ & $17$  \\
+		\hline
+	\end{tabular}
+\end{center}
+
+Dans cet exercice on ne s'intéresse qu'aux \underline{\textbf{moutons de Kivircik}}.
+
+\begin{enumerate}[leftmargin=*]
+	\item Déterminer la taille de la population étudiée.
+	\item Calculer les fréquences génotypiques $MM$, $MN$ et $NN$. 
+	\item Calculer les fréquences des allèles $M$ et $N$ dans la population.
+	\item En supposant que la population est à l’équilibre d’Hardy-Weinberg, calculer les fréquences génotypiques théoriques à partir des fréquences alléliques obtenus à la question précédente.
+	\item Comparer les fréquences théoriques obtenues à la question précédente avec les fréquences génotypiques réellement observées. \\ Peut-on valider l’hypothèse selon laquelle la population 	est en équilibre d’Hardy-Weinberg pour ce gène ?
+\end{enumerate}
+
+\vspace{11pt}
+
+\exercice \\
+
+Une étude sur une population de moustiques au Maroc a montré que la résistance
+des moustiques aux insecticides est liée à un gène appelé \emph{ace-1}. Il
+existe sous deux allèles : $R$ (résistant) et $S$ (sensible). L'étude a montré que
+les individus homozygotes $(R//R)$ sont résistants aux insecticides. La
+fréquence de l'allèle $R$ dans la population de moustiques étudiée est de $4$\%.
+
+\begin{enumerate}[leftmargin=*]
+	\item Calculer la fréquence de l’allèle $S$.
+	\item En supposant que la population est à l’équilibre de Hardy-Weinberg pour ce gène :
+	\begin{enumerate}[leftmargin=*,label=\alph*.]
+		\item Calculer la fréquence de moustiques résistants aux insecticides.
+		\item Calculer la fréquence de moustiques qui sont sensibles aux
+          insecticides.
+		\item Calculer la fréquence de moustiques porteurs de l’allèle $R$ mais
+          qui ne sont pas résistants aux insecticides.
+	\end{enumerate}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\setcounter{numexos}{0}
+
+\noindent\textbf{Prénom :}\hfill\textbf{Nom :}\hfill\textbf{Classe :}\\[1cm]
+\begin{center}
+\textbf{\LARGE \textsc{Test d'enseignement scientifique}}\\[2mm]
+
+{\large Lundi 27 Mars 2023, durée : 0h55}\\[1mm]
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+La calculatrice est \textbf{autorisée.} Si nécessaire, on arrondira les
+résultats à $0,01$\% près.\\[1cm]
+
+
+\exercice \\
+
+Le gène de la calpastatine a un effet majeur sur la croissance musculaire des animaux. Chez le mouton, il est situé sur le cinquième chromosome et possède deux allèles $M$ et $N$. L’allèle $M$ provoque une croissance plus importante des muscles.\\
+Certaines populations de moutons ont subi une sélection afin d’obtenir des animaux ayant un poids plus important. En particulier, il a été montré que les individus possédant le génotype $NN$ avait un poids inférieur en moyenne à ceux des autres génotypes.\\
+Une étude a été menée en Turquie sur deux espèces de moutons : les moutons de Kivircik
+($KIV$) et les moutons Karacabey Merino ($KM$). Voici les résultats obtenus :
+\begin{center}
+	\begin{tabular}{|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|}
+		\hline
+		\rule[-1ex]{0pt}{2.5ex}  \textbf{Génotype} & $MM$ & $MN$ & $NN$  \\
+		\hline
+		\rule[-1ex]{0pt}{2.5ex}  $KIV$ & $245$ & $79$ & $12$  \\
+		\hline
+		\rule[-1ex]{0pt}{2.5ex} $KM$ & $166$ & $65$ & $17$  \\
+		\hline
+	\end{tabular}
+\end{center}
+
+Dans cet exercice on ne s'intéresse qu'aux \underline{\textbf{moutons Karacabey Merino}}.
+
+\begin{enumerate}[leftmargin=*]
+	\item Déterminer la taille de la population étudiée.
+	\item Calculer les fréquences génotypiques $MM$, $MN$ et $NN$.
+	\item Calculer les fréquences des allèles $M$ et $N$ dans la population.
+	\item En supposant que la population est à l’équilibre d’Hardy-Weinberg, calculer les fréquences génotypiques théoriques à partir des fréquences alléliques obtenus à la question précédente.
+	\item Comparer les fréquences théoriques obtenues à la question précédente avec les fréquences génotypiques réellement observées. \\
+	Peut-on valider l’hypothèse selon laquelle la population 	est en équilibre d’Hardy-Weinberg pour ce gène ?
+\end{enumerate}
+
+\vspace{11pt}
+
+\exercice \\
+
+Dans le nord de l'Allemagne, une étude sur une population de cerfs a montré
+qu'un certain nombre d'individus sont malades et sont atteints de malformations. Ces
+malformations sont liées à un gène existant sous deux allèles : $M$ (malade) et
+$S$ (sain). Les individus homozygotes $(M//M)$ sont atteints de malformations.
+La fréquence de l'allèle $S$ dans la population est de $94$\%.
+
+\begin{enumerate}[leftmargin=*]
+	\item Calculer la fréquence de l’allèle $M$.
+	\item En supposant que la population est à l’équilibre de Hardy-Weinberg pour ce gène :
+	\begin{enumerate}[leftmargin=*,label=\alph*.]
+		\item Calculer la fréquence de sujets atteints par des malformations.
+		\item Calculer la fréquence des individus qui ne présentent pas de
+          malformations.
+		\item Calculer la fréquence de porteurs de l’allèle défectueux mais non
+          atteints par la maladie.
+	\end{enumerate}
+\end{enumerate}
+\end{document}
