@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Probabilités -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\newcommand{\Cf}{\mathscr{C}_f}
+\newcommand{\Cg}{\mathscr{C}_g}
+
+\title{Chapitre 9 : Probabilités}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+% TODO: ?
+
+\section{Expérience aléatoire}
+\subsection{Vocabulaire des probabilités}
+
+\begin{defi}{Expérience aléatoire}
+  Une \textbf{expérience aléatoire} est une expérience dont les résultats
+  possibles sont connus sans que l'on puisse déterminer lequel sera réalisé.
+\end{defi}
+
+\begin{defi}{Issue}
+  Une \textbf{issue} est un des résultats possibles d'une expérience aléatoire.
+\end{defi}
+
+\begin{defi}{Univers}
+  L'\textbf{univers} associé à une expérience aléatoire est l'ensemble de toutes
+  ses issues possibles.
+\end{defi}
+
+\begin{exemple}
+  On lance un dé cubique dont les faces sont numérotées de $1$ à $6$ et on
+  observe le résultat obtenu. Cette expérience aléatoire a $6$ issues possibles
+  et l'univers associé est
+  \[
+    \Omega = \left\{ 1; 2; 3; 4; 5; 6 \right\}.
+  \]
+\end{exemple}
+
+\begin{exemple}
+  On tire une carte parmi un jeu de $32$ cartes et on observe sa couleur (coeur,
+  carreau, trèfle, ou pique). Cette expérience a $4$ issues possibles et
+  l'univers associé est
+  \[
+    \Omega = \left\{ \heartsuit; \diamondsuit; \clubsuit; \spadesuit \right\}.
+  \]
+\end{exemple}
+
+\begin{app}
+  On lance une pièce de monnaie et on regarde si on tombe sur pile ou face.
+  \begin{enumerate}
+    \item Quelles sont les issues de cette expérience aléatoire ?
+    \item Déterminer l'univers $\Omega$.
+  \end{enumerate}
+\end{app}
+
+\begin{app}
+  Une urne contient $10$ boules numérotées de $1$ à $10$. Parmi ces boules, $5$
+  sont rouges, $3$ sont bleues et $2$ sont vertes. Dans chaque cas, déterminer
+  l'univers associé à l'expérience aléatoire décrite.
+  \begin{enumerate}
+    \item On tire une boule au hasard et on s'intéresse à sa valeur.
+    \item On tire une boule au hasard et on s'intéresse à sa couleur.
+  \end{enumerate}
+\end{app}
+
+\subsection{Loi de probabilité}
+
+\begin{defi}{Loi de probabilité}
+  Définir une \textbf{loi de probabilité} pour une expérience aléatoire dont
+  l'univers est $\Omega=\left\{ x_1; x_2; \dots; x_n \right\}$ consiste à
+  attribuer à chacune des issues un nombre $p_i$ positif ou nul, appelé
+  \textbf{probabilité}, tel que
+  \[
+    p_1+p_2+\cdots+p_n = 1.
+  \]
+\end{defi}
+\begin{rmq}
+  Lorsque toutes les probabilités $p_1, p_2, \dots, p_n$ sont égales, on parle
+  d'\textbf{équiprobabilité}.
+\end{rmq}
+\begin{notation}
+  Si on a une expérience aléatoire dont l'univers est $\Omega=\left\{ x_1;
+    \dots; x_n \right\}$, on note alors
+    \[
+      P\left( \left\{ x_i \right\} \right)
+    \]
+    la probabilité associée à l'issue $x_i$, pour n'importe quel entier $i$
+    compris entre $1$ et $n$.
+\end{notation}
+\begin{exemple}
+  On lance une pièce de monnaie équilibrée. On est dans une situation
+  d'équiprobabilité. On obtient donc la loi de probabilité suivante :
+  \[
+    P\left( \left\{ \text{face} \right\} \right)=P\left( \left\{ \text{pile}
+  \right\} \right)=\frac{1}{2}.
+  \]
+\end{exemple}
+
+\begin{app}
+  On lance un dé cubique équilibré dont les faces sont numérotées de $1$ à $6$.
+  Donner la loi de probabilité associée à cette expérience aléatoire.
+\end{app}
+
+\end{document}

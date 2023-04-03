@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Probabilités -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 4 : Probabilités}
+\date{}
+\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+% TODO:
+% =====
+%
+% Ajouter un rappel des notions de taux d'évolution et de coefficient
+% multiplicateur. Ces notions sont vues en seconde mais donnent de l'intérêt à
+% la notion de taux moyen qui est au programme dans ce cours.
+
+\setcounter{page}{4}
+\setcounter{defis}{5}
+\setcounter{props}{3}
+\setcounter{exemples}{11}
+\setcounter{section}{2}
+\setcounter{subsection}{1}
+
+\subsection{Probabilités conditionnelles}
+Soit $A$ et $B$ deux événements d'un même univers, tous deux de probabilité non
+nulle.
+\begin{defi}{Probabilité conditionnelle}
+  La \textbf{probabilité conditionnelle} que l'événement $B$ se réalise sachant
+  que l'événement $A$ s'est déjà réalisé se note $P_A(B)$ et est définie par
+  \[
+    P_A(B) = \frac{P\left( A\cap B \right)}{P\left( A \right)}.
+  \]
+\end{defi}
+\begin{exemple}
+ \begin{minipage}{.5\textwidth}
+   On reprend le même tableau que dans les premiers exemples. On choisit une
+   personne au hasard et on considère l'événement $C$ : « la personne va
+   régulièrement au cinéma » et $S$ : « la personne fait régulièrement du sport
+   ». On utilise le tableau pour trouver que
+   \[
+     P_{\overline C}\left( S \right) = \frac{12}{65}.
+   \]
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|}
+  \cline{2-4}
+  \multicolumn{1}{c|}{} & $\;\;S\;\;$ & $\;\;\overline S\;\;$ & \textbf{Total} \\
+  \hline
+  $C$ & $20$ & $15$ & $35$ \\
+  \hline
+  $\overline C$ & $12$ & $53$ & $65$ \\
+  \hline
+  \textbf{Total} & $32$ & $68$ & $100$ \\
+  \hline
+\end{tabular}
+\end{center}
+\end{minipage} 
+La probabilité de choisir une personne faisant du sport de manière régulière
+sachant que la personne choisie ne va pas régulièrement au cinéma est de
+$\frac{12}{65}$.
+\end{exemple}
+
+\begin{app}
+  On reprend de nouveau l'application concernant la classe de $32$ élèves. On
+  choisit une personne au hasard dans cette classe et on note $A$ l'événement «
+  la personne choisie suit la spécialité HGGSP » et $B$ l'événement « la
+  personne choisie est un garçon ».
+  \begin{enumerate}
+    \item Calculer la probabilité que la personne choisie soit un garçon,
+      sachant qu'elle suit la spécialité HGGSP.
+    \item Calculer $P_{\overline A}\left( B \right)$.
+  \end{enumerate}
+\end{app}
+
+\begin{defi}{Arbre de probabilités}
+  \begin{minipage}{.4\textwidth}
+    Lorsqu'on réalise une expérience aléatoire mettant en jeu plusieurs
+    événements, il est plus facile d'organiser les différentes issues en
+    utilisant un \textbf{arbre de probabilités.} La première série de branche
+    sépare les issues selon la réalisation du premier événement, la deuxième
+    série de branche selon le deuxième événement, \emph{etc.}\\[2mm]
+    On indique sur chaque branche de l'arbre la probabilité correspondante comme
+    indiquée sur l'arbre ci-contre. Les probabilités du deuxième niveau de
+    l'arbre sont des probabilités conditionnelles.
+\end{minipage}
+  \begin{minipage}{.6\textwidth}
+    \begin{center}
+\begin{tikzpicture}[scale=1,level 1/.style={sibling distance=4cm},
+    level 2/.style={sibling distance=2cm}]
+  \node {} [grow'=right, level distance=3cm]
+  child {
+    node {$A$}
+    child {
+      node {$B$}
+      edge from parent node[above=2mm] {$P_A(B)=\frac{4}{7}$}
+    }
+    child{
+      node {$\overline B$}
+      edge from parent node[below=2mm] {$P_A(\overline B)=\frac{3}{7}$}
+    }
+    edge from parent node[above = 5mm] {$P(A)=\frac{21}{32}$}
+  }
+  child {
+    node {$\overline A$}
+    child {
+      node {$B$}
+      edge from parent node[above=2mm] {$P_{\overline A}(B)=\frac{6}{11}$}
+    }
+    child{
+      node {$\overline B$}
+      edge from parent node[below=2mm] {$P_{\overline A}(\overline
+      B)=\frac{5}{11}$}
+    }
+    edge from parent node[below = 5mm] {$P(\overline A)=\frac{11}{32}$}
+  };
+  %\node at (9.2, -.515) {$P(\overline A\cap B)=P(\overline A)\times P_{\overline
+  %A}(B)$};
+\end{tikzpicture}
+\end{center}    
+  \end{minipage}
+\end{defi}
+
+\begin{exemple}
+  L'arbre ci-dessus correspond à l'application avec la classe de $32$ élèves et
+  les événements $A$ «
+  la personne choisie suit la spécialité HGGSP » et $B$ l'événement « la
+  personne choisie est un garçon ».
+\end{exemple}
+
+
+\end{document}
