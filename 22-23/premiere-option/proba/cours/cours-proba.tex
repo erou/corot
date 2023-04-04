@@ -136,5 +136,38 @@ $\frac{12}{65}$.
   personne choisie est un garçon ».
 \end{exemple}
 
+\begin{prop}
+  Un arbre de probabilité satisfait certaines propriétés.
+  \begin{enumerate}
+  \item La somme des probabilités sur les branches issues d'un même nœud est
+    égale à $1$.
+  \item On appelle \textbf{chemin} une suite de branches décrivant une
+    succession d'événements. La probabilité d'un chemin est égale au produit des
+    probabilités situées sur les branches qui le composent.
+  \item La probabilité d'un événement est la somme des probabilités des chemins
+    qui y aboutissent.
+  \end{enumerate}
+\end{prop}
+
+\begin{defi}{Indépendance}
+  Les événements $A$ et $B$ sont dits \textbf{indépendants} lorsque
+  \[
+    P_A(B) = P(B),
+  \]
+  ou, de manière symétrique, lorsque
+  \[
+    P_B(A) = P(A).
+  \]
+\end{defi}
+
+\begin{rmq}
+  Intuitivement, cela signifie que la probabilité que $B$ se réalise ne dépend
+  pas de la réalisation de l'événement $A$.
+\end{rmq}
+
+\begin{app}
+  En conservant le même exemple (la classe de $32$ élèves), montrer que les
+  événements $A$ et $B$ ne sont pas indépendants.
+\end{app}
 
 \end{document}

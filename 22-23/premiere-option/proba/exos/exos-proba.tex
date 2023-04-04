@@ -3,14 +3,14 @@
 \newcommand{\titrechapitre}{Croissance exponentielle -- Exercices}
 \newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
 \newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
-\newcommand{\topbotmargins}{2cm}
+\newcommand{\topbotmargins}{1cm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 %\input{layout-nb.tex}
 
 \begin{document}
-%\maketitle\thispagestyle{fancy}
+\pagestyle{empty}
 
-\paragraph{Exercice 1.}~\\
+\begin{exo}~\\
 \begin{minipage}{.4\textwidth}
   Le tableau ci-contre présente les activités préférées d'un groupe de
   personnes.
@@ -45,8 +45,9 @@
           pétanque ?
   \end{enumerate}
 \end{enumerate}
+\end{exo}
 
-\paragraph{Exercice 2.}~\\
+\begin{exo}~\\
 \begin{minipage}{.4\textwidth}
   Le tableau ci-contre présente la répartition des élèves d'un groupe en
   fonction de la langue étudiée.
@@ -82,36 +83,9 @@
           garçons ?
     \end{enumerate}
 \end{enumerate}
+\end{exo}
 
-\paragraph{Exercice 3.}~\\
-\begin{minipage}{.5\textwidth}
-  Le club de badminton de la commune souhaite organiser une coupe loisir et
-  sonde les adhérents pour savoir s'ils comptent y participer. On choisit un
-  adhérent du club au hasard et on note
-  \begin{itemize}
-    \item $P$ l'événement : «L'adhérent souhaite participer à la coupe loisir»;
-  \end{itemize}
-\end{minipage}
-\begin{minipage}{.5\textwidth}
-\begin{center}
-\renewcommand{\arraystretch}{2}
-\begin{tabular}{|c|c|c|}
-  \cline{2-3}
-  \multicolumn{1}{c|}{} & \makecell{\textbf{Souhaitent}\\\textbf{participer}} &
-  \makecell{\textbf{Ne souhaitent}\\\textbf{pas participer}} \\
-  \hline
-  \textbf{Hommes} & $25$ & $5$ \\
-  \hline
-  \textbf{Femmes} & $20$ & $2$ \\
-  \hline
-\end{tabular}
-\end{center}
-\end{minipage}
-\begin{itemize}
-  \item $H$ l'événement : «L'adhérent est un homme».
-\end{itemize}
-
-\paragraph{Exercice 4.}~\\
+\begin{exo}~\\
 \begin{minipage}{.35\textwidth}
   Dans un lycée, $1200$ élèves ont répondu à un sondage pour savoir s'ils
   viennent de manière autonome (à vélo ou à pied) ou s'ils sont conduits
@@ -146,8 +120,9 @@ ainsi que pour savoir s'ils sont demi-pensionnaires ou externes :
   \item On choisit une personne au hasard parmi les personnes autonomes, quelle
     est la probabilité que cette personne soit demi-pensionnaire ?
 \end{enumerate}
+\end{exo}
 
-\paragraph{Exercice 5. ($\star$)}~\\
+\begin{exo}\!\!\textbf{($\star$)}\\
 \begin{minipage}[]{.5\textwidth}
   En $2015$, les donneurs de sang en France étaient composés de $52$\% de femmes
   et de $48$\% d'hommes.
@@ -165,5 +140,70 @@ ainsi que pour savoir s'ils sont demi-pensionnaires ou externes :
     \includegraphics[scale=.5]{hf.png}
   \end{center}
 \end{minipage}
+\end{exo}
+
+\begin{exo}~\\
+\begin{minipage}{.5\textwidth}
+  Le club de badminton de la commune souhaite organiser une coupe loisir et
+  sonde les adhérents pour savoir s'ils comptent y participer. On choisit un
+  adhérent du club au hasard et on note
+  \begin{itemize}
+    \item $P$ l'événement : «L'adhérent souhaite participer à la coupe loisir»;
+  \end{itemize}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|}
+  \cline{2-3}
+  \multicolumn{1}{c|}{} & \makecell{\textbf{Souhaitent}\\\textbf{participer}} &
+  \makecell{\textbf{Ne souhaitent}\\\textbf{pas participer}} \\
+  \hline
+  \textbf{Hommes} & $25$ & $5$ \\
+  \hline
+  \textbf{Femmes} & $20$ & $2$ \\
+  \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{itemize}
+  \item $H$ l'événement : «L'adhérent est un homme».
+\end{itemize}
+Compléter l'arbre de probabilité ci-dessous. On écrira les probabilités sous
+forme de fractions irréductibles.
+    \begin{center}
+\begin{tikzpicture}[scale=1,level 1/.style={sibling distance=2cm},
+    level 2/.style={sibling distance=1cm}]
+  \node {} [grow'=right, level distance=3cm]
+  child {
+    node {$H$}
+    child {
+      node {$P$}
+      edge from parent node[above] {$\cdots$}
+    }
+    child{
+      node {$\overline P$}
+      edge from parent node[below] {$\cdots$}
+    }
+    edge from parent node[above] {$\cdots$}
+  }
+  child {
+    node {$\overline H$}
+    child {
+      node {$P$}
+      edge from parent node[above] {$\cdots$}
+    }
+    child{
+      node {$\overline P$}
+      edge from parent node[below] {$\cdots$}
+    }
+    edge from parent node[below] {$\cdots$}
+  };
+  %\node at (9.2, -.515) {$P(\overline A\cap B)=P(\overline A)\times P_{\overline
+  %A}(B)$};
+\end{tikzpicture}
+\end{center}
+\end{exo}
+
 
 \end{document}
