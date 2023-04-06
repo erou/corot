@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\textbf{Prénom :}\hfill\textbf{Nom :}\hfill\textbf{Classe :}\\
+\begin{center}
+\textbf{\LARGE \textsc{Interrogation -- Fonctions affines}}\\[2mm]
+
+{\large Vendredi 7 Avril, durée : 0h30}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+% BARÊME
+% ======
+%
+% Ex 1 : 1 1 2
+% Ex 2 : 1.5 1.5 (0.75 pour m et 0.75 pour p) 
+% Ex 3 : 1 2
+
+\paragraph{Exercice 1. \emph{(4 points)}}~\\
+\begin{minipage}[]{.3\textwidth}
+  \begin{enumerate}
+    \item Sur le repère ci-contre, tracer les courbes représentatives des
+      fonctions dont les expressions sont les suivantes :
+      \begin{enumerate}
+        \item $f(x) = 3x-2$
+        \item $g(x) = -\frac{1}{2}x+\frac{3}{2}$
+      \end{enumerate}
+      \emph{On indiquera bien $\mathcal C_f$ et $\mathcal C_g$ pour préciser
+      quelle courbe correspond à quelle fonction.}
+    \item Donner l'expression de la fonction dont la courbe est donnée sur le
+      repère.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}[]{.7\textwidth}
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[x=1cm, y=1cm]
+      \addplot[domain=-5.5:5.5, samples=101] {(2/3)*x-1/3};
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\paragraph{Exercice 2. \emph{(3 points)}}
+\begin{enumerate}
+  \item On considère une fonction affine $w$ vérifiant $w(1)=0$ et $w(4)=3$.
+    Retrouver l'expression de la fonction $w$.
+  \item On considère une fonction affine $u$ vérifiant $u(-2)=3$ et $u(3)=-1$.
+    Retrouver l'expression de la fonction $u$.
+\end{enumerate}
+\paragraph{Exercice 3. \emph{(3 points)}} On condidère la fonction $t$ définie
+sur $\mathbb{R}$ par l'expression $t(x) = 3x + 5$.
+\begin{enumerate}
+  \item Donner le sens de variation de $t$.
+  \item Dresser le tableau de signe de $t$.
+\end{enumerate}
+
+\end{document}

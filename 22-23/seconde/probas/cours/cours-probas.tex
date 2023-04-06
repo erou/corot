@@ -158,7 +158,7 @@
 
 \begin{app}
   On lance un dé équilibré à six face. On considère les événements $A$ : «
-  obtenir un nombre pair » et $B$ : « obtenir un multiple de $3$ ».
+  obtenir un nombre pair » et $B$ : « obtenir un multiple de $3$~».
   \begin{enumerate}
     \item Décrire les événements $A\cap B$ et $A\cup B$.
     \item Donner les issues contenues dans $A\cap B$ et $A\cup B$.
@@ -178,5 +178,128 @@
   $A$, est l'événement constitué de toutes les issues de l'ensemble $\Omega$ qui
   n'appartiennent pas à $A$. On le note $\overline A$.
 \end{defi}
+
+\begin{app}
+  On lance un dé équilibré à six faces.
+  \begin{enumerate}
+    \item Donner un exemple de deux événements $F$ et $G$ qui sont
+      incompatibles.
+    \item On redonne les événements $A$ : « obtenir un nombre pair » et $B$ : «
+      obtenir un multiple de $3$~». Décrire les événements $\overline A$ et
+      $\overline B$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Probabilité d'un événement}
+
+\begin{defi}{Probabilité d'un événement}
+  La \textbf{probabilité d'un événement} est la somme des probabilités des
+  événements élémentaires qui le constituent. La probabilité de l'ensemble vide
+  est $0$.
+\end{defi}
+
+\begin{app}
+  On jette un dé équilibré à six faces.
+  \begin{enumerate}
+    \item On note $A$ l'événement « Obtenir un multiple de $3$. ».
+      \begin{enumerate}
+        \item Donner les issues qui constituent cet événement.
+        \item Calculer $P(A)$, la probabilité de cet événement.
+      \end{enumerate}
+    \item On note $B$ l'événement « Obtenir un nombre supérieur ou égale à $2$.
+      ».
+      \begin{enumerate}
+        \item Donner les issues qui constituent cet événement.
+        \item Calculer $P(B)$, la probabilité de cet événement.
+      \end{enumerate}
+  \end{enumerate}
+\end{app}
+
+\begin{prop}
+  On a $P\left( \Omega \right) = 1$ et, pour tout événement $A$, $0\leq P\left(
+  A \right)\leq 1$.
+\end{prop}
+
+\begin{prop}
+  Dans une situation d'équiprobabilité, la probabilité d'un événement $A$ est
+  \[
+    P\left( A \right) = \frac{\text{nombre d'issues favorables à
+    }A}{\text{nombre total d'issues}}.
+  \]
+\end{prop}
+
+\begin{notation}
+  Le nombre d'issues favorables à un événement $A$ est appelé \textbf{cardinal}
+  et est noté
+  \[
+    \Card\left( A \right).
+  \]
+\end{notation}
+
+\begin{rmq}
+  Avec la notation précédente, en cas d'équiprobabilité, on a
+  \[
+    P\left( A \right) = \frac{\Card\left( A \right)}{\Card\left( \Omega
+    \right)}.
+  \]
+\end{rmq}
+
+\begin{app}
+  On lance un dé équilibré icosaédrique dont les faces sont numérotées de $1$ à
+  $20$.
+  \begin{enumerate}
+    \item Justifier qu'on est dans une situation d'équiprobabilité.
+    \item Déterminer la probabilité de l'événement $A$ : « obtenir un nombre
+      supérieur ou égal à $15$. »
+  \end{enumerate}
+\end{app}
+
+\section{Calculs de probabilités}
+\subsection{Probabilité d'une union}
+
+\begin{prop}
+  Quels que soient les événements $A$ et $B$ de $\Omega$, on a
+  \[
+    P\left( A \cup B \right) = P\left( A \right) + P\left( B \right) - P\left(
+    A\cap B \right).
+  \]
+\end{prop}
+
+\begin{prop}
+  Si $A$ et $B$ sont deux événements incompatibles, alors
+  \[
+    P\left( A \cup B \right) = P\left( A \right) + P\left( B \right).
+  \]
+\end{prop}
+
+\subsection{Probabilité de l'événement contraire}
+
+\begin{prop}
+  Pour deux événements contraire $A$ et $\overline A$, on a
+  \[
+    P\left( \overline A \right) = 1 - P\left( A \right).
+  \]
+\end{prop}
+
+\begin{app}
+  On considère une expérience aléatoire dont l'univers est $\Omega = \left\{
+  1; 2; 3; 4; 5; 6; 7 \right\}$. Les sept événements élémentaires sont
+  équiprobables. On considères les événements
+\begin{align*}
+  A &= \left\{ 2; 3; 4 \right\} &
+  B &= \left\{3; 4; 5; 7 \right\} &
+  C &= \left\{1; 5 \right\}
+\end{align*}
+\begin{enumerate}
+  \item Donner l'écriture ensembliste de $\overline A$, $\overline B$ et $A\cap
+    B$.
+  \item Calculer les probabilités suivantes : $P\left( \overline A \right)$,
+    $P\left( \overline B \right)$, $P(A\cap B)$ et $P(A\cup C)$.
+  \item Calculer $P\left( A\cup B \right)$ de deux façons différentes.
+\end{enumerate}
+\end{app}
+
+\subsection{Arbre de dénombrement}
+\subsection{Tableau à double entrée}
 
 \end{document}
