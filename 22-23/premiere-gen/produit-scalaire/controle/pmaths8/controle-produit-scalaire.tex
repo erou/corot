@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+% Barême
+% ======
+%
+% Ex 1 : 1 et 2
+% Ex 2 : 1 / calcul et 1 et 2 (1 pour la réécriture de la formule puis 1 pour la
+% calculatrice)
+
+\begin{center}
+\textbf{\LARGE \textsc{Interrogation -- Produit scalaire}}\\[2mm]
+
+{\large Jeudi 30 Mars 2023, durée : 0h40}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+\paragraph{Exercice 1. \emph{(3 points)}}
+On considère les points du plan suivants : $A(-2; 11)$, $B(6; -13)$ et
+$C(10; 15)$.
+\begin{enumerate}
+  \item Calculer le produit scalaire $\vect{AB}\cdot\vect{BC}$.
+  \item Montrer que le triangle $ABC$ est rectangle et préciser en quel sommet.
+\end{enumerate}
+
+\paragraph{Exercice 2. \emph{(7 points)}}~\\
+\begin{minipage}{.6\textwidth}
+  La figure ci-contre représente un rectangle $ABCD$ tel que $AB=6$ et $BC=4$ et
+  un triangle $ABE$ équilatéral. Le point $F$ est le milieu du segment $\left[
+  AB \right]$.
+  \begin{enumerate}
+    \item En utilisant la méthode de votre choix, calculer les produits
+      scalaires suivants. \emph{On prendra soin de préciser la méthode utilisée
+      et de bien justifier les calculs.}
+      \begin{align*}
+        \textbf{a)}\;& \vect{AB}\cdot\vect{AE} &
+        \textbf{b)}\;& \vect{AB}\cdot\vect{FE} \\
+        \textbf{c)}\;& \vect{AE}\cdot\vect{CD} &
+        \textbf{d)}\;& \vect{FD}\cdot\vect{FC}
+      \end{align*}
+    \item Dans cette question on admet que $\vect{FD}\cdot\vect{FC}=7$.
+      \begin{enumerate}
+        \item Calculer les longueurs $DF$ et $FC$.
+        \item Déterminer la mesure de l'angle $\widehat{DFC}$, au centième de
+          degré près.
+      \end{enumerate}
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+\begin{center}
+\begin{tikzpicture}
+  \draw[red, thick] (0,0) -- (6,0) -- (60:6) -- (0,0) -- (0,-4) -- (6, -4) --
+  (6,0);
+
+  \point{3}{0}{black};
+  \point{0}{0}{black};
+  \point{6}{-4}{black};
+  \point{0}{-4}{black};
+  \point{6}{0}{black};
+  \point{3}{5.196}{black};
+
+  \node at (-.4, 0) {$A$};
+  \node at (-.4, -4) {$D$};
+  \node at (6.4, 0) {$B$};
+  \node at (6.4, -4) {$C$};
+  \node at (3, .4) {$F$};
+  \node at (3, 5.6) {$E$};
+
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\end{document}

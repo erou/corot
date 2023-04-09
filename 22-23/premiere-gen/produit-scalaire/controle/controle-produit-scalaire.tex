@@ -22,9 +22,9 @@
 % calculatrice)
 
 \begin{center}
-\textbf{\LARGE \textsc{Interrogation -- Produit scalaire}}\\[2mm]
+\textbf{\LARGE \textsc{Contrôle -- Produit scalaire \& dérivation}}\\[2mm]
 
-{\large Jeudi 30 Mars 2023, durée : 0h40}\\[1mm]
+{\large Mardi 11 Avril 2023, durée : 1h00}\\[1mm]
 \noindent\rule{8cm}{0.4pt}\\[1mm]
 \textbf{\textsc{Consignes à respecter}}
 \begin{enumerate}[label=\textbf{\arabic*/}]
@@ -43,59 +43,41 @@
   Bon courage !
 \end{center}
 
-\paragraph{Exercice 1. \emph{(3 points)}}
-On considère les points du plan suivants : $A(-2; 11)$, $B(6; -13)$ et
-$C(10; 15)$.
-\begin{enumerate}
-  \item Calculer le produit scalaire $\vect{AB}\cdot\vect{BC}$.
-  \item Montrer que le triangle $ABC$ est rectangle et préciser en quel sommet.
-\end{enumerate}
-
-\paragraph{Exercice 2. \emph{(7 points)}}~\\
-\begin{minipage}{.6\textwidth}
-  La figure ci-contre représente un rectangle $ABCD$ tel que $AB=6$ et $BC=4$ et
-  un triangle $ABE$ équilatéral. Le point $F$ est le milieu du segment $\left[
-  AB \right]$.
+\paragraph{Exerice 1. \emph{(9 points)}}~\\ % 1. 1pt 2. 1pt 3. 1pt 4abc 1pt×3 5.
+% 1pt 6. 2pt
+\begin{minipage}{.5\textwidth}
+  On considère le rectangle $ABCD$ tel que $AB=5$ et $BC=2$. Le point $M$ est un
+  point du segment $\left[ DC \right]$ tel que $DM=x$.\\
+  On cherche à déterminer les positions du point $M$ afin d'obtenir des valeurs
+  spécifiques du produit scalaire $\vect{MA}\cdot\vect{MB}$.
   \begin{enumerate}
-    \item En utilisant la méthode de votre choix, calculer les produits
-      scalaires suivants. \emph{On prendra soin de préciser la méthode utilisée
-      et de bien justifier les calculs.}
-      \begin{align*}
-        \textbf{a)}\;& \vect{AB}\cdot\vect{AE} &
-        \textbf{b)}\;& \vect{AB}\cdot\vect{FE} \\
-        \textbf{c)}\;& \vect{AE}\cdot\vect{CD} &
-        \textbf{d)}\;& \vect{FD}\cdot\vect{FC}
-      \end{align*}
-    \item Dans cette question on admet que $\vect{FD}\cdot\vect{FC}=7$.
-      \begin{enumerate}
-        \item Calculer les longueurs $DF$ et $FC$.
-        \item Déterminer la mesure de l'angle $\widehat{DFC}$, au centième de
-          degré près.
-      \end{enumerate}
+    \item À quel intervalle appartient le nombre $x$ ?
+    \item Quelle est la valeur du produit scalaire
+      $\vect{MA}\cdot\vect{MB}$ lorsque le point $M$ est placé sur $D$ ? Sur $C$
+      ?
   \end{enumerate}
 \end{minipage}
-\begin{minipage}{.4\textwidth}
-\begin{center}
-\begin{tikzpicture}
-  \draw[red, thick] (0,0) -- (6,0) -- (60:6) -- (0,0) -- (0,-4) -- (6, -4) --
-  (6,0);
-
-  \point{3}{0}{black};
-  \point{0}{0}{black};
-  \point{6}{-4}{black};
-  \point{0}{-4}{black};
-  \point{6}{0}{black};
-  \point{3}{5.196}{black};
-
-  \node at (-.4, 0) {$A$};
-  \node at (-.4, -4) {$D$};
-  \node at (6.4, 0) {$B$};
-  \node at (6.4, -4) {$C$};
-  \node at (3, .4) {$F$};
-  \node at (3, 5.6) {$E$};
-
-\end{tikzpicture}
-\end{center}
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+    \includegraphics[scale=.6]{ps.png}
+  \end{center}
 \end{minipage}
+\begin{enumerate}
+    \setcounter{enumi}{2}
+  \item Justifier que le produit scalaire $\vect{MA}\cdot\vect{MB}$ vaut
+    \[
+      \vect{MA}\cdot\vect{MB} = x^2 - 5x + 4.
+    \]
+  \item On définit la fonction $f$ sur $\mathbb{R}$ par, pour tout
+    $x\in\mathbb{R}$, $f(x) = x^2 - 5x + 4$.
+    \begin{enumerate}
+      \item Justifier \emph{soigneusement} que, pour tout $x\in\mathbb{R}$, $f'(x) = 2x-5$.
+      \item Déterminer le tableau de signe de $f'$.
+      \item En déduire les variations de $f$.
+    \end{enumerate}
+  \item En déduire la position de $M$ minimisant la valeur du produit scalaire.
+  \item Est-il possible que les droites $\left( MA \right)$ et $\left( MB
+    \right)$ soient perpendiculaires ? Si oui, pour quelle(s) valeur(s) de $x$ ?
+\end{enumerate}
 
 \end{document}
