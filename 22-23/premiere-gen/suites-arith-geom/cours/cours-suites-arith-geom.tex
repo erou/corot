@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Suites arithmétiques et géométriques -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 9 : Suites arithmétiques et géométriques}
+\date{}
+\author{}
+
+% Note
+% ====
+%
+% Ce chapitre doit probablement commencer par une activité pour que la
+% définition de variable aléatoire soit motivée directement. Sans cela, le
+% début du chapitre peut paraître un peu rude.
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Suites arithmétiques}
+\subsection{Définition}
+\begin{defi}{Suite arithmétique}
+  On dit que la suite $(u_n)$ est \textbf{arithmétique} s'il existe un réel
+  $r$ tel que, pour tout entier $n\in\mathbb{N}$
+  \[
+    u_{n+1} = u_n + r.
+  \]
+  Le nombre $r$ est appelé la \textbf{raison} de la suite.
+\end{defi}
+
+\begin{rmq}
+  \begin{itemize}
+    \item Pour passer d'un terme à l'autre, on ajoute la raison $r$, on a donc
+      $r=u_{n+1}-u_n$.
+    \item La raison $r$ ne dépend pas de $n$.
+  \end{itemize}
+\end{rmq}
+
+\begin{app}
+  Pour chacune des suites suivantes, déterminer si elles sont arithmétiques ou
+  non. Si oui, déterminer la raison et le premier terme.
+  \begin{enumerate}
+    \item La suite $(a_n)$ définie sur $\mathbb{N}$ par $a_0=1$ et
+      $a_{n+1}=a_n-8$.
+    \item La suite $(b_n)$ définie sur $\mathbb{N}$ par $b_n=n^2+2n+4$.
+    \item La suite $(c_n)$ définie sur $\mathbb{N}$ par $c_n=3n+1$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Expression}
+\begin{prop}
+  Soit $(u_n)$ une suite arithmétique de raison $r$ et de premier terme $u_0$.
+  Pour tout entier $n\in\mathbb{N}$, on a $u_n = u_0 +n\times r$.
+\end{prop}<++>
+
+\end{document}
