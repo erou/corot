@@ -47,7 +47,7 @@
   \begin{minipage}[]{.5\textwidth}
     On souhaite empiler des allumettes. Pour $n\in\mathbb{N}^*$, on note $a_n$
     le nombre d'allumettes nécessaire pour construire la ligne du niveau $n$.
-    Ainsi $a_2=2$ et $a_4=4$.
+    Ainsi $a_1=2$ et $a_2=4$.
   \end{minipage}
   \begin{minipage}[]{.5\textwidth}
     \begin{center}
@@ -214,5 +214,96 @@
   \end{enumerate}
 \end{exo}
 
+\begin{exo}
+  Le $1^\text{er}$ Janvier $2023$, Olivier veut déposer $5\;000$ euros sur un
+  compte en banque. Il a le choix entre $2$ propositions.
+  \begin{enumerate}
+    \item On lui propose un compte épargne avec des intérêts à taux fixe. Chaque
+      année, le $31$ Décembre, la banque lui verse $110$ euros sur son compte
+      épargne. On note $u_n$ la somme sur le compte le $1^\text{er}$ Janvier de
+      l'année $2023+n$.
+      \begin{enumerate}
+        \item Déterminer les valeurs de $u_0$ et $u_1$.
+        \item Exprimer $u_n$ en fonction de $n$. Justifier.
+        \item Combien aurait-il sur son compte en banque en $2040$ ?
+      \end{enumerate}
+    \item On lui propose un compte épargne avec des intérêts à taux composés.
+      Chaque année, le $31$ Décembre, la banque lui verse sur son compte épagne
+      $3$\% de la somme disponible sur le compte. On note $v_n$ la somme sur le
+      compte le $1^\text{er}$ Janvier de l'année $2023+n$.
+      \begin{enumerate}
+        \item Déterminer les valeurs de $v_0$ et $v_1$.
+        \item Exprimer $v_n$ en fonction de $n$. Justifier.
+        \item Combien aurait-il sur son compte en banque en $2045$ ?
+      \end{enumerate}
+    \item S'il décide de laisser l'argent sur son compte pendant $5$ ans, quelle
+      offre est la plus intéressante ?
+    \item À l'aide de la calculatrice, déterminer à partir de combien d'années
+      il est plus intéressant de choisir l'offre avec des intérêts à taux
+      composés.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $(u_n)$ la suite définie par $u_0=2$ et, pour tout $n\in\mathbb{N}$,
+  $u_{n+1}=3u_n+4$.
+  \begin{enumerate}
+    \item Calculer $u_1$ et $u_2$.
+    \item La suite $\left( u_n \right)$ est-elle arithmétique ? Géométrique ?
+      Justifier.
+    \item Soit $\left( v_n \right)$ la suite définie par pour tout
+      $n\in\mathbb{N}$ par $v_n=u_n+2$.
+      \begin{enumerate}
+        \item Calculer $v_0$.
+        \item Démontrer que $\left( v_n \right)$ est une suite géométrique de
+          raison $3$.
+        \item En déduire l'expression de $v_n$ en fonction de $n$.
+        \item En déduire l'expression de $u_n$ en fonction de $n$.
+      \end{enumerate}
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Un parc d'attractions propose à ses visiteurs des pass annuels donannt un
+  accès illimité à l'ensemble du site. En $2023$, $5\;000$ visiteurs achètent ce
+  pass. Chaque année, le directeur du parc prévoit que $90$\% de ces visiteurs
+  renouvelleront leur pass et que $800$ nouveaux visiteurs en achèteront un. On
+  note $u_n$ le nombre de visiteurs ayant le pass annuel en $2023+n$.
+  \begin{enumerate}
+    \item Déterminer la valeur de $u_0$ et $u_1$.
+    \item Justifier que, pour tout $n\in\mathbb{N}$, $u_{n+1} = 0,9u_n+800$.
+    \item Soit $\left( v_n \right)$ la suite définie par $v_n=u_n-8000$.
+      \begin{enumerate}
+        \item Justifier que la suite $\left( v_n \right)$ est géométrique.
+        \item Donner l'expression de $v_n$ en fonction de $n$.
+        \item Donner l'expression de $u_n$ en fonction de $n$.
+      \end{enumerate}
+    \item Combien peut-on prévoir qu'il y aura de visiteurs détenteurs du pass
+      annuel en $2035$ ?
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  On administre à un patient un médicament par injection intraveineuse. Le but
+  de l'exercice est d'étudier l'évolution de cette quantité minute par minute.
+  On programme la machine de façon que :
+  \begin{itemize}
+    \item à l'instant $0$, elle injecte $10$ mL de médicament ;
+    \item toutes les minutes, elle injecte $1$ mL de médicament.
+  \end{itemize}
+  On estime que $20$\% du médicament présent dans le sang est éliminé par
+  minute. On note $w_n$ la quantité de médicament (en mL) dans le sang après $n$
+  minutes.
+  \begin{enumerate}
+    \item Justifier que pour tout entier naturel $n\in\mathbb{N}$, $w_{n+1} =
+      0,8w_n+1$.
+    \item Pour tout entier naturel $n\in\mathbb{N}$, on pose $z_n=w_n-5$.
+      Démontrer que $z$ est une suite géométrique dont on précisera la raison et
+      le premier terme.
+    \item En déduire l'expression de $z_n$ puis de $w_n$ en fonction de $n$.
+    \item Quelle est la limite de la suite $\left( w_n \right)$ ? Quelle
+      interprétation peut-on donner ?
+  \end{enumerate}
+\end{exo}
 
 \end{document}
