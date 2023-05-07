@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+% Objectifs
+% =========
+%
+% + retrouver une loi de probabilité en utilisant
+%   + un arbre
+%   + un tableau
+% + calculer une espérance
+% + interpréter une espérance
+% + une question avec une variable ?
+%
+% Barême
+% ======
+%
+% Ex 1 : 1 et 2
+% Ex 2 : 1 / calcul et 1 et 2 (1 pour la réécriture de la formule puis 1 pour la
+% calculatrice)
+
+\begin{center}
+\textbf{\LARGE \textsc{Interrogation -- Variables aléatoires}}\\[2mm]
+
+{\large Mardi 9 Mars 2023, durée : 0h30}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+\paragraph{Exercice 1. \emph{(5 points)}} On considère deux dés cubiques à six
+faces, parfaitement équilibrés. On note $X$ la variable aléatoire
+représentant la somme des deux dés.
+\begin{enumerate}
+  \item Faire un tableau pour représenter les valeurs possibles de $X$.
+  \item Déterminer la loi de probabilité de $X$.
+  \item Déterminer l'espérance de $X$.
+  \item Traduire l'événement $\left\{ X\neq 12 \right\}$ en français. Quelle est la
+    probabilité de cet événement ?
+  \item Calculer $P\left( X\geq 7 \right)$.
+\end{enumerate}
+
+\paragraph{Exercice 2. \emph{(5 points)}}~\\
+\begin{minipage}[t]{.5\textwidth}
+Voici les tarifs des desserts d'une brasserie.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{cc}
+  \toprule
+  \textbf{Dessert} & \textbf{Tarif (en euro)} \\ \midrule
+  Assortiment de macarons & $8$ \\
+  Fondant au chocolat & $6$ \\
+  Île flottante & $4$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{minipage}[t]{.5\textwidth}
+La cheffe de cuisine estime que les choix des clients se répartissent de la
+manière suivante :
+\begin{itemize}
+  \item Assortiment de macarons : $30$\%
+  \item Fondant au chocolat : $45$\%
+  \item Île flottante : $25$\%
+\end{itemize}
+\end{minipage}
+\begin{enumerate}
+  \item Pour un client de ce restaurant, $X$ désigne la variable aléatoire égale
+    au prix du dessert choisi.
+    \begin{enumerate}
+      \item Donner la loi de probabilité de $X$.
+      \item Déterminer et interpréter $E(X)$.
+    \end{enumerate}
+  \item Pour un couple client de ce restaurant, on note maintenant $Y$ la
+    variable aléatoire égale au montant total des desserts choisis. On suppose
+    que les deux personnes font leur choix de manière indépendante.
+    \begin{enumerate}
+      \item Modéliser cette situation à l'aide d'un arbre pondéré.
+      \item Donner la loi de probabilité de $Y$.
+      \item Déterminer et interpréter $E(Y)$.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
