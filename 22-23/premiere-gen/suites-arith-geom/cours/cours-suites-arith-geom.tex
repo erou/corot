@@ -362,7 +362,66 @@
 
 \section{Calculs de sommes}
 \subsection{Propriétés générales}
+\begin{notation}
+  La \textbf{somme} des $n$ termes $x_1$, $x_2$, $\dots$, $x_n$ se note
+  \[
+    \sum_{k=1}^n x_k = x_1 + x_2 + \cdots + x_n.
+  \]
+\end{notation}
+\begin{rmq}
+  La lettre utilisée comme indice de sommation n'a pas d'importance : il s'agit
+  d'une \textbf{variable «~muette~»}. On a donc
+  \[
+    \sum_{k=1}^n x_k =
+    \sum_{i=1}^n x_i =
+    \sum_{j=1}^n x_j
+  \]
+\end{rmq}
+\begin{prop}
+S'il n'y a pas d'indice de sommation dans la somme, c'est que le terme sommé
+est constant.
+  \[
+    \sum_{k=1}^{n} 1 = \underbrace{1+1+\dots+1}_{n\text{ termes égaux à }1}
+  \]
+\end{prop}
+\begin{app}
+  Calculer les sommes suivantes.
+  \begin{align*}
+    \textbf{a)}\; & \sum_{k=1}^{15} 1 = &
+    \textbf{b)}\; & \sum_{k=1}^{n} 1 = &
+    \textbf{c)}\; & \sum_{k=0}^{15} 1 = &
+    \textbf{d)}\; & \sum_{k=0}^{n} 1 =
+  \end{align*}
+\end{app}
+\begin{prop}
+  Soient $\left\{ x_k \right\}_{1\leq k \leq n}$ et $\left\{ y_k \right\}_{1\leq
+  k \leq n}$ deux familles de $n$ nombres rééls et soit $\lambda\in\mathbb{R}$
+  un réel. On a alors
+  \begin{align*}
+    \sum_{k=1}^n\left( x_k+y_k \right) &= \sum_{k=1}^nx_k+\sum_{k=1}^ny_k &
+    &\text{et}&
+    \sum_{k=1}^n\lambda x_k &= \lambda\sum_{k=1}^nx_k.
+  \end{align*}
+\end{prop}
 \subsection{Somme des termes d'une suite arithmétique}
+\begin{thm}
+  Soit $n\in\mathbb{N}^*$ un entier naturel non nul, on a alors
+  \[
+    \sum_{k=1}^n k = 1+2+\cdots+n = \frac{n(n+1)}{2}.
+  \]
+\end{thm}
+\begin{proof}[Démonstration (à connaître)]
+  ~\vspace{3cm}\\
+\end{proof}
+\begin{app}
+  Soit $n\in\mathbb{N}^*$. Calculer les sommes suivantes.
+  \begin{align*}
+    \textbf{a)}\;& \sum_{k=1}^{10} k &
+    \textbf{b)}\;& \sum_{i=0}^{50} \left( 2i+1 \right) &
+    \textbf{c)}\;& \sum_{k=0}^{n} (nk+3)
+  \end{align*}
+
+\end{app}
 \subsection{Somme des termes d'une suite géométrique}
 
 \end{document}
