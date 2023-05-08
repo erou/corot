@@ -276,7 +276,105 @@ forme de fractions irréductibles.
     \item Modéliser l'expérience à l'aide d'un arbre pondéré.
     \item Interpréter l'événement $V\cap G$, puis calculer sa probabilité.
     \item Interpréter l'événement $V\cup G$, puis calculer sa probabilité.
+    \item On choisit un élève au hasard parmi ceux qui ont été vaccinés. Quelle
+      est la probabilité qu'il ait eu la grippe ?
+    \item On choisit un élève au hasard parmi ceux qui n'ont pas été vaccinés.
+      Quelle est la probabilité qu'il ait eu la grippe ?
   \end{enumerate}
 \end{exo}
+
+\begin{exo}
+  On lance un dé à six faces numérotées de $1$ à $6$.
+  \begin{enumerate}
+    \item Quelle est la probabilité que le résultat obtenu soit un nombre pair
+      et un nombre supérieur ou égal à $4$ ?
+    \item \begin{enumerate}
+          \item Quelle est la probabilité d'obtenir un nombre pair ?
+          \item Quelle est la probabilité pour que le résultat obtenu soit un nombre
+            pair sachant que c'est un  supérieur ou égal à $4$ ?
+          \item Les événements «~obtenir un nombre pair~» et «~obtenir un nombre
+            supérieur ou égale à $4$~» sont-ils indépendants ?
+      \end{enumerate}
+    \item Quelle est la probabilité que le résultat obtenu soit impair sachant
+      que c'est un nombre premier ?
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+Dans une crèche, chaque matin, Hapsatou fait la sieste
+avec une probabilité de $0,7$. Si elle a fait la sieste le matin, elle fera à
+nouveau la sieste l'après-midi avec une probabilité de $0,2$. Sinon, elle fera
+la sieste l'après-midi avec une probabilité de $0,9$. On note $A$ l'événement
+«~Hapsatou fait la sieste l'après-midi~» et $M$ l'événement «~Hapsatou fait la
+sieste le matin~».
+\begin{enumerate}
+  \item Représenter la situation avec un arbre de probabilité que l'on
+    complètera entièrement.
+  \item Calculer la probabilité qu'elle de fasse pas du tout la sieste dans la
+    journée.
+  \item Calculer la probabilité qu'elle fasse la sieste l'après-midi.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Dans une forêt, il y a $30$\% d'épicéas et $70$\% de sapins. Un parasite infecte
+$20$\% des épicéas et $10$\% des sapins. On
+choisit un arbre au hasard dans la forêt. On note $S$ l'événement «~L'arbre
+choisi est un sapin~» et $M$ «~L'arbre choisi est parasité~».
+\begin{enumerate}
+  \item D'après l'énoncé, que vaut $P(S)$ ?
+  \item D'après l'énoncé, que vaut $P_S(M)$ ?
+  \item Résumer la situation à l'aide d'un arbre de probabilité.
+  \item Déterminer $P(M)$, la probabilité de choisir un arbre parasité.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}~\\
+  \begin{minipage}[]{.5\textwidth}
+ On donne ci-contre un arbre de probabilité partiellement complété avec des
+ événements $A$ et $B$.
+    \begin{enumerate}
+      \item Compléter l'arbre de probabilité.
+      \item Que vaut $P_A(\overline B)$ ?
+      \item Calculer $P(\overline A\cap B)$.
+      \item \textbf{($\star$)} Calculer $P(B)$.
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+\begin{center}
+\begin{tikzpicture}[scale=1,level 1/.style={sibling distance=2cm},
+    level 2/.style={sibling distance=1cm}]
+  \node {} [grow'=right, level distance=3cm]
+  child {
+    node {$A$}
+    child {
+      node {$B$}
+      edge from parent node[above] {$0,4$}
+    }
+    child{
+      node {$\overline B$}
+      edge from parent node[below] {$\cdots$}
+    }
+    edge from parent node[above] {$0,3$}
+  }
+  child {
+    node {$\overline A$}
+    child {
+      node {$B$}
+      edge from parent node[above] {$\cdots$}
+    }
+    child{
+      node {$\overline B$}
+      edge from parent node[below] {$0,1$}
+    }
+    edge from parent node[below] {$\cdots$}
+  };
+  %\node at (9.2, -.515) {$P(\overline A\cap B)=P(\overline A)\times P_{\overline
+  %A}(B)$};
+\end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{exo}
+
 
 \end{document}
