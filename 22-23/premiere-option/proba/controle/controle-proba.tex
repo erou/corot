@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+% Objectifs
+% =========
+%
+% + retrouver une loi de probabilité en utilisant
+%   + un arbre
+%   + un tableau
+% + calculer une espérance
+% + interpréter une espérance
+% + une question avec une variable ?
+%
+% Barême
+% ======
+%
+% Ex 1 : 1 et 2
+% Ex 2 : 1 / calcul et 1 et 2 (1 pour la réécriture de la formule puis 1 pour la
+% calculatrice)
+
+\begin{center}
+\textbf{\LARGE \textsc{Contrôle -- Probabilités}}\\[2mm]
+
+{\large Mardi 9 Mars 2023, durée : 1h00}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+\item Si besoin, on arrondira les résultats à $0,1$\% près.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+\paragraph{Exercice 1.\emph{(5 points)}}
+  Le tableau ci-contre donne la répartition, en millier, des personnes au
+  chômage en France en $2021$.
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|c|}
+  \cline{2-5}
+  \multicolumn{1}{c|}{} & $<25$ \textbf{ans} & $25-49$ \textbf{ans} & $>49$
+  \textbf{ans} & \phantom{S}\textbf{Total}\phantom{S} \\
+  \hline
+  \textbf{Femmes} & $268$ & $621$ & $252$ & \\
+  \hline
+  \textbf{Hommes} & $306$ & $634$ & $285$ & \\
+  \hline
+  \textbf{Total} & & & & \\
+  \hline
+\end{tabular}
+\end{center}
+  \begin{enumerate}
+    \item Remplir le tableau ci-dessus.
+    \item Calculer la fréquence marginale des moins de $25$ ans parmi les
+      personnes au chômage.
+    \item Calculer la fréquence conditionnelle des personnes au chômage de moins
+      de $25$ ans parmi les femmes au chômage.
+    \item Calculer la fréquence conditionnelle des femmes parmi les personnes au
+      chômage de moins de $25$ ans.
+    \item On choisit une personne au hasard parmi toutes les personnes au
+      chômage en $2021$. Calculer la probabilité que la personne choisie soit un
+      homme de strictement plus de $49$ ans.
+\end{enumerate}
+
+\paragraph{Exercice 2. \emph{(5 points)}}~\\
+\begin{minipage}[]{.5\textwidth}
+Un refuge pour animaux accueille $120$ chiens et chats, m\^ales et femelles :
+\begin{itemize}
+  \item $30$\% sont des chats ;
+  \item parmi les chiens, $25$\% sont des m\^ales ;
+  \item il y a $32$ m\^ales.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[]{.5\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|}
+  \cline{2-4}
+  \multicolumn{1}{c|}{} & \textbf{Chiens} & \textbf{Chats} & \textbf{Total} \\ 
+  \hline
+  \textbf{M\^ales} & & & \\
+  \hline
+  \textbf{Femelles} & & & \\
+  \hline
+  \textbf{Total} & & & $120$ \\
+  \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{enumerate}
+  \item Remplir le tableau ci-dessus.
+  \item Calculer la fréquence marginale des femelles parmi les animaux du
+    refuge.
+  \item Calculer la fréquence conditionnelle des m\^ales parmi les chats.
+  \item Calculer la fréquence conditionnelle des chiens parmi les femelles.
+  \item On choisit un m\^ale au hasard. Calculer la probabilité que ce soit un
+    chat.
+\end{enumerate}
+
+\paragraph{Exercice 3. \emph{(2 points)}}
+Dans un cinéma, $32$\% des clients achètent des sucreries pour visionner leur
+film et $27$\% des clients achètent des boissons. On observe que $5$\% des
+clients achètent à la fois des sucreries et des boissons.\\
+On choisit un client de ce cinéma au hasard. Les événements «~Le client a acheté
+des sucreries.~» et «~Le client a acheté une boisson.~» sont-ils indépendants ?
+
+\paragraph{Exercice 4. \emph{(x points)}} % Exercice sur les arbres : construire
+% un arbre à partir d'un tableau, savoir utiliser un arbre pour faire des
+% calculs, utiliser les propriétés d'un arbre pour donner la probabilité
+% manquante sur une branche, utiliser l'énoncer pour construire un arbre
+
+\end{document}
