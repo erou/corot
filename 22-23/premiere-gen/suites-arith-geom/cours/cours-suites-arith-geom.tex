@@ -381,7 +381,7 @@
 S'il n'y a pas d'indice de sommation dans la somme, c'est que le terme sommé
 est constant.
   \[
-    \sum_{k=1}^{n} 1 = \underbrace{1+1+\dots+1}_{n\text{ termes égaux à }1}
+    \sum_{k=1}^{n} 1 = \underbrace{1+1+\dots+1}_{n\text{ termes égaux à }1} = n
   \]
 \end{prop}
 \begin{app}
@@ -406,12 +406,14 @@ est constant.
 \subsection{Somme des termes d'une suite arithmétique}
 \begin{thm}
   Soit $n\in\mathbb{N}^*$ un entier naturel non nul, on a alors
-  \[
-    \sum_{k=1}^n k = 1+2+\cdots+n = \frac{n(n+1)}{2}.
-  \]
+  \begin{align*}
+    1+2+\cdots+n &= \frac{n(n+1)}{2} &
+    &\text{ou encore} &
+    \sum_{k=1}^n k = \frac{n(n+1)}{2}.
+  \end{align*}
 \end{thm}
 \begin{proof}[Démonstration (à connaître)]
-  ~\vspace{3cm}\\
+  ~\vspace{4cm}\\
 \end{proof}
 \begin{app}
   Soit $n\in\mathbb{N}^*$. Calculer les sommes suivantes.
@@ -420,8 +422,69 @@ est constant.
     \textbf{b)}\;& \sum_{i=0}^{50} \left( 2i+1 \right) &
     \textbf{c)}\;& \sum_{k=0}^{n} (nk+3)
   \end{align*}
-
 \end{app}
+
 \subsection{Somme des termes d'une suite géométrique}
+\begin{thm}
+  Soit $n\in\mathbb{N}^*$ un entier naturel non nul et
+  $q\in\mathbb{R}\setminus\left\{ 1 \right\}$ un réel différent de $1$, on a
+  alors
+  \begin{align*}
+    1+q+q^2+\cdots+q^n &= \frac{1-q^{n+1}}{1-q} &
+    &\text{ou encore} &
+    \sum_{k=0}^n q^k &= \frac{1-q^{n+1}}{1-q}.
+  \end{align*}
+\end{thm}
+\begin{proof}[Démonstration (à connaître)]
+  ~\vspace{4cm}\\
+\end{proof}
+\begin{app}
+  Soit $n\in\mathbb{N}^*$. Calculer les sommes suivantes.
+  \begin{align*}
+    \textbf{a)}\;& \sum_{k=0}^{8} \left( 3\times2^k \right) &
+    \textbf{b)}\;& \sum_{i=0}^{n} \left( \left( -\frac{1}{2} \right)^k-5\right)
+  \end{align*}
+\end{app}
+
+\begin{app}
+  Durant l'année $2020$, un constructeur automobile a construit $15\,000$
+  voitures. Sa production augmente de $120$ unités par an. On note $u_n$ le
+  nombre de voitures construites durant l'année $2020+n$.
+  \begin{enumerate}
+    \item Donner $u_0$ et préciser la nature de la suite $\left( u_n
+      \right)$.
+    \item Exprimer $u_n$ en fonction de $n$.
+    \item Calculer le nombre de voitures fabriquées par ce constructeur entre
+      $2020$ et $2030$.
+  \end{enumerate}~\\[-8mm]
+  \begin{minipage}[t]{.5\textwidth}
+  \begin{enumerate}
+      \setcounter{enumi}{3}
+    \item Compléter le programme Python suivant permettant de calculer le nombre
+      total de voitures fabriquées par ce constructeur $n$ années après $2020$.
+  \end{enumerate}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{.4\textwidth}
+    \begin{center}
+\begin{lstlisting}[language=Python]
+def somme(n):
+    u =            # A remplir
+    S =            # A remplir
+    for i in range(1, n+1):
+        u =           # A remplir
+        S =           # A remplir
+    return           # A remplir
+\end{lstlisting}
+    \end{center}
+  \end{minipage}
+\end{app}
+\begin{app}
+  Une entreprise décide de soutenir une association caritative par des dons
+  mensuels. Le premier janvier $2021$, l'entreprise fait un don de $150$ euros
+  et chaque mois, elle rajoute $10$\% de plus. On note $u_n$ la valeur du don
+  mensuel $n$ mois après le premier janvier $2021$. Quelle somme totale
+  l'association aura-t-elle reçue de l'entreprise au bout de $1$ an ?
+\end{app}
 
 \end{document}

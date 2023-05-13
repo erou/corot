@@ -34,7 +34,7 @@
 \begin{center}
 \textbf{\LARGE \textsc{Interrogation -- Variables aléatoires}}\\[2mm]
 
-{\large Jeudi 11 Mars 2023, durée : 0h35}\\[1mm]
+{\large Mardi 9 Mars 2023, durée : 0h30}\\[1mm]
 \noindent\rule{8cm}{0.4pt}\\[1mm]
 \textbf{\textsc{Consignes à respecter}}
 \begin{enumerate}[label=\textbf{\arabic*/}]
@@ -55,38 +55,54 @@
 
 \paragraph{Exercice 1. \emph{(5 points)}} On considère deux dés cubiques à six
 faces, parfaitement équilibrés. On note $X$ la variable aléatoire
-représentant le maximum des deux dés. Par exemple si l'on obtient $2$ avec le
-premier dé et $3$ avec le deuxième, alors $X$ vaut $3$.
+représentant la somme des deux dés.
 \begin{enumerate}
   \item Faire un tableau pour représenter les valeurs possibles de $X$.
   \item Déterminer la loi de probabilité de $X$.
   \item Déterminer l'espérance de $X$.
-  \item Traduire l'événement $\left\{ X\neq 6 \right\}$ en français. Quelle est la
+  \item Traduire l'événement $\left\{ X\neq 12 \right\}$ en français. Quelle est la
     probabilité de cet événement ?
-  \item Calculer $P\left( X\geq 4 \right)$.
+  \item Calculer $P\left( X\geq 7 \right)$.
 \end{enumerate}
 
-\paragraph{Exercice 2. \emph{(5 points)}} On dispose d'une urne dans laquelle on
-a déposé $20$ balles de couleurs, toutes indistingables au toucher. Parmi les
-boules, il y a $6$ balles rouges, $9$ balles vertes, et $5$ balles bleues. On
-joue au jeu suivant : on gagne $8$ euros si l'on pioche une balle rouge, $6$
-euros si l'on pioche une balle verte, et $4$ euros si l'on pioche une balle
-bleue.
+\paragraph{Exercice 2. \emph{(5 points)}}~\\
+\begin{minipage}[t]{.5\textwidth}
+Voici les tarifs des desserts d'une brasserie.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{cc}
+  \toprule
+  \textbf{Dessert} & \textbf{Tarif (en euro)} \\ \midrule
+  Assortiment de macarons & $8$ \\
+  Fondant au chocolat & $6$ \\
+  Île flottante & $4$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{minipage}[t]{.5\textwidth}
+La cheffe de cuisine estime que les choix des clients se répartissent de la
+manière suivante :
+\begin{itemize}
+  \item Assortiment de macarons : $30$\%
+  \item Fondant au chocolat : $45$\%
+  \item Île flottante : $25$\%
+\end{itemize}
+\end{minipage}
 \begin{enumerate}
-  \item On note $X$ la variable aléatoire donnant le gain à ce jeu.
+  \item Pour un client de ce restaurant, $X$ désigne la variable aléatoire égale
+    au prix du dessert choisi.
     \begin{enumerate}
       \item Donner la loi de probabilité de $X$.
       \item Déterminer et interpréter $E(X)$.
     \end{enumerate}
-  \item On va maintenant piocher deux boules en tout, en remettant à
-    chaque fois la boule piochée dans l'urne. La composition de l'urne et les
-    gains associés à chaque tirage restent inchangés. On garde le gain pour
-    chacune des deux boules tirées. On note $Y$ la variable aléatoire
-    donnant le gain à ce nouveau jeu.
+  \item Pour un couple client de ce restaurant, on note maintenant $Y$ la
+    variable aléatoire égale au montant total des desserts choisis. On suppose
+    que les deux personnes font leur choix de manière indépendante.
     \begin{enumerate}
       \item Modéliser cette situation à l'aide d'un arbre pondéré.
       \item Donner la loi de probabilité de $Y$.
       \item Déterminer et interpréter $E(Y)$.
     \end{enumerate}
 \end{enumerate}
+
 \end{document}
