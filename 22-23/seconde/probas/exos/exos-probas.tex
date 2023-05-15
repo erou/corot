@@ -7,6 +7,17 @@
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 %\input{layout-nb.tex}
 
+\newtheoremstyle{exostyle}%
+{}% space above thm
+{3mm}% space below thm
+{}% body font
+{}% body indentation
+{\bfseries}% head font
+{.}% punctuation between head and body
+{3mm}% space after head
+{}% ?
+
+
 \begin{document}
 %\maketitle\thispagestyle{fancy}
 
@@ -286,7 +297,7 @@
   \end{enumerate}
 \end{exo}
 
-\newpage
+%\newpage
 \begin{exo}
   Dans un village, il y a deux boulangeries. On considère les événements :
   \begin{itemize}
@@ -301,7 +312,92 @@
     \item L'événement $E$ : « auncune boulangerie n'est ouverte ».
     \item L'événement $F$ : « les deux boulangeries sont ouvertes ».
   \end{enumerate}
-  
 \end{exo}
+
+\begin{exo}
+  Une urne contient trois boules bleues, deux boules rouges et une boule verte.
+  On tire successivement et sans remise deux boules dans l'urne.
+  \begin{enumerate}
+    \item Traduire la situation par un arbre de décombrement.
+    \item Quelle est la probabilité :
+      \begin{enumerate}
+        \item de tirer deux boules de la même couleur ?
+        \item de ne pas tirer de boule bleue ?
+        \item de tirer au moins une boule verte ?
+      \end{enumerate}
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Dans un sac opaque, on met deux billets de $5$ euros, un billet de $10$ euros
+  et deux billets de $20$ euros. Tous les billets sont indiscernables au
+  toucher. On tire successivement et sans remise deux billets dans le sac.
+  \begin{enumerate}
+    \item Traduire la situation par un arbre de probabilité.
+  \end{enumerate}
+  On considère les événements suivants :
+  \begin{itemize}
+    \item $A$ : « on tire deux billets identiques » ;
+    \item $B$ : « on tire au moins un billet de $20$ ».
+  \end{itemize}
+  \begin{enumerate}
+      \setcounter{enumi}{1}
+    \item Déterminer $P(A)$ et $P(B)$.
+    \item Définir par une phrase l'événement $\overline B$ et donner sa
+      probabilité.
+    \item Définir par une phrase l'événement $A\cap\overline B$ et donner sa
+      probabilité.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  On lance trois fois de suite une pièce équilibrée.
+  \begin{enumerate}
+    \item Quelle est la probabilité d'obtenir trois fois face ?
+    \item Quelle est la probabilité d'obtenir au moins une fois pile ?
+    \item Quelle est la probabilité d'obtenir exactement deux fois pile ?
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  En France, il y a $16$\% de gauchers, $30$\% de personnes qui ont les yeux
+  bleus, et $3$\% de gauchers aux yeux bleus.
+  \begin{enumerate}
+    \item Faire un tableau pour résumer la situation.
+    \item Quelle est la probabilité qu'un individus pris au hasard ne soit pas
+      gaucher et n'ait pas les yeux bleus ?
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Un nouveau logiciel permet de filtrer les messages sur une messagerie
+  électronique. Les concepteurs l'ont testé pour $2000$ messages et voici leurs
+  conclusions :
+  \begin{itemize}
+    \item $70$\% des courriels sont des spams ;
+    \item $95$\% des spams sont éliminés ;
+    \item $2$\% des courriels bienvenus sont éliminés.
+  \end{itemize}
+  \begin{enumerate}
+    \item Faire un tableau à double entrée pour résumer la situation.
+  \end{enumerate}
+  On tire au sort un message parmi les $2000$ messages, et on considère les
+  événements suivants :
+  \begin{itemize}
+    \item $B$ : « Le courriel est un courriel bienvenu. »
+    \item $E$ : « Le courriel est éliminé. »
+  \end{itemize}
+  \begin{enumerate}
+      \setcounter{enumi}{1}
+    \item Calculer la probabilité des événements $B$ et $E$.
+    \item Déterminer la probabilité que le courriel soit un spam.
+    \item Décrire à l'aide d'une phrase les événements $B\cap E$ et
+      $B\cap\overline B$.
+    \item Calculer la probabilité des événements précédents.
+    \item Le logiciel échoue lorsqu'un courriel bienvenu est éliminé ou quand un
+      spam est conservé. Quelle est la probabilité que le logiciel échoue ?
+  \end{enumerate}
+\end{exo}
+
 
 \end{document}
