@@ -127,5 +127,65 @@
   On lit graphiquement l'ordonnée à l'origine et le coefficient directeur de la
   même manière que pour une fonction affine !
 \end{rmq}
+\begin{app}~\\
+  \begin{minipage}[]{.5\textwidth}
+  Déterminer graphiquement les équations réduites de chacune des droites
+  ci-contre.
+  \begin{itemize}
+    \item $(d_1)$ :
+    \item $(d_2)$ :
+    \item $(d_3)$ :
+    \item $(d_4)$ :
+    \item $(d_5)$ :
+  \end{itemize}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+ \begin{center}
+  \begin{tikzpicture}
+    \begin{axis}
+      \addplot[green!50!black, thick, samples=101]{2*x-3};
+      \addplot[blue!50!black, thick, samples=101, domain=-5.5:5.5]{.75*x-.25};
+      \addplot[orange, thick, samples=101, domain=-5.5:5.5]{3};
+      \addplot[violet, thick, samples=101, domain=-5.5:5.5]{-.5*x-2};
+    \end{axis}
+    \draw[red, thick] (2.25, 0) -- (2.25, 5.5);
+    \node[red] at (1.85, 3.8) {$(d_1)$};
+    \node[orange] at (.85, 4.6) {$(d_3)$};
+    \node[green!50!black] at (3.85, 2) {$(d_4)$};
+    \node[blue!50!black] at (.85, .6) {$(d_2)$};
+    \node[violet] at (4., .6) {$(d_5)$};
+  \end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{app}
+
+\begin{app}~\\
+  \begin{minipage}[]{.5\textwidth}
+    Sur la figure ci-contre, tracer les droites d'équation :
+    \begin{itemize}
+      \item $(d_1): y = 1$
+      \item $(d_2): y = \frac{1}{5}x+1$
+      \item $(d_3): x = -4$
+      \item $(d_4): y = -2-\frac{2}{3}x$
+      \item $(d_5): y = \frac{3}{4}x-\frac{1}{4}$
+    \end{itemize}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+ \begin{center}
+  \begin{tikzpicture}
+    \begin{axis}
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{app}
+
+\begin{app}
+  Soit la droite $(d)$ passant par les points $A\left( 2; 1 \right)$ et $B\left(
+  4;0 \right)$. Déterminer l'équation de la droite $\left( AB \right)$.
+\end{app}
+
+\section{Vecteur directeur et équation cartésienne}
+\subsection{Vecteur directeur d'une droite}
 
 \end{document}
