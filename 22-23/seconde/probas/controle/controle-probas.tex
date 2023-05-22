@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\begin{document}
+\textbf{Prénom :}\hfill\textbf{Nom :}\hfill\textbf{Classe :}\\[5mm]
+\begin{center}
+\textbf{\LARGE \textsc{Contrôle -- Probabilités \& inéquations}}\\[2mm]
+
+{\large Mardi 23 Mai 2023, durée : 0h55}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+% BARÊME
+% ======
+%
+% Exercice 1
+% ----------
+%
+% 1. 1pt
+% 2a. 1pt
+% 2b. 0.5pt description + 1pt calcul
+% 2c. 1pt
+% 2d. 0.5pt description + 1pt calcul
+% 3. 1
+%
+% Exercice 2
+% ----------
+%
+% 1. 1pt
+% 2. 1pt
+% 3a. 1pt
+% 3b. 0.5pt phrase + 1pt calcul
+% 3c. 1pt
+% 4a. 1pt
+% 4b. .5pt phrase + 1pt calcul
+%
+% Exercice 3
+% ----------
+%
+% 1. 1pt signes dans l'ordre + 1pt changement signe
+% 2. 1pt signes dans l'ordre + 1pt changement signe
+% 3. 0.5 pt tableau correct + 0.5 pt conclusion
+
+
+\paragraph{Exercice 1. \emph{(7 points)}} La gendarmerie a relevé, sur les
+$2\,400$ accidents corporels en voitures comptabilisés en $2011$ dans le
+Val-de-Marne, que $576$ conducteurs étaient des femmes. Parmi elles, $144$
+conduisaient sous l'emprise de l'alcool. Par ailleurs, $574$ conducteurs hommes
+conduisaient sous l'emprise de de l'alcool.
+\begin{center}
+\begin{tabularx}{.8\textwidth}{|c|Y|Y|Y|}
+  \hline
+  Le conducteur ... & \makecell{était\\un homme} & \makecell{était\\une femme} & Total\\ 
+  \hline
+  \makecell{était sous\\l'emprise de\\l'alcool} & $574$ & $144$ & \\
+  \hline
+  \makecell{n'était pas sous\\l'emprise de\\l'alcool} & & & \\
+  \hline
+  \makecell{~\\Total\\~} & & $576$ & $2\,400$ \\
+  \hline
+\end{tabularx}
+\end{center}
+\begin{enumerate}
+  \item Compléter le tableau ci-dessus.
+  \item On choisit au hasard un conducteur parmi les victimes d'accidents
+    corporels dans le Val-de-Marne en $2011$ et on note :
+    \begin{itemize}
+      \item $F$ l'événement : « Le conducteur était une femme. » ;
+      \item $A$ l'événement : « Le conducteur était sous l'emprise de l'alcool.
+        ».
+    \end{itemize}
+    \begin{enumerate}
+      \item Déterminer la probabilité de l'événement $F$.
+      \item Décrire par une phrase l'événement $A\cap F$ puis calculer $P(A\cap
+        F)$.
+      \item Déterminer la probabilité de l'événement $A\cup F$.
+      \item Décrire par une phrase l'événement $A\cap \overline F$ puis calculer
+        sa probabilité.
+    \end{enumerate}
+  \item Un contrôle d'alcoolémie sur un conducteur accidenté révèle qu'il était
+    sous l'emprise de l'alcool. Quelle est la probabilité que ce conducteur soit
+    un homme ?
+\end{enumerate}
+
+\paragraph{Exercice 2. \emph{(8 points)}}
+Une urne contient $4$ jetons :
+\begin{itemize}
+  \item deux jaunes ;
+  \item un rose ;
+  \item un violet.
+\end{itemize}
+On tire au hasard un jeton de l'urne, puis un second jeton sans remettre le
+premier. On suppose que tous les tirages sont équiprobables.
+\begin{enumerate}
+  \item Représenter cette situation par un arbre de dénombrement.
+  \item Combien y-a-t-il de tirages possibles ?
+  \item On considère les événements :
+    \begin{itemize}
+      \item $R$ : « Le premier jeton tiré est rose. » ;
+      \item $J$ : « Le deuxième jeton tiré est jaune. ».
+    \end{itemize}
+    \begin{enumerate}
+      \item Déterminer $P(R)$ et $P(J)$.
+      \item Traduire par une phrase l'événement $R\cap J$, puis calculer
+        $P(R\cap J)$.
+      \item Calculer $P(R\cup J)$.
+    \end{enumerate}
+  \item On considère l'événement $N$ : « Aucun jeton tiré n'est jaune. ».
+    \begin{enumerate}
+      \item Calculer $P(N)$.
+      \item Décrire l'événement $\overline N$, puis calculer $P\left( \overline
+        N\right)$.
+    \end{enumerate}
+\end{enumerate}
+
+\paragraph{Exercice 3. \emph{(5 points)}}
+On souhaite résoudre dans $\mathbb{R}$ l'inéquation $(5x-2)(3x+7)\leq0$.
+\begin{enumerate}
+  \item Déterminer, en fonction de $x$, le signe de $5x-2$. \emph{On fera un
+    tableau de signe et on veillera à bien justifier les différentes étapes.}
+  \item Déterminer, en fonction de $x$, le signe de $3x+7$. \emph{On fera un
+    tableau de signe et on veillera à bien justifier les différentes étapes.}
+  \item Rassembler les réponses dans un tableau de signes et en déduire
+    l'ensemble des solutions de l'inéquation $(5x-2)(3x+7)\leq0$.
+\end{enumerate}
+
+\end{document}
