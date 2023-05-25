@@ -1,0 +1,164 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Fonction exponentielle -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 10 : Fonction exponentielle}
+\date{}
+\author{}
+
+% Note
+% ====
+%
+% TODO : ajouter un encart ``Méthode'' avec le plan pour les exercices sur les
+% suites arithmético-géométriques. Exprimer v_n+1 en fonction de u_n+1 puis
+% exprimer u_n+1 en fonction de u_n puis exprimer u_n en fonction de v_n et on a
+% alors v_n+1 en fonction de v_n. Eventuellement un truc qui ressemble à un
+% diagramme commutatif avec ça ?
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Définition et première propriétés}
+\subsection{Définition}
+\begin{thmadm}
+  Il existe une unique fonction $f$ dérivable sur $\mathbb{R}$ telle que
+  \[
+    f' = f\quad\text{et}\quad f(0)=1.
+  \]
+  Cette fonction est appelée \textbf{fonction exponentielle} et est notée
+  $\exp$.
+\end{thmadm}
+\begin{rmq}
+  La fonction exponentielle est donc définie sur $\mathbb{R}$ et on a
+  $\exp(0)=1$. Elle est aussi dérivable sur $\mathbb{R}$ et pour tout
+  $x\in\mathbb{R}$, on a $\exp'(x)=\exp(x)$.
+\end{rmq}
+
+\subsection{Propriétés algébriques}
+\begin{prop}
+  Pour tout réel $x\in\mathbb{R}$, on a
+  \[
+    \exp(x)\times\exp(-x)=1\quad\text{et}\quad\exp(x)\neq0.
+  \]
+\end{prop}
+\begin{prop}
+  Soient $x\in\mathbb{R}$ et $y\in\mathbb{R}$ deux réels et $n\in\mathbb{Z}$ un
+  entier relatif, on a alors
+  \begin{align*}
+    \textbf{a.}\;& \exp(x+y) = \exp(x)\times\exp(y) &
+    \textbf{b.}\;& \exp(-x) = \frac{1}{\exp(x)} \\
+    \textbf{c.}\;& \exp(x-y) = \frac{\exp(x)}{\exp(y)} &
+    \textbf{d.}\;& \exp(nx) = (\exp(x))^n
+  \end{align*}
+\end{prop}
+
+\subsection{Notation $e^x$}
+\begin{notation}
+  Le nombre $\exp(1)$ est noté $e$. On a $e\approx2,718$.
+\end{notation}
+\begin{propadm}
+  D'après les propriétés précédentes, pour tout $n\in\mathbb{Z}$, on a
+  \[
+    \exp(n) = \exp(n\times1) = (\exp(1))^n = e^n.
+  \]
+  Par extension, on admet que pour tout nombre réel $x\in\mathbb{R}$, on a
+  \[
+    \exp(x) = e^x.
+  \]
+\end{propadm}
+\begin{prop}
+On retrouve les propriétés algébriques précédentes :
+  \begin{align*}
+    \textbf{a.}\;& e^{x+y} = e^x\times e^y &
+    \textbf{b.}\;& e^{-x} = \frac{1}{e^x} &
+    \textbf{c.}\;& e^{x-y} = \frac{e^x}{e^y} &
+    \textbf{d.}\;& e^{nx} = \left( e^x \right)^n 
+  \end{align*}
+\end{prop}
+
+\begin{app}
+  Simplifier au maximum chacune des expressions suivantes, où $x\in\mathbb{R}$.
+  \begin{align*}
+    \textbf{a)}\;& A = \frac{e^2\times e^{-3}}{e^{-7}} &
+    \textbf{b)}\;& B = e^x\left( 1+2e^{-x} \right) &
+    \textbf{c)}\;& C = \frac{e^{5x-2}}{e^{1-x}} &
+    \textbf{d)}\;& D = \frac{e^{2x+1}}{\left( e^{x-1} \right)^{4}}
+  \end{align*}
+\end{app}
+\begin{app}
+  Démontrer chacune des deux égalités suivantes.
+  \begin{align*}
+    \textbf{a)}\;& \frac{4e^{2x}}{e^{2x}+3} = \frac{4}{1+3e^{-2x}} &
+    \textbf{b)}\;& \left( e^x+e^{-x} \right)^2-\left( e^x-e^{-x} \right)^2 = 4
+  \end{align*}
+\end{app}
+\begin{prop}
+  Pour tout réel $x\in\mathbb{R}$, $e^x>0$.
+\end{prop}
+\begin{proof}
+  Pour tout réel $x\in\mathbb{R}$, $e^x\neq0$, puis
+  \[
+    e^x = \left( e^{\frac{x}{2}} \right)^2\geq0,
+  \]
+  donc pour tout réel $x\in\mathbb{R}$, on a $e^x>0$.
+\end{proof}
+
+\section{Étude de la fonction exponentielle}
+\subsection{Variations et représentation graphique}
+\begin{prop}
+  La fonction exponentielle est dérivable sur $\mathbb{R}$ et, pour tout
+  $x\in\mathbb{R}$, on a
+  \[
+    \exp'(x) = \exp(x).
+  \]
+\end{prop}
+\begin{proof}
+  Cela fait partie de la définition de la fonction exponentielle.
+\end{proof}
+\begin{prop}
+  La fonction exponentielle est strictement croissante sur
+  $\mathbb{R}$.\\[-3mm]
+\begin{center}
+\begin{tikzpicture}
+  \tkzTabInit[espcl=10]{$x$ / 1 ,$\exp(x)$ / 1, $\exp$ / 2}{$-\infty$, $+\infty$}
+   \tkzTabLine{, +,}
+   \tkzTabVar{-/, +/}
+   \tkzTabVal{1}{2}{0.333}{$0$}{$1$} % On place 0, son antécédent est pi / 2.
+   \tkzTabVal{1}{2}{0.667}{$1$}{$e$} % On place 0, son antécédent est pi / 2.
+\end{tikzpicture}
+\end{center}
+\end{prop}
+\begin{proof}
+  On sait que pour tout $x\in\mathbb{R}$, $\exp'(x)=\exp(x)>0$, donc la fonction
+  $\exp$ est strictement croissante, d'après les propriétés sur la dérivation.
+\end{proof}
+\begin{prop}
+  \begin{minipage}[]{.5\textwidth}
+    La courbe représentative de la fonction exponentielle est donnée ci-contre.
+    On retrouve bien
+    \begin{itemize}
+      \item qu'elle est strictement positive ;
+      \item strictement croissante ;
+      \item $\exp(0)=1$ ;
+      \item $\exp(1)=e\approx2,718$.
+    \end{itemize}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}
+        \addplot[red, very thick, samples=101, domain=-5.5:3] {e^x};
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+  \end{minipage}
+\end{prop}
+
+
+
+\end{document}

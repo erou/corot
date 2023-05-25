@@ -187,5 +187,74 @@
 
 \section{Vecteur directeur et équation cartésienne}
 \subsection{Vecteur directeur d'une droite}
+On se place toujours dans un repère $(O; I, J)$ du plan.
+\begin{defi}{Vecteur directeur}
+  On appelle \textbf{vecteur directeur} d'une droite $(d)$ tout représentant du vecteur
+  $\vect{AB}$ où $A$ et $B$ sont deux points quelconques distincts de la droite
+  $(d)$.
+\end{defi}
+\begin{rmq}
+  Une droite possède une infinité de vecteurs directeurs.
+\end{rmq}
+\begin{exemple}~\\
+  \begin{minipage}[]{.5\textwidth}
+    Dans l'image ci-contre, les vecteurs de coordonnées $\left( 3; 2 \right)$,
+    $\left( 1, \frac{2}{3} \right)$ ou encore $\left( 6; 4 \right)$ sont tous
+    vecteurs directeurs de la droite. 
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[black, thick, samples=101, domain=-5.5:5.5] {.667*x+1};
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exemple}
+\begin{app}
+  Soient deux points $A\left( 1;5 \right)$ et $B\left( -3;2 \right)$. Déterminer
+  un vecteur directeur de la droite $\left( AB \right)$.
+\end{app}
+
+\subsection{Équation cartésienne}
+\begin{prop}
+  Dans un repère du plan, toute droite $(d)$ admet une équation de la forme
+  \[
+    ax + by + c = 0,
+  \]
+  où $a, b$ sont des réels qui ne peuvent pas être simultanément nuls et où $c$
+  est un réel quelconque. Un point appartient à $(d)$ si et seulement si ses
+  coordonnées vérifient son équation.
+\end{prop}
+\begin{defi}{Équation cartésienne}
+  L'équation de la propriété ci-dessus s'appelle \textbf{équation cartésienne}
+  de la droite $(d)$.
+\end{defi}
+
+\begin{app}
+  Soit $(d)$ la droite d'équation cartésienne
+  \[
+    5x + 2y - 12 = 0.
+  \]
+  \begin{enumerate}
+    \item Identifier les coefficients $a$, $b$, et $c$.
+    \item Les points $A\left( 2; 1 \right)$ et $B\left( 4; -6 \right)$
+      appartiennent-ils à la droite $(d)$ ? Justifier.
+  \end{enumerate}
+\end{app}
+
+\begin{app}
+  \begin{enumerate}
+    \item Déterminer l'équation cartésienne de la droite ayant pour équation réduite
+      $y=2x+1$, puis identifier les coefficients $a$, $b$, et $c$.
+    \item Déterminer l'équation réduite de la droite ayant pour équation
+      cartésienne
+      \[
+        2x - 5y + 4 = 0,
+      \]
+      puis identifier les coefficients $m$ et $p$.
+  \end{enumerate}
+\end{app}
 
 \end{document}
