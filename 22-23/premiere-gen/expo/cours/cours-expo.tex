@@ -159,6 +159,60 @@ On retrouve les propriétés algébriques précédentes :
   \end{minipage}
 \end{prop}
 
+\subsection{Équations et inéquations}
+\begin{prop}
+  Pour tout nombres réels $a,b\in\mathbb{R}$, on a :
+  \begin{itemize}
+    \item $e^a = e^b \Leftrightarrow a=b$
+    \item $e^a > e^b \Leftrightarrow a>b$
+    \item $e^a < e^b \Leftrightarrow a<b$
+  \end{itemize}
+\end{prop}
+\begin{app}
+  Résoudre les équations suivantes sur $\mathbb{R}$.
+  \begin{align*}
+    \textbf{1.}\;& e^x = e^7 &
+    \textbf{2.}\;& e^x < e^2 &
+    \textbf{3.}\;& e^x\geq 1 &
+    \textbf{4.}\;& e^{2x}= \frac{1}{e} &
+    \textbf{5.}\;& e^{-3x+4}+1\leq2
+  \end{align*}
+\end{app}
+
+\subsection{Fonctions composées}
+\begin{prop}
+  Pour tous réels $a,b\in\mathbb{R}$ fixés, la fonction $f$ définie sur
+  $\mathbb{R}$ par
+  \(
+    f(x) = e^{ax+b}
+  \)
+  est dérivable sur $\mathbb{R}$ et, pour tout réel $x\in\mathbb{R}$, on a
+  \[
+    f'(x) = ae^{ax+b}.
+  \]
+\end{prop}
+\begin{proof}
+  Cela vient de la formule de la dérivée d'une fonction composée.
+\end{proof}
+
+\begin{app}
+  Calculer les dérivées des fonctions définies sur $\mathbb{R}$ suivantes.
+  \begin{align*}
+    \textbf{a)}\;& f(t) = 7e^{-4t} &
+    \textbf{b)}\;& g(x) = \frac{e^{1-5x}}{x^2} &
+    \textbf{c)}\;& h(t) = (3t-2)e^{\frac{1}{6}t} 
+  \end{align*}
+\end{app}
+
+\begin{app}
+  On considère la fonction $f$ définie sur $\mathbb{R}$ par $f(x)=4xe^{-x}$.
+  \begin{enumerate}
+    \item Calculer $f'(x)$.
+    \item Résoudre dans $\mathbb{R}$ l'équation $f'(x)=0$.
+    \item Dresser le tableau de variation de la fonction $f$. Préciser son
+      extremum.
+  \end{enumerate}
+\end{app}
 
 
 \end{document}

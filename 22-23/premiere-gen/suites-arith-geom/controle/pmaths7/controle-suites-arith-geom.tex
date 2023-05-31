@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+% Objectifs
+% =========
+%
+% Savoir faire les questions classiques des exercices avec une suite
+% arithmético-géométrique.
+%
+% Barême
+% ======
+%
+% Ex 1 : 1 et 2
+% Ex 2 : 1 / calcul et 1 et 2 (1 pour la réécriture de la formule puis 1 pour la
+% calculatrice)
+
+\begin{center}
+\textbf{\LARGE \textsc{Interrogation -- Suites arithmétiques et
+géométriques}}\\[2mm]
+
+{\large Mardi 30 Mai 2023, durée : 0h30}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+%\vspace{2mm}
+%\noindent Le barême est donné à titre indicatif.
+%\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+Une entreprise crée une Foire Aux Questions (« FAQ ») sur son site
+internet. On étudie le nombre de questions qui y sont posées chaque mois. On
+admet que, chaque mois :
+\begin{itemize}
+  \item $10$\% des questions posées le mois précédent sont éliminées de la FAQ,
+    car elles ne sont plus d'actualité ;
+  \item $130$ nouvelles questions sont ajoutées à la FAQ.
+\end{itemize}
+Au cours du premier mois, où la FAQ est mise en place, $300$ questions sont
+posées. On note $u_n$ le nombre de questions posées $n$ mois après la mise en
+place de la FAQ. \emph{On arrondira si besoin les résultats à l'unité.}
+\begin{enumerate}
+  \item Déterminer les valeurs de $u_0$, $u_1$ et $u_2$.
+  \item La suite $\left( u_n \right)$ est-elle arithmétique ? Géométrique ? Justifier.
+  \item Justifier que, pour tout $n\in\mathbb{N}$, on a 
+    \[
+      u_{n+1} = 0,9u_n+130.
+    \]
+  \item Soit $\left( v_n \right)$ la suite définie par $v_n = u_n - 1300$.
+    \begin{enumerate}
+      \item Calculer $v_0$.
+      \item Justifier que la suite $\left( v_n \right)$ est une suite
+        géométrique de raison $q=0,9$.
+      \item Donner l'expression de $v_n$ en fonction de $n$.
+      \item Donner l'expression de $u_n$ en fonction de $n$.
+    \end{enumerate}
+  \item Combien y aura-t-il de questions dans la FAQ un an après sa mise en
+    place ?
+\end{enumerate}
+
+\end{document}
