@@ -1,0 +1,98 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Produit scalaire -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 7 : Produit scalaire}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Rappels sur les vecteurs}
+\begin{defi}{Caractéristiques d'un vecteur}
+  \begin{minipage}{.5\textwidth}
+  Le vecteur $\vect{AB}$ est défini par
+  \begin{itemize}
+    \item \textbf{sa direction} : celle de la droite $\left( AB \right)$;
+    \item \textbf{son sens} : de $A$ vers $B$;
+    \item \textbf{sa norme} : la longueur du segment $\left[ AB \right]$.
+  \end{itemize}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[loosely dashed] (0,0) -- (6, 2);
+      \draw[red, thick, -latex] (1.5,0.5) -- (4.5, 1.5);
+      \node at (1.5, 0.8) {$A$};
+      \node at (4.5, 1.8) {$B$};
+    \end{tikzpicture}
+  \end{center}
+  \end{minipage}
+\end{defi}
+\noindent\begin{minipage}[b]{.5\textwidth}
+\begin{propnom}{Relation de Chasles}
+  \[
+    \vect{AB}+\vect{BC} = \vect{AC}.
+  \]
+  \begin{center}
+    \begin{tikzpicture}[scale=1.08]
+      \draw[blue, thick, -latex] (0,0) -- node[above left] {$\vect{BC}$} (-2, -1);
+      \draw[red, thick, -latex] (2,-2) -- node[below] {$\vect{AC}$} (-2, -1);
+      \draw[green!50!black, thick, -latex] (2,-2) -- node[above right]
+      {$\vect{AB}$} (0, 0);
+
+      \node at (0,0.2) {$B$};
+      \node at (-2.3,-1) {$C$};
+      \node at (2.2,-2) {$A$};
+    \end{tikzpicture}
+  \end{center}
+\end{propnom}
+\end{minipage}
+\begin{minipage}[b]{.5\textwidth}
+\begin{prop}
+  Soit $A\left( x_A; y_A \right)$ et $B\left( x_B; y_B \right)$ alors les
+  coordonnées de $\vect{AB}$ sont $(x_B-x_A; y_B-y_A)$.
+\end{prop}
+
+\begin{prop}
+  Soient $\vect r(x;y)$ et $\vect s(x';y')$ deux vecteurs d'un repère du plan.
+  Les coordonnées de $\vect r +\vect s$ sont alors $(x+x';y+y')$.
+\end{prop}
+\end{minipage}
+
+\begin{rmq}
+  Il y a évidemment beaucoup d'autres choses à savoir sur les vecteurs !
+\end{rmq}
+
+\section{Expressions du produit scalaire}
+\subsection{Formule trigonométrique}
+\begin{defi}{Angle de deux vecteurs}~\\[-5mm]
+  \begin{minipage}{.8\textwidth}
+    Soient $\vect u$ et $\vect v$ deux vecteurs du plan. On note $(\vect u,
+    \vect v)$ l'angle géométrique $\widehat{BAC}$ où $\vect u=\vect{AB}$ et
+    $\vect v=\vect{AC}$. 
+  \end{minipage}
+  \begin{minipage}{.2\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[orange, thick, fill=orange, fill opacity=.4] (20:0.3) arc (20:70:.3);
+        \fill[orange, opacity=.4] (0,0) -- (20:0.3) -- (70:.3) -- (0,0);
+        \draw[blue, thick, -latex] (0,0) -- node[below] {$\vect u$}
+        (20:1.5);
+        \draw[green!50!black, thick, -latex] (0,0) -- node[left] {$\vect v$}
+        (70:1.5);
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{defi}
+
+
+
+
+\end{document}
