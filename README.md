@@ -5,7 +5,7 @@ Français
 --------
 
 Cet espace contient tous les fichiers sources (.tex et images) des cours que je
-donne au lycée Jean-Baptiste Corot. Ces fichiers sont largements inspirés de
+donne au lycée Jean-Baptiste Corot. Ces fichiers sont largement inspirés de
 discussions avec des collègues mais aussi de ressources disponibles en ligne,
 comme [Le livre scolaire](https://www.lelivrescolaire.fr) ou
 [Sésamath](https://manuel.sesamath.net/).
