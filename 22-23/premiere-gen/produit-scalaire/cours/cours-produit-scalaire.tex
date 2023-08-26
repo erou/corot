@@ -11,9 +11,15 @@
 \date{}
 \author{}
 
+% TODO
+% ====
+%
+% Faire plus d'exercices et/ou d'exemples pour le projeté orthogonal.
+
 \begin{document}
 \maketitle\thispagestyle{fancy}
 
+~\\[-22mm]
 \section{Rappels sur les vecteurs}
 \begin{defi}{Caractéristiques d'un vecteur}
   \begin{minipage}{.5\textwidth}
@@ -68,7 +74,7 @@
 
 \begin{rmq}
   Il y a évidemment beaucoup d'autres choses à savoir sur les vecteurs !
-\end{rmq}
+\end{rmq}~\\[-13mm]
 
 \section{Expressions du produit scalaire}
 \subsection{Formule trigonométrique}
@@ -92,7 +98,78 @@
   \end{minipage}
 \end{defi}
 
+\begin{defi}{Produit scalaire}
+  Soient $\vect u$ et $\vect v$ deux vecteurs du plan. On appelle
+  \textbf{produit scalaire} de $\vect u$ et $\vect v$ le réel, noté $\vect
+  u\cdot\vect v$, défini par
+  \[
+    \vect u\cdot\vect v=||\vect u||\times||\vect v||\times\cos\left( \vect u,
+    \vect v \right).
+  \]
+\end{defi}
 
+\begin{app}~\\[-5mm]
+  \begin{minipage}{.7\textwidth}
+  Soient $\vect{AB}$ et $\vect{AC}$ deux vecteurs tels que $||\vect{AB}||=2$ et
+  $||\vect{AC}||=3$ et $\widehat{BAC}=30^\circ$.\\
+  Calculer le produit scalaire $\vect{AC}\cdot\vect{AC}$.
+  \end{minipage}
+  \begin{minipage}{.3\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[orange, thick, fill=orange, fill opacity=.4] (20:0.5) arc (20:50:.5);
+        \fill[orange, opacity=.4] (0,0) -- (20:0.5) -- (50:.5) -- (0,0);
+        \draw[blue, thick, -latex] (0,0) -- (20:2);
+        \draw[green!50!black, thick, -latex] (0,0) -- (50:3);
+        \node at (-.2, -.1) {$A$};
+        \node at (2.1, .75) {$B$};
+        \node at (2, 2.5) {$C$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{app}
+
+\begin{app}~\\[-7mm]
+  \begin{minipage}{.8\textwidth}
+  Soit $ABC$ un triangle équilatéal de côté $2$. Calculer le produit scalaire
+  $\vect{AB}\cdot\vect{AC}$.
+  \end{minipage}
+  \begin{minipage}{.2\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0,0) -- (2,0) -- (60:2) -- (0,0);
+        \node at (-.2, .1) {$A$};
+        \node at (2.2, .1) {$B$};
+        \node at (1, 2) {$C$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{app}
+
+\subsection{Formule du projeté orthogonal}
+\begin{prop}
+  \begin{minipage}{.7\textwidth}
+  Soient $\vect{AB}$ et $\vect{AC}$ deux vecteurs du plan. Soit $H$ le projeté
+  orthogonal du point $C$ sur la droite $(AB)$. On a alors
+  \[
+    \vect{AB}\cdot\vect{AC}=\vect{AB}\cdot\vect{AH}.
+  \]
+  \end{minipage}
+  \begin{minipage}{.3\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[-latex] (0,0) -- (2, 1);
+        \draw[-latex] (0,0) -- (3, 0);
+        \draw[-latex, red] (0,0) -- (2, 0);
+        \draw[red, dashed] (2, 1) -- (2, 0);
+        \node at (-.2, 0) {$A$};
+        \node at (3.2, 0) {$B$};
+        \node at (2.1, 1.2) {$C$};
+        \node[red] at (2, -.3) {$H$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{prop}
 
 
 \end{document}
