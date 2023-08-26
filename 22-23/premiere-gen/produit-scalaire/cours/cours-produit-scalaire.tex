@@ -2,7 +2,7 @@
 
 \newcommand{\titrechapitre}{Produit scalaire -- Cours}
 \newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
-\newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
 \newcommand{\topbotmargins}{2cm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 %\input{layout-nb.tex}
@@ -170,6 +170,127 @@
     \end{center}
   \end{minipage}
 \end{prop}
+
+\begin{rmq}
+  Si $H$ est sur la demie-droite $[AB)$, alors $\vect{AB}\cdot\vect{AC}=AB\times
+    AH$. Sinon $\vect{AB}\cdot\vect{AC}=-AB\times AH$.
+\end{rmq}
+
+\begin{app}
+  Soit $ABCD$ un rectangle tel que $AB=3$ et $AC=4$. On note $E$ le milieu de
+  $\left[ AB \right]$ et $F$ le milieu de $\left[ CD \right]$.
+  \begin{enumerate}
+    \item Calculer $\vect{AB}\cdot\vect{AC}$.
+    \item Calculer $\vect{AE}\cdot\vect{CF}$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Dans un repère orthonormé}
+\begin{thm}
+  Soient $\vect u$ et $\vect v$ deux vecteurs de coordonnées respectives
+  $\begin{pmatrix}x\\y\end{pmatrix}$ et $\begin{pmatrix}x'\\y'\end{pmatrix}$
+  dans un repère orthonormé. On a alors
+  \[
+    \vect u\cdot\vect v = xx'+yy'.
+  \]
+\end{thm}
+\begin{app}
+  Soient $A\left( -2;5 \right)$, $B\left( 3, -1 \right)$ et $C\left( 4; 2
+  \right)$ trois points du plan. Calculer $\vect{AB}\cdot\vect{AC}.$
+\end{app}
+\begin{methode}
+  Quand on veut \textbf{calculer un produit scalaire}, il faut réfléchir à la
+  méthode la plus adaptée :
+  \begin{itemize}
+    \item si on peut calculer facilement l'angle mis en jeu, on utilise la
+      première formule.
+    \item Si on peut calculer facilement le projeté orthogonal, on utilise la
+      deuxième formule.
+    \item Si on connaît (ou si on peut calculer facilement) les coordonnées des
+      vecteurs mis en jeu, on utilise la troisième formule.
+  \end{itemize}
+\end{methode}
+
+\begin{app}
+  Dans chaque cas, calculer $\vect{AB}\cdot\vect{AC}$ dans le triangle $ABC$.
+  \begin{enumerate}
+    \item $AB=5$, $AC=4\sqrt2$ et $\left( \vect{AB}, \vect{AC}
+      \right)=\frac{\pi}{4}$.
+    \item $AB=5$ et $AH=4$ où $H$ est le pied de la hauteur issue de $C$. De
+      plus $H\in[AB)$.
+    \item $A(-1;1)$, $B(4; -1)$, $C(3; 3)$ dans un repère orthonormé.
+  \end{enumerate}
+\end{app}
+
+\section{Propriétés du produit scalaire}
+\subsection{Bilinéarité et symétrie}
+\begin{propnom}{Symétrie}
+  Soient deux vecteurs $\vect u$ et $\vect w$, alors on a $\vect u\cdot\vect w =
+  \vect w\cdot\vect u$.
+\end{propnom}
+\begin{propnom}{Bilinéarité}
+  Soient $\vect u$, $\vect v$ et $\vect w$ trois vecteurs et $k\in\mathbb{R}$ un
+  réel. On a alors
+  \begin{itemize}
+    \item $\vect u\cdot\left( \vect v+\vect w \right)=\vect u\cdot\vect v+\vect
+      u\cdot\vect w$
+    \item $\vect u\cdot\left( k\vect w \right) = \left( k\vect u
+      \right)\cdot\vect w=k\left( \vect u\cdot\vect w \right)$
+  \end{itemize}
+\end{propnom}
+
+\subsection{Orthogonalité}
+\begin{defi}
+  Les vecteurs $\vect{AB}$ et $\vect{CD}$ sont dits \textbf{orthogonaux} lorsque
+  les droites $(AB)$ et $(CD)$ sont perpendiculaires.
+\end{defi}
+\begin{notation}
+  On note souvent $\vect{AB}\perp\vect{CD}$ lorsque les vecteurs
+  $\vect{AB}$ et $\vect{CD}$ sont orthogonaux.
+\end{notation}
+
+\begin{prop}
+  Deux vecteurs $\vect u$ et $\vect v$ sont orthogonaux si et seulement si
+  $\vect u\cdot\vect v=0$.
+\end{prop}
+\begin{app}
+  \begin{minipage}{.5\textwidth}
+    On considère un rectangle $ABCD$ tel que
+    \begin{itemize}
+      \item $AB=\frac{3}{2}BC$;
+      \item $\vect{AF}=\frac{2}{3}\vect{AB}$;
+      \item $\vect{BE}=\frac{1}{4}\vect{BC}$.
+    \end{itemize} Que
+    peut-on dire des droites $(DE)$ et $(CF)$ ?
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0,0) -- (6,0) -- (6,4) -- (0,4) -- (0,0);
+        \draw[dashed] (0,4) -- (6, 1);
+        \draw[dashed] (4,0) -- (6, 4);
+
+        \node at (-.2, .2) {$A$};
+        \node at (6.2, .2) {$B$};
+        \node at (6.2, 3.8) {$C$};
+        \node at (-.2, 3.8) {$D$};
+        \node at (6.2, 1) {$E$};
+        \node at (3.8, .2) {$F$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{app}
+
+\begin{app}
+  Dans un repère orthonormé $(0; \vect i, \vect j)$, on donne les points
+  $A(-3;0)$, $B(0;-2)$ et $C(4;4)$.
+  \begin{enumerate}
+    \item Calculer $\vect{AB}\cdot\vect{AC}$ et en déduire une mesure de l'angle
+      $\widehat{BAC}$, au centième de degré près.
+    \item Démontrer que le triangle $ABC$ est rectangle et préciser en quel
+      sommet.
+  \end{enumerate}
+\end{app}
 
 
 \end{document}
