@@ -78,9 +78,193 @@
         \point{5}{2.5}{black};
         \node at (5.25, 2.75) {$M$};
 
+        \draw[very thick, -latex] (2, 4) -- node[above left] {$\vect{v_1}$} (4,4);
+        \draw[very thick, -latex] (10, 5) -- node[above left] {$\vect{v_2}$} (7,4);
+        \draw[very thick, -latex] (1, 5) -- node[above left] {$\vect{v_3}$} (1,3);
+        \draw[very thick, -latex] (0, 2) -- node[above right] {$\vect{v_4}$} (2,0);
+        \draw[very thick, -latex] (8, 1) -- node[above left] {$\vect{v_5}$} (9,3);
       \end{tikzpicture}
     \end{center}
   \end{minipage}
 \end{app}
+
+\begin{app}
+  \begin{minipage}[]{.7\textwidth}
+    On considère la figure suivante composée de triangles équilatéraux.
+    Compléter les pointillés.
+    \begin{enumerate}
+      \item Le point $D$ a pour image le point $B$ par la translation de vecteur
+        $\vect{G\ldots}$.
+      \item Le point $E$ a pour image le point $\ldots$ par la translation de
+        vecteur $\vect{DJ}$.
+      \item Le point $\ldots$ a pour image le point $B$ par la translation de
+        vecteur $\vect{FL}$.
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.3\textwidth}
+    \begin{center}
+      \includegraphics[scale=.3]{triangles.png}
+    \end{center}
+  \end{minipage}
+\end{app}
+
+\subsection{Caractéristiques d'un vecteur}
+\begin{defi}{Caractéristiques d'un vecteur}
+  \begin{minipage}{.5\textwidth}
+  Le vecteur $\vect{AB}$ est défini par
+  \begin{itemize}
+    \item \textbf{sa direction} : celle de la droite $\left( AB \right)$;
+    \item \textbf{son sens} : de $A$ vers $B$;
+    \item \textbf{sa norme} : la longueur du segment $\left[ AB \right]$.
+  \end{itemize}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[loosely dashed] (0,0) -- (1.5, .5);
+      \draw[red, thick, -latex] (1.5,0.5) -- (4.5, 1.5);
+      \draw[loosely dashed] (4.5,1.5) -- (6, 2);
+      \node at (1.5, 0.8) {$A$};
+      \node at (4.5, 1.8) {$B$};
+    \end{tikzpicture}
+  \end{center}
+  \end{minipage}
+\end{defi}
+
+\begin{app}
+  \begin{minipage}[]{.5\textwidth}
+    Sur la figure ci-contre, on a représenté les points $A, B, C, C', D, E, F$
+    et $F'$, placés sur des droites parallèles.
+    \begin{enumerate}
+      \item Citer les vecteurs ayant le même sens.
+      \item Citer les vecteurs ayant la même norme.
+      \item Citer les vecteurs ayant la même direction.
+      \item Donner l'image du point $F$ par la translation de vecteur
+        $\vect{AB}$.
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[thick, dashed] (0,0) -- (1, 1/3);
+        \draw[thick, green!50!black, -latex] (5, 5/3) -- (1,1/3);
+        \draw[thick, dashed] (5, 5/3) -- (6,2);
+        \node at (.8, .6) {$E$};
+        \node at (5.1, 2) {$D$};
+
+        \draw[thick, dashed] (0,1) -- (2, 5/3);
+        \draw[thick, red, -latex] (2, 5/3) -- (4, 7/3);
+        \draw[thick, dashed] (4, 7/3) -- (6,3);
+        \node at (1.8, 1.9) {$C$};
+        \node at (4, 2.6) {$C'$};
+
+        \draw[thick, dashed] (0,2) -- (3, 3);
+        \draw[thick, orange, -latex] (5, 11/3) -- (3, 3);
+        \draw[thick, dashed] (6,4) -- (5, 11/3);
+        \node at (3.2, 3.3) {$F$};
+        \node at (5, 3.9) {$F'$};
+
+        \draw[thick, dashed] (0,3) -- (1, 10/3);
+        \draw[thick, red, -latex] (1, 10/3) -- (3,4);
+        \draw[thick, dashed] (3,4) -- (4, 13/3);
+        \node at (.8, 3.6) {$A$};
+        \node at (3.1, 4.3) {$B$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{app}
+
+\begin{notation}
+  La \textbf{norme} du vecteur $\vect{AB}$ se note $||\vect{AB}||$.
+\end{notation}
+
+\subsection{Égalité de vecteurs}
+\begin{defi}{Égalité de vecteurs}
+  Deux vecteurs sont dits \textbf{égaux} s'ils ont la même direction, le même
+  sens, et la même longueur.
+\end{defi}
+
+\begin{prop}~\\[-5mm]
+  \begin{minipage}[]{.68\textwidth}
+  Le quadrilatère $ABCD$ est un \textbf{parallèlogramme} si et seulement si
+  \[
+    \vect{AB} = \vect{CD}.
+  \]
+\end{minipage}\hspace{-6mm}
+  \begin{minipage}[]{.32\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[dashed] (0,0) -- (4, 1);
+        \draw[dashed] (1,1) -- (5, 2);
+        \draw[red, thick, -latex] (0,0) -- (1, 1);
+        \draw[red, thick, -latex] (4,1) -- (5, 2);
+
+        \node at (-.2, 0) {$A$};
+        \node at (.6, .9) {$B$};
+        \node at (4.1, .8) {$C$};
+        \node at (5.1, 1.8) {$D$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{prop}
+
+\begin{rmq}
+  \textbf{Attention !} Le sens des lettres dans la propriété précédente ($ABDC$)
+  n'est pas le sens habituel ($ABCD$).
+\end{rmq}
+\begin{rmq}
+  Le parallèlogramme peut éventuellement être aplati, c'est-à-dire que tous ses
+  points soient alignés sur une même droite. La propriété reste vraie.
+\end{rmq}
+\section{Vecteurs opposés}
+\begin{defi}{Vecteur opposé}
+  Le \textbf{vecteur opposé} au vecteur $\vect u$, noté $-\vect u$, est le
+  vecteur qui possède la même direction et la même norme que le vecteur $\vect
+  u$, mais qui a un sens opposé.
+\end{defi}
+\begin{prop}~\\[-2mm]
+  \begin{minipage}[]{.6\textwidth}
+  L'opposé du vecteur $\vect{AB}$ est le vecteur $\vect{BA}$. On a donc
+  \[
+    -\vect{AB} = \vect{BA}.
+  \]
+  \end{minipage}
+  \begin{minipage}[]{.4\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[red, -latex, thick] (0,0) -- (4, 1);
+        \draw[blue, latex-, thick] (.025,-.1) -- (4.025, .9);
+        \node at (-.2, 0) {$A$};
+        \node at (4.2, 1.1) {$B$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{prop}
+    
+\section{Propriétés des vecteurs}
+\subsection{Milieu et vecteur}
+\begin{prop}
+  Pour tous points du plan $A$ et $B$, $\vect{AM}=\vect{MB}$ si et seulement si
+  $M$ est le milieu de $[AB]$.
+\end{prop}
+
+\subsection{Représentant d'un vecteur}
+\begin{defi}{Représentant}
+  \begin{minipage}[]{.5\textwidth}
+    Lorsque $\vect{AB}=\vect{CD}=\vect{EF}$, alors on dit que les vecteurs
+    $\vect{AB}$, $\vect{CD}$ et $\vect{EF}$ sont des représentants d'un même
+    vecteur que l'on peut également noter avec une seule lettre minuscule $\vect
+    u$, $\vect v$, $\ldots$, indépendamment des deux points. On note alors
+    \[
+    \vect u=\vect{AB}=\vect{CD}=\vect{EF}.
+  \]
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+  \end{minipage}
+\end{defi}
+\begin{rmq}
+  Un vecteur admet une \textbf{infinité} de représentants.
+\end{rmq}
+\subsection{Sommes de vecteurs}
 
 \end{document}

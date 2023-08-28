@@ -184,10 +184,10 @@ ytick={-5.0,-4.0,...,5.0},
 
 \newenvironment{rmq}
   {
-    \begin{bclogo}[logo=\bcinfo, noborder=true]{Remarque}
+    \begin{bclogo}[logo=\bcinfo, noborder=true, margeG=-0.33]{Remarque}
   }
   {
-    \end{bclogo}
+    \end{bclogo}\ignorespacesafterend
   }
 
 % Defining the method environment
@@ -195,7 +195,7 @@ ytick={-5.0,-4.0,...,5.0},
 
 \newenvironment{methode}
   {
-    \begin{bclogo}[logo=\bcoutil, noborder=true]{Méthode}
+    \begin{bclogo}[logo=\bcoutil, noborder=true, margeG=-0.33]{Méthode}
   }
   {
     \end{bclogo}
@@ -209,7 +209,7 @@ ytick={-5.0,-4.0,...,5.0},
 
 \newenvironment{oldexo}
   {
-    \begin{bclogo}[logo=\bccrayon, noborder=true]{Exercice \theexos}
+    \begin{bclogo}[logo=\bccrayon, noborder=true, margeG=-0.33]{Exercice \theexos}
   }
   {
     \end{bclogo}
