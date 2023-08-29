@@ -186,7 +186,7 @@
 
 \begin{prop}~\\[-5mm]
   \begin{minipage}[]{.68\textwidth}
-  Le quadrilatère $ABCD$ est un \textbf{parallèlogramme} si et seulement si
+  Le quadrilatère $ABCD$ est un \textbf{parallélogramme} si et seulement si
   \[
     \vect{AB} = \vect{CD}.
   \]
@@ -213,7 +213,7 @@
   n'est pas le sens habituel ($ABCD$).
 \end{rmq}
 \begin{rmq}
-  Le parallèlogramme peut éventuellement être aplati, c'est-à-dire que tous ses
+  Le parallélogramme peut éventuellement être aplati, c'est-à-dire que tous ses
   points soient alignés sur une même droite. La propriété reste vraie.
 \end{rmq}
 \section{Vecteurs opposés}
@@ -260,11 +260,148 @@
   \]
   \end{minipage}
   \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[red, thick, -latex] (0,0) -- (3, 1);
+        \draw[blue, thick, -latex] (0,1) -- (3, 2);
+        \draw[green!50!black, thick, -latex] (1,2) -- (4, 3);
+        \draw[orange!50!black, thick, -latex] (-2, 2) -- node[above] {$\vect u$} (1, 3);
+
+        \node[red] at (-.2, 0) {$A$};
+        \node[red] at (3.2, 1) {$B$};
+
+        \node[blue] at (-.2, 1) {$C$};
+        \node[blue] at (3.2, 2) {$D$};
+
+        \node[green!50!black] at (.8, 2) {$E$};
+        \node[green!50!black] at (4.2, 3) {$F$};
+      \end{tikzpicture}
+    \end{center}
   \end{minipage}
 \end{defi}
 \begin{rmq}
   Un vecteur admet une \textbf{infinité} de représentants.
-\end{rmq}
+\end{rmq}~\\[-15mm]
 \subsection{Sommes de vecteurs}
+\begin{defi}{Somme de vecteurs}~\\[-4mm]
+  \begin{minipage}[]{.5\textwidth}
+    La \textbf{somme} de deux vecteurs $\vect u$ et $\vect v$ et le vecteur
+    $\vect u+\vect v$ associé à la translation obtenue par la translation de
+    vecteur $\vect u$ suivie de la transalation de vecteur $\vect v$.
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[green!50!black, -latex, thick] (0,0) -- (3, 2);
+        \draw[green!50!black, -latex, thick] (-.5,.5) -- node[above left]
+        {$\vect u$} (2.5, 2.5);
+        
+        \draw[blue, -latex, thick] (3,2) -- (5, 1);
+        \draw[blue, -latex, thick] (3.5,2.5) -- node[above right] {$\vect v$}
+        (5.5, 1.5);
+
+        \draw[red, -latex, very thick] (0,0) -- node[above] {$\vect u+\vect
+        v$} (5, 1);
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{defi}
+
+\begin{defi}{Différence de vecteurs}~\\[-6mm]
+  \begin{minipage}[]{.5\textwidth}
+  La \textbf{différence} de deux vecteurs $\vect u$ et $\vect v$ est le vecteur
+  $\vect u-\vect v=\vect u+\left( -\vect v \right)$. Cela signifie que
+  soustraire un vecteur revient à additionner son opposé.
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[green!50!black, -latex, thick] (0,0) -- (3, 2);
+        \draw[green!50!black, -latex, thick] (-2.5,1.5) -- node[above left]
+        {$\vect u$} (.5, 3.5);
+        
+        \draw[blue, -latex, thick] (3,2) -- (1, 3);
+        \draw[blue, -latex, thick] (1.5,3.5) -- node[above right] {$\vect v$}
+        (3.5, 2.5);
+
+        \draw[red, -latex, very thick] (0,0) -- node[left] {$\vect u-\vect
+        v$} (1, 3);
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{defi}
+
+\begin{propnom}{Relation de Chasles}~\\[-8mm]
+  \begin{minipage}[]{.5\textwidth}
+    Pour tous points $A$, $B$ et $C$ du plan, on a
+  \[
+    \vect{AB}+\vect{BC} = \vect{AC}.
+  \]
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+  \begin{center}
+    \begin{tikzpicture}[scale=1.08]
+      \draw[blue, thick, -latex] (0,0) -- node[above left] {$\vect{BC}$} (-2, -1);
+      \draw[red, thick, -latex] (2,-2) -- node[below] {$\vect{AC}$} (-2, -1);
+      \draw[green!50!black, thick, -latex] (2,-2) -- node[above right]
+      {$\vect{AB}$} (0, 0);
+
+      \node at (0,0.2) {$B$};
+      \node at (-2.3,-1) {$C$};
+      \node at (2.2,-2) {$A$};
+    \end{tikzpicture}
+  \end{center}
+  \end{minipage}
+\end{propnom}
+
+\begin{propnom}{Propriété du parallélogramme}
+    Pour tous points $A$, $B$ et $C$ du plan, on a
+  \[
+    \vect{AB}+\vect{BC} = \vect{AD}
+  \]
+  si, et seulement si, $ABDC$ est un parallélogramme.
+\end{propnom}
+
+\begin{app}
+  Soit $A, B, C, D$ des points du plan.
+  \begin{enumerate}
+    \item Simplifier le vecteur $\vect{BA}+\vect{AC}+\vect{CD}$.
+    \item Simplifier le vecteur $\vect{AD}+\vect{BC}+\vect{AB}$.
+  \end{enumerate}
+\end{app}
+
+\section{Vecteurs dans un repère}
+\begin{defi}{Coordonnées d'un vecteur}
+  Dans un repère $(0; I, J)$, les \textbf{coordonnées du vecteur} $\vect u$ sont
+  les coordonnées de l'unique point $M$ tel que $\vect{OM}=\vect u$.
+\end{defi}
+\begin{prop}
+  Dans si repère, si $A(x_A, y_A)$ et $B(x_B, y_B)$ alors $\vect{AB}$ a pour
+  coordonnées $\vect{AB}\begin{pmatrix}x_B-x_A\\y_B-y_A\end{pmatrix}$. On écrit
+  aussi $\vect{AB}(x_B-x_A,y_B-y_A)$.
+\end{prop}
+\begin{app}
+  Soit $A(1;2)$, $B(2, -2)$ et $C(-3, 0)$ trois points d'un repère du plan $(O;
+  I, J)$.
+  \begin{enumerate}
+    \item Faire une figure et y placer les points $A, B, C$.
+    \item Donner les coordonnées de $\vect{AB}$ ainsi que le représentant
+      d'origine $O$ de ce vecteur.
+    \item Donner les coordonnées de $\vect{AC}$ ainsi que le représentant
+      d'origine $O$ de ce vecteur.
+  \end{enumerate}
+\end{app}
+
+\begin{prop}
+  Deux vecteurs sont égaux si, et seulement si, ils ont les mêmes coordonnées.
+\end{prop}
+
+\subsection{Coordonnées d'une somme}
+\begin{prop}
+  Soient $\vect r\begin{pmatrix}x\\y\end{pmatrix}$ et
+  $\vect s\begin{pmatrix}x'\\y'\end{pmatrix}$ deux vecteurs d'un repère du plan.
+  Les coordonnées de $\vect r+\vect s$ sont alors
+  $\begin{pmatrix}x+x'\\y+y'\end{pmatrix}$.
+\end{prop}
 
 \end{document}
