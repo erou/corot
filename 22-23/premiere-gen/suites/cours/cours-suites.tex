@@ -146,9 +146,11 @@ réels :
 
 \begin{app}
   Dans un repère, représenter les trois premiers termes de de la suite $(u_n)$
-  définie sur $\mathbb{N}$ par $u_n=2-1,5n$.
+  définie sur $\mathbb{N}$ par
+  \[
+    u_n=2-1,5n.
+  \]
 \end{app}
-
 \section{Sens de variation}
 
 \begin{defi}{Suite croissante}
@@ -172,19 +174,174 @@ réels :
   soit croissante, soit décroissante à partir du rang $n_0$.
 \end{defi}
 
-\section{Limites de suites}
+\begin{exemple}
+  Soit $z$ la suite définie par $z_0=1$ et, pour tout entier naturel
+  $n\in\mathbb{N}$, $z_{n+1}=z_n-2$. Pour tout entier $n\in\mathbb{N}$, on a
+  \begin{align*}
+    z_{n+1}-z_n&=-2 \\
+    &\leq0.
+  \end{align*}
+  Donc la suite $z$ est décroissnte à partir de $n=0$.
+\end{exemple}
 
-% Finalement le reste sera traité dans un autre chapitre, où il n'y aura que les
-% suites artithmétiques et les suites géométriques.
-%
-%\section{Suites arithmétiques}
-%\subsection{Généralités}
-%\subsection{Somme de termes}
-%\subsection{Sens de variation}
-%
-%\section{Suites géométrique}
-%\subsection{Généralités}
-%\subsection{Somme de termes}
-%\subsection{Sens de variation}
+\begin{app}
+  Étudier le sens de variation de la suite $(u_n)$ définie pour tout entier
+  $n>0$ par $u_n=\frac{1}{n}$.\\
+  \emph{Indication : on pourra étudier la différence de $u_{n+1}$ et $u_n$.}
+\end{app}
+
+\begin{app}
+  Étudier le sens de variation des suites suivantes.
+  \begin{enumerate}
+    \item La suite $u$ définie sur $\mathbb{N}$ par $u_n=n^2+3n+1$.
+    \item La suite $v$ définie sur $\mathbb{N}$ par $v_n=\frac{n-4}{n+5}$.
+    \item La suite $w$ définie sur $\mathbb{N}$ par $w_n=-2\times7^n$.
+  \end{enumerate}
+\end{app}
+
+\begin{rmq}
+  \textbf{Attention !} Toutes les suites ne sont pas croissantes ou
+  décroissantes. Parfois, une suite ne sera ni l'un ni l'autre.
+\end{rmq}
+
+\begin{methode}
+  Pour trouver le sens de variation d'une suite $(u_n)$ on peut calculer la
+  différence $u_{n+1}-u_n$ et regarder son signe.
+  \begin{itemize}
+    \item Si c'est \textbf{positif}, la suite est \textbf{croissante}.
+    \item Si c'est \textbf{négatif}, la suite est \textbf{décroissante}.
+  \end{itemize}
+\end{methode}
+
+\section{Utilisation de la calculatrice}~\\[-10mm]
+\begin{minipage}{.48\textwidth}
+  La calculatrice est très utile pour représenter graphiquement une suite ou
+  obtenir les premiers termes de la suite. Un mode d'emploi est donné dans
+  l'image ci-contre.\\[10mm]
+%  \begin{app}
+   Soit $(u_n)$, $(v_n)$, et $(w_n)$ trois suites définies sur $\mathbb{N}$ par
+   \begin{align*}
+     u_n &= n^3-n^2+1 \\
+     v_0 &=10\text{ et }v_{n+1}=\frac{1}{2}v_n+1 \\
+     w_0 &=1\text{ et }w_{n+1} = w_n+n
+   \end{align*}
+  Compléter le tableau de valeurs suivant à l'aide de la calculatrice.
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+   \hline
+   $\mathbf{u_n}$ & & & & & & \\
+   \hline
+   $\mathbf{v_n}$ & & & & & & \\
+   \hline
+   $\mathbf{w_n}$ & & & & & & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+%  \end{app}
+\end{minipage}
+\hfill
+\begin{minipage}{.48\textwidth}
+  \begin{center}
+    \includegraphics[scale=.6]{calculatrice.png}
+  \end{center}
+\end{minipage}
+
+\section{Limites de suites}
+\begin{app}
+  Soit $(u_n)$ la suite définie sur $\mathbb{N}$ par 
+  \[
+    u_n=3-\frac{5}{n+1}.
+  \]
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $0$ & $1$ & $2$ & $5$ & $10$ & $25$ & $50$ & $100$ & $200$ &
+   $500$ \\
+   \hline
+   $\mathbf{u_n}$ & & & & & & & & & & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+  \begin{enumerate}
+    \item À l'aide de la calculatrice, remplir le tableau de valeur ci-dessus.
+    \item Vers quele valeur semble se rapprocher cette suite lorsque $n$ est
+      très grand ?
+  \end{enumerate}
+\end{app}
+
+\begin{notation}
+  Lorsque les termes $u_n$ d'une suite se rapprochent d'un réel $\ell$ quand $n$
+  tend vers $+\infty$, on dit que $u$ \textbf{converge} vers $\ell$ et on note
+  \[
+    \lim_{n\to\infty}u_n=\ell.
+  \]
+\end{notation}
+\begin{defi}{Limite}
+  Lorsqu'on a $u$ une suite et $\ell\in\mathbb{R}$ un réel tel que
+  \[
+    \lim_{n\to\infty}u_n=\ell,
+  \]
+  on dit que $\ell$ est la \textbf{limite} de la suite $u$.
+\end{defi}
+
+\begin{app}
+  On considère les cinq suites suivantes.
+  \begin{align*}
+    u_n &= n^2 &
+    v_n &= \frac{1}{n} &
+    w_n &= (-1)^n &
+    t_n &= -2^n &
+    s_n &= \left( \frac{1}{n} \right)^n
+  \end{align*}
+ \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $u_n$ & $v_n$ & $w_n$ & $t_n$ & $s_n$ \\
+   \hline
+   $1$ & & & & & \\
+   \hline
+   $5$ & & & & & \\
+   \hline
+   $10$ & & & & & \\
+   \hline
+   $25$ & & & & & \\
+   \hline
+   $50$ & & & & & \\
+   \hline
+   $100$ & & & & & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+  \begin{enumerate}
+    \item Compléter le tableau ci-dessus.
+    \item Quel semble être le comportement à l'infini des suites $u$, $v$, $w$,
+      $t$ et $s$ ?
+  \end{enumerate}
+\end{app}
+\begin{notation}
+  Lorsque $u_n$ devient de plus en plus grand quand $n$ tend vers $+\infty$, on
+  dit que $u$ \textbf{diverge} vers $+\infty$ et on note
+  \[
+    \lim_{n\to+\infty}u_n=+\infty.
+  \]
+\end{notation}
+\begin{notation}
+  Lorsque $u_n$ est négatif et devient de plus en plus grand en valeur absolue
+  quand $n$ tend vers $+\infty$, on
+  dit que $u$ \textbf{diverge} vers $-\infty$ et on note
+  \[
+    \lim_{n\to+\infty}u_n=-\infty.
+  \]
+\end{notation}
+
+\begin{defi}{Absence de limite}
+  Lorsque les valeurs de $u_n$ ne se stabilisent autour d'aucune valeur réelle,
+  on dit que $u$ diverge et n'admet pas de limite.
+\end{defi}
 
 \end{document}
