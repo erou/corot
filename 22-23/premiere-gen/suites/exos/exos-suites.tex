@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Suites -- Exercices}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{}
+\date{}
+\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\begin{exo}
+  Soit $(u_n)$ la suite définie pour tout $n \in \mathbb{N}$ par $u_n = (3n + 1)^2$.
+\begin{enumerate}
+    \item Calculer les termes $u_0$, $u_1$ et $u_{10}$.
+    \item Exprimer $u_{n+1}$ en fonction de $n$.
+    \item Démontrer que pour tout entier $n \in \mathbb{N}$, $u_{n+1} - u_n = 18n + 15$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $(w_n)$ la suite définie sur $\mathbb{N}$ par $w_n = 5n^2 - 2n + 3$.
+\begin{enumerate}
+    \item Calculer les trois premiers termes de cette suite.
+    \item Démontrer que pour tout entier $n \in \mathbb{N}$, $w_{n+1} - w_n = 10n + 3$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $(t_n)$ la suite définie sur $\mathbb{N}$ par $t_n =
+  \frac{n^2-3}{n+2}$.
+\begin{enumerate}
+    \item Calculer les trois premiers termes de la suite $(t_n)$.
+    \item Calculer $t_{15}$.
+    \item Exprimer $t_{n+1}$ en fonction de $n$.
+    \item Exprimer $t_{2n}$ en fonction de $n$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}~
+  \begin{enumerate}
+    \item Pour chacune des suites suivantes, définies par récurrence, calculer
+      les trois prochains termes.
+      \begin{align*}
+        \textbf{a)}&\; u_0 = 3\text{ et }u_{n+1} = 5u_n - 2 &
+        \textbf{b)}&\; u_0 = -2\text{ et }u_{n+1} = (u_n)^2 - 4u_n+1 \\
+        \textbf{c)}&\; u_0 = 1\text{ et }u_{n+1} = -3u_n - 4n &
+        \textbf{d)}&\; u_0 = 2\text{ et }u_{n+1} = \frac{1}{u_n}-\frac{1}{2n+1}
+      \end{align*}
+    \item Pour chacune des suites précédentes, exprimer $u_n$ en fonction de $u_{n-1}$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $(u_n)$ la suite définie par $u_0 = 1$, $u_1 = 1$ et la relation $u_{n+2}
+  = u_{n+1} + 2u_n + n$.
+\begin{enumerate}
+    \item Calculer $u_2$, $u_3$, $u_4$ et $u_5$.
+    \item Exprimer $u_n$ en fonction de $u_{n-1}$ et $u_{n-2}$.
+    \item Exprimer $u_{n+3}$ en fonction de $u_{n+2}$ et $u_{n+1}$.
+\end{enumerate}
+\end{exo}
+
+\end{document}
