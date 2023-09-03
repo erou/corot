@@ -281,5 +281,6 @@ todo.md
 # Sound files linked to CLIL
 *.mp3
 
-# docx
+# Written non maths documents
 *.docx
+*.odt
