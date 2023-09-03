@@ -3,7 +3,7 @@
 \newcommand{\titrechapitre}{Second degré -- Cours}
 \newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
 \newcommand{\pagination}{\thepage/\pageref{LastPage}}
-\newcommand{\topbotmargins}{2cm}
+\newcommand{\topbotmargins}{1.5cm}
 
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 
@@ -397,26 +397,27 @@ degré, c'est-à-dire à trouver des solutions réelles à nos équations.
 \end{proof}
 
 \begin{exemple}
-  Considérons l'équation du second degré
-  \[
-    x^2+2x-3 = 0.
-  \]
+  Considérons l'équation du second degré $x^2+2x-3 = 0$.
   On a ici $a=1, b=2, c=-3$. On commence par calculer le discriminant de cette
-  équation, on obtient
-  \[
-    \Delta =
-  \]
+  équation, on obtient $\Delta = 2^2 - 4\times 1\times(-3) = 16$.
   On est dans le cas où $\Delta>0$ et on sait qu'on a ainsi deux solutions
   distinctes:
-  \[
-    x_1 =
-  \]
-  et
-  \[
-    x_2 =
-  \]
- L'ensemble des solutions de l'équation est donc $\mathscr S =$
+  \begin{align*}
+    x_1 &= \frac{-2+\sqrt{16}}{2\times1} = \frac{-2+4}{2} = 1 &
+    &\text{ et } &
+    x_2 &= \frac{-2-\sqrt{16}}{2\times1} = \frac{-2-4}{2} = -3.
+  \end{align*}
+ L'ensemble des solutions de l'équation est donc $\mathscr S =\left\{ -3; 1
+ \right\}$
 \end{exemple}
+
+\begin{app}
+  On considère l'équation $2x^2+3x-1=0$.
+  \begin{enumerate}
+    \item Calculer le discriminant $\Delta$ associé à cette équation.
+    \item En déduire l'ensemble des solutions de l'équation.
+  \end{enumerate}
+\end{app}
 
 \section{Propriétés d'un trinôme $ax^2+bx+c$}
 \subsection{Factorisation}
@@ -437,38 +438,32 @@ degré, c'est-à-dire à trouver des solutions réelles à nos équations.
 \end{propadm}
 
 \begin{exemple}
-  On a vu précédemment que la fonction $f$ définie par
-  \[
-    f(x) = x^2+2x-3
-  \]
+  On a vu précédemment que la fonction $f$ définie par $f(x) = x^2+2x-3$
   avait pour discriminant $\Delta=16$ et pour racines $x_1=-3$ et $x_2=1$. Cela
   signifie que l'on peut aussi écrire $f$ sous la forme factorisée
   \[
-    f(x) =\phantom{(x+3)(x-1).}
+    f(x) =(x+3)(x-1).
   \]
 \end{exemple}
 
 \subsection{Somme et produit de racines}
 \begin{propadm}
   Soit $a,b,c\in\mathbb{R}$ et soit $f$ une fonction polynôme de degré $2$
-  définie sur $\mathbb{R}$ par
-  \[
-    f(x)=ax^2+bx+c,
-  \]
+  définie sur $\mathbb{R}$ par $f(x)=ax^2+bx+c$,
   dont le discriminant est strictement positif. La fonction $f$ a alors deux
   racines distinctes $x_1$ et $x_2$ et on a
-  \[
-    x_1+x_2 = \frac{-b}{a}\text{ et }x_1\times x_2=\frac{c}{a}.
-  \]
+  \begin{align*}
+    x_1+x_2 &= \frac{-b}{a} &
+    &\text{ et }&
+    x_1\times x_2 &=\frac{c}{a}.
+  \end{align*}
 \end{propadm}
 
 \subsection{Signe d'une fonction polynôme du second degré}
 \begin{propadm}
-  Soit $f$ une fonction polynôme du second degré définie sur $\mathbb{R}$ par
-  \[
-    f(x)=ax^2+bx+c,
-  \]
-  de déterminant $\Delta$.
+  Soit $f$ une fonction du second degré définie sur $\mathbb{R}$ par
+    $f(x)=ax^2+bx+c$,
+  de discriminant $\Delta$.
   \begin{itemize}
     \item Si $\Delta<0$, alors pour tout réel $x\in\mathbb{R}$, $f(x)$ est du
       signe de $a$.
@@ -508,9 +503,8 @@ degré, c'est-à-dire à trouver des solutions réelles à nos équations.
 \end{propadm}
 \begin{exemple}
   On peut reprendre la fonction $f$ définie sur $\mathbb{R}$ par
-  \[
-    f(x) = x^2+2x-3.
-  \]
+    $f(x) = x^2+2x-3$.\\
+  \begin{minipage}[]{.65\textwidth}
   On a vu que le déterminant de $f$ vaut $16$ et que les deux racines de $f$
   sont données par $x_1=-3$ et $x_2=1$. On a ainsi le tableau de signe suivant.
   \begin{center}
@@ -522,6 +516,8 @@ degré, c'est-à-dire à trouver des solutions réelles à nos équations.
   \end{center}
   Et, en effet, cela concorde avec la représentation graphique de $f$ donnée
   ci-dessous.
+  \end{minipage}
+  \begin{minipage}[]{.35\textwidth}
   \begin{center}
 \begin{tikzpicture}
 \begin{axis}
@@ -533,5 +529,6 @@ degré, c'est-à-dire à trouver des solutions réelles à nos équations.
 \filldraw[black] (3.25, 2.75) circle (2pt);
 \end{tikzpicture}
   \end{center}
+  \end{minipage}
 \end{exemple}
 \end{document}
