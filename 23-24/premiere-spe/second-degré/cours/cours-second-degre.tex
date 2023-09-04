@@ -3,7 +3,7 @@
 \newcommand{\titrechapitre}{Second degré -- Cours}
 \newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
 \newcommand{\pagination}{\thepage/\pageref{LastPage}}
-\newcommand{\topbotmargins}{1.5cm}
+\newcommand{\topbotmargins}{2cm}
 
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 
@@ -81,49 +81,7 @@
   \textbf{forme canonique} de $f$.
 \end{prop}
 
-\begin{proof}[Démonstration (à connaître).]
-  Soit $f$ la fonction définie sur $\mathbb{R}$ par
-  \[
-    f(x) = ax^2+bx+c,
-  \]
-  avec $a,b,c\in\mathbb{R}$ trois réels et $a\neq0$. Comme on a $a\neq0$, on
-  peut écrire, pour tout $x\in\mathbb{R}$, que
-  \[
-    f(x) = a\left( x^2+\frac{b}{a}x+\frac{c}{a} \right).
-  \]
-  Puis on remarque que les termes $x^2+\frac{b}{a}x$ forment le début du
-  développement de
-  \[
-    \left(x+\frac{b}{2a}\right)^2 = \phantom{x^2 +
-      \frac{b}{a}x+\left(\frac{b}{2a}\right)^2.}
-  \]
-  On peut donc écrire que
-  \[
-    \left( x^2+\frac{b}{a}x \right) = \phantom{\left( x+\frac{b}{2a} \right)^2-\left(
-    \frac{b}{2a} \right)^2}
-  \]
-  puis que
-  \[
-    f(x) = a\left(\phantom{ \left( x+\frac{b}{2a} \right)^2-\left( \frac{b}{2a}
-    \right)^2+\frac{c}{a}} \right).
-  \]
-  En mettant sur le même dénominateur, on remarque que
-  \begin{align*}
-    -\left( \frac{b}{2a} \right)^2+\frac{c}{a} &= \phantom{-\frac{b^2}{4a^2} +
-    \frac{c}{a}} \\
-    &= \phantom{\frac{-b^2+4ac}{4a^2}}.
- \end{align*}
- On retrouve alors
- \begin{align*}
-   f(x) &= a\left( x+\frac{b}{2a} \right)^2+a\times\frac{-b^2+4ac}{4a^2} \\
-   &= a\left( x+\frac{b}{2a} \right)^2+\frac{-b^2+4ac}{4a} \\
-   &= a\left( x-\alpha \right)^2+\beta,
- \end{align*}
- où $\alpha=\cfrac{-b}{2a}$ et où $\beta=\cfrac{-b^2+4ac}{4a}$. De plus, on a
- aussi 
- \[
-   f(\alpha) = a\left( \alpha-\alpha \right)^2+\beta= a\times 0+\beta=\beta.
- \]
+\begin{proof}[Démonstration à connaître.]
 \end{proof}
 
 \begin{exemple}
@@ -347,53 +305,7 @@ degré, c'est-à-dire à trouver des solutions réelles à nos équations.
   \end{itemize}
 \end{prop}
 
-\begin{proof}
-  Soit $f$ la fonction polynôme du second degré définie sur $\mathbb{R}$ par
-  \[
-    f(x) = ax^2+bx+c.
-  \]
-  On a vu au cours de la démonstration concernant la forme canonique que l'on
-  pouvait écrire
-  \[
-    f(x) = a\left(x+\frac{b}{2a}\right)^2-\frac{b^2-4ac}{4a} =
-    a\left(x+\frac{b}{2a}\right)^2-\frac{\Delta}{4a} .
-  \]
-  En raisonnant \textbf{par équivalence}, on a ainsi
-  \begin{align*}
-    f(x) = 0 &\Longleftrightarrow a\left( x+\frac{b}{2a}
-    \right)^2-\frac{\Delta}{4a}=0 \\
-    &\Longleftrightarrow a\left( x+\frac{b}{2a}
-    \right)^2=\frac{\Delta}{4a} \\
-    &\Longleftrightarrow \left( x+\frac{b}{2a}
-    \right)^2=\frac{\Delta}{4a^2}.
-  \end{align*}
-  On peut alors différencier plusieurs cas.
-  \paragraph{Premier cas : $\Delta<0$.} Dans ce cas on a
-  $\frac{\Delta}{4a^2}<0$. Mais on a aussi $\left( x+\frac{b}{2a} \right)^2\geq0$
-  car un carré est toujours positif ou nul. L'équation n'a donc pas de solution.
-  \paragraph{Deuxième cas : $\Delta=0$.} Dans ce cas l'équation devient
-  \begin{align*}
-    f(x) = 0 &\Longleftrightarrow \left( x+\frac{b}{2a} \right)^2 = 0 \\
-    &\Longleftrightarrow \left( x+\frac{b}{2a} \right) = 0 \\
-    &\Longleftrightarrow x = \frac{-b}{2a}.
-  \end{align*}
-  L'équation a donc une unique solution, donnée par $x_0=\cfrac{-b}{2a}$.
-  \paragraph{Troisième cas : $\Delta>0$.} Cette fois-ci on a
-  \begin{align*}
-    f(x) = 0 &\Longleftrightarrow \left( x+\frac{b}{2a} \right)^2 =
-    \frac{\Delta}{4a^2} \\
-    &\Longleftrightarrow \left( x+\frac{b}{2a} \right)^2 =
-    \left( \frac{\sqrt\Delta}{2a} \right)^2 \\
-    &\Longleftrightarrow x+\frac{b}{2a}=\frac{\sqrt\Delta}{2a}\text{ ou
-    }x+\frac{b}{2a}=-\frac{\sqrt\Delta}{2a}\\
-    &\Longleftrightarrow x=-\frac{b}{2a}+\frac{\sqrt\Delta}{2a}\text{ ou
-    }x=-\frac{b}{2a}+\frac{\sqrt\Delta}{2a}.
-  \end{align*}
-  Et on obtient finalement deux solutions distinctes, données par
-  \[
-    x_1 = \frac{-b-\sqrt\Delta}{2a}\text{ et }x_2 =
-    \frac{-b+\sqrt\Delta}{2a}.
-  \]
+\begin{proof}[Démonstration à connaître]
 \end{proof}
 
 \begin{exemple}
@@ -445,6 +357,14 @@ degré, c'est-à-dire à trouver des solutions réelles à nos équations.
     f(x) =(x+3)(x-1).
   \]
 \end{exemple}
+\begin{app}
+  On considère l'expression $f(x)=x^2+x-6$.
+  \begin{enumerate}
+    \item Calculer le discriminant $\Delta$ associé à $f$.
+    \item En déduire les racines de $f$.
+    \item Écrire $f$ sous sa forme factorisée.
+  \end{enumerate}
+\end{app}
 
 \subsection{Somme et produit de racines}
 \begin{propadm}
