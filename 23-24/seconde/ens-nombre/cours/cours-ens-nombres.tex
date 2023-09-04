@@ -1,0 +1,299 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Ensembles de nombres}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{1.7cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\title{Chapitre 1 : Ensembles de nombres}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Ensembles de nombres}
+\begin{notation}
+  Le symbole $\in$ se lit «\textbf{appartient à}». Le symbole $\notin$ se lit
+  «\textbf{n'appartient pas à}».
+\end{notation}
+\begin{exemple}
+  On a $5\in\mathbb{N}$ et $-1\notin\mathbb{N}$.
+\end{exemple}
+\noindent
+\begin{center}
+  \begin{tabularx}{\textwidth}{|c|c|c|Y|Y|}
+  \hline
+  \makecell{\textbf{Ensemble de}\\\textbf{nombres}} & \textbf{Définition} &
+  \makecell{\textbf{Nota}\\\textbf{tion}} & \textbf{Exemple} &
+  \makecell{\textbf{Contre-}\\\textbf{Exemple}}\\
+  \hline
+  \makecell{Nombres \textbf{entiers}\\naturels} & \makecell{Un nombre entier \textbf{naturel}
+est un nombre\\entier positif ou nul.} & $\mathbb{N}$ & & \\
+  \hline
+  \makecell{Nombres \textbf{entiers}\\relatifs} & \makecell{Un nombre entier
+    \textbf{relatif} est un nombre\\entier positif, négatif ou nul.} &
+    $\mathbb{Z}$ & & \\
+  \hline
+  \makecell{Nombres \\\textbf{décimaux}} & \makecell{Un nombre \textbf{décimal} est
+  un nombre\\qui peut s'écrire sous la forme $\frac{a}{10^k}$\\où
+  $a\in\mathbb{Z}$ et $k\in\mathbb{N}$} & $\mathbb{D}$ & & \\
+  \hline
+  \makecell{Nombres \\\textbf{rationnels}} & \makecell{Un nombre \textbf{rationnel} est
+  un nombre\\qui peut s'écrire sous la forme $\frac{p}{q}$\\où $p\in\mathbb{Z}$,
+  $q\in\mathbb{N}$, $q\neq0$} & $\mathbb{Q}$ & & \\
+  \hline
+  \makecell{Nombres \\\textbf{réels}} & \makecell{On considère une droite
+    graduée\\ et à chaque point de la droite on\\associe un nombre, son
+    abcisse.\\
+    Les \textbf{nombres réels} sont les abcisses de\\tous les points de la droite
+  graduée.} &
+  $\mathbb{R}$
+  & & \\
+  \hline
+\end{tabularx}
+
+\begin{tikzpicture}
+\draw (-5.5,0) grid (4.5,0);
+\draw[-stealth] |- (4.5,0) node[above] {};
+\foreach \x in {-5,...,4} \draw (\x,-.1)node[below]{\x} -- (\x,.1);
+\draw(4.5,.5) node {$\mathbb{R}$};
+\draw[red, thick] (-1.414,.1) node[above] {$-\sqrt{2}$}--(-1.414,-.1);
+\draw[red, thick] (3.141,.1) node[above] {$\pi$}--(3.141,-.1);
+\draw[red, thick] (.333,.1) node[above] {$\frac{1}{3}$}--(.333,-.1);
+\draw[red, thick] (-2.667,.1) node[above] {$\frac{-8}{3}$}--(-2.667,-.1);
+\draw[red, thick] (2.5,.1) node[above] {$2,5$}--(2.5,-.1);
+\end{tikzpicture}
+\end{center}
+
+\begin{app}
+  Donner :
+  \begin{enumerate}
+    \item un nombre appartenant aux deux ensembles $\mathbb{N}$ et $\mathbb{Z}$;
+    \item un nombre appartenant à $\mathbb{Z}$ mais pas à $\mathbb{N}$;
+    \item un nombre appartenant à $\mathbb{Q}$ mais pas à $\mathbb{D}$;
+    \item deux nombres appartenant à $\mathbb{D}$;
+    \item un nombre n'appartenant ni à $\mathbb{D}$, ni à $\mathbb{Q}$;
+    \item un nombre irrationnel.
+  \end{enumerate}
+\end{app}
+
+\begin{app}
+  Donner les abscisses des points placés sur la droite numérique ci-dessous.
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (-7.5,0) grid (7.5,0);
+      \draw[-stealth] |- (7.5,0) node[above] {};
+      \foreach \x in {-14,...,14} \draw[black!40!white] (\x*.5,-.1) -- (\x*.5,.1);
+      \draw (7.5,.5) node {$\mathbb{R}$};
+      \draw[thick] (0, -.1) node[below] {$0$}--(0, .1);
+      \draw[thick] (2, -.1) node[below] {$1$}--(2, .1);
+      \node[red!70!black] (a) at (.5, .5) {A};
+      \node[red!70!black] (b) at (3, .5) {B};
+      \node[red!70!black] (c) at (-5.5, .5) {C};
+      \node[red!70!black] (d) at (6, .5) {D};
+    \end{tikzpicture}
+  \end{center}
+\end{app}
+
+\begin{rmq}
+  Un \textbf{nombre décimal} a une écriture décimale finie, et réciproquement,
+  tout nombre qui a une écriture décimale finie est un nombre décimal.
+\end{rmq}
+\begin{notation}
+  Le symbole $\subset$ se lit «\textbf{est inclus dans}» et le symbole
+  $\not\subset$ se lit «\textbf{n'est pas inclus dans}».
+\end{notation}
+\begin{propadm}
+  On a 
+  \[
+    \mathbb{N}\subset\mathbb{Z}\subset\mathbb{D}\subset\mathbb{Q}\subset\mathbb{R}.
+  \]
+\end{propadm}
+\begin{rmq}
+  Les symboles $\in$ et $\subset$ ne sont pas équivalents, attention à ne pas
+  les confondre. On a $\mathbb{N}\subset \mathbb{Z}$: l'ensemble $\mathbb{N}$
+  est inclus dans l'ensemble $\mathbb{Z}$; tandis qu'on a $-5\in\mathbb{Z}$: le
+  nombre $-5$ est \textbf{un élément} de $\mathbb{Z}$.
+\end{rmq}
+
+\begin{app}
+  Compléter les pointillés avec le symbole correspondant ($\in, \notin,
+  \subset, \not\subset$).
+\begin{align*}
+  a)&\; 8 \ldots \mathbb{N} &
+  b)&\; -7,5 \ldots \mathbb{D} &
+  c)&\; \frac{1}{4} \ldots \mathbb{Z} &
+  d)&\; \mathbb{D} \ldots \mathbb{N} &
+  e)&\; \sqrt 5 \ldots \mathbb{Q} \\
+  f)&\; -\frac{6}{2} \ldots \mathbb{Z} &
+  g)&\; \frac{2}{3} \ldots \mathbb{D} &
+  h)&\; \mathbb{Z} \ldots \mathbb{R} &
+  i)&\; \pi \ldots \mathbb{R} &
+  j)&\; \mathbb{N} \ldots \mathbb{Q}
+\end{align*}
+\end{app}
+
+\section{Arithmétique}
+\subsection{Diviseurs et multiples}
+\begin{defi}{Diviseurs et multiples}
+  Soient $a$ et $b$ deux nombres entiers relatifs (donc $a,b\in\mathbb{Z}$). On
+  dit que $a$ est un \textbf{diviseur} de $b$ s'il existe $k\in\mathbb{Z}$ tel
+  que
+  \[
+    b = k\times a.
+  \]
+  Dans ce cas, on dit aussi que
+  \begin{itemize}
+    \item $b$ est un \textbf{multiple} de $a$;
+    \item $a$ \textbf{divise} $b$;
+    \item $b$ est \textbf{divisible} par $a$.
+  \end{itemize}
+\end{defi}
+\begin{app}
+  \begin{enumerate}
+    \item Donner les diviseurs de $18$, $12$.
+    \item Donner les multiples de $7$ inférieurs à $50$.
+  \end{enumerate}
+\end{app}
+\begin{app}
+  Simplifier les fractions suivantes
+  \begin{align*}
+    \frac{120}{39} &= &
+    \frac{66}{42} &= &
+    \frac{108}{32} &=
+  \end{align*}
+\end{app}
+\subsection{Parité}
+\begin{defi}{Nombres pairs ou impairs}
+  Soit $a\in\mathbb{Z}$ un entier relatif, on dit que $a$ est un nombre
+  \begin{itemize}
+    \item \textbf{pair} s'il existe $k\in\mathbb{Z}$ tel que $a=2\times k$;
+    \item \textbf{impair} s'il existe $k\in\mathbb{Z}$ tel que $a=2\times k+1$.
+  \end{itemize}
+\end{defi}
+\begin{rmq}
+  Ce sont les définitions que vous connaissiez déjà : un nombre est
+  \textbf{pair} s'il est divisible par $2$. On dit qu'il est \textbf{impair} s'il
+  n'est pas divisible par $2$.
+\end{rmq}
+\begin{app}
+  Expliquer pourquoi les nombres $12$ ou $70$ sont pairs. Expliquer pourquoi les
+  nombres $13$ ou $39$ sont impairs.
+\end{app}
+\subsection{Nombre premier}
+\begin{defi}{Nombre premier}
+  Un entier naturel est dit \textbf{premier} s'il possède exactement deux
+  diviseurs distincts : $1$ et lui-même.
+\end{defi}
+\begin{app}
+  Donner tous les nombres premiers inférieurs à $10$.
+\end{app}
+\begin{rmq}
+  Le nombre $1$ \textbf{n'est pas un nombre premier} car il a un seul diviseur.
+\end{rmq}
+\begin{app}
+  Donner la décomposition comme produit de nombres premiers de chacun des
+  nombres suivants.
+  \begin{align*}
+    40 &= &
+    12 &= &
+    75 &= &
+    126 &=
+  \end{align*}
+\end{app}
+
+\section{Intervalles}
+\begin{defi}{Intervalle}
+  Un \textbf{intervalle} de $\mathbb{R}$ est une partie de $\mathbb{R}$ qui
+  correspond à un segment, une demi-droite, ou à la droite toute entière.  
+\end{defi}
+
+\subsection{Intervalle borné}
+\noindent On considère deux réels $a$ et $b$ tels que $a<b$.
+\begin{center}
+  \renewcommand{\arraystretch}{2}
+% \setlength\extrarowheight{10pt}
+  \begin{tabularx}{\textwidth}{|Y|c|Y|Y|}
+    \hline
+    \makecell{L'ensemble des\\réels $x$ tels que} & \makecell{est représenté par
+      un \textbf{segment}\\sur une droite graduée :} &\makecell{Notation
+      de\\l'intervalle} & {Type de l'intervalle} \\
+      \hline
+      $a \leq x \leq b$ & & $[a;b]$ & \\
+      \hline
+      $a < x < b$ & & $]a;b[$ & \\
+      \hline
+      $a \leq x < b$ & & $[a;b[$ & \\
+      \hline
+      $a < x \leq b$ & & $]a;b]$ & \\
+      \hline
+  \end{tabularx}
+\end{center}
+
+\begin{app}
+ Compléter le tableau suivant. 
+\begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|Y|Y|Y|Y|}
+    \hline
+    \makecell{L'ensemble des\\réels $x$ tels que} & est représenté par &
+  Intervalle  & \makecell{Type de l'intervalle} \\
+      \hline
+      $8 < x < 15$ & & & \\
+      \hline
+    & & $x\in]{-2};1[$ & \\
+      \hline
+      & & & \\
+      \hline
+  \end{tabularx}
+\end{center}
+\end{app}
+
+\begin{rmq}
+  L'ordre des réels a une importance. L'intervalle $[3;4]$ existe alors que
+  $[4;3]$ n'existe pas. Pour les ensembles de solutions, écrits entre accolades,
+  l'ordre n'a pas d'importance : $\left\{ 4; 3 \right\}$ existe.
+\end{rmq}
+
+\subsection{Intervalle non borné}
+\noindent On considère deux réels $a,b\in\mathbb{R}$.
+\begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|Y|c|Y|}
+    \hline
+    \makecell{L'ensemble des\\réels $x$ tels que} & \makecell{est représenté par
+      une \textbf{demi-droite}\\sur une droite graduée :}
+      &\makecell{Notation\\de l'intervalle} \\
+      \hline
+      $x\geq a$ & & $[a; +\infty[$ \\
+      \hline
+      $x> a$ & & $]a; +\infty[$ \\
+      \hline
+      $x\leq b$ & & $]{-\infty}; b]$ \\
+      \hline
+    $x < b$ & & $]{-\infty}; b[$ \\
+      \hline
+  \end{tabularx}
+\end{center}
+
+\begin{app}
+  Compléter le tableau suivant.
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|Y|Y|Y|}
+    \hline
+    \makecell{L'ensemble des\\réels $x$ tels que} & est représenté
+    par &\makecell{Notation\\de l'intervalle} \\
+      \hline
+      $x\leq 10$ & & \\
+      \hline
+      & & $x\in]-2; +\infty[$ \\
+      \hline
+  \end{tabularx}
+  \end{center}
+\end{app}
+
+
+\end{document}
