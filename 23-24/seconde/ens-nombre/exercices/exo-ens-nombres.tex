@@ -3,8 +3,9 @@
 \newcommand{\titrechapitre}{Ensembles de nombres -- Exercices}
 \newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
 \newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{4mm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
-%\input{layout-nb.tex}
 
 %\title{Chapitre 1 : Ensembles de nombres}
 %\date{}
@@ -137,8 +138,9 @@
 \begin{exo}
   On considère des droites graduées sur lesquelles on  marqué des ensembles de
   nombres. Donner l'intervalle correspondant à chacun de ces ensembles.
+  \begin{multicols}{2}
   \begin{enumerate}
-    \item \begin{tikzpicture}
+    \item \begin{tikzpicture}[scale=.8]
   \draw (-4.5,0) grid (4.5,0);
   \draw[-stealth] |- (4.5,0) node[above] {};
   \foreach \x in {-4,...,4} \draw[black!40!white] (\x,-.1) -- (\x,.1);
@@ -148,7 +150,7 @@
   \draw[blue!70!white, thick] (-3, 0) -- (2, 0);
   \draw[blue!70!white, thick] (2.1, -.3) -- (2, -.3) -- (2, .3) -- (2.1, .3);
 \end{tikzpicture}
-    \item \begin{tikzpicture}
+    \item \begin{tikzpicture}[scale=.8]
   \draw (-4.5,0) grid (4.5,0);
   \draw[-stealth] |- (4.5,0) node[above] {};
   \foreach \x in {-4,...,4} \draw[black!40!white] (\x,-.1) -- (\x,.1);
@@ -157,7 +159,7 @@
   \draw[blue!70!white, thick] (-4.5, 0) -- (-1, 0);
   \draw[blue!70!white, thick] (-1.1, -.3) -- (-1, -.3) -- (-1, .3) -- (-1.1, .3);
 \end{tikzpicture}
-    \item \begin{tikzpicture}
+    \item \begin{tikzpicture}[scale=.8]
   \draw (-4.5,0) grid (4.5,0);
   \draw[-stealth] |- (4.5,0) node[above] {};
   \foreach \x in {-4,...,4} \draw[black!40!white] (\x,-.1) -- (\x,.1);
@@ -167,7 +169,7 @@
   \draw[blue!70!white, thick] (-2, 0) -- (3, 0);
   \draw[blue!70!white, thick] (2.9, -.3) -- (3, -.3) -- (3, .3) -- (2.9, .3);
 \end{tikzpicture}
-    \item \begin{tikzpicture}
+    \item \begin{tikzpicture}[scale=.8]
   \draw (-4.5,0) grid (4.5,0);
   \draw[-stealth] |- (4.5,0) node[above] {};
   \foreach \x in {-4,...,4} \draw[black!40!white] (\x,-.1) -- (\x,.1);
@@ -177,6 +179,7 @@
   \draw[blue!70!white, thick] (-1.1, -.3) -- (-1, -.3) -- (-1, .3) -- (-1.1, .3);
 \end{tikzpicture}
   \end{enumerate}
+  \end{multicols}
 \end{exo}
 
 \begin{exo}
