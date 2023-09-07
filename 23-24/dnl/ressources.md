@@ -4,7 +4,7 @@ Ideas
 + Give a puzzle to solve each week (or so) and ask the students to come and
 explain their answer. 
 + Find the odd one in this list of... As seen before; with many possible
-  answers.
+  answers. *Causeries mathématiques*
 
 
 Ressources
