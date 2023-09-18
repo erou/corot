@@ -3,34 +3,27 @@
 \newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
 \newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
 \newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
-\input{/home/erou/teaching/corot/latex/layout-color.tex}
-%\input{layout-nb.tex}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
 
-%\title{Chapitre 1 : Ensembles de nombres}
-%\date{}
-%\author{}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
 
 \begin{document}
-%\maketitle\thispagestyle{fancy}
 
 \noindent\textbf{Prénom :}\hfill\textbf{Nom :}\hfill Note
 :\hspace{1.5cm}/20\vspace{.5cm}\\
-\textbf{Exercice 1.} \hspace{2cm}\emph{/8 points}\\
+\textbf{Exercice 1.} \hspace{2cm}\emph{/4 points}\\
 \begin{enumerate}
-  \item Donner les abcisses des points $A$, $B$, $C$, et $D$ placés sur la droite
+  \item Donner les abcisses des points $A$ et $B$ placés sur la droite
 numérique ci-dessous.
 \begin{align*}
   A:& &
   B:& &
-  C:& &
-  D:&
 \end{align*}
-  \item Placer les points $E, F, G, H$ correspondant aux nombres suivants :
+  \item Placer les points $C$ et  $D$ correspondant aux nombres suivants :
     \begin{align*}
-      E:&\; \frac{3}{2} &
-      F:&\; 2 &
-      G:&\; \pi\approx 3,14 &
-      H:&\; -1,25
+      C:&\; -\frac{3}{2} &
+      D:&\; \pi\approx3,14 &
     \end{align*}
 \end{enumerate}
 \begin{center}
@@ -41,22 +34,16 @@ numérique ci-dessous.
       \draw[thick] (0, -.1) node[below] {$0$}--(0, .1);
       \draw[thick] (2, -.1) node[below] {$1$}--(2, .1);
       \node[red!70!black] (a) at (-1, .5) {A};
-      \node[red!70!black] (b) at (-4.5, .5) {B};
-      \node[red!70!black] (c) at (1.5, .5) {C};
-      \node[red!70!black] (d) at (5, .5) {D};
+      \node[red!70!black] (c) at (1.5, .5) {B};
     \end{tikzpicture}
 \end{center}
-\noindent \textbf{Exercice 2.} \hspace{2cm}\emph{/8 points}\\
+\noindent \textbf{Exercice 2.} \hspace{2cm}\emph{/4 points}\\
 Compléter avec le symbole correspondant ($\in, \notin, \subset, \not\subset$).
 \begin{align*}
-  \textbf{a)}\; & 0 \ldots \mathbb{Z} &
-  \textbf{b)}\; & \mathbb{Z} \ldots \mathbb{Q} &
-  \textbf{c)}\; & \frac{2}{5} \ldots \mathbb{D} &
-  \textbf{d)}\; & \mathbb{Q} \ldots \mathbb{D} \\
-  \textbf{e)}\; & \frac{-1}{3} \ldots \mathbb{D} &
-  \textbf{f)}\; & \sqrt 2 \ldots \mathbb{Q} &
-  \textbf{g)}\; & \mathbb{N} \ldots \mathbb{R} &
-  \textbf{h)}\; & 2\pi \ldots \mathbb{R}
+  \textbf{a)}\; & \mathbb{Z} \ldots \mathbb{Q} &
+  \textbf{b)}\; & \frac{2}{5} \ldots \mathbb{D} &
+  \textbf{c)}\; & \mathbb{Q} \ldots \mathbb{D} &
+  \textbf{d)}\; & \sqrt 2 \ldots \mathbb{Q} &
 \end{align*}
 \textbf{Exercice 3.}\hspace{2cm}\emph{/4 points}\\
 {\small Pour chacun des nombres suivants, déterminer le plus petit ensemble
@@ -69,62 +56,32 @@ appartient.}
   \textbf{d)}&\;\frac{-6}{5}
 \end{align*}
 
-\vspace{2.2cm}
 
-\noindent\textbf{Prénom :}\hfill\textbf{Nom :}\hfill Note
-:\hspace{1.5cm}/20\vspace{.5cm}\\
-\textbf{Exercice 1.} \hspace{2cm}\emph{/8 points}\\
+\noindent \textbf{Exercice 4.} \hspace{2cm}\emph{/2 points}\\
+Donner la décomposition en nombres premiers de chacun des nombres suivants.
+\begin{multicols}{2}
+  \noindent \textbf{a)} $630=$\\
+  \textbf{b) }$2717=$
+\end{multicols}
+
+\noindent \textbf{Exercice 5.} \hspace{2cm}\emph{/3 points}\\
+Simplifier les fractions suivantes. \emph{On fera attention à laisser en
+évidence les étapes de calculs.}
+\begin{multicols}{3}
+  \noindent \textbf{a)} $\dfrac{56}{32}=$\\
+  \textbf{b)} $\dfrac{66}{78}=$\\
+  \textbf{c)} $\dfrac{117}{169}=$
+\end{multicols}
+\vspace{1.5cm}
+
+\noindent \textbf{Exercice 6.} \hspace{2cm}\emph{/3 points}
 \begin{enumerate}
-  \item Donner les abcisses des points $A$, $B$, $C$, et $D$ placés sur la droite
-numérique ci-dessous.
-\begin{align*}
-  A:& &
-  B:& &
-  C:& &
-  D:&
-\end{align*}
-  \item Placer les points $E, F, G, H$ correspondant aux nombres suivants :
-    \begin{align*}
-      E:&\; \frac{3}{2} &
-      F:&\; 2 &
-      G:&\; \pi\approx 3,14 &
-      H:&\; -1,25
-    \end{align*}
+  \item Le nombre $1221$ est-il un multiple de $37$ ?
+    \emph{Justifier.}\vspace{1.5cm}
+  \item Donner la liste des diviseurs de $60$ :
+  \item Est-il possible de donner un exemple de nombre à la fois dans
+    $\mathbb{Q}$ et dans $\mathbb{D}$ ? Si oui, donner un exemple. Si non,
+    expliquer pourquoi.
 \end{enumerate}
-\begin{center}
-    \begin{tikzpicture}
-      \draw (-7.5,0) grid (7.5,0);
-      \draw[-stealth] |- (7.5,0) node[above] {};
-      \foreach \x in {-14,...,14} \draw[black!40!white] (\x*.5,-.1) -- (\x*.5,.1);
-      \draw[thick] (0, -.1) node[below] {$0$}--(0, .1);
-      \draw[thick] (2, -.1) node[below] {$1$}--(2, .1);
-      \node[red!70!black] (a) at (-1, .5) {A};
-      \node[red!70!black] (b) at (-4.5, .5) {B};
-      \node[red!70!black] (c) at (1.5, .5) {C};
-      \node[red!70!black] (d) at (5, .5) {D};
-    \end{tikzpicture}
-\end{center}
-\noindent \textbf{Exercice 2.} \hspace{2cm}\emph{/8 points}\\
-Compléter avec le symbole correspondant ($\in, \notin, \subset, \not\subset$).
-\begin{align*}
-  \textbf{a)}\; & 0 \ldots \mathbb{Z} &
-  \textbf{b)}\; & \mathbb{Z} \ldots \mathbb{Q} &
-  \textbf{c)}\; & \frac{2}{5} \ldots \mathbb{D} &
-  \textbf{d)}\; & \mathbb{Q} \ldots \mathbb{D} \\
-  \textbf{e)}\; & \frac{-1}{3} \ldots \mathbb{D} &
-  \textbf{f)}\; & \sqrt 2 \ldots \mathbb{Q} &
-  \textbf{g)}\; & \mathbb{N} \ldots \mathbb{R} &
-  \textbf{h)}\; & 2\pi \ldots \mathbb{R}
-\end{align*}
-\textbf{Exercice 3.}\hspace{2cm}\emph{/4 points}\\
-{\small Pour chacun des nombres suivants, déterminer le plus petit ensemble
-($\mathbb{N}, \mathbb{Z}, \mathbb{D}, \mathbb{Q}, \mathbb{R}$) auquel il
-appartient.}
-\begin{align*}
-  \textbf{a)}&\;\frac{3}{7} &
-  \textbf{b)}&\;-1,9 &
-  \textbf{c)}&\;\sqrt{9} &
-  \textbf{d)}&\;\frac{-6}{5}
-\end{align*}
 
 \end{document}
