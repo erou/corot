@@ -1,0 +1,531 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Probabilités conditionnelles -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\title{\vspace{-15mm}Chapitre 2 : Probabilités conditionnelles}
+\date{\vspace{-12mm}\href{https://erou.forge.aeif.fr/spe-1e/probas-cond.html}
+{\includegraphics{qr-probas-cond.png}}\\Utilisez le QR-code
+pour retrouver ce cours au format numérique, ainsi que d'autres
+ressources.\vspace{-5mm}}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\begin{notation}
+  \begin{itemize}
+    \item On note $\Omega$ l'univers, c'est-à-dire l'ensemble des issues
+      possibles de l'expérience aléatoire.
+    \item Un événement correspond à une partie des issues possibles de
+      l'expérience, c'est un sous-ensemble de $\Omega$.
+    \item On note $P(A)$ la probabilité que l'événement $A$ se réalise.
+    \item On note $\overline A$ l'événement complémentaire de $A$.
+    \item On note $A\cup B$ l'événement qui se réalise si l'événement $A$
+      \textbf{ou} l'événement $B$ se réalise, c'est-à-dire si au moins l'un des
+      deux se réalise.
+    \item On note $A\cap B$ l'événement qui se réalise si l'événement $A$
+      \textbf{et} l'événement $B$ se réalise, c'est-à-dire si les deux
+      événements se réalisent simultanément.
+  \end{itemize}
+\end{notation}
+
+\section{Probabilités conditionnelles}
+
+\noindent Dans tout le chapitre, sauf indication contraire, $A$ et $B$ sont
+deux événements d'un univers $\Omega$, tels que
+\[
+  P(A)\neq0.
+\]
+
+\begin{defi}{Probabilité conditionnelle}
+  La \textbf{probabilité conditionnelle} que l'événement $B$ se réalise sachant
+  que l'événement $A$ est réalisé se note
+  \[
+    P_A(B)
+  \]
+  et est définie par
+  \[
+    P_A(B) = \frac{P(A\cap B)}{P(A)}
+  \]
+\end{defi}
+
+\begin{exemple}
+  Un sac contient quatre boules noires numérotées de $1$ à $4$ et notées $N_1,
+  N_2, N_3, N_4$ ainsi que six boules blanches numérotées de $1$ à $6$ et notées
+  $B_1, B_2, B_3, B_4, B_5, B_6$. On extrait au hasard une boule dans le sac. On
+  a
+  \[
+    \Omega=\left\{ N_1, N_2, N_3, N_4, B_1, B_2, B_3, B_4, B_5, B_6 \right\}.
+  \]
+  On note
+
+  \begin{itemize}
+    \item $A$ l'événement « la boule tirée porte un numéro $3$ »;
+    \item $B$ l'événement « la boule est blanche ».
+  \end{itemize}
+  On a $A=\left\{ N_3, B_3 \right\}$, $B=\left\{B_1, B_2, B_3, B_4, B_5, B_6
+  \right\}$, et $A\cap B=\left\{ B_3 \right\}$. On a ainsi
+  $P(A)=\frac{2}{10}\neq0$ et $P(A\cap B)=\frac{1}{10}$. La probabilité
+  d'extraire une boule blanche \textbf{sachant qu'}elle porte le numéro $3$ est
+  égale à
+  \begin{align*}
+    P_A(B) &=\frac{\;\frac{1}{10}\;}{\frac{2}{10}} \\
+    &= \frac{1}{10}\times\frac{10}{2} \\
+    &= \frac{1}{2}.
+  \end{align*}
+\end{exemple}
+
+\begin{app}
+  On jette un dé équilibré à six faces numérotées de $1$ à $6$ et on s'intéresse
+  au nombre obtenu. Quelle est la probabilité que le nombre obtenu soit un
+  nombre premier sachant que le nombre obtenu est supérieur à $4$ ?
+\end{app}
+
+\begin{prop}
+  La probabilité $P_A(B)$ vérifie
+  \[
+    0\leq P_A(B)\leq 1\text{ et }P_A(B)+P_A(\overline{B})=1.
+  \]
+\end{prop}
+
+\begin{prop}
+  Si $A$ et $B$ sont deux événements de probabilité non nulle, alors
+  \[
+  P(A\cap B) = P_A(B)\times P(A) = P_B(A)\times P(B).
+  \]
+  \label{prop:1}
+\end{prop}
+
+\begin{exemple}
+  Si $P(A)=0,7$, $P(B)=0,6$, et $P_A(B)=\frac{4}{7}$, alors
+  \[
+    P(A\cap B)=P(A)\times P_A(B) = 0,7\times\frac{4}{7}=0,4
+  \]
+  puis
+  \[
+    P_B(A) = \frac{P(B\cap A)}{P(B)} = \frac{0,4}{0,6}=\frac{2}{3}.
+  \]
+\end{exemple}
+
+\begin{rmq}
+  La propriété $2$ permet de passer de $P_A(B)$ à $P_B(A)$ (et inversement). On
+  voit dans l'exemple $3$ que ce n'est pas la même chose !
+\end{rmq}
+
+\begin{app}
+  Dans une classe de première, $55$\% des élèves sont des filles et $40$\% des
+  élèves sont des filles demi-pensionnaires. On choisit un élève au hasard dans
+  cette classe. Quelle est la probabilité qu'un élève soit demi-pensionnaire
+  sachant que c'est une fille ?
+\end{app}
+
+\subsection{Utilisation de tableaux}
+
+\begin{notation}
+Les \textbf{tableaux à double entrée} permettent une présentation claires de certaines
+expériences aléatoires et facilitent le calcul des probabilités conditionnelles.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{cccc}
+  \toprule
+  & $\mathbf{B}$ & $\mathbf{\overline B}$ & \textbf{Total} \\ \midrule
+  $\mathbf{A}$ & $P(A\cap B)$ & $P(A\cap\overline B)$ & $P(A)$ \\
+  $\mathbf{\overline A}$ & $P(\overline A\cap B)$ & $P(\overline A\cap\overline
+  B)$ & $P(\overline A)$ \\
+  \textbf{Total} & $P(B)$ & $P(\overline B)$ & $1$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\begin{itemize}
+  \item $P(A\cap B)$ se lit à l'intersection de la ligne $A$ et de la colonne
+    $B$.
+  \item $P(A)$ (respectivement $P(B)$) se lit sur la dernière colonne
+    (respectivement la dernière ligne).
+  \item $P_A(B)$ (ou $P_B(A)$) s'obtient en calculant le quotient des deux
+    probabilités adéquates:
+    \[
+      P_A(B) = \frac{P(A\cap B)}{P(A)}\text{ et }P_B(A) = \frac{P(A\cap
+      B)}{P(B)}.
+    \]
+\end{itemize}
+\end{notation}
+
+\begin{exemple}
+  Si $P(A)=0,7$, $P(B)=0,6$ et $P(A\cap B)=0,4$, on a alors le tableau
+  suivant.\\
+  \begin{minipage}[]{.5\textwidth}
+ Et on trouve donc
+\begin{itemize}
+  \item $P(\overline A\cap\overline B)=0,1$;
+  \item $P_B(\overline A)=\frac{P(\overline A\cap
+    B)}{P(B)}=\frac{0,2}{0,6}=\frac{1}{3}$;
+  \item $P_{\overline A}(B)=\frac{P(\overline A\cap
+    B)}{P(\overline A)}=\frac{0,2}{0,3}=\frac{2}{3}$;
+\end{itemize}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+ \begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{cccc}
+  \toprule
+  & $\mathbf{B}$ & $\mathbf{\overline B}$ & \textbf{Total} \\ \midrule
+  $\mathbf{A}$ & $0,4$ & $0,3$ & $0,7$ \\
+  $\mathbf{\overline A}$ & $0,2$ & $0,1$ & $0,3$ \\
+  \textbf{Total} & $0,6$ & $0,4$ & $1$ \\ \bottomrule
+\end{tabular}
+\end{center}
+  \end{minipage}
+\end{exemple}
+
+\begin{app}
+  Un club sportif rassemble $180$ membres répartis en deux catégories : juniors
+  et seniors. On compte $135$ seniors dont $81$ hommes. Il y a $27$ garçons
+  parmi les juniors.\\
+  En choisissant une femme au hasard, calculer la probabilité d'avoir une
+  juniore.
+\end{app}
+
+\section{Formule des probabilités totales}
+\subsection{Arbre pondéré}
+
+\begin{defi}{Arbre pondéré}
+  \begin{minipage}{.4\textwidth}
+  Un \textbf{arbre pondéré}, ou \textbf{arbre de probabilité}, est un schéma
+  mettant en jeu des probabilités conditionnelles et permettant de calculer
+  rapidement des probabilités.
+\end{minipage}
+  \begin{minipage}{.6\textwidth}
+    \begin{center}
+\begin{tikzpicture}[scale=.8,level 1/.style={sibling distance=2cm},
+    level 2/.style={sibling distance=1cm}]
+  \node {} [grow'=right, level distance=3cm]
+  child {
+    node {$A$}
+    child {
+      node {$B$}
+      edge from parent node[above] {$P_A(B)$}
+    }
+    child{
+      node {$\overline B$}
+      edge from parent node[below] {$P_A(\overline B)$}
+    }
+    edge from parent node[above] {$P(A)$}
+  }
+  child {
+    node {$\overline A$}
+    child {
+      node {$B$}
+      edge from parent node[above] {$P_{\overline A}(B)$}
+    }
+    child{
+      node {$\overline B$}
+      edge from parent node[below] {$P_{\overline A}(\overline B)$}
+    }
+    edge from parent node[below] {$P(\overline A)$}
+  };
+  \node at (9.2, -.515) {$P(\overline A\cap B)=P(\overline A)\times P_{\overline
+  A}(B)$};
+\end{tikzpicture}
+\end{center}    
+  \end{minipage}
+\end{defi}
+\begin{propadm}
+  \begin{enumerate}
+    \item La somme des probabilités des branches issues d'un nœud est égale à
+      $1$.
+    \item La probabilité de l'événement à l'extrémité d'un chemin est égale au
+      produit des probabilités des branches composant ce chemin.
+    \item La probabilité d'un événement est égale à la somme des probabilités
+      des chemins conduisant à cet événement.
+  \end{enumerate}
+\end{propadm}
+
+\begin{exemple}
+  \begin{minipage}{.6\textwidth}
+    On considère l'arbre pondéré ci-contre.
+    \begin{itemize}
+      \item La première propriété nous dit que $0,7+0,1+x=1$, d'où $x=0,2$. De
+        même $y=0,6$ et $z=0,6$.
+      \item La deuxième propriété nous dit que $P(A\cap D)=P(A)\times
+        P_A(D)=0,7\times0,4=0,28$.
+      \item La troisième propriété nous dit que $P(D)=P(A\cap D)+P(C\cap
+        D)=0,7\times0,4+0,2\times0,5=0,38$.
+    \end{itemize}
+  \end{minipage}
+    \begin{minipage}{.4\textwidth}
+    \begin{center}
+\begin{tikzpicture}[scale=.8,level 1/.style={sibling distance=3cm},
+    level 2/.style={sibling distance=1.5cm}]
+  \node {} [grow'=right, level distance=3cm]
+  child {
+    node {$A$}
+    child {
+      node {$D$}
+      edge from parent node[above] {$0,4$}
+    }
+    child{
+      node {$\overline D$}
+    edge from parent node[below] {$y$}
+    }
+    edge from parent node[above=.1cm] {$0,7$}
+  }
+  child {
+    node {$B$}
+    child {
+      node {$E$}
+      edge from parent node[above] {$0,1$}
+    }
+    child{
+      node {$F$}
+      edge from parent node[above=-.1cm] {$0,3$}
+    }
+    child{
+      node {$G$}
+    edge from parent node[below] {$z$}
+    }
+    edge from parent node[above] {$0,1$}
+  }
+    child {
+      node{$C$}
+      child{
+        node{$D$}
+        edge from parent node[above] {$0,5$}
+      }
+      child{
+        node{$\overline D$}
+        edge from parent node[below] {$0,5$}
+      }
+    edge from parent node[below=.1cm] {$x$}
+  };
+\end{tikzpicture}
+\end{center}    
+  \end{minipage}
+\end{exemple}
+\begin{app}
+  On considère une expérience aléatoire et deux événements $A$ et $B$ tels que
+  $P(A)=0,6$, $P_A(B)=0,7$ et $P_{\overline A}(B)=0,2$.
+  \begin{enumerate}
+    \item Construire un arbre pondéré complet représentant cette expérience.
+    \item Déterminer la probabilité de l'événement $A\cap B$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Probabilités totales}
+\noindent\begin{minipage}{.6\textwidth}
+\begin{defi}{Partition de l'univers}
+  Soit $k\in\mathbb{N}^*$ un entier naturel non nul et $A_1, A_2, \dots, A_k$
+  des événements non vides de $\Omega$. Les événements $A_1, A_2,
+  \dots, A_k$ forment une \textbf{partition de l'univers} $\Omega$
+  si et seulement si
+  \begin{itemize}
+    \item ils sont deux à deux \textbf{incompatibles} : pour tous entiers
+      distincts $i$ et $j$ entre $1$ et $k$, on a $A_i\cap A_j=\emptyset$ ;
+    \item leur réunion forme tout l'univers : $A_1\cup A_2\cup\cdots\cup
+      A_k=\Omega$.
+  \end{itemize}
+\end{defi}
+
+\begin{propnom}{Formule des probabilités totales}
+  On considère une expérience aléatoire d'univers $\Omega$ et un événement $B$.
+  On note $A_1, \dots, A_k$ $k$ événements formant une partition de l'univers.
+  Alors on a
+  \[
+    P(B) = P(A_1\cap B)+P(A_2\cap B)+\cdots+P(A_k\cap B)
+  \]
+\end{propnom}
+  \end{minipage}
+  \begin{minipage}{.4\textwidth}
+    \begin{center}
+      \begin{tikzpicture}[scale=.97]
+  \draw[thick] (0,0) -- (5, 0) -- (5, 8) -- (0, 8) -- (0,0);
+  \fill[blue, opacity=.15] (0,0) -- (3, 0) -- (3, 2) -- (0, 2);
+  \draw[blue, opacity=.3] (3, 0) -- (3, 2) -- (0, 2);
+  \fill[red, opacity=.15] (3,0) -- (3, 5) -- (5, 5) -- (5, 0);
+  \draw[red, opacity=.3] (3,0) -- (3, 5) -- (5, 5);
+  \fill[cyan, opacity=.15] (5,5) -- (1, 5) -- (1, 7) -- (5, 7);
+  \draw[cyan, opacity=.3] (5,5) -- (1, 5) -- (1, 7) -- (5, 7);
+  \fill[orange, opacity=.15] (0,2) -- (3, 2) -- (3, 5) -- (1, 5) -- (1, 7) --
+  (5, 7) -- (5, 8) -- (0, 8);
+  \node[blue] at (1, 1) {\Large $A_1$};
+  \node[red] at (4.5, 1) {\Large $A_2$};
+  \node[cyan] at (1.7, 6.2) {\Large $A_3$};
+  \node[orange] at (1, 3.5) {\Large $A_4$};
+  \node at (5.5, 4) {\Huge $\Omega$};
+  \node[green!50!black] at (4, 6.5) {\LARGE $B$};
+  \draw[thick, green!50!black, opacity=.6] (3, 3.5) ellipse (1.5 and 3);
+  \fill[green!50!black, opacity=.15] (3, 3.5) ellipse (1.5 and 3);
+\end{tikzpicture}
+    \end{center}
+\end{minipage}
+
+\begin{rmq}
+  Un événement $A$ et son complémentaire $\overline A$ forment toujours une
+  partition de l'univers. On a donc
+  \[
+    P(B) = P(A\cap B)+P(\overline A\cap B).
+  \]
+\end{rmq}
+
+\begin{exemple}
+  \begin{minipage}{.6\textwidth}
+    On considère l'arbre pondéré ci-contre. Les événements $A$, $B$ et $C$
+    forment une partition de l'univers $\Omega$, ainsi
+    \begin{align*}
+      P(D) &= P(A\cap D)+P(B\cap D)+P(C\cap D) \\
+      &= P(A)\times P_A(D)+P(B)\times P_B(D)+P(C)\times P_C(D) \\
+      &= 0,1\times 0,2 + 0,5\times0,7+0,4\times0,1\\
+      &=0,41
+    \end{align*}
+  \end{minipage}
+    \begin{minipage}{.4\textwidth}
+    \begin{center}
+\begin{tikzpicture}[scale=.8,level 1/.style={sibling distance=2cm},
+    level 2/.style={sibling distance=1cm}]
+  \node {} [grow'=right, level distance=3cm]
+  child {
+    node {$A$}
+    child {
+      node {$D$}
+      edge from parent node[above] {$0,2$}
+    }
+    child{
+      node {$\overline D$}
+    edge from parent node[below] {$0,8$}
+    }
+    edge from parent node[above=.1cm] {$0,1$}
+  }
+  child {
+    node {$B$}
+    child {
+      node {$D$}
+      edge from parent node[above] {$0,7$}
+    }
+    child{
+      node {$\overline D$}
+      edge from parent node[below] {$0,3$}
+    }
+    edge from parent node[above] {$0,5$}
+  }
+    child {
+      node{$C$}
+      child{
+        node{$D$}
+        edge from parent node[above] {$0,1$}
+      }
+      child{
+        node{$\overline D$}
+        edge from parent node[below] {$0,9$}
+      }
+    edge from parent node[below=.1cm] {$0,4$}
+  };
+\end{tikzpicture}
+\end{center}    
+  \end{minipage}
+\end{exemple}
+
+\begin{app}
+  \begin{minipage}{.6\textwidth}
+    On considère les événements $A$ et $B$ vérifiant l'arbre pondéré
+    ci-contre.\\
+     Déterminer $P(B)$.
+  \end{minipage}
+    \begin{minipage}{.4\textwidth}
+    \begin{center}
+\begin{tikzpicture}[scale=.8,level 1/.style={sibling distance=2cm},
+    level 2/.style={sibling distance=1cm}]
+  \node {} [grow'=right, level distance=3cm]
+  child {
+    node {$A$}
+    child {
+      node {$B$}
+      edge from parent node[above] {$0,7$}
+    }
+    child{
+      node {$\overline B$}
+    edge from parent node[below] {$0,3$}
+    }
+    edge from parent node[above] {$0,6$}
+  }
+  child {
+    node {$\overline A$}
+    child {
+      node {$B$}
+      edge from parent node[above] {$0,2$}
+    }
+    child{
+      node {$\overline B$}
+      edge from parent node[below] {$0,8$}
+    }
+    edge from parent node[below] {$0,4$}
+  };
+\end{tikzpicture}
+\end{center}    
+  \end{minipage}
+\end{app}
+
+\section{Indépendance}
+\begin{defi}{Indépendance}
+  Soient $A$ et $B$ deux événements d'un univers $\Omega$. On dit que $A$ et $B$
+  sont \textbf{indépendants} lorsque
+  \[
+    P(A\cap B) = P(A)\times P(B).
+  \]
+\end{defi}
+\begin{prop}
+  Soient $A$ et $B$ deux événements d'un univers $\Omega$, tels que $P(A)\neq0$.
+  Alors $A$ et $B$ sont indépendants si et seulement si $P_A(B)=P(B)$.
+\end{prop}
+\begin{proof}
+  C'est un résultat d'équivalence (``si et seulement si''). Commençons par le
+  sens direct : si $A$ et $B$ sont indépendants alors $P_A(B)=P(B)$. Cela vient de la définition de $P_A(B)$. En effet $P_A(B)=\frac{P(A\cap
+  B)}{P(A)}$. Mais dans le cas de deux événements indépendants on a
+  $P(A\cap B)=P(A)\times P(B)$, donc
+  \[
+    P_A(B)=\frac{P(A)P(B)}{P(A)}=P(B).
+  \]
+  L'autre sens (si $P_A(B)=P(B)$ alors $A$ et $B$ sont indépendants) vient aussi
+  de la définition. On a $P_A(B)=P(B)$ donc $\frac{P(A\cap B)}{P(A)}=P(B)$, d'où
+  finalement $P(A\cap B)=P(A)P(B)$, et donc les événements $A$ et $B$ sont
+  indépendants.
+\end{proof}
+\begin{rmq}
+  L'intuition derrière la notion d'indépendance est que si deux événements sont
+  indépendants, la réalisation de l'un n'influence pas la réalisation
+  de l'autre.
+\end{rmq}
+\begin{exemple}
+  Soient $A$ et $B$ deux événements indépendants tels que $P(A)=0,8$ et
+  $P(B)=0,35$. Danc ce cas, on a
+  \[
+    P(A\cap B) = 0,8\times0,35=0,28.
+  \]
+\end{exemple}
+\begin{propadm}
+  Si $A$ et $B$ sont deux événements indépendants, alors $\overline A$ et $B$
+  sont aussi deux événements indépendants.
+\end{propadm}
+\begin{app}
+  On dispose d'une urne qui contient trois boules rouges numérotées $1, 2, 3$
+  ainsi que six boules noires numérotées $1, 1, 1, 2, 2$ et $3$. Les boules sont
+  indiscernables au toucher. On tire une boule au hasard dans cette urne et on
+  s'intéresse aux événements suivants :
+  \begin{itemize}
+    \item $R$ : « Tirer une boule rouge. »
+    \item $P$ : « Tirer une boule dont le numéro est pair. »
+    \item $U$ : « Tirer une boule dont le numéro est $1$. »
+  \end{itemize}
+  \begin{enumerate}
+    \item Montrer que les événements $P$ et $R$ sont indépendants.
+    \item Les événements $R$ et $U$ sont-ils indépendants ? Justifier.
+  \end{enumerate}
+\end{app}
+
+\begin{app}
+  Exercice plus difficile avec des inconnues sur les branches.
+\end{app}
+
+\end{document}
