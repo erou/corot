@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Probabilités conditionnelles -- Éléments de
+correction}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 2 : Information chiffrée}
+\date{}
+\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\begin{center}
+  \LARGE \textbf{Éléments de correction}\\[-5mm]
+\rule{10cm}{1pt}
+\end{center}
+\paragraph{Exercice 4.} Cet exercice ressemble dans l'idée à l'exercice 3 : il
+faut faire un tableau d'effectif pour ensuite comprendre le problème.
+\begin{enumerate}
+  \item Pour compléter le tableau, il faut bien lire l'énoncé : on nous dit que
+    $30$\% des salariés ont $40$ ans ou plus, donc ça veut dire que dans la
+    colonne $\geq 40$ ans et dans la ligne ``Total'', il doit y avoir $30$\% de
+    l'effectif total de l'entreprise. On calcule donc
+    \[
+      0,3 \times 2000 = 600
+    \]
+    et il y a donc $600$ employés de plus de $40$ ans. Parmi ces $600$
+    personnes de plus de $40$ ans, on nous dit aussi que $40$\% sont des cadres,
+    on calcule donc que $0,4\times600=240$ sont des cadres de plus de $40$ ans.
+    Cela nous permet de remplir $240$ dans la colonne $\geq40$ ans et la ligne
+    ``Cadres''. Enfin, on sait qu'il y a $2000-600=1400$ personnes de moins de
+    $40$ ans dans cette entreprise, dont $25$\% qui sont des cadres, soit
+    $0,25\times1400=350$. Finalement, en remplissant les dernière données qui
+    nous manque en faisant des soustractions/additions, on obtient le tableau
+    suivant.
+  \begin{center}
+ \begin{tabular}{cccc}
+  \toprule
+  & \textbf{$<40$ ans} & \textbf{$\geq40$ ans} & \textbf{Total} \\
+  \midrule
+  \textbf{Cadres} & $350$ &  $240$ & $590$ \\
+  \textbf{Non cadres} & $1050$  & $360$ & $1410$ \\
+  \textbf{Total} & $1400$  & $600$ & $2000$ \\
+  \bottomrule
+\end{tabular}
+  \end{center}
+  Maintenant qu'on a le tableau, il ne nous reste plus qu'à faire des
+  traductions maths/français pour résoudre les questions de l'exercice.
+\item \begin{enumerate}
+    \item Il y a \textbf{équiprobabilité} dans cette expérience aléatoire. On
+      lit dans le tableau que
+      \[
+        P(A)=\frac{600}{2000}=\frac{3}{10}=0,3
+        \text{ et }
+        P(B)=\frac{590}{2000}=\frac{59}{200}=0,295.
+    \]
+  \item $A\cap B$ signifie « la personne interrogée a $40$ ou plus
+    \textbf{et} est une cadre », tandis que $A\cup B$ signifie « la personne
+    interrogée a $40$ ans ou plus \textbf{ou} est une cadre ». Ici aussi le
+    ``ou'' n'est pas exlusif : on peut très bien être une cadre et avoir plus de
+    $40$ ans dans $A\cup B$.
+  \item La probabilité $P(A\cap B)$ se lit dans le tableau et vaut
+    \[
+      P(A\cap B) = \frac{240}{2000}=\frac{3}{25}=0,12.
+    \]
+    La probabilité $P(A\cup B)$ ne se lit pas dans le tableau mais se retrouve
+    gr\^ace à la formule
+    \begin{align*}
+      P(A\cup B) &= P(A)+P(B)-P(A\cap B)\\
+      &= 0,3+0,295-0,12\\
+      &= 0,475
+    \end{align*}
+  \end{enumerate}
+\item Dans cette question, on lit les mots ``sachant que'', donc on sait qu'on a
+  affaire à une probabilité \textbf{conditionnelle}. On doit donc traduire la
+  question : ne pas être un cadre correspond à $\overline B$ et être une
+  personne de plus de $40$ ans correspond à $A$. On cherche donc la probabilité
+  $P_A(\overline B)$.
+  On a
+  \begin{align*}
+    P_A(\overline B) &= \frac{P(A\cap\overline B)}{P(A)} \\
+    &= \frac{\;\frac{360}{2000}\;}{\frac{600}{2000}} \\
+    &= \frac{360}{2000}\times\frac{2000}{600} \\
+    &= \frac{360}{600} \\
+    &= \frac{3}{5}
+  \end{align*}
+\end{enumerate}
+
+\paragraph{Exercice 5.} Dans cet exercice il n'y a pas de contexte, ça veut dire
+qu'il faut jongler entre les formules et les propriétés du cours pour trouver
+les réponses.
+\begin{enumerate}
+  \item On va utiliser la formule
+    \begin{align*}
+      P(A\cap B) &= P_A(B)\times P(A) \\
+      &= 0,8\times0,4 \\
+      &= 0,32.
+    \end{align*}
+  \item On va utiliser le fait que
+    \[
+      P(A\cap B)=P_B(A)\times P(B)
+    \]
+    qui nous donne en isolant $P(B)$:
+    \begin{align*}
+      P(B) &= \frac{P(A\cap B)}{P_B(A)} \\
+      &= \frac{0,32}{0,6} \\
+      &= \frac{32}{60} \\
+      &= \frac{8}{15}.
+    \end{align*}
+  \item Pour cette dernière question, on utilise la formule utilisée plusieurs
+    fois déjà. On met tout sous forme de fraction pour faire des calculs exacts,
+    puis on met sous le même dénominateur.
+    \begin{align*}
+      P(A\cup B) &= P(A)+P(B)-P(A\cap B) \\
+      &= 0,4 + \frac{8}{15}-0,32 \\
+      &= \frac{2}{5}+\frac{8}{15}-\frac{8}{25} \\
+      &= \frac{30}{75}+\frac{40}{75}-\frac{24}{75} \\
+      &= \frac{46}{75}.
+    \end{align*}
+\end{enumerate}
+
+\paragraph{Exercice 17.}
+\begin{enumerate}
+  \item La première question vient soit de l'application d'une identité remarquable,
+soit du chapitre sur le second degré. Dans tous les cas, c'est quelque chose que
+vous devez savoir faire qui n'a pas de lien avec les probabilités. Ce qui est
+important dans cette question c'est que le trinôme $x^2-1,7x+0,8$ n'a pas de
+racine.
+  \item On veut prouver que les événements $A$ et $B$ ne sont pas indépendants.
+    On va supposer par l'absurde qu'ils le sont et on va voir que ce n'est pas
+    possible en arrivant à une absurdité. On suppose donc que $P(A\cap
+    B)=P(A)P(B)$.
+
+    Tout d'abord on obtient remplaçant $P(A\cap B)=0,8$ et $P(A\cup B)=0,9$
+    dans la formule
+    \[
+      P(A\cup B) = P(A)+P(B)-P(A\cap B)
+    \]
+    que $P(A)+P(B)=1,7$.
+    On pose ensuite $P(A)=x$, et on a ainsi $P(B)=1,7-x$. Puis on utilise encore
+    la même formule
+    \begin{align*}
+      P(A\cup B) = P(A)+P(B)-P(A\cap B) \Leftrightarrow &\;
+      P(A\cup B) = P(A)+P(B)-P(A)P(B) \\
+      \Leftrightarrow&\; 0,9 = x + (1,7-x) - x(1,7-x) \\
+      \Leftrightarrow&\; 0,9 = 1,7 - 1,7x+x^2 \\
+      \Leftrightarrow&\; 0 = 0,8 - 1,7x+x^2 \\
+      \Leftrightarrow&\; x^2-1,7x+0,8 = 0
+    \end{align*}
+\end{enumerate}
+Ainsi on vient de prouver que $x=P(A)$ est racine du trinôme de la première
+question, ce qui est impossible car ce trinôme n'a pas de racine. Ainsi notre
+résultat est absurde et c'est donc que $A$ et $B$ ne sont pas indépendants.
+\end{document}

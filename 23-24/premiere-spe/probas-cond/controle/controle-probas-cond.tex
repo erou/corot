@@ -1,0 +1,121 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\begin{center}
+\textbf{\LARGE \textsc{Contrôle 2}}\\[2mm]
+
+{\large Mardi 13 Décembre 2022, durée : 1h00}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+\paragraph{Exercice 1. \emph{(8 points)}} Une entreprise est composée de trois services A, B
+et C d'effectifs respectifs $370$, $280$ et $350$ employés. Une enquête sur le
+temps de trajet quotidien entre le domicile des employés et l'entreprise a
+montré que $60$\% des employés du service A, $30$\% de ceux du service B, et
+$20$\% de ceux du service C résident à moins de $30$ minutes de l'entreprise.\\
+On choisit au hasard un employé de cette entreprise et on considère les
+événements suivants :
+\begin{itemize}
+  \item $A$ : « L'employé fait partie du service A » ;
+  \item $B$ : « L'employé fait partie du service B » ;
+  \item $C$ : « L'employé fait partie du service C » ;
+  \item $T$ : « L'employé réside à moins de $30$ minutes de l'entreprise ».
+\end{itemize}
+\begin{enumerate}
+  \item \begin{enumerate}
+      \item Justifier que $P(A)=0,37$.
+      \item Donner $P_A(T)$.
+      \item Représenter la situation à l'aide d'un arbre pondéré en indiquant
+        les probabilités associées à chaque branche.
+    \end{enumerate}
+  \item Déterminer la probabilité que l'employé choisi soit du service A et
+    qu'il réside à moins de $30$ minutes de son lieu de travail.
+  \item Montrer que $P(T)=0,376$.
+  \item Combien de personnes résident à plus de $30$ minutes de l'entreprise ?
+  \item Sachant qu'un employé de l'entreprise réside à plus de $30$ minutes de
+    son lieu de travail, déterminer la probabilité qu'il fasse partie du service
+    B.
+  \item Est-il vrai que plus de la moitié des employés de l'entreprise font
+    partie du service A ou résident à moins de $30$ minutes de l'entreprise ?
+    Justifier.
+\end{enumerate}
+
+\newpage
+\paragraph{Exercice 2. \emph{(7 points)}} Un club sportif regroupe $500$ membres qui peuvent être
+des femmes ou des hommes. Dans ce club, $60$\% des membres sont des femmes.
+Chaque membre pratique un seul sport parmi le VTT et le Volley-Ball. On sait
+aussi qu'il y a $40$\% des membres du club qui pratiquent le VTT, dont
+$80$ hommes.\\
+On choisit une personne au hasard dans ce club, et on considère les événements :
+\begin{itemize}
+  \item $A$ : « la personne choisie est une femme » ;
+  \item $B$ : « la personne choisie pratique le VTT ».
+\end{itemize}
+\begin{enumerate}
+      \item À partir des indications de l'énoncé, compléter le tableau suivant.
+    \begin{center}
+      \def\arraystretch{1.5}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      & \textbf{VTT} & \textbf{Volley-Ball} & \textbf{Total} \\
+      \hline
+      \textbf{Femmes} & & & \\
+      \hline
+      \textbf{Hommes} & & & \\
+      \hline
+      \textbf{Total} & & & \\
+      \hline
+    \end{tabular}
+    \end{center}
+  \item \begin{enumerate}
+      \item Calculer les probabilités $P(A)$ et $P(B)$ des événements $A$ et
+        $B$.
+      \item Calculer les probabilités $P(A\cap B)$ et $P(A\cup B)$.
+      \item Calculer les probabilités $P_A(B)$ et $P_B(A)$.
+    \end{enumerate}
+  \item Les événements $A$ et $B$ sont-ils indépendants ?
+  \item \begin{enumerate}
+      \item Quelle est la probabilité que la personne choisie soit un homme qui
+        pratique le Volley-Ball ?
+      \item Sachant que la personne choisie joue au volley-ball, calculer la
+        probabilité que ce soit un homme.
+    \end{enumerate}
+\end{enumerate}
+
+\paragraph{Exercice 3. \emph{(5 points)}} Pour chacune des fonctions suivantes, donner l'ensemble
+de dérivabilité et l'expression de la fonction dérivée.
+\begin{align*}
+  \textbf{1)}\;& f:x\mapsto (2x-3)^{8} &
+  \textbf{2)}\;& g:x\mapsto (\sqrt x+1)(x^2+x) &
+  \textbf{3)}\;& h:x\mapsto \frac{x+1}{x^2+x+1}
+\end{align*}
+
+\end{document}

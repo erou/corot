@@ -1,0 +1,348 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Suites -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+\title{Chapitre 3 : Suites}
+\date{}
+\author{}
+
+\newcommand{\Cf}{\mathscr C_{f}}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Définition et mode de génération}
+\noindent Intuitivement, une \textbf{suite} est une liste ordonnée et infinie de nombres
+réels :
+\[
+  1, 4, 9, 16, 25, \dots
+\]
+\[
+  1, 3, 5, 7, 9, \dots
+\]
+\begin{defi}{Suite numérique}
+  Une \textbf{suite numérique} $u$, également notée
+  $(u_n)$, est une fonction définie sur $\mathbb{N}$ à valeurs dans $\mathbb{R}$.
+  \[
+  \begin{array}{cccc}
+    u: & \mathbb{N} & \to & \mathbb{R} \\
+    & n & \mapsto & u(n)
+  \end{array}
+\]
+\end{defi}
+\begin{notation}
+  Le terme $u(n)$ est le plus souvent noté $u_n$.\\
+  La suite $u$ est parfois aussi notée $(u_n)_{n\in\mathbb{N}}$.
+\end{notation}
+
+\begin{rmq}
+  Parfois le premier terme de la suite $u$ n'est pas $u_0$ mais $u_1$ ou un
+  indice encore supérieur.
+\end{rmq}
+\begin{rmq}
+  \textbf{Attention !} Il ne faut pas confondre le terme $u_n$ et la suite
+  $(u_n)$.
+\end{rmq}
+
+\begin{exemple}
+  Soit $(u_n)$ la suite définie arbitrairement sur $\mathbb{N}$ par
+  \[
+    u_0 = 2
+    \;;\;
+    u_1 = 3
+    \;;\;
+    u_2 = 741
+    \;;\;
+    u_4 = -12 
+  \]
+\end{exemple}
+\begin{defi}{Définition explicite d'une suite}
+  Une suite est définie \textbf{explicitement} lorsque l'on peut calculer
+  n'importe quel terme de la suite directement en fonction de $n$. On donne
+  alors l'expression du \textbf{terme général} $u_n$ en fonction de $n$.
+\end{defi}
+\begin{exemple}
+  La suite $(v_n)$ définie sur $\mathbb{N}$ par $v_n=2n+1$ est définie
+  expicitement. On a 
+  \begin{align*}
+    v_4 &= 2 \times 4+1 = 9 &
+    v_{10} &= 2 \times 10 +1 = 21 &
+    v_{58} &= 2 \times 58 +1 = 117
+  \end{align*}
+\end{exemple}
+
+\begin{app}
+  Soit $(w_n)$ la suite définie sur $\mathbb{N}$ par $w_n=10n-5$. Calculer les
+  termes $w_3$, $w_{10}$, $w_{42}$, et $w_{101}$.
+\end{app}
+
+\begin{defi}{Définition par récurrence}
+  Une suite $(u_n)$ est définie \textbf{par récurrence} lorsqu'elle est définie par la
+  donnée de son premier terme et d'une relation qui permet de calculer un terme
+  à partir du terme précédent. On donne donc l'expression de $u_{n+1}$ en
+  fonction de $u_n$. Cette relation est appelée \textbf{relation de récurrence}.
+\end{defi}
+
+\begin{exemple}
+  La suite $(a_n)$ définie sur $\mathbb{N}$ par le premier terme $a_0=4$ et,
+  pour tout entier $n$, par $a_{n+1}=2a_n+1$ est définie par récurrence. Pour
+  trouver $a_4=79$, il faut calculer $a_3$, qui nécessite de calculer $a_2$, qui
+  nécessite à son tour de calculer $a_1$, que l'on calcule gr\^ace à
+  \[
+    a_1 = 2a_0+1 = 2\times 4+1=9.
+  \]
+  Puis on trouve
+  \begin{align*}
+    a_2 &= 2a_1+1 = 2\times9+1=19 \\
+    a_3 &= 2a_2+1 = 2\times19+1=39 \\
+    a_4 &= 2a_3+1 = 2\times39+1=79.
+  \end{align*}
+\end{exemple}
+
+\begin{app}
+  Calculer les trois premiers termes de la suite $(b_n)$ définie par $b_0=3$ et,
+  pour tout $n\in\mathbb{N}$, par $b_{n+1}=2b_n-5n$.
+\end{app}
+
+\section{Représentation graphique d'une suite}
+
+\begin{defi}{Représentation graphique d'une suite}
+  Dans un repère du plan, une \textbf{représentation des termes} de la suite
+  $(u_n)$ est l'ensemble des points $M_n$ de coordonnées $(n, u_n)$ avec
+  $n\in\mathbb{N}$ un entier naturel. On obtient ce que l'on appelle un
+  \textbf{nuage de points}. 
+\end{defi}
+
+\begin{exemple}
+\begin{minipage}{.5\textwidth}
+  Soit $(u_n)$ la suite définie sur $\mathbb{N}$ par $u_n=\frac{n}{2}-1.5$. On
+  représente le nuage de points $(n, u_n)$ sur la figure ci-contre.\\
+  Les points
+  dans le repère ont donc les coordonnées suivantes :
+  $(0; -1.5)$,
+  $(1; -1)$,
+  $(2; -0.5)$,
+  $(3; 0)$,
+  $(4; 0.5)$, et
+  $(5; 1)$.
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[x=1cm, y=1cm, xmin=-.5, ymin=-2.5, ymax=2.5]
+    \end{axis}
+    \foreach \x in {0, ..., 5} {
+      \point{.5+\x}{.5*\x+1}{red};
+    }
+  \end{tikzpicture}
+\end{center}
+\end{minipage}
+\end{exemple}
+
+\begin{app}
+  Dans un repère, représenter les trois premiers termes de de la suite $(u_n)$
+  définie sur $\mathbb{N}$ par
+  \[
+    u_n=2-1,5n.
+  \]
+\end{app}
+\section{Sens de variation}
+
+\begin{defi}{Suite croissante}
+  Une suite $(u_n)$ est \textbf{croissante} à partir du rang $n_0$ lorsque, pour
+  tout entier $n\geq n_0$, on a 
+  \[
+    u_{n+1}\geq u_n.
+  \]
+\end{defi}
+
+\begin{defi}{Suite décroissante}
+  Une suite $(u_n)$ est \textbf{décroissante} à partir du rang $n_0$ lorsque, pour
+  tout entier $n\leq n_0$, on a 
+  \[
+    u_{n+1}\leq u_n.
+  \]
+\end{defi}
+
+\begin{defi}{Suite monotone}
+  Une suite est dite \textbf{monotone} à partir du rang $n_0$ lorsqu'elle est
+  soit croissante, soit décroissante à partir du rang $n_0$.
+\end{defi}
+
+\begin{exemple}
+  Soit $z$ la suite définie par $z_0=1$ et, pour tout entier naturel
+  $n\in\mathbb{N}$, $z_{n+1}=z_n-2$. Pour tout entier $n\in\mathbb{N}$, on a
+  \begin{align*}
+    z_{n+1}-z_n&=-2 \\
+    &\leq0.
+  \end{align*}
+  Donc la suite $z$ est décroissnte à partir de $n=0$.
+\end{exemple}
+
+\begin{app}
+  Étudier le sens de variation de la suite $(u_n)$ définie pour tout entier
+  $n>0$ par $u_n=\frac{1}{n}$.\\
+  \emph{Indication : on pourra étudier la différence de $u_{n+1}$ et $u_n$.}
+\end{app}
+
+\begin{app}
+  Étudier le sens de variation des suites suivantes.
+  \begin{enumerate}
+    \item La suite $u$ définie sur $\mathbb{N}$ par $u_n=n^2+3n+1$.
+    \item La suite $v$ définie sur $\mathbb{N}$ par $v_n=\frac{n-4}{n+5}$.
+    \item La suite $w$ définie sur $\mathbb{N}$ par $w_n=-2\times7^n$.
+  \end{enumerate}
+\end{app}
+
+\begin{rmq}
+  \textbf{Attention !} Toutes les suites ne sont pas croissantes ou
+  décroissantes. Parfois, une suite ne sera ni l'un ni l'autre.
+\end{rmq}
+
+\begin{methode}
+  Pour trouver le sens de variation d'une suite $(u_n)$ on peut calculer la
+  différence $u_{n+1}-u_n$ et regarder son signe.
+  \begin{itemize}
+    \item Si c'est \textbf{positif}, la suite est \textbf{croissante}.
+    \item Si c'est \textbf{négatif}, la suite est \textbf{décroissante}.
+  \end{itemize}
+\end{methode}
+
+\section{Utilisation de la calculatrice}~\\[-10mm]
+\begin{minipage}{.48\textwidth}
+  La calculatrice est très utile pour représenter graphiquement une suite ou
+  obtenir les premiers termes de la suite. Un mode d'emploi est donné dans
+  l'image ci-contre.\\[10mm]
+%  \begin{app}
+   Soit $(u_n)$, $(v_n)$, et $(w_n)$ trois suites définies sur $\mathbb{N}$ par
+   \begin{align*}
+     u_n &= n^3-n^2+1 \\
+     v_0 &=10\text{ et }v_{n+1}=\frac{1}{2}v_n+1 \\
+     w_0 &=1\text{ et }w_{n+1} = w_n+n
+   \end{align*}
+  Compléter le tableau de valeurs suivant à l'aide de la calculatrice.
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+   \hline
+   $\mathbf{u_n}$ & & & & & & \\
+   \hline
+   $\mathbf{v_n}$ & & & & & & \\
+   \hline
+   $\mathbf{w_n}$ & & & & & & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+%  \end{app}
+\end{minipage}
+\hfill
+\begin{minipage}{.48\textwidth}
+  \begin{center}
+    \includegraphics[scale=.6]{calculatrice.png}
+  \end{center}
+\end{minipage}
+
+\section{Limites de suites}
+\begin{app}
+  Soit $(u_n)$ la suite définie sur $\mathbb{N}$ par 
+  \[
+    u_n=3-\frac{5}{n+1}.
+  \]
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $0$ & $1$ & $2$ & $5$ & $10$ & $25$ & $50$ & $100$ & $200$ &
+   $500$ \\
+   \hline
+   $\mathbf{u_n}$ & & & & & & & & & & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+  \begin{enumerate}
+    \item À l'aide de la calculatrice, remplir le tableau de valeur ci-dessus.
+    \item Vers quele valeur semble se rapprocher cette suite lorsque $n$ est
+      très grand ?
+  \end{enumerate}
+\end{app}
+
+\begin{notation}
+  Lorsque les termes $u_n$ d'une suite se rapprochent d'un réel $\ell$ quand $n$
+  tend vers $+\infty$, on dit que $u$ \textbf{converge} vers $\ell$ et on note
+  \[
+    \lim_{n\to\infty}u_n=\ell.
+  \]
+\end{notation}
+\begin{defi}{Limite}
+  Lorsqu'on a $u$ une suite et $\ell\in\mathbb{R}$ un réel tel que
+  \[
+    \lim_{n\to\infty}u_n=\ell,
+  \]
+  on dit que $\ell$ est la \textbf{limite} de la suite $u$.
+\end{defi}
+
+\begin{app}
+  On considère les cinq suites suivantes.
+  \begin{align*}
+    u_n &= n^2 &
+    v_n &= \frac{1}{n} &
+    w_n &= (-1)^n &
+    t_n &= -2^n &
+    s_n &= \left( \frac{1}{n} \right)^n
+  \end{align*}
+ \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $u_n$ & $v_n$ & $w_n$ & $t_n$ & $s_n$ \\
+   \hline
+   $1$ & & & & & \\
+   \hline
+   $5$ & & & & & \\
+   \hline
+   $10$ & & & & & \\
+   \hline
+   $25$ & & & & & \\
+   \hline
+   $50$ & & & & & \\
+   \hline
+   $100$ & & & & & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+  \begin{enumerate}
+    \item Compléter le tableau ci-dessus.
+    \item Quel semble être le comportement à l'infini des suites $u$, $v$, $w$,
+      $t$ et $s$ ?
+  \end{enumerate}
+\end{app}
+\begin{notation}
+  Lorsque $u_n$ devient de plus en plus grand quand $n$ tend vers $+\infty$, on
+  dit que $u$ \textbf{diverge} vers $+\infty$ et on note
+  \[
+    \lim_{n\to+\infty}u_n=+\infty.
+  \]
+\end{notation}
+\begin{notation}
+  Lorsque $u_n$ est négatif et devient de plus en plus grand en valeur absolue
+  quand $n$ tend vers $+\infty$, on
+  dit que $u$ \textbf{diverge} vers $-\infty$ et on note
+  \[
+    \lim_{n\to+\infty}u_n=-\infty.
+  \]
+\end{notation}
+
+\begin{defi}{Absence de limite}
+  Lorsque les valeurs de $u_n$ ne se stabilisent autour d'aucune valeur réelle,
+  on dit que $u$ diverge et n'admet pas de limite.
+\end{defi}
+
+\end{document}

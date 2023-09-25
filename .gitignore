@@ -284,3 +284,4 @@ todo.md
 # Written non maths documents
 *.docx
 *.odt
+*.~lock*
