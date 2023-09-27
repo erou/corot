@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Second degré -- Éléments de correction}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+\renewcommand{\abstractname}{Avertissement -- Consignes d'utilisation}
+
+\begin{abstract}
+  Ces \textbf{éléments de correction} constituent une aide pour votre travail :
+  ils vous permettent de vérifier vos résultats mais les détails des calculs
+  sont parfois ignorés afin de laisser place à la démarche et aux méthodes. Il
+  faut souvent connaître le cours (qu'on ne rappellera pas ici) afin de
+  comprendre certaines étapes. C'est donc à vous, \emph{une fois le cours
+  connu}, d'essayer de faire les exercices, et c'est à vous de \emph{faire les
+  calculs dans le détail} afin de remplir les trous dans les corrections.
+\end{abstract}
+
+\paragraph{Exercice 14.}
+C'est un exercice de géométrie dans lequel la partie nouvelle est de déterminer
+des quantités en fonction d'une longueur $x$ qu'on ne conna\^it pas.
+
+\subparagraph{1.}
+Le nombre $x$ représente la longueur $AF$. Le point $F$ est sur le segment
+$\left[ AB \right]$ qui mesure $4$ cm. On a donc $x\in\left[ 0;4 \right]$.
+
+\subparagraph{2.}
+$AFKE$ est un carré donc on a $FK=AF=EK=x$. L'aire du triangle $EFK$ vaut donc
+$\frac{x^2}{2}$.
+
+\subparagraph{3.}
+On a $AF+FB=AB=4$. Donc $FB=4-x$. Puis $KH=FB=4-x$. On en déduit que l'aire du
+carré $KHCG$ est $(4-x)^2$.
+
+\subparagraph{4.}
+L'aire de la figure bleue est égale à l'aire du triangle bleu ajoutée à celle du
+carré bleu. Cette aire est donc égale à $\frac{x^2}{2}+(4-x)^2$.
+
+\subparagraph{5.}
+Pour cette question, l'objectif est de déterminer la valeur de $x$ qui donne la
+plus petite aire pour la partie bleue, c'est à dire la valeur de $x$ qui donne
+la plus petite valeur prise par la fonction $f$ définie sur $\left[ 0; 4
+\right]$ par
+\[
+  f(x) = \frac{x^2}{2}+(4-x)^2.
+\]
+On cherche donc la valeur pour laquelle $f$ atteint son \textbf{minimum}, et
+pour cela on va mettre $f$ sous forme développée, puis calculer la forme
+canonique de $f$ et en déduire la réponse.
+La forme développée de $f$ est
+\[
+  f(x) = \frac{3}{2}x^2-8x+16.
+\]
+La forme canonique est
+\[
+  f(x) = \frac{3}{2}\left(x-\frac{8}{3}\right)^2+\frac{16}{3}.
+\]
+On en déduit donc que l'aire minimale est atteinte pour $x=\frac{8}{3}$.
+
+\newpage
+\paragraph{Exercice 15.}
+\subparagraph{1.}
+On calcule $C(10)=200$. Donc cela coûte 200 euros.
+
+\subparagraph{2.}
+La vente d'un chargeur rapporte $20$ euros donc la vente de $x$ chargeurs
+rapporte $20x$ euros.
+
+\subparagraph{3.}
+Le bénéfice est égal aux recettes (l'argent rapporté par la vente) moins les
+coûts. C'est-à-dire que
+\begin{align*}
+  B(x) &= 20x - C(x) \\
+  &= -3x^2+120x-900.
+\end{align*}
+\subparagraph{4.(a)}
+La forme canonique est
+\[
+  B(x) = -3\left( x-20 \right)^2+300.
+\]
+\subparagraph{4.(b)}
+\begin{center}
+  \begin{tikzpicture}
+    \tkzTabInit{$x$ / 1 , $f(x)$ / 2}{$0$, $20$, $50$}
+    \tkzTabVar{+/ , -/$300$, +/ }
+\end{tikzpicture}
+\end{center}
+
+\subparagraph{4.(c)}
+Le bénéfice maximal de l'entreprise est de $300$ euros (la valeur de $\beta$),
+il a lieu pour $20$ chargeurs (la valeur de $\alpha$).
+
+\subparagraph{5.(a)}
+\begin{center}
+  \begin{tikzpicture}
+    \tkzTabInit{$x$ / 1, $f(x)$ / 2}{$0$, $10$,
+      $30$, $50$}
+    \tkzTabLine{, -, z , +, z, -,}
+  \end{tikzpicture}
+\end{center}
+
+\subparagraph{5.(b)}
+L'entreprise doit vendre entre $10$ et $30$ chargeurs pour être rentable.
+
+\end{document}
