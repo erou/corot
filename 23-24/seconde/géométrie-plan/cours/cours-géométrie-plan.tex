@@ -7,8 +7,11 @@
 \newcommand{\spacebelowexo}{5mm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 
-\title{Chapitre 3 : Géométrie dans le plan}
-\date{}
+\title{\vspace{-15mm}Chapitre 3 : Géométrie dans le plan}
+\date{\vspace{-14mm}
+\href{https://erou.forge.aeif.fr/s11/geom.html}{
+  \includegraphics[scale=.6]{qr-géométrie-plan.png}}
+\vspace{-12mm}}
 \author{}
 
 \begin{document}
@@ -66,11 +69,10 @@
   \end{minipage}
 \end{defi}
 
-\begin{exemple}
-  % TODO: enlever les coordonnées pour la version élève
-  Dans le repère juste au-dessus, les coordonnées des points $O$, $I$, $J$, et
-  $M$ sont respectivement $(0;0)$, $(1;0)$, $(0;1)$ et $(2; -1)$.
-\end{exemple}
+\begin{app}
+  Dans le repère juste au-dessus, donner les coordonnées des points $O$, $I$, $J$, et
+  $M$.
+\end{app}
 
 \begin{rmq}
   Si les droites $(OI)$ et $(OJ)$ sont perpendiculaires, le repère $(O; I, J)$
@@ -83,14 +85,13 @@
   $A(x_A; y_A)$.
 \end{notation}
 
-\begin{exemple}
-  % TODO: enlever les coordonnées pour la version élève
+\begin{app}~\\[-6mm]
   \begin{minipage}{.5\textwidth}
     \begin{itemize}
-      \item L'ordonnée du point $A$ est $2$.
-      \item L'abscisse du point $B$ est $0$.
-      \item Les coordonnées de $C$ sont $(-2; 0)$.
-      \item Les coordonnees de $D$ sont $(-1; 2)$.
+      \item L'ordonnée du point $A$ est :
+      \item L'abscisse du point $B$ est :
+      \item Les coordonnées de $C$ sont :
+      \item Les coordonnees de $D$ sont :
     \end{itemize}
 \end{minipage}
   \begin{minipage}{.5\textwidth}
@@ -121,9 +122,7 @@
     \end{tikzpicture}
     \end{center}
   \end{minipage}
-\end{exemple}
-
-%TODO: autre exemple dans un repère non orthonormé, pour voir l'intérêt
+\end{app}
 
 \subsection{Coordonnées du milieu d'un segment}
 \begin{prop}
@@ -138,9 +137,8 @@
   L'abscisse de $K$ est la moyenne des abscisses de $A$ et $B$. L'ordonnée de
   $K$ est la moyenne des ordonnées de $A$ et $B$.
 \end{rmq}
-\begin{exemple}
+\begin{app}~\\[-5mm]
   \begin{minipage}{.6\textwidth}
-  %TODO: v eleve
   Soient $A(1; 1)$, $B(-2; 0)$, $C(-1; -2)$ et $D(2; -1)$ quatre points dans un
   repère $(O; I, J)$.
   \begin{enumerate}
@@ -169,7 +167,7 @@
     \end{tikzpicture}
     \end{center}
   \end{minipage}
-\end{exemple}
+\end{app}
 
 \section{Distance dans un repère orthonormé}
 \begin{prop}
@@ -181,13 +179,10 @@
   \]
 \end{prop}
 
-\begin{exemple}
-  Soit $(O; I, J)$ un repère orthonormé et $A(-1; 2)$ et $B(4; 3)$, on a :
-  \[
-    AB = \sqrt{(x_B-x_A)^2+(y_B-y_A)^2} = \sqrt{(4-(-1))^2+(3-2)^2} =
-    \sqrt{25+1}=\sqrt{26}.
-  \]
-\end{exemple}
+\begin{app}
+  Soit $(O; I, J)$ un repère orthonormé et $A(-1; 2)$ et $B(4; 3)$. Calculer la
+  distance $AB$.
+\end{app}
 
 \begin{app}
   Dans un repère orthonormé $(O; I, J)$ du plan, on considère les points $A$,
@@ -201,13 +196,13 @@
   $C$ sont alignés dans cet ordre si, et seulement si, $AC = AB+BC$.
 \end{prop}
 
-\begin{exemple}
+\begin{app}
   Soit $(O; I, J)$ un repère orthonormé et $A(-2; -2)$, $B(3; 1)$ et
   $C(8; 4)$ trois points de ce repère.\\
   Ces points sont-ils alignés ?
-\end{exemple}
+\end{app}
 
-\begin{exemple}
+\begin{app}~\\[-5mm]
   \begin{minipage}[]{.5\textwidth}
     Dans le repère orthonormé $(A; I, J)$, on considère la figure ci-contre
     composée d'un carrée $ABCD$ et de deux points $E$ et $F$. Les points $E$,
@@ -250,7 +245,7 @@
     \end{tikzpicture}
     \end{center}
   \end{minipage}
-\end{exemple}
+\end{app}
 
 \section{Configurations du plan}
 \subsection{Propriétés dans le triangle}
@@ -259,7 +254,7 @@
   trois sommets du triangle.
 \end{defi}
 
-\begin{prop}
+\begin{prop}~\\[-7mm]
   \begin{minipage}{.5\textwidth}
   Dans un triangle, les médiatrices des côtés sont concourantes en un point $O$
   qui est le centre du \href{https://www.geogebra.org/m/wv4ccwvu}{cercle
@@ -315,7 +310,7 @@
   plus proche de $M$.
 \end{prop}
 
-\begin{defi}{Hauteur}
+\begin{defi}{Hauteur}~\\[-4mm]
   \begin{minipage}{.5\textwidth}
     Dans un triangle $ABC$, la \textbf{hauteur} issue du sommet $A$ est la
     droite passant par $A$ et par $H$, le projeté orthogonal de $A$ sur $(BC)$ : il
@@ -337,7 +332,8 @@
   \end{minipage}
 \end{defi}
 
-\begin{app}
+\newpage
+\begin{app}~\\[-5mm]
   \begin{minipage}{.7\textwidth}
     On considère les points dans le repère ci-contre.
     \begin{enumerate}
