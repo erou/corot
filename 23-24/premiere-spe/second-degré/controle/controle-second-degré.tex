@@ -1,0 +1,201 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\newcommand{\Cf}{\mathscr{C}_{f}}
+\newcommand{\Cg}{\mathscr{C}_{g}}
+\newcommand{\Ch}{\mathscr{C}_{h}}
+
+\begin{document}
+
+% Objectifs
+% =========
+%
+% + retrouver une loi de probabilité en utilisant
+%   + un arbre
+%   + un tableau
+% + calculer une espérance
+% + interpréter une espérance
+% + une question avec une variable ?
+%
+% Barême
+% ======
+%
+% I.1 0.5
+% I.2 0.5
+% I.3 1
+% I.4 0.5
+% I.5 1 + 0.5 + 0.5 = 2
+% I.6 1.5 (1 racines + 0.5 tableau) + 0.5 = 2
+%
+% II.1 0.5
+% II.2 1 racines 0.5 tableau + 0.5 conjecture
+% II.3 0.5
+% II.4 1 racunes 0.5 tableau
+% II.5 0.5
+% II.6 0.5
+% II.7 0.5 construction tableau + 0.5 conclusion
+%
+% III.1 0.5 × 3 = 1.5
+% III.2 1
+% III.3 0.5 × 2 = 1
+% III.4 1
+% III.5 1 + 0.5 + 0.5 = 1.5
+%
+% IV. Rédaction/correction de la copie : 1
+
+\begin{center}
+\textbf{\LARGE \textsc{Contrôle -- Second degré}}\\[2mm]
+
+{\large Mercredi 04 Octobre 2023, durée : 1h00}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif. Un point est dédié à la
+rédaction et la propreté de la copie.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+\begin{exo}[$6,5$ points]
+  Un artisan fabrique des boîtes à bijoux en bois. Il peut en fabriquer jusqu'à
+  $150$ par mois. On suppose que toute la production est vendue, et chaque boîte
+  est vendue $50$ euros. Le coût de fabrication de $x$ boîtes est donné par la
+  fonction 
+  \[
+    f(x) = 0,23x^2+4x+300.
+  \]
+  \begin{enumerate}
+    \item Quel est le coût de fabrication de $20$ boîtes ?
+    \item On note $R(x)$ la recette, en euros, engendrée par la vente de $x$
+      boîtes. Exprimer $R(x)$ en fonction de $x$.
+    \item Montrer que le bénéfice, en euros, engendré par la vente de $x$ boîtes
+      est donné par la fonction $B$, définie sur $[0;150]$ par
+      \[
+        B(x) = -0,23x^2+46x-300.
+      \]
+    \item Quel est le bénéfice réalisé pour la vente de $20$ boîtes ?
+    \item \begin{enumerate}
+        \item Donner la forme canonique de $B$.
+        \item Donner le tableau de variation de $B$.
+        \item En déduire le bénéfice maximal de l'artisan. Pour combien de boîte
+          est-il obtenu ?
+      \end{enumerate}
+    \item \begin{enumerate}
+        \item Donner le tableau de signe de $B$.
+        \item Combien de boîte l'artisan doit-il fabriquer pour être rentable ?
+      \end{enumerate}
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[$6,5$ points]
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x) = -x^2+3x+1$. On note
+  $\Cf$ la courbe représentative de $f$ dans le plan muni d'un repère
+  orthonormé.
+  \begin{enumerate}
+    \item En utilisant la calculatrice, conjecturer la position relative de
+      $\Cf$ par rapport à l'axe des abscisses.
+    \item \begin{enumerate}
+        \item Donner le tableau de signe de la fonction $f$.
+        \item Valider ou corriger votre conjecture.
+      \end{enumerate}
+  \end{enumerate}
+  On considère maintenant une fonction $g$ définie sur $\mathbb{R}$ par $g(x) =
+  x^2+x+1$ et on note $\Cg$ sa courbe représentative.
+  \begin{enumerate}
+      \setcounter{enumi}{2}
+    \item En utilisant la calculatrice, conjecturer la position relative de
+      $\Cf$ par rapport à $\Cg$, en précisant les éventuels points
+      d'intersection.
+    \item Étudier le signe de $f(x)-g(x)$ suivant les valeurs du nombre réel
+      $x$.
+    \item Valider ou corriger votre conjecture concernant $\Cf$ et $\Cg$.
+  \end{enumerate}
+  On considère finalement la fonction $h$ définie par
+  \[
+    h(x) = \frac{f(x)}{g(x)} = \frac{-x^2+3x+1}{x^2+x+1}.
+  \]
+  \begin{enumerate}
+      \setcounter{enumi}{5}
+    \item Vérifier que la fonction $h$ est bien définie sur $\mathbb{R}$.
+    \item Résoudre l'équation $h(x)\geq0$.
+  \end{enumerate}
+\end{exo}
+
+\newpage
+\begin{exo}[$6$ points]
+Soit $ABCD$ un rectangle de côtés $AB=10$ cm et $BC=5$
+cm. $AEFG$ est un carré de côté $x$ et $FICH$ est un rectangle. On note $f(x)$
+l'aire de la partie blanche.\\
+\begin{minipage}{.5\textwidth}
+  \begin{enumerate}
+    \item \begin{enumerate}
+        \item Justifier que $$AG=GF=EF=AE=x.$$
+        \item Combien la longueur $AG$ peut-elle valoir au maximum ?
+        \item À quel intervalle appartient $x$ ?
+      \end{enumerate}
+    \item Calculer $\mathcal A_{AEF}$, l'aire du triangle $AEF$, en fonction de
+      $x$.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=.8]
+    \node[label={[shift={(0,0)}]$A$}] (A) at (0, 5) {};
+    \node[label={[shift={(0,0)}]$E$}] (E) at (3, 5) {};
+    \node[label={[shift={(0,0)}]$B$}] (B) at (10, 5) {};
+    \node[label={[shift={(-.3,-.3)}]$G$}] (G) at (0, 2) {};
+    \node[label={[shift={(.2,-.7)}]$F$}] (F) at (3, 2) {};
+    \node[label={[shift={(.2,-.3)}]$I$}] (I) at (10, 2) {};
+    \node[label={[shift={(0,-.7)}]$D$}] (D) at (0, 0) {};
+    \node[label={[shift={(0,-.7)}]$H$}] (H) at (3, 0) {};
+    \node[label={[shift={(0,-.7)}]$C$}] (C) at (10, 0) {};
+
+  \fill[blue!70!black, opacity=.1] (A.center) -- (F.center) -- (G.center);
+  \fill[blue!70!black, opacity=.1] (G.center) -- (F.center) -- (H.center) --
+  (D.center);
+  \fill[blue!70!black, opacity=.1] (E.center) -- (B.center) -- (I.center) --
+  (F.center);
+  \fill[blue!70!black, opacity=.1] (F.center) -- (I.center) -- (C.center);
+  \draw[thick, blue!70!black] (A.center) -- (B.center) -- (C.center) -- (D.center) --
+  (G.center) -- (I.center);
+  \draw[thick, blue!70!black] (C.center) -- (F.center) -- (G.center) -- (A.center) --
+  (F.center) -- (E.center) (F.center)--(H.center);
+
+  \draw[stealth-stealth] (A.north) -- node[above] {$x$} (E.north);
+  \end{tikzpicture}
+\end{center}
+\end{minipage}
+\begin{enumerate}
+    \setcounter{enumi}{2}
+  \item \begin{enumerate}
+      \item Exprimer les longueurs $FH$ et $HC$ en fonction de $x$.
+      \item En déduire l'aire $\mathcal A_{FCH}$ du triangle $FCH$.
+    \end{enumerate}
+  \item Déterminer l'expression de $f(x)$ sous forme développée.
+  \item \emph{On admet que $f(x) = x^2-\frac{15}{2}x+25$.}
+    \begin{enumerate}
+      \item Mettre $f(x)$ sous forme canonique.
+      \item Donner le tableau de variations de $f$.
+      \item Pour quelle valeur de $x$ l'aire blanche est-elle minimale ?
+    \end{enumerate}  
+\end{enumerate}
+\end{exo}
+
+
+\end{document}
