@@ -16,12 +16,6 @@
 % Objectifs
 % =========
 %
-% + retrouver une loi de probabilité en utilisant
-%   + un arbre
-%   + un tableau
-% + calculer une espérance
-% + interpréter une espérance
-% + une question avec une variable ?
 %
 % Barême
 % ======
@@ -65,14 +59,74 @@
 \end{center}
 
 \vspace{2mm}
-\noindent Le barême est donné à titre indicatif. Un point est dédié à la
-rédaction et la propreté de la copie.
+\noindent Le barême est donné à titre indicatif.
 \vspace{2mm}
 \begin{center}
   Bon courage !
 \end{center}
 
-\begin{exo}[$6,5$ points]
+\begin{exo}[$2$ points]~\\[-7mm]
+  \begin{minipage}{.47\textwidth}
+  Une fonction $f$ polynôme du second degré est représentée graphiquement
+  ci-contre. On note $f(x) = ax^2+bx+c$ la forme développée de $f$.
+  \begin{enumerate}
+    \item Quel est le signe de $a$ ?
+    \item Quel est le signe du discriminant $\Delta$ ?
+  \end{enumerate}
+  \emph{On prendra soin de justifier les réponses.}
+\end{minipage}
+\begin{minipage}{.47\textwidth}
+  \begin{center}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[red, very thick, samples=201, domain=-5:5]{-.5*(x+2)^2+1};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\end{exo}
+
+\begin{exo}[$4$ points]
+  On considère la fonction polynôme du second degré suivante :
+  \[
+    f:x\mapsto 2x^2+3x-1.
+  \]
+  \begin{enumerate}
+    \item Résoudre l'équation $f(x) = 0$.
+    \item Donner la forme factorisée de $f$.
+    \item Donner le tableau de signes de $f$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[$2$ points]
+  On considère la fonction polynôme du second degré suivante :
+  \[
+    g:x\mapsto -4x^2+4x-1.
+  \]
+  \begin{enumerate}
+    \item Déterminer la forme canonique de la fonction $g$.
+    \item Dresser le tableau de variation de $g$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[$3$ points]
+  On considère la fonction $h$ définie par
+  \[
+    h(x) = \frac{3x}{x^2+x+1}.
+  \]
+  \begin{enumerate}
+    \item 
+      \begin{enumerate}
+        \item Prouver que, pour tout $x\in\mathbb{R}$, on a $x^2+x+1>0$.
+        \item En déduire que la fonction $h$ est bien définie sur $\mathbb{R}$.
+      \end{enumerate}
+    \item Résoudre l'inéquation $h(x)\leq0$.
+  \end{enumerate}
+\end{exo}
+
+% .5+1+1+.5+1.5+1+.5+2+1
+\newpage
+\begin{exo}[$9$ points]
   Un artisan fabrique des boîtes à bijoux en bois. Il peut en fabriquer jusqu'à
   $150$ par mois. On suppose que toute la production est vendue, et chaque boîte
   est vendue $50$ euros. Le coût de fabrication de $x$ boîtes est donné par la
@@ -103,7 +157,8 @@ rédaction et la propreté de la copie.
   \end{enumerate}
 \end{exo}
 
-\begin{exo}[$6,5$ points]
+\begin{comment}
+\begin{exo}[$9$ points ?]
   Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x) = -x^2+3x+1$. On note
   $\Cf$ la courbe représentative de $f$ dans le plan muni d'un repère
   orthonormé.
@@ -196,6 +251,7 @@ l'aire de la partie blanche.\\
     \end{enumerate}  
 \end{enumerate}
 \end{exo}
+\end{comment}
 
 
 \end{document}
