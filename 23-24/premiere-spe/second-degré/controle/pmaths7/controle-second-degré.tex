@@ -13,33 +13,35 @@
 
 \begin{document}
 
+% Objectifs
+% =========
+%
+%
 % Barême
 % ======
 %
-% I.1 0.5 signe 0.5 justification
-% I.2 0.5 signe 0.5 justification
+% I.1 0.5
+% I.2 0.5
+% I.3 1
+% I.4 0.5
+% I.5 1 + 0.5 + 0.5 = 2
+% I.6 1.5 (1 racines + 0.5 tableau) + 0.5 = 2
 %
-% II.1 0.5 discriminant 0.5 formules racines 0.5 calul racine 0.5 conclusion
-% II.2 0.5 forme 0.5 rédaction propre
-% II.3 0.5 tableau 0.5 justification
+% II.1 0.5
+% II.2 1 racines 0.5 tableau + 0.5 conjecture
+% II.3 0.5
+% II.4 1 racunes 0.5 tableau
+% II.5 0.5
+% II.6 0.5
+% II.7 0.5 construction tableau + 0.5 conclusion
 %
-% III.1 0.5 alpha / beta 0.5 calcul 0.5 conclusion
-% III.2 0.5 tableau 
+% III.1 0.5 × 3 = 1.5
+% III.2 1
+% III.3 0.5 × 2 = 1
+% III.4 1
+% III.5 1 + 0.5 + 0.5 = 1.5
 %
-% IV.1(a) 0.5 déterminant 0.5 justification signe
-% IV.1(b) 0.5 justification
-% IV.2 0.5 signe de h 0.5 tableau récapitulatif ou justification 0.5 conclusion 
-%
-% V.1 0.5 démarche/justification 0.5 calcul
-% V.2 0.5 démarche 0.5 expression
-% V.3 0.5 démarche 0.5 calcul
-% V.4 0.5 calcul
-% V.5(a) 0.5 alpha beta 0.5 calcul 0.5 forme finale
-% V.5(b) 0.5 tableau 0.5 justification
-% V.5(c) 0.5 résultat
-% V.6(a) 0.5 déterminant 0.5 formules racines 0.5 calcul 0.5 tableau
-% V.6(b) 0.5 conclusion
-
+% IV. Rédaction/correction de la copie : 1
 
 \begin{center}
 \textbf{\LARGE \textsc{Contrôle -- Second degré}}\\[2mm]
@@ -77,7 +79,7 @@
   \begin{center}
 \begin{tikzpicture}
 \begin{axis}
-\addplot[red, very thick, samples=201, domain=-5.5:5.5]{.25*(x-1.3)^2+.7};
+\addplot[red, very thick, samples=201, domain=-5:5]{-.5*(x+2)^2+1};
 \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -87,7 +89,7 @@
 \begin{exo}[$4$ points]
   On considère la fonction polynôme du second degré suivante :
   \[
-    f:x\mapsto 3x^2+5x-1.
+    f:x\mapsto 2x^2+3x-1.
   \]
   \begin{enumerate}
     \item Résoudre l'équation $f(x) = 0$.
@@ -99,7 +101,7 @@
 \begin{exo}[$2$ points]
   On considère la fonction polynôme du second degré suivante :
   \[
-    g:x\mapsto -9x^2+6x-1.
+    g:x\mapsto -4x^2+4x-1.
   \]
   \begin{enumerate}
     \item Déterminer la forme canonique de la fonction $g$.
@@ -110,47 +112,47 @@
 \begin{exo}[$3$ points]
   On considère la fonction $h$ définie par
   \[
-    h(x) = \frac{5x}{x^2-x+1}.
+    h(x) = \frac{3x}{x^2+x+1}.
   \]
   \begin{enumerate}
     \item 
       \begin{enumerate}
-        \item Prouver que, pour tout $x\in\mathbb{R}$, on a $x^2-x+1>0$.
+        \item Prouver que, pour tout $x\in\mathbb{R}$, on a $x^2+x+1>0$.
         \item En déduire que la fonction $h$ est bien définie sur $\mathbb{R}$.
       \end{enumerate}
-    \item Résoudre l'inéquation $h(x)\geq0$.
+    \item Résoudre l'inéquation $h(x)\leq0$.
   \end{enumerate}
 \end{exo}
 
 % .5+1+1+.5+1.5+1+.5+2+1
 \newpage
 \begin{exo}[$9$ points]
-  Une entreprise fabrique des piscines gonflables. Elle peut en fabriquer jusqu'à
-  $150$ par jour. On suppose que toute la production est vendue, et chaque
-  piscine est vendue $70$ euros. Le coût de fabrication de $x$ piscines est donné par la
+  Un artisan fabrique des boîtes à bijoux en bois. Il peut en fabriquer jusqu'à
+  $150$ par mois. On suppose que toute la production est vendue, et chaque boîte
+  est vendue $50$ euros. Le coût de fabrication de $x$ boîtes est donné par la
   fonction 
   \[
-    f(x) = 0,31x^2+8x+400.
+    f(x) = 0,23x^2+4x+300.
   \]
   \begin{enumerate}
-    \item Quel est le coût de fabrication de $30$ piscines ?
+    \item Quel est le coût de fabrication de $20$ boîtes ?
     \item On note $R(x)$ la recette, en euros, engendrée par la vente de $x$
-      piscines. Exprimer $R(x)$ en fonction de $x$.
-    \item Montrer que le bénéfice, en euros, engendré par la vente de $x$
-      piscines est donné par la fonction $B$, définie sur $[0;150]$ par
+      boîtes. Exprimer $R(x)$ en fonction de $x$.
+    \item Montrer que le bénéfice, en euros, engendré par la vente de $x$ boîtes
+      est donné par la fonction $B$, définie sur $[0;150]$ par
       \[
-        B(x) = -0,31x^2+62x-400.
+        B(x) = -0,23x^2+46x-300.
       \]
-    \item Quel est le bénéfice réalisé pour la vente de $30$ piscines ?
+    \item Quel est le bénéfice réalisé pour la vente de $20$ boîtes ?
     \item \begin{enumerate}
         \item Donner la forme canonique de $B$.
         \item Donner le tableau de variation de $B$.
-        \item En déduire le bénéfice maximal de l'entreprise. Pour combien de
-          piscines est-il obtenu ?
+        \item En déduire le bénéfice maximal de l'artisan. Pour combien de boîte
+          est-il obtenu ?
       \end{enumerate}
     \item \begin{enumerate}
         \item Donner le tableau de signe de $B$.
-        \item Combien de piscines l'entreprise doit-elle fabriquer pour être rentable ?
+        \item Combien de boîte l'artisan doit-il fabriquer pour être rentable ?
       \end{enumerate}
   \end{enumerate}
 \end{exo}
@@ -250,5 +252,6 @@ l'aire de la partie blanche.\\
 \end{enumerate}
 \end{exo}
 \end{comment}
+
 
 \end{document}

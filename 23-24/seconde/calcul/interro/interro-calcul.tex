@@ -3,89 +3,131 @@
 \newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
 \newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
 \newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
-\newcommand{\topbotmargins}{2cm}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{1cm}
+\newcommand{\spacebelowexo}{3mm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
-%\input{layout-nb.tex}
-
-%\title{Chapitre 1 : Ensembles de nombres}
-%\date{}
-%\author{}
 
 \begin{document}
-%\maketitle\thispagestyle{fancy}
 
+\noindent\textbf{Prénom :}\hfill\textbf{Nom :}\hfill~
 \begin{center}
-  \textbf{\LARGE Interrogation - calcul littéral}
+  \textbf{\LARGE Interrogation}
 \end{center}
 
-\paragraph{Exercice 1.} Calculer et simplifier les fractions suivantes.
+\begin{exo}
+  Compléter le tableau ci-dessous.
+  \begin{center}
+    \renewcommand{\arraystretch}{2}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Inégalités} & \textbf{Intervalle} & \textbf{Représentation sur une
+    droite graduée} \\
+    \hline
+    & & \begin{tikzpicture}
+  \draw (-4.5,0) grid (4.5,0);
+  \draw[-stealth] |- (4.5,0) node[above] {};
+  \foreach \x in {-4,...,4} \draw[black!40!white] (\x,-.1) -- (\x,.1);
+  \draw[thick] (0, .1) node[above] {$0$}--(0, -.1);
+  \draw[thick] (1, .1) node[above] {$1$}--(1, -.1);
+  \draw[blue!70!white, very thick] (-2.9, -.3) -- (-3, -.3) -- (-3, .3) -- (-2.9, .3);
+  \draw[blue!70!white, very thick] (-3, 0) -- (2, 0);
+  \draw[blue!70!white, very thick] (2.1, -.3) -- (2, -.3) -- (2, .3) -- (2.1, .3);
+\end{tikzpicture} \\
+    \hline
+    $x\geq -1$ & & \\
+    \hline
+  \end{tabular}
+  \end{center}
+\end{exo}
+
+\begin{exo}
+Calculer et simplifier les fractions suivantes.
 \begin{align*}
   \textbf{1)}\;& a = \frac{1}{3}-\frac{1}{4} &
   \textbf{2)}\;& b = \frac{\;\frac{7}{2}\;}{\frac{3}{4}} &
-%  \textbf{3)}\;& c = 2+\frac{1}{5}
+  \textbf{3)}\;& c = 2+\frac{3(x+1)}{5(x+1)}
 \end{align*}
+\end{exo}
 
-\paragraph{Exercice 2.} Écrire le nombre suivant sous la forme $2^k$, avec
+\begin{exo}
+Écrire les nombres suivants sous la forme $2^k$, avec
 $k\in\mathbb{Z}$.
-\[
-  \frac{2^2\times2^7}{2^5}
-\]
+\begin{align*}
+  a &= \frac{2^2\times2^7}{2^5} &
+  b &= \frac{16^{4}\times4}{32^{-2}}
+\end{align*}
 %  \textbf{2)}\;& \left( 2^3 \right)^4\times\left( \frac{1}{2} \right)^5
-\paragraph{Exercice 3.}
+\end{exo}
+
+\begin{exo}~
 \begin{enumerate}
   \item Factoriser $x^2-6x+9$.
   \item Développer $(2x+1)^2$.
+  \item Développer $\left(x-\frac{1}{2}\right)^2$.
 \end{enumerate}
+\end{exo}
 
-\vspace{2cm}
+\vspace{3cm}
 
+\noindent\textbf{Prénom :}\hfill\textbf{Nom :}\hfill~
 \begin{center}
-  \textbf{\LARGE Interrogation - calcul littéral}
+  \textbf{\LARGE Interrogation}
 \end{center}
 
-\paragraph{Exercice 1.} Calculer et simplifier les fractions suivantes.
+\setcounter{exo}{0}
+\begin{exo}
+  Compléter le tableau ci-dessous.
+  \begin{center}
+    \renewcommand{\arraystretch}{2}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Inégalités} & \textbf{Intervalle} & \textbf{Représentation sur une
+    droite graduée} \\
+    \hline
+    & & \begin{tikzpicture}
+  \draw (-4.5,0) grid (4.5,0);
+  \draw[-stealth] |- (4.5,0) node[above] {};
+  \foreach \x in {-4,...,4} \draw[black!40!white] (\x,-.1) -- (\x,.1);
+  \draw[thick] (0, .1) node[above] {$0$}--(0, -.1);
+  \draw[thick] (1, .1) node[above] {$1$}--(1, -.1);
+  \draw[blue!70!white, very thick] (-2.9, -.3) -- (-3, -.3) -- (-3, .3) -- (-2.9, .3);
+  \draw[blue!70!white, very thick] (-3, 0) -- (2, 0);
+  \draw[blue!70!white, very thick] (2.1, -.3) -- (2, -.3) -- (2, .3) -- (2.1, .3);
+\end{tikzpicture} \\
+    \hline
+    $x\geq -1$ & & \\
+    \hline
+  \end{tabular}
+  \end{center}
+\end{exo}
+
+\begin{exo}
+Calculer et simplifier les fractions suivantes.
 \begin{align*}
   \textbf{1)}\;& a = \frac{1}{3}-\frac{1}{4} &
   \textbf{2)}\;& b = \frac{\;\frac{7}{2}\;}{\frac{3}{4}} &
-%  \textbf{3)}\;& c = 2+\frac{1}{5}
+  \textbf{3)}\;& c = 2+\frac{3(x+1)}{5(x+1)}
 \end{align*}
+\end{exo}
 
-\paragraph{Exercice 2.} Écrire le nombre suivant sous la forme $2^k$, avec
+\begin{exo}
+Écrire les nombres suivants sous la forme $2^k$, avec
 $k\in\mathbb{Z}$.
-\[
-  \frac{2^2\times2^7}{2^5}
-\]
-%  \textbf{2)}\;& \left( 2^3 \right)^4\times\left( \frac{1}{2} \right)^5
-\paragraph{Exercice 3.}
-\begin{enumerate}
-  \item Factoriser $x^2-6x+9$.
-  \item Développer $(2x+1)^2$.
-\end{enumerate}
-
-\vspace{2cm}
-
-\begin{center}
-  \textbf{\LARGE Interrogation - calcul littéral}
-\end{center}
-
-\paragraph{Exercice 1.} Calculer et simplifier les fractions suivantes.
 \begin{align*}
-  \textbf{1)}\;& a = \frac{1}{3}-\frac{1}{4} &
-  \textbf{2)}\;& b = \frac{\;\frac{7}{2}\;}{\frac{3}{4}} &
-%  \textbf{3)}\;& c = 2+\frac{1}{5}
+  a &= \frac{2^2\times2^7}{2^5} &
+  b &= \frac{16^{4}\times4}{32^{-2}}
 \end{align*}
-
-\paragraph{Exercice 2.} Écrire le nombre suivant sous la forme $2^k$, avec
-$k\in\mathbb{Z}$.
-\[
-  \frac{2^2\times2^7}{2^5}
-\]
 %  \textbf{2)}\;& \left( 2^3 \right)^4\times\left( \frac{1}{2} \right)^5
-\paragraph{Exercice 3.}
+\end{exo}
+
+\begin{exo}~
 \begin{enumerate}
   \item Factoriser $x^2-6x+9$.
   \item Développer $(2x+1)^2$.
+  \item Développer $\left(x-\frac{1}{2}\right)^2$.
 \end{enumerate}
+\end{exo}
+
 
 
 \end{document}
