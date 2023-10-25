@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Résolution d'équation -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\title{\vspace{-15mm}Chapitre 4 : Résolution d'équation}
+\date{\vspace{-14mm}
+\href{https://erou.forge.aeif.fr/s11/equation.html}{
+  \includegraphics[scale=.6]{qr-equation.png}}
+\vspace{-12mm}}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Équations du premier degré}
+\begin{defi}{Équation}
+  Une \textbf{équation} est une égalité contenant une quantité inconnue (souvent
+  notée $x$, ou $y$, ou $t$, ...).
+\end{defi}
+\begin{exemple}
+  L'égalité $x-3=2$ est une équation dont l'inconnue est $x$.
+\end{exemple}
+\begin{defi}{Résolution d'une équation}
+  \textbf{Résoudre} une équation (dans $\mathbb{R}$) consiste à déterminer les valeurs que peut prendre
+  l'inconnue (dans $\mathbb{R}$) pour rendre l'égalité vraie. Ces valeurs sont appelées les
+  \textbf{solutions} de l'équation.
+\end{defi}
+\begin{exemple}
+ Considérons l'équation $x-3=2$. Le nombre $5$ est une solution de cette
+ équation car l'égalité $5-2=3$ est vraie. 
+\end{exemple}
+\begin{prop}
+  Effectuer \textbf{la même opération} (addition, soustraction,
+  multiplication, division, ...) des deux côtés d'une égalité conserve cette
+  égalité.
+\end{prop}
+\begin{notation}
+  Lorsque deux équations d'inconnue $x$ sont vraies pour les mêmes valeurs de
+  $x$, on dit qu'elles sont \textbf{équivalentes} et on utilise le symbole
+  $\Longleftrightarrow$.
+\end{notation}
+\begin{rmq}
+  \textbf{Attention !} Il ne faut pas confondre les symboles $=$ et
+  $\Leftrightarrow$. Ils ne veulent \textbf{pas} dire la même chose.
+\end{rmq}
+\begin{exemple}
+  En ajoutant $3$ des deux côtés de l'égalité, on peut écrire
+  \begin{align*}
+    x-3=2 &\Longleftrightarrow x-3+3=2+3 \\
+    &\Longleftrightarrow x=5
+  \end{align*}
+\end{exemple}
+\begin{methode}
+  \begin{enumerate}
+    \item On applique des opérations successives aux deux membres de l'équation afin
+      d'obtenir l'inconnue d'un seul côté.
+    \item On obtient ensuite la valeur de l'inconnue en multipliant ou divisant
+      par le nombre approprié.
+  \end{enumerate}
+\end{methode}
+\begin{app}
+  Résoudre les équations suivantes dans $\mathbb{R}$.
+  \begin{align*}
+    \textbf{a)}\;& 6x+7=0 &
+    \textbf{b)}\;& 8x-1=2x+4 &
+    \textbf{c)}\;& 3(4x-1) = 12x+2
+  \end{align*}
+\end{app}
+\begin{notation}
+  Si une équation a, par exemple, le nombre $1$ pour solution, on écrira que
+  l'ensemble des solutions de l'équation est $\mathscr S=\left\{ 1
+  \right\}$.
+\end{notation}
+\begin{notation}
+  Si une équation n'a aucune solution dans $\mathbb{R}$, on note l'ensemble de
+  ses solutions $\mathscr S=\emptyset$. Cet ensemble est appelé
+  \textbf{ensemble vide} et ne contient aucun élément.
+\end{notation}
+
+
+\section{Équations produit nul}
+\begin{prop}
+  Un produit est nul si et seulement si l'un au moins de ses facteurs est nul.
+\end{prop}
+\begin{exemple}
+  On considère l'équation $(3x+2)(4x-6)=0$ dans $\mathbb{R}$.
+  \begin{align*}
+    (3x+2)(x-6) = 0 &\Longleftrightarrow 3x+2 = 0\text{ ou } x-6=0 \\
+    &\Longleftrightarrow 3x = -2 \text{ ou } x = 6 \\
+    &\Longleftrightarrow x = \frac{-2}{3} \text{ ou } x = 6
+  \end{align*}
+  L'ensemble des solutions de cette équation dans $\mathbb{R}$ est donc
+  $\mathscr S=\left\{ \dfrac{-2}{3}; 6 \right\}$.
+\end{exemple}
+\begin{app}
+  Résoudre les équations suivantes dans $\mathbb{R}$.
+  \begin{align*}
+    \textbf{a)}\;& (5x-2)(x+3) = 0 &
+    \textbf{b)}\;& \left(2x-\frac{1}{3}\right)(1-x) = 0 &
+  \end{align*}
+\end{app}
+
+\end{document}
