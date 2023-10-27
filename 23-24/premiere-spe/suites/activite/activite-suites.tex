@@ -1,0 +1,104 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Suites -- Activité d'introduction}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+\section{Exemples de suites définies par une formule explicite}
+
+\begin{exemple}
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $\cdots$ &
+   $10$ \\
+   \hline
+   $\mathbf{u(n)}$ & $0$ & $1$ & $4$ & $9$ & $16$ & $25$ & $36$ & $49$ &
+   $\cdots$ & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+
+  \begin{enumerate}
+    \item En trouvant un lien logique entre $u(n)$ et $n$, compléter la case
+      manquante du tableau.
+    \item Calculer $u(15)$.
+    \item Soit $n\in\mathbb{N}$ un entier. Exprimer $u(n)$ en fonction de $n$.
+    \item Soit $n\in\mathbb{N}$ un entier. Exprimer $u(2n)$ en fonction de $n$.
+  \end{enumerate}
+\end{exemple}
+
+\begin{exemple}
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ &
+   $9$ \\
+   \hline
+   $\mathbf{u_n}$ & $3$ & $5$ & $7$ & $9$ & $11$ & $13$ & $15$ & $17$ &
+   & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+  \begin{enumerate}
+    \item Compléter les cases manquantes dans le tableau.
+    \item Soit $n\in\mathbb{N}$ un entier. Exprimer $u_n$ en fonction de $n$.
+    \item Calculer $u_{100}$.
+  \end{enumerate}
+\end{exemple}
+
+\section{Exemples de suites définies par récurrence}
+\begin{exemple}
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ \\
+   \hline
+   $\mathbf{u_n}$ & $1$ & $2$ & $4$ & $8$ & $16$ & $32$ & $64$ & & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+  \begin{enumerate}
+    \item Compléter les cases manquantes dans le tableau.
+    \item \begin{enumerate}
+        \item Exprimer $u_1$ en fonction de $u_0$.
+        \item Exprimer $u_2$ en fonction de $u_1$.
+        \item Exprimer $u_5$ en fonction de $u_4$.
+      \end{enumerate}
+    \item Soit $n\in\mathbb{N}$ un entier. Exprimer $u_{n+1}$ en fonction de $u_n$.
+    \item Peut-on calculer simplement $u_{20}$ ?
+  \end{enumerate}
+\end{exemple}
+
+\begin{exemple}
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
+   \hline
+   $\mathbf{n}$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
+   \hline
+   $\mathbf{u_n}$ & $1$ & $1$ & $2$ & $6$ & $24$ & $120$ & \\
+   \hline
+  \end{tabularx}
+  \end{center}
+  \begin{enumerate}
+    \item Compléter la case manquante dans le tableau.
+    \item Quel est le calcul permettant de passer de $u_2$ à $u_3$ ? De
+      $u_3$ à $u_4$ ? De $u_6$ à $u_7$ ?
+    \item Soit $n\in\mathbb{N}$ un entier. Donner la relation liant
+      $u_{n+1}$ à $u_n$.
+    \item Soit $n\in\mathbb{N}$ un entier. Exprimer $u_{n}$ en fonction de
+      $u_{n-1}$.
+  \end{enumerate}
+\end{exemple}
+
+
+\end{document}
