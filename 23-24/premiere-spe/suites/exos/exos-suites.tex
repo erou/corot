@@ -2,9 +2,9 @@
 
 \newcommand{\titrechapitre}{Suites -- Exercices}
 \newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
-\newcommand{\pagination}{}%{\thepage/\pageref{LastPage}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
 \newcommand{\topbotmargins}{2cm}
-\newcommand{\spacebelowexo}{5mm}
+\newcommand{\spacebelowexo}{3mm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 %\input{layout-nb.tex}
 
@@ -103,6 +103,107 @@ $(u_n)$, définies pour tout $n \in \mathbb{N}$.
     \item Résoudre l'inéquation $\frac{2n}{n+1} > 1$.
     \item En déduire les variations de la suite $u$.
   \end{enumerate}
+\end{exo}
+
+\begin{exo}
+Dans chaque cas, déterminer le sens de variation de la suite $u$ définie par
+\begin{enumerate}
+  \item $u_{n}=\frac{3^{n}}{n}$ pour tout $n \geq 1$
+  \item $u_{n}=-8 n+13$ pour tout $n \geq 0$
+  \item $u_{n}=\frac{1}{n}-\frac{1}{n+1}$ pour tout $n \geq 1$
+\end{enumerate} 
+\end{exo}
+
+\begin{exo}
+  Pour chacune des suites suivantes, à l'aide de la calculatrice :
+
+\begin{enumerate}
+  \item indiquer si la suite $\left(u_{n}\right)$ est convergente ou divergente.
+
+  \item Conjecturer la limite éventuelle de $\left(u_{n}\right)$.
+    \begin{align*}
+      \textbf{a)}\; & \forall n \in \mathbb{N},
+      u_{n}=\left(\frac{7}{8}\right)^{n} &
+      \textbf{b)}\; & \forall n \in \mathbb{N}, u_{n}=(1,3)^{n} &
+      \textbf{c)}\; & \forall n \in \mathbb{N}, u_{n+1}=2 u_{n}-7,\;u_0=8 \\
+      \textbf{d)}\; & \forall n \in \mathbb{N}^*, u_{n}=5-\frac{1}{n^2} &
+      \textbf{e)}\; & \forall n \in \mathbb{N}, u_{n}=n^3 &
+      \textbf{f)}\; & \forall n \in \mathbb{N}, u_{n+1}=\frac{3}{4}
+      u_{n}+5,\;u_0=0
+    \end{align*}
+\end{enumerate}
+\emph{Rappel de notation :} le symbole $\forall$ signifie « pour tout », donc
+écrire « $\forall n \in \mathbb{N}$ » revient à écrire « pour tout entier
+naturel $n$ ».
+\end{exo}
+
+\begin{exo}
+  Soit $u$ la suite définie pour tout $n \in \mathbb{N}$ par $u_{n}=n$.
+\begin{enumerate}
+  \item Construire un repère et y représenter le nuage de point $(n, u(n))_{n
+      \in \mathbb{N}}$.
+  \item Conjecturer la limite de la suite $u$.
+  \item Mêmes questions avec la suite $w$ définie pour tout entier naturel $n
+    \geq 1$ par $w_{n}=\frac{1}{n}$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Une entreprise d'impression de photos propose un abonnement annuel à ses
+  clients qui coûte $45$ euros. Avec cet abonnement, le client paye $5$ centimes
+  par photo qu'il veut imprimer. On note $u_{n}$ le prix payé par le client pour
+  l'abonnement et pour l'impression de $n$ photos.
+\begin{enumerate}
+  \item Exprimer $u_{n}$ en fonction de $n$.
+  \item Combien le client paye-t-il pour imprimer $15$ photos?
+  \item S'il a payé $98$ euros, combien de photos a-t-il imprimées?
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $\left(u_{n}\right)$ la suite définie pour tout $n \in \mathbb{N}$ par
+  $u_{n}=\frac{1,01^{n}}{n}$.
+\begin{enumerate}
+  \item À l'aide de la calculatrice, conjecturer, si elle existe, la limite de
+    la suite $u$.
+  \item Donner une valeur approchée de $u_{1000}, u_{2000}$ et $u_{5000}$.
+  \item Les résultats sont-ils cohérents avec la question 1 ? Conclure.
+  \item En étudiant le signe de $\frac{u_{n+1}}{u_{n}}-1$, déterminer le sens de
+    variation de la suite $\left(u_{n}\right)$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $\left(u_{n}\right)$ la suite définie par $u_{0}=1000$ et, pour tout
+  entier $n \in \mathbb{N}, u_{n+1}=0,9 u_{n}+90$.
+\begin{enumerate}
+  \item Calculer $u_{1}$ et $u_{2}$.
+  \item On admet que, pour tout entier naturel $n, u_{n}=100
+    \times(0,9)^{n}+900$.
+  \item Conjecturer à l'aide de la calculatrice la limite de la suite
+    $\left(u_{n}\right)$.
+  \item Déterminer le sens de variation de la suite $\left(u_{n}\right)$.
+  \item À l'aide de la calculatrice, déterminer à partir de quel nombre $n$ on a
+    $u_{n} \leq 901$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}[$\star\star$]
+  Pour tout entier $n \geq 1$, on note $u_{n}$ la somme des $n$ premiers carrés,
+  c'est-à-dire $u_{n}=1^{2}+2^{2}+3^{3}+\cdots+n^{2}$.
+\begin{enumerate}
+  \item Calculer les trois premiers termes de la suite $u$.
+  \item Déterminer une relation de récurrence entre $u_{n+1}$ et $u_{n}$.
+  \item On pose $w$ la suite définie pour tout $n \in \mathbb{N}$ par
+\[
+w_{n}=\frac{n(n+1)(2n+1)}{6} .
+\]
+\begin{enumerate}
+  \item  Montrer que $u_{1}=w_{1}$.
+  \item Vérifier que la suite $w$ vérifie la même relation de récurrence que
+    $u$. Conclure.
+\end{enumerate}
+\end{enumerate}
 \end{exo}
 
 \end{document}
