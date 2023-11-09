@@ -42,3 +42,10 @@ Mathematics' Unintended Consequences
 ------------------------------------
 
 https://www.bbc.co.uk/sounds/play/b00qj2nq
+
+Ethiopian multiplication
+------------------------
+
+https://www.youtube.com/watch?v=Nc4yrFXw20Q
+
+Séance sur https://afdm.apmep.fr/rubriques/eleves/la-multiplication-decouvertes-en-dnl/#more-415
