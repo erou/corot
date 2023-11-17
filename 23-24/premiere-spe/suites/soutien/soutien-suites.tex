@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+
+\noindent\begin{minipage}[]{.48\textwidth}
+\begin{exo}
+  Soit $(w_n)$ la suite définie sur $\mathbb{N}$ par $w_n = 5n - 2$.
+\begin{enumerate}
+    \item Calculer les trois termes $w_0$, $w_1$ et $w_2$.
+    \item Exprimer, $w_{n+1}$ en fonction de $n$.
+    \item Démontrer que pour tout entier $n \in \mathbb{N}$, $w_{n+1} - w_n = 5$.
+\end{enumerate}
+\end{exo}
+\end{minipage}
+\hfill
+\begin{minipage}[]{.48\textwidth}
+\begin{exo}
+  Soit $(u_n)$ la suite définie pour tout $n \in \mathbb{N}$ par $u_n = 2n^2$.
+\begin{enumerate}
+    \item Calculer les termes $u_0$, $u_1$ et $u_{10}$.
+    \item Exprimer $u_{n+1}$ en fonction de $n$.
+    \item Démontrer que pour tout entier $n \in \mathbb{N}$, $u_{n+1} - u_n = 4n
+      + 2$.
+\end{enumerate}
+\end{exo}
+\end{minipage}
+~\vspace{.5cm}
+
+\noindent\begin{minipage}[]{.48\textwidth}
+\begin{exo}
+  On considère la suite $(u_n)$ définie par $u_0=2$ et pour tout
+  $n\in\mathbb{N}$, $u_{n+1}=\frac{2u_n-2}{u_n-3}$.
+  \begin{enumerate}
+    \item Calculer $u_1$ et $u_2$.
+    \item Exprimer $u_{n+2}$ en fonction de $u_{n+1}$.
+  \end{enumerate}
+\end{exo}
+\end{minipage}
+\hfill
+\begin{minipage}[]{.48\textwidth}
+\begin{exo}
+  On considère la suite $(t_n)$ définie par $t_0=3$ et pour tout
+  $n\in\mathbb{N}$, $t_{n+1}=t_n+\left( t_n \right)^2$.
+  \begin{enumerate}
+    \item Calculer $t_1$ et $t_2$.
+    \item Exprimer $t_{n+2}$ en fonction de $u_{t+1}$.
+  \end{enumerate}
+\end{exo}
+\end{minipage}
+
+\begin{exo}
+  Dans l'association sportive d'un lycée, il y a :
+  \begin{itemize}
+    \item $24$\% d'élèves de seconde dont $42$\% font du football et le reste de
+      l'athlétisme ;
+    \item $61$\% d'élèves de première dont $68$\% font du football et le reste de
+      l'athlétisme ;
+    \item $15$\% d'élèves de terminale dont $35$\% font du football et le reste de
+      l'athlétisme.
+  \end{itemize}
+  On choisit au hasard une personne dans l'association sportive du lycée.
+  On considère les événements
+  \begin{itemize}
+    \item $S$ : « la personne choisie est en seconde » ;
+    \item $R$ : « la personne choisie est en première » ;
+    \item $T$ : « la personne choisie est en terminale » ;
+    \item $F$ : « la personne choisie pratique le football ».
+  \end{itemize}
+  \begin{enumerate}
+    \item Faire un arbre pour résumer la situation.
+    \item Traduire en français l'événement $R\cap \overline F$. Calculer la
+      probabilité de cet événement.
+    \item Calculer la probabilité que la personne choisie fasse de l'athlétisme.
+    \item Calculer la probabilité de l'événement «~la personne choisie est en
+      première ou fait de l'athlétisme~».
+    \item Calculer $P_{\overline F}(R)$. Interpréter le résultat.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  M. Seaurou, professeur de mathématiques, a trié sa bibliothèque dans laquelle
+  figure $54$ livres, dont $22$ parlent de mathématiques. Il manque de place
+  dans sa bibliothèque et veut ranger certains livres dans son garage. Parmi les
+  livres de mathématiques, $15$ doivent être déplacés. Parmi les autres livres,
+  $17$ doivent être déplacés. On choisit un livre au hasard dans la
+  bibliothèque.
+  \begin{enumerate}
+    \item Faire un tableau pour résumer la situation.
+    \item Calculer la probabilité de l'événement « le livre doit être déplacé au
+      garage ».
+    \item Calculer la probabilité de choisir un livre qui ne parle pas de
+      mathématique devant être déplacé au garage.
+    \item Sachant qu'un livre doit être déplacé au garage, quelle est la
+      probabilité que le livre parle de mathématiques ?
+  \end{enumerate}
+\end{exo}
+
+\end{document}

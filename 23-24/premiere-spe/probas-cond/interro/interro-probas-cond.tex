@@ -3,134 +3,140 @@
 \newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
 \newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
 \newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
-\newcommand{\topbotmargins}{.7cm}
-\newcommand{\spacebelowexo}{3mm}
+\newcommand{\topbotmargins}{.2cm}
+\newcommand{\spacebelowexo}{0mm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 
 % Barême 
 % ======
 %
-% I.1 0.5 / res sans justification, juste lecture
-% I.2 0.5 trad fr et 0.5 lecture tableau
-% I.3 0.5 I \cup L et 0.5 calcul
-% I.4 0.5 démarche avec formule et 0.5 calcul 0.5 conclusion
-% I.5 0.5 calcul 0.5 formule 0.5 interprétation
+% I.1 0.5 forme arbre, 0.5 bons nombres
+% I.2 0.5 trad fr et 0.5 calcul
+% I.3 0.5 trad maths 0.5 formule 0.5 calcul
+% I.4 0.5 trad maths 0.5 formule 0.5 calcul
+% I.5 0.5 formule 0.5 calcul 0.5 interprétation
 %
-% II.1 0.5 présentation événements, 0.5 pour l'arbre
-% II.2 0.5 formule 0.5 calcul
-% II.3 0.5 traduction 0.5 formule 0.5 calcul de l'intersection 0.5 calcul final
+% II.1 0.5 / res sans justification
+% II.2 0.5 formule 0.5 calcul 0.5 interprétation
+% II.3 0.5 formule 0.5 calcul
 
 \begin{document}
 
-\begin{exo}[$6$ points]~\\
+\begin{exo}[$6,5$ points]
+  La répartition des poivrons chez un maraîcher est :
+  \begin{itemize}
+    \item $45$\% de poivrons verts dont $60$\% sont bio.
+    \item $40$\% de poivrons rouges dont $50$\% sont bio.
+    \item $15$\% de poivrons jaunes dont $80$\% sont bio.
+  \end{itemize}
+  Nino achète un poivron au hasard chez ce maraîcher.
+  On note
+  \begin{itemize}
+    \item $V$ : « le poivron acheté est vert » ;
+    \item $R$ : « le poivron acheté est rouge » ;
+    \item $J$ : « le poivron acheté est jaune » ;
+    \item $B$ : « le poivron acheté est bio » ;
+  \end{itemize}
+  \begin{enumerate}
+    \item Faire un arbre pour représenter la situation.
+    \item Traduire en français l'événement $J\cap B$ et donner $P(J\cap B)$.
+    \item Calculer la probabilité que le poivron soit bio.
+    \item Calculer la probabilité de l'événement « le poivron choisi est jaune
+      ou bio ».
+    \item Calculer $P_B(J)$. Interpréter le résultat.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[$3,5$ points]~\\
 \begin{minipage}{.55\textwidth}
-Dans un collège, les élèves doivent choisir une option parmi «~latin~»
-et «~thé\^atre~» et une langue vivante parmi «~allemand~» et «~italien~». Le
-tableau ci-contre récapitule les différents choix.
-\end{minipage}
+  Annie a une collection d'éléphants miniatures dont la répartition est donnée
+  ci-contre. Chaque semaine, elle tire au hasard un éléphant pour le mettre sur
+  son bureau de travail. On considère les événements suivants.
+  \begin{itemize}
+    \item $N$ : « l'éléphant est noir » ;
+  \end{itemize}
+  \end{minipage}
 \begin{minipage}{.45\textwidth}
   \begin{center}
  \begin{tabular}{cccc}
   \toprule
-  & \textbf{Italien} & \textbf{Allemand} & \textbf{Total} \\
+  & \textbf{Noir} & \textbf{Couleur} & \textbf{Total} \\
   \midrule
-  \textbf{Latin} & $30$ & $90$ & $120$ \\
-  \textbf{Thé\^atre} & $120$ & $120$ & $240$ \\
-  \textbf{Total} & $150$ & $210$ & $360$ \\
+  \textbf{Bois} & $17$ & $85$ & $102$ \\
+  \textbf{Métal} & $22$ & $110$ & $132$ \\
+  \textbf{Total} & $39$ & $195$ & $234$ \\
   \bottomrule
 \end{tabular}
   \end{center}
 \end{minipage}
-On choisit au hasard une personne parmi les élèves du collège. On note
-\begin{itemize}
-  \item $I$ l'événement «~la personne choisie fait de l'italien~»;
-  \item $L$ l'événement «~la personne choisie fait du latin~».
-\end{itemize}
-\begin{enumerate}
-  \item Donner les probabilités $P(I)$ et $P(\overline L)$.
-  \item Traduire en français l'événement $I\cap \overline L$ et donner
-    $P(I\cap\overline L)$.
-  \item Exprimer à l'aide des événements $I$ et $L$ l'événement «~la personne
-    choisie fait de l'italien ou du théi\^atre~». Donner la probabilité de cet
-    événement.
-  \item Les événements $I$ et $\overline L$ sont-ils indépendants ?
-  \item Calculer $P_{L}(\overline I)$. Interpréter le résultat.
-\end{enumerate}
-\end{exo}
-
-\begin{exo}[$4$ points]
-  À un croisement, se trouve un feu tricolore dont les feux sont alternativement
-  vert, rouge ou orange avec probabilités respectives de $0,5$; $0,4$ et $0,1$.
-  Des cyclistes empruntent régulièrement ce croisement et une étude statistique
-  a permis de déterminer les résultats suivants :
   \begin{itemize}
-    \item si le feu est vert, le cycliste passe avec une probabilité de $1$;
-    \item si le feu est orange, le cycliste passe avec une probabilité de $0,2$;
-    \item si le feu est rouge, le cycliste passe avec une probabilité de $0,04$.
+    \item $B$ : « l'éléphant est en bois » ;
   \end{itemize}
   \begin{enumerate}
-    \item Représenter la situation par un arbre de probabilité.
-    \item Calculer la probabilité que le cycliste ne s'arrête pas au feu
-      tricolore.
-    \item Calculer la probabilité que le feu soit vert, sachant que le cycliste
-      ne s'est pas arrêté au feu.
+    \item Donner les probabilités $P(B)$ et $P(N)$.
+    \item Calculer $P_B(N)$. Interpréter le résultat.
+    \item Les événements $B$ et $N$ sont-ils indépendants ?
   \end{enumerate}
 \end{exo}
-
-\vspace{2cm}
 \setcounter{exo}{0}
-\begin{exo}[$6$ points]~\\
+~\vspace{4mm}
+\begin{exo}[$6,5$ points]
+  La répartition des poivrons chez un maraîcher est :
+  \begin{itemize}
+    \item $45$\% de poivrons verts dont $60$\% sont bio.
+    \item $40$\% de poivrons rouges dont $50$\% sont bio.
+    \item $15$\% de poivrons jaunes dont $80$\% sont bio.
+  \end{itemize}
+  Nino achète un poivron au hasard chez ce maraîcher.
+  On note
+  \begin{itemize}
+    \item $V$ : « le poivron acheté est vert » ;
+    \item $R$ : « le poivron acheté est rouge » ;
+    \item $J$ : « le poivron acheté est jaune » ;
+    \item $B$ : « le poivron acheté est bio » ;
+  \end{itemize}
+  \begin{enumerate}
+    \item Faire un arbre pour représenter la situation.
+    \item Traduire en français l'événement $J\cap B$ et donner $P(J\cap B)$.
+    \item Calculer la probabilité que le poivron soit bio.
+    \item Calculer la probabilité de l'événement « le poivron choisi est jaune
+      ou bio ».
+    \item Calculer $P_B(J)$. Interpréter le résultat.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[$3,5$ points]~\\
 \begin{minipage}{.55\textwidth}
-Dans un collège, les élèves doivent choisir une option parmi «~latin~»
-et «~thé\^atre~» et une langue vivante parmi «~allemand~» et «~italien~». Le
-tableau ci-contre récapitule les différents choix.
-\end{minipage}
+  Annie a une collection d'éléphants miniatures dont la répartition est donnée
+  ci-contre. Chaque semaine, elle tire au hasard un éléphant pour le mettre sur
+  son bureau de travail. On considère les événements suivants.
+  \begin{itemize}
+    \item $N$ : « l'éléphant est noir » ;
+  \end{itemize}
+  \end{minipage}
 \begin{minipage}{.45\textwidth}
   \begin{center}
  \begin{tabular}{cccc}
   \toprule
-  & \textbf{Italien} & \textbf{Allemand} & \textbf{Total} \\
+  & \textbf{Noir} & \textbf{Couleur} & \textbf{Total} \\
   \midrule
-  \textbf{Latin} & $30$ & $120$ & $150$ \\
-  \textbf{Thé\^atre} & $90$ & $80$ & $170$ \\
-  \textbf{Total} & $120$ & $200$ & $320$ \\
+  \textbf{Bois} & $17$ & $85$ & $102$ \\
+  \textbf{Métal} & $22$ & $110$ & $132$ \\
+  \textbf{Total} & $39$ & $195$ & $234$ \\
   \bottomrule
 \end{tabular}
   \end{center}
 \end{minipage}
-On choisit au hasard une personne parmi les élèves du collège. On note
-\begin{itemize}
-  \item $I$ l'événement «~la personne choisie fait de l'italien~»;
-  \item $L$ l'événement «~la personne choisie fait du latin~».
-\end{itemize}
-\begin{enumerate}
-  \item Donner les probabilités $P(I)$ et $P(L)$.
-  \item Traduire en français l'événement $I\cap L$ et donner $P(I\cap L)$.
-  \item Exprimer à l'aide des événements $I$ et $L$ l'événement «~la personne
-    choisie fait de l'italien ou du latin~». Donner la probabilité de cet
-    événement.
-  \item Les événements $I$ et $L$ sont-ils indépendants ?
-  \item Calculer $P_{\overline L}(\overline I)$. Interpréter le résultat.
-\end{enumerate}
-\end{exo}
-
-\begin{exo}[$4$ points]
-  À un croisement, se trouve un feu tricolore dont les feux sont alternativement
-  vert, rouge ou orange avec probabilités respectives de $0,4$; $0,5$ et $0,1$.
-  Des cyclistes empruntent régulièrement ce croisement et une étude statistique
-  a permis de déterminer les résultats suivants :
   \begin{itemize}
-    \item si le feu est vert, le cycliste passe avec une probabilité de $1$;
-    \item si le feu est orange, le cycliste passe avec une probabilité de $0,1$;
-    \item si le feu est rouge, le cycliste passe avec une probabilité de $0,02$.
+    \item $B$ : « l'éléphant est en bois » ;
   \end{itemize}
   \begin{enumerate}
-    \item Représenter la situation par un arbre de probabilité.
-    \item Calculer la probabilité que le cycliste ne s'arrête pas au feu
-      tricolore.
-    \item Calculer la probabilité que le feu soit vert, sachant que le cycliste
-      ne s'est pas arrêté au feu.
+    \item Donner les probabilités $P(B)$ et $P(N)$.
+    \item Calculer $P_B(N)$. Interpréter le résultat.
+    \item Les événements $B$ et $N$ sont-ils indépendants ?
   \end{enumerate}
 \end{exo}
+
+
 
 \end{document}
