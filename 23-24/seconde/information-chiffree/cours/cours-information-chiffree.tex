@@ -1,0 +1,353 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Information chiffrée -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\title{Chapitre 5 : Information chiffrée}
+\date{}
+\date{\vspace{-14mm}
+\href{https://erou.forge.aeif.fr/s11/information.html}{
+  \includegraphics[scale=.6]{qrcode-information.png}}
+\vspace{-12mm}}
+\author{}
+
+\begin{document}
+\vspace{-2cm}
+\maketitle\thispagestyle{fancy}
+
+\section{Proportion et pourcentage}
+\subsection{Calculer un pourcentage}
+\begin{prop}
+  Soit $t>0$ un nombre positif. Prendre $t\%$ d'une quantité, c'est la
+  multiplier par
+  \(
+    \frac{t}{100}.
+  \)
+\end{prop}
+\begin{exemple}
+  Prendre $4\%$ de $120$ euros correspond à
+  \[
+    \frac{4}{100}\times 120 = 4,8\text{ euros.}
+  \]
+\end{exemple}
+\begin{app}
+  \begin{enumerate}
+    \item Prendre $18\%$ de $500$.
+    \item Calculer $33\%$ de $921$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Exprimer une proportion}
+\begin{defi}{Population et sous-population}
+  Soient $E$ un ensemble de référence non vide et $n_E$ le nombre d'éléments de
+  $E$. Soient $A$ une partie de l'ensemble $E$ et $n_A$ le nombre d'éléments de
+  $A$.
+  \begin{itemize}
+    \item L'ensemble $E$ est appelé la \textbf{population}, les éléments de $E$
+      sont appelés les \textbf{individus}, et le nombre d'individus $n_E$ est
+      appelé l'\textbf{effectif} de $E$.
+    \item L'ensemble $A$ est appelé \textbf{sous-population}, et $n_A$ est
+      appelé l'effectif de $A$.
+  \end{itemize}
+\end{defi}
+\begin{app}
+  On considère une classe de $35$ élèves, dont $20$ sont des filles. On pose
+  alors $E$ l'ensemble des élèves de la classe et $A$ l'ensemble des filles de
+  la classe.
+  \begin{itemize}
+    \item Quel ensemble est la population ? Quel est son effectif ?
+    \item Quel ensemble est la sous-population ? Quel est son effectif ?
+  \end{itemize}
+\end{app}
+
+\begin{defi}{Proportion}
+  Soit $E$ une population et $A$ une sous-population. La \textbf{proportion} $p$
+  de $A$ dans $E$ est le réel défini par
+      \[
+        p = \frac{n_A}{n_E}.
+      \]
+\end{defi}
+\begin{app}
+  Lors d'une élection, sur $864$ inscrits, $648$ personnes ont voté. Quelle est
+  la proportion de votants ?
+\end{app}
+\begin{rmq}
+  Une proportion peut être exprimée sous forme décimale, sous forme de fraction,
+  ou de pourcentage
+  \[
+    0,3 = \frac{30}{100} = 30\%.
+  \]
+\end{rmq}
+\begin{app}
+  Au sein du lycée Toroc, il y a $2400$ élèves, dont $1800$ sont
+  demi-pensionnaires.
+  \begin{enumerate}
+    \item Donner, sous forme décimale, la proportion d'élèves demi-pensionnaires
+      dans le lycée Toroc.
+    \item Donner cette proportion sous forme fractionnaire et sous forme de
+      pourcentage.
+  \end{enumerate}
+\end{app}
+
+\begin{prop}
+  Connaissant la proportion $p$ de $A$ dans $E$, on peut retrouver l'effectif
+  manquant $n_A$ ou $n_E$ :
+  \[
+    n_A = p\times n_E\text{ et, pour }p\neq0,\;n_E=\frac{n_A}{p}.
+  \]
+\end{prop}
+\begin{prop}
+  Pour tout ensemble $A$ contenu dans un ensemble non vide $E$, on a $0\leq
+  p\leq1$.
+\end{prop}
+\begin{exemple}
+  Sachant que $n_A=200$ et que $p=0,25$, on retrouve l'effectif $n_E$ de la
+  population avec le calcul
+  \[
+    n_E = \frac{n_A}{p} = \frac{200}{0,25}=800.
+  \]
+\end{exemple}
+\begin{app}
+  On s'intéresse à la composition d'une tablette de chocolat de $180$ g.
+  \begin{enumerate}
+    \item Elle comporte $72$ g de sucre : quelle est la proporion (en
+      pourcentage) cela représente-t-il ?
+    \item Le cacao constitue $55\%$ de la tablette : quelle masse cela
+      représente-t-il ?
+  \end{enumerate}
+\end{app}
+
+\subsection{Pourcentage de pourcentage}
+\begin{prop}
+  Soient $E$ une population et $A$ une sous-population de $E$ de proportion
+  $p_A$. Soit $B$ une sous-population de $A$ de proportion $p_B$ par rapport à
+  $A$. Alors $B$ est une sous-population de $E$, et la proportion de $B$ par
+  rapport à $E$ est $p=p_A\times p_B$.
+\end{prop}
+\begin{exemple}
+  Le Syndicat des Éditeurs de Logiciels de Loisirs déclare que $53$\% des
+  français jouent régulièrement aux jeux vidéos. Parmi eux, $47$\% sont des
+  femmes. En notant $p$ la proportion de femmes jouant aux jeux vidéos parmi
+  tous les français, on a
+  \[
+    p = \frac{53}{100}\times\frac{47}{100} = 0,2491 = 24,91\%.
+  \]
+  Parmi l'ensemble des français, la proportion de femmes jouant aux jeux vidéos
+  est de $24,91\%$.
+\end{exemple}
+\begin{app}
+  Dans une boulangerie, le rayon p\^atisserie représente $30$\% du montant des
+  ventes par jour et on sait que $3$ p\^atisseries sur $5$ sont des éclairs au
+  chocolat.\\
+  Le propriétaire ne fait un bénéfice que si le montant des ventes d'éclairs au
+  chocolat représente plus de $20$\% de la recette par jour.
+  \begin{enumerate}
+    \item Quelle proportion de la recette (en pourcentage) représente le montant
+      des ventes d'éclairs au chocolat ?
+    \item Le propriétaire doit-il continuer à proposer des éclairs au chocolat ?
+      Justifier.
+  \end{enumerate}
+\end{app}
+
+\section{Taux d'évolution}
+\noindent On considère une quantité qui varie. On note
+\begin{itemize}
+  \item $V_D$ la \textbf{valeur de départ} de cette quantité ;
+  \item $V_A$ la \textbf{valeur d'arrivée} de cette quantité.
+\end{itemize}
+\subsection{Variation absolue et variation relative}
+\begin{defi}{Variation absolue}
+  La \textbf{variation absolue} $\Delta V$ est donnée par $\Delta V = V_A-V_D$.
+\end{defi}
+\begin{defi}{Variation relative}
+  La \textbf{variation relative} (ou \textbf{taux d'évolution}) $t$ est le
+  quotient de la différence $V_A$ et $V_D$ par $V_D$. On a donc
+  \[
+    t = \frac{V_A-V_D}{V_D}.
+  \]
+\end{defi}
+\begin{rmq}
+  Si la quantité \textbf{augmente}, les variations sont \textbf{positives}. Si
+  la quantité \textbf{diminue}, alors les variations sont \textbf{négatives}.
+\end{rmq}
+\begin{exemple}
+  Dans la ville de Trifouilli-Les-Oies, il a fait $10^\circ$C en moyenne le
+  lundi, et $15^\circ$C en moyenne le mardi.
+  \begin{itemize}
+    \item On identifie $V_D=10$ et $V_A=15$.
+    \item La variation absolue est de $\Delta V=15-10=5^\circ$C.
+    \item Le taux d'évolution est de $\frac{15-10}{10}=0,5$. En pourcentage, le
+      taux d'évolution est de $50\%$.
+  \end{itemize}
+\end{exemple}
+\begin{app}
+  Adam place $110$ euros en Bourse. Il se rend compte $15$ jours plus tard que
+  ses actions valent $132$ euros.
+  \begin{enumerate}
+    \item Calculer la variation absolue de la somme placée.
+    \item Calculer la variation relative de cette somme placée (en pourcentage).
+  \end{enumerate}
+\end{app}
+
+\subsection{Coefficient multiplicateur}
+\begin{defi}{Coefficient multiplicateur}
+  On considère une quantité qui passe de la valeur $V_D$ à $V_A$. Le
+  \textbf{coefficient multiplicateur}, noté $CM$, associé à cette évolution est
+  \[
+    CM = \frac{V_A}{V_D}.
+  \]
+\end{defi}
+\begin{prop}
+  Le coefficient multiplicateur permet de passer de la valeur de départ à la
+  valeur d'arrivée (et inversement).
+  \begin{align*}
+    V_A &= CM\times V_D &
+    V_D &= \frac{V_A}{CM}
+  \end{align*}
+\end{prop}
+\begin{prop}
+  \begin{minipage}{0.6\textwidth}
+  Soit $t$ le taux d'évolution qui permet à une quantité de passer de $V_D$ à
+  $V_A$. On a alors
+  \[
+    V_A=(1+t)\times V_D.
+  \]
+  On a donc $CM=1+t$.
+\end{minipage}
+  \begin{minipage}{0.4\textwidth}
+    \begin{center}
+  \begin{tikzpicture}
+    \node[circle, draw] (VD) at (0,0) {$V_D$};
+    \node[circle, draw] (VA) at (3,0) {$V_A$};
+    \draw[-latex] (VD.north) to[out=60, in=120] (VA.north);
+    \node at (1.5, .8) {$\times CM$};
+    \node at (1.5, 1.7) {taux d'évolution $t$};
+  \end{tikzpicture}
+\end{center}
+
+  \end{minipage}
+\end{prop}
+\begin{prop}
+  \begin{itemize}
+    \item Dans le cas d'une baisse, $t$ est négatif et $CM$ est un réel compris entre
+      $0$ et $1$.
+    \item Dans le cas d'une augmentation, $t$ est positif et $CM$ est un réel supérieur
+      $1$.
+  \end{itemize}
+\end{prop}
+\begin{exemple}
+  Un article à $85$ euros est soldé à $-25\%$. On a $V_D=85$ et $t=-25\%=-0,25$.
+  On en déduit $$CM=1+(-0,25)=0,75$$ et $$ V_A=V_D\times CM=85\times
+  0,75=63,75.$$
+  Le nouveau prix de cet article est $63,75$ euros.
+\end{exemple}
+\begin{app}
+  Adam effectue un autre placement de $110$ euros. Ses actions risquent de subir
+  une des deux modifications suivantes : soit elles augmentent de $10\%$, soit
+  elles baissent de $15\%$.
+  \begin{enumerate}
+    \item Donner les cofficients multiplicateurs liés à chacune de ces
+      évolutions.
+    \item Dans chacun des cas, calculer la nouvelle valeur de ses actions.
+  \end{enumerate}
+\end{app}
+
+\section{Évolutions successives et réciproques}
+\subsection{Évolutions successives}
+\begin{defi}{Évolutions successives et globale}
+  Lorsqu'une quantité subit des \textbf{évolutions successives} de taux $t_1,
+  t_2, \dots, t_n$ de sa valeur, elle subit alors une \textbf{evolution globale}
+  de taux $t$.
+\end{defi}
+\begin{prop}
+  Le coefficient multiplicateur global $CM$ associé à l'évolution $t$ est le
+  produit des coefficients multiplicateurs $CM_1, CM_2, \dots, CM_n$, associés
+  respectivement aux évolutions $t_1, t_2, \dots, t_n$. On a
+  \[
+    CM = CM_1\times CM_2\times\dots\times CM_n.
+  \]
+  \begin{center}
+  \begin{tikzpicture}
+    \node[circle, draw] (VD) at (0,0) {$V_D$};
+    \node[circle, draw] (V1) at (3,0) {\phantom{$V_A$}};
+    \node[circle, draw] (V2) at (6,0) {\phantom{$V_A$}};
+    \node[circle, draw] (VA) at (9,0) {$V_A$};
+    \draw[-latex] (VD.north) to[out=60, in=120] (V1.north);
+    \draw[-latex] (V1.north) to[out=60, in=120] (V2.north);
+    \node at (1.5, .8) {$\times CM_1$};
+    \node at (1.5, 1.7) {taux $t_1$};
+    \node at (4.5, .8) {$\times CM_2$};
+    \node at (4.5, 1.7) {taux $t_2$};
+    \node at (7.5,0) {$\dots$};
+    \draw[-latex] (VD.south) to[out=-15, in=-165] (VA.south);
+    \node at (4.5, -.7) {$CM_1\times CM_2\times\dots\times CM_n$};
+    \node at (4.5, -1.4) {taux d'évolution $t$};
+  \end{tikzpicture}
+\end{center}
+
+\end{prop}
+\begin{exemple}
+  Une valeur subit une hausse de $6\%$ puis une hausse de $14$\%. Le coefficient
+  multiplicateur associé au taux d'évolution global $t$ est alors
+  \[
+    CM = 1,06\times1,14=1,2084.
+  \]
+  On en déduit $t=1,2084-1=0,2084$ soit une augmentation globale de $20,84\%$.
+\end{exemple}
+\begin{rmq}
+  \textbf{Attention !} Le taux d'évolution global n'est pas égal à somme des
+  taux d'évolution successifs.
+\end{rmq}
+\begin{app}
+  Déterminer le taux d'évolution global d'une valeur suite à une augmentation de
+  $50\%$ puis à une diminution de $50\%$.
+\end{app}
+
+\subsection{Évolutions réciproques}
+\begin{defi}{Taux réciproque}
+  Une quantité non nulle $V_D$ subit une évolution de taux $t$ et devient égale
+  à une quantité $V_A$. Le \textbf{taux réciproque} de $t$ est le taux $t'$
+  permettant de passer de $V_A$ à $V_D$.
+\end{defi}
+\begin{exemple}
+  Un article coûte $50$ euros. Une baisse de $20\%$ fait passer le prix à $40$
+  euros. Il faut une augmentation de $25\%$ pour revenir au prix initial de $50$
+  euros.
+  Ici $t=-20\%$ et $t'=+25\%$.
+
+\end{exemple}
+\begin{prop}~\\[-5mm]
+  \begin{minipage}{0.6\textwidth}
+  Le coefficient multiplicateur réciproque $CM'$ associé à l'évolution
+  réciproque $t'$ est l'inverse du coefficient multiplicateur non nul $CM$
+  associé à l'évolution de départ $t$. On a
+  \[
+    CM' = \frac{1}{CM}.
+  \]
+\end{minipage}
+  \begin{minipage}{0.4\textwidth}
+    \begin{center}
+  \begin{tikzpicture}
+    \node[circle, draw] (VD) at (0,0) {$V_D$};
+    \node[circle, draw] (VA) at (3,0) {$V_A$};
+    \draw[-latex] (VD.north) to[out=30, in=150] (VA.north);
+    \node at (1.5, .6) {$\times CM$};
+    \node at (1.5, 1.3) {taux d'évolution $t$};
+    \draw[-latex] (VA.south) to[out=-150, in=-30] (VD.south);
+    \node at (1.5, -.35) {$\times \cfrac{1}{CM}$};
+    \node at (1.5, -1.3) {taux d'évolution $t'$};
+  \end{tikzpicture}
+\end{center}
+
+  \end{minipage}
+
+\end{prop}
+\begin{app}
+  Déterminer l'évolution réciproque d'une augmentation de $60$\%.
+\end{app}
+
+\end{document}

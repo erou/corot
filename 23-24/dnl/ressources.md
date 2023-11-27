@@ -5,6 +5,7 @@ Ideas
 explain their answer. 
 + Find the odd one in this list of... As seen before; with many possible
   answers. *Causeries mathématiques*
++ Study Conway's sequence
 
 
 Ressources

@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}
+\newcommand{\titreclasse}{}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}%\thepage/\pageref{LastPage}}
+\newcommand{\spacebelowexo}{5mm}%\thepage/\pageref{LastPage}}
+
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+% Barême
+%
+% I.1  0.25 / pts
+% I.2a 0.5 formule 0.5 calcul
+% I.2b 0.5 explication idée 0.5 formule 0.5 résolution équation
+% I.2c 0.5 justification
+% I.3a 1 calculs (-0.5 par bêtise) 0.5 verif 0.5 conclusion
+% I.3b 0.5 justif
+% I.3c 0.5 justif
+% I.4a 0.5 redac pythagore 0.5 calcul 0.5 conclusion
+% I.4b 0.5 justification
+%
+% II.1  0.5 par formule
+% II.2  0.5 / angle
+% II.3a 0.5 def
+% II.3b 0.5 technique
+%
+% III.a 0.5 -1 en +1 0.5 division
+% III.b 0.5 passage autre côté 0.5 division
+% III.c 0.5 inconnues 0.5 constantes 0.5 division
+% III.d 0.5 développement 0.5 inconnues 0.5 constantes 0.5 conclusion
+%
+% IV.1a 0.5
+% IV.1b 0.5
+% IV.1c 0.5 somme 0.5 simplification
+% IV.2 0.5 égalité
+% IV.3a 0.5 résolution
+% IV.3b 0.5 conclusion
+
+\begin{document}
+
+\begin{center}
+\textbf{\LARGE \textsc{Contrôle 1}}\\[2mm]
+
+{\large Mercredi 22 Novembre 2023, durée : 0h55}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+%\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+\begin{exo}[$8$ points]
+  On considère $(O; I, J)$ un repère orthonormé, ainsi que les points $P(8; 2)$,
+  $T(-1; 1)$, $M(-6; -4)$ et $U(4; 6)$.
+  \begin{enumerate}
+    \item Construire le repère et y placer les points mentionnés ci-dessus.
+      \emph{Conseil : placez également les futurs points pour voir à quoi
+      ressemble le dessin.}
+    \item \begin{enumerate}
+        \item Vérifier, par le calcul, que le point $S$, milieu du segment
+          $\left[ MP \right]$, a pour coordonnées $(1; -1)$.
+        \item Vérifier, toujours par le calcul, que les coordonnées de $R$,
+          symétrique de $T$ par rapport à $S$, sont $(3; -3)$.
+        \item Que peut-on dire du quadrilatère $PTMR$ ?
+      \end{enumerate}
+    \item \begin{enumerate}
+        \item Montrer que les points $M$, $T$ et $U$ sont alignés. 
+        \item En déduire que les droites $\left( UT \right)$ et $\left( PR
+          \right)$ sont parallèles.
+        \item \emph{On admet également que les droites $(RT)$ et $(PU)$ sont
+          parallèles.} Que peut-on déduire sur le quadrilatère $RTUP$ ?
+      \end{enumerate}
+    \item \begin{enumerate}
+        \item Démontrer que le triangle $TUP$ est rectangle en $U$.
+        \item Que peut-on déduire sur le quadrilatère $RTUP$ ?
+      \end{enumerate}
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[$3$ points]
+  Soit $ABC$ un triangle rectangle en $A$. On suppose qu'on a $AC=4$ et $BC=8$.
+  \begin{enumerate}
+    \item Rappeler les formules donnant $\cos\left( \widehat{ABC} \right)$ et
+      $\sin\left( \widehat{ABC} \right)$ en fonction des côtés du triangle
+      $ABC$.
+    \item Donner tous les angles (en degré) du triangle $ABC$.
+    \item \begin{enumerate}
+        \item Comment s'appelle le cercle qui passe par tous les sommets d'un
+          triangle ?
+        \item Comment peut-on le tracer ?
+      \end{enumerate}
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[$5,5$ points]
+  Résoudre les équations suivantes dans $\mathbb{R}$. On donnera à chaque fois
+  la réponse sous forme d'un ensemble de solutions.
+  \begin{align*}
+    \textbf{a)}\;& 5x - 1 = 6 &
+    \textbf{b)}\;& 5 - 3x = 0 &
+    \textbf{c)}\;& 2x + 7 = 4x + 3 &
+    \textbf{d)}\;& 3(x-1) = 1 + 3x
+  \end{align*}
+\end{exo}
+
+\begin{exo}[$3,5$ points]
+  Une grand-mère a trois petits enfants : Alice, Bob, et Charles. Pendant une
+  fête, elle leur offre à tous les trois une enveloppe contenant de l'argent.
+  Alice et Bob recoivent autant d'argent dans leur enveloppe, mais Charles, qui
+  est le chouchou, reçoit deux fois plus d'argent qu'Alice et Bob. En tout, la
+  grand-mère a distribué $140$ euros.\\
+  On note $x$ la somme d'argent distribuée à Alice.
+  \begin{enumerate}
+
+    \item \begin{enumerate}
+        \item Exprimer, en fonction de $x$, la somme d'argent versée à Bob.
+        \item Exprimer, en fonction de $x$, la somme d'argent versée à Charles.
+        \item Exprimer, en fonction de $x$, la somme totale d'argent versée aux
+          trois petits-enfants réunis.
+      \end{enumerate}
+    \item Écrire une équation modélisant cette situation.
+    \item \begin{enumerate}
+        \item Résoudre cette équation.
+        \item En déduire la somme d'argent versée à Alice, Bob et Charles.
+      \end{enumerate}
+  \end{enumerate}
+\end{exo}
+
+\end{document}
