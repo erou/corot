@@ -1,0 +1,168 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{.5cm}
+\newcommand{\spacebelowexo}{2mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+\begin{exo}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x) = 2x^2-x$.
+  \begin{enumerate}
+    \item Soit $h$ un réel non nul. Exprimer $f(1+h)-f(1)$ en fonction de $h$.
+    \item Montrer que $f$ est dérivable en $1$ et donner la valeur du nombre
+      dérivé de $f$ en $1$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $g$ la fonction définie sur $\mathbb{R}^*$ par $g(x) = \frac{3}{x}$.
+  \begin{enumerate}
+    \item Soit $h$ un réel non nul. Exprimer $g(1+h)-g(1)$ en fonction de $h$.
+    \item Montrer que $g$ est dérivable en $1$ et donner la valeur du nombre
+      dérivé de $g$ en $1$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $h$ une fonction définie sur $\mathbb{R}$. On sait que $h(2)=3$ et
+  $h'(2)=2$. Donner l'équation réduite de la tangente à la courbe représentative
+  de la fonction $h$, au point d'abscisse $2$.
+\end{exo}
+
+\begin{exo}
+  Soit $t$ la fonction définie sur $\mathbb{R}$ par $t(x) = \frac{x^2}{2}$. On
+  note $\mathcal C_t$ la courbe représentative de $t$.
+  \begin{enumerate}
+    \item Calculer $t(3)$.
+    \item Calculer $t'(3)$.
+    \item En déduire l'équation réduite de la tangente à 
+      $\mathcal C_t$ au point d'abscisse $3$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}~\\
+  \begin{minipage}{.5\textwidth}
+    Sur la figure ci-contre, on a donné la représentation graphique $\mathcal
+    C_f$ de la
+    fonction $f$ définie sur $\mathbb{R}$ par $f(x) = x^3-x^2-x+1$. On également
+    représenté la tangente $T_A$ à la courbe $\mathcal C_f$ au point $A(0; 1)$.
+    \begin{enumerate}
+      \item \begin{enumerate}
+          \item Lire graphiquement la valeur de $f'(0)$.
+          \item En déduire l'équation réduite de $T_A$.
+        \end{enumerate}
+    \end{enumerate}
+    On remarque également que l'axe des abscisse est la tangente de $\mathcal
+    C_f$ au point $B(1; 0)$.
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+      \item \begin{enumerate}
+          \item Combien vaut $f'(1)$ ?
+          \item En déduire l'équation réduite de la tangente à $\mathcal C_f$ au
+            point d'abscisse $1$.
+        \end{enumerate}
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=.9]
+    \begin{axis}[x=1cm, y=1cm, ymin=-.5, xmin=-2.5]
+     \addplot[red, samples=101, semithick]{x^3-x^2-x+1};
+      \addplot[blue, samples=101]{1-x};
+    \end{axis}
+    \draw[very thick, blue] (2.5-.1, 1.5)--(2.5+.1, 1.5) (2.5, 1.5-.1)--(2.5,
+    1.5+.1);
+    \node[blue] (a) at (2.8, 1.8) {$A$};
+    \node[red] (Cf) at (3.8, 4.8) {$\mathcal C_f$};
+    \node[blue] (TA) at (.4, 4) {$T_A$};
+  \end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{exo}
+
+\vspace{1cm}
+\setcounter{exo}{0}
+\begin{exo}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x) = 2x^2-x$.
+  \begin{enumerate}
+    \item Soit $h$ un réel non nul. Exprimer $f(1+h)-f(1)$ en fonction de $h$.
+    \item Montrer que $f$ est dérivable en $1$ et donner la valeur du nombre
+      dérivé de $f$ en $1$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $g$ la fonction définie sur $\mathbb{R}^*$ par $g(x) = \frac{3}{x}$.
+  \begin{enumerate}
+    \item Soit $h$ un réel non nul. Exprimer $g(1+h)-g(1)$ en fonction de $h$.
+    \item Montrer que $g$ est dérivable en $1$ et donner la valeur du nombre
+      dérivé de $g$ en $1$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}
+  Soit $h$ une fonction définie sur $\mathbb{R}$. On sait que $h(2)=3$ et
+  $h'(2)=2$. Donner l'équation réduite de la tangente à la courbe représentative
+  de la fonction $h$, au point d'abscisse $2$.
+\end{exo}
+
+\begin{exo}
+  Soit $t$ la fonction définie sur $\mathbb{R}$ par $t(x) = \frac{x^2}{2}$. On
+  note $\mathcal C_t$ la courbe représentative de $t$.
+  \begin{enumerate}
+    \item Calculer $t(3)$.
+    \item Calculer $t'(3)$.
+    \item En déduire l'équation réduite de la tangente à 
+      $\mathcal C_t$ au point d'abscisse $3$.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}~\\
+  \begin{minipage}{.5\textwidth}
+    Sur la figure ci-contre, on a donné la représentation graphique $\mathcal
+    C_f$ de la
+    fonction $f$ définie sur $\mathbb{R}$ par $f(x) = x^3-x^2-x+1$. On également
+    représenté la tangente $T_A$ à la courbe $\mathcal C_f$ au point $A(0; 1)$.
+    \begin{enumerate}
+      \item \begin{enumerate}
+          \item Lire graphiquement la valeur de $f'(0)$.
+          \item En déduire l'équation réduite de $T_A$.
+        \end{enumerate}
+    \end{enumerate}
+    On remarque également que l'axe des abscisse est la tangente de $\mathcal
+    C_f$ au point $B(1; 0)$.
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+      \item \begin{enumerate}
+          \item Combien vaut $f'(1)$ ?
+          \item En déduire l'équation réduite de la tangente à $\mathcal C_f$ au
+            point d'abscisse $1$.
+        \end{enumerate}
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+\begin{center}
+  \begin{tikzpicture}[scale=.9]
+    \begin{axis}[x=1cm, y=1cm, ymin=-.5, xmin=-2.5]
+     \addplot[red, samples=101, semithick]{x^3-x^2-x+1};
+      \addplot[blue, samples=101]{1-x};
+    \end{axis}
+    \draw[very thick, blue] (2.5-.1, 1.5)--(2.5+.1, 1.5) (2.5, 1.5-.1)--(2.5,
+    1.5+.1);
+    \node[blue] (a) at (2.8, 1.8) {$A$};
+    \node[red] (Cf) at (3.8, 4.8) {$\mathcal C_f$};
+    \node[blue] (TA) at (.4, 4) {$T_A$};
+  \end{tikzpicture}
+\end{center}
+  \end{minipage}
+\end{exo}
+
+
+
+
+
+\end{document}
