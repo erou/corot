@@ -1,0 +1,100 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+\begin{center}
+\textbf{\LARGE \textsc{Évaluation -- Réseaux sociaux}}\\[2mm]
+
+{\large Mercredi 13 Décembre 2023, durée : 0h30}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie.
+\end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+\begin{exo}[$3$ points]
+  Un réseau social constitué de $7$ personnes : Alice, Bernard, Cassandra,
+  Denis, Eliott, Fernando et Gaétan. On a les liens suivants :
+  \begin{itemize}
+    \item Alice est amie avec Eliott et Fernando.
+    \item Bernard est ami avec Cassandra et Fernando.
+    \item Cassandra est amie avec Fernando.
+    \item Denis est ami avec Eliott et Fernando.
+    \item Eliott est ami avec Gaétan.
+  \end{itemize}
+  \begin{enumerate}
+    \item Représenter ce réseau social sous forme de graphe.
+    \item Qui est la personne qui possède le plus d'amis ? Combien en
+      possède-t-elle ?
+    \item Quelle est la distance entre Bernard et Eliott ?
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[$2$ points]~\\[-1.5cm]
+  \begin{minipage}{.5\textwidth}
+    On a représenté un graphe ci-contre.
+    \begin{enumerate}
+      \item Quel est le centre du graphe ? \emph{Justifier.}
+      \item Donner le diamètre du graphe.
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}{.5\textwidth}
+  \begin{tikzpicture}
+\begin{scope}[every node/.style={circle,thick,draw}]
+    \node (A) at (0,0) {A};
+    \node (B) at (0,3) {B};
+    \node (C) at (2.5,4) {C};
+    \node (D) at (2.5,1) {D};
+    \node (E) at (2.5,-3) {E};
+    \node (F) at (5,3) {F} ;
+\end{scope}
+\begin{scope}[>={stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path (A) edge (B);
+    \path (B) edge (C);
+    \path (A) edge (D);
+    \path (D) edge (C);
+    \path (A) edge (E);
+    \path (D) edge (E);
+    \path (D) edge (F);
+    \path (C) edge (F);
+    \path (E) edge (F); 
+    \path (B) edge[bend right=60] (E); 
+\end{scope}
+\end{tikzpicture}
+\end{minipage}
+\end{exo}
+
+\begin{exo}[$5$ points]
+  \emph{Les réponses doivent être justifiées et rédigées.}
+  \begin{enumerate}
+    \item Quel est le but des algorithmes présents dans les réseaux sociaux ?
+    \item Pourquoi les réseaux sociaux prennent-ils des données personnels ?
+    \item Citer deux mécanismes d'addictions présent dans le réseaux sociaux.
+    \item Vrai ou faux ? Une personne mineure ne risque rien si elle est
+      reconnue coupable de harcèlement.
+    \item Expliquer ce qu'est le phénomène du « petit monde ».
+  \end{enumerate}
+\end{exo}
+
+
+\end{document}
