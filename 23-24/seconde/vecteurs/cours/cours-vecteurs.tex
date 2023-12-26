@@ -8,8 +8,12 @@
 
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
 
-\title{Chapitre 7 : Vecteurs}
-\date{}
+%\title{\vspace{-20mm}Chapitre 6 : Vecteurs}
+\title{Chapitre 6 : Vecteurs}
+\date{\vspace{-14mm}
+\href{https://erou.forge.aeif.fr/s11/vecteurs.html}{
+  \includegraphics[scale=.6]{qr-vecteurs.png}}
+\vspace{-12mm}}
 \author{}
 
 \begin{document}
@@ -212,12 +216,12 @@
 \begin{rmq}
   \textbf{Attention !} Le sens des lettres dans la propriété précédente ($ABDC$)
   n'est pas le sens habituel ($ABCD$).
-\end{rmq}
+\end{rmq}%~\\[-15mm]
 \begin{rmq}
   Le parallélogramme peut éventuellement être aplati, c'est-à-dire que tous ses
   points soient alignés sur une même droite. La propriété reste vraie.
 \end{rmq}
-\section{Vecteurs opposés}
+\subsection{Vecteurs opposés}
 \begin{defi}{Vecteur opposé}
   Le \textbf{vecteur opposé} au vecteur $\vect u$, noté $-\vect u$, est le
   vecteur qui possède la même direction et la même norme que le vecteur $\vect
@@ -404,5 +408,63 @@
   Les coordonnées de $\vect r+\vect s$ sont alors
   $\begin{pmatrix}x+x'\\y+y'\end{pmatrix}$.
 \end{prop}
+
+\subsection{Produit d'un vecteur par un réel}
+\begin{defi}{Produit d'un vecteur par un réel}
+  Soit $\lambda\in\mathbb{R}$ un réel et $\vect u$ un vecteur de coordonnées
+  $\begin{pmatrix}x\\y\end{pmatrix}$. Le vecteur $\lambda\vect u$ a pour
+  coordonnées $\begin{pmatrix}\lambda x \\ \lambda y \end{pmatrix}$.
+\end{defi}
+\begin{prop}
+  Soient $\lambda, \lambda'\in\mathbb{R}$ deux nombres réels, $\vect u$ et $\vect w$ deux vecteurs. On a
+  \begin{align*}
+    \textbf{1.}\;& \lambda\left( \vect u +\vect w \right) = \lambda\vect
+    u+\lambda\vect w &
+    \textbf{2.}\;& \left( \lambda+\lambda' \right)\vect u = \lambda\vect
+    u+\lambda'\vect u &
+    \textbf{3.}\;& \lambda\left( \lambda'\vect u\right) = \left( \lambda\lambda'
+    \right)\vect u
+  \end{align*}
+\end{prop}
+
+\section{Colinéarité de deux vecteurs}
+\subsection{Définition}
+\begin{defi}{Colinéarité de deux vecteurs}
+  Deux vecteurs $\vect u$ et $\vect v$ sont dits \textbf{colinéaires}
+  lorsqu'il existe un nombre réel $\lambda\in\mathbb{R}$ tel que $\vect
+  u=\lambda\vect v$.
+\end{defi}
+\begin{prop}
+  Deux vecteurs $\vect u$ et $\vect v$ sont colinéaires si, et seulement si,
+  leurs coordonnées sont proportionnelles.
+\end{prop}
+\subsection{Déterminant}
+\begin{defi}{Déterminant}
+  Soient $\vect u$ et $\vect v$ deux vecteurs de coordonnées respectives
+  $\begin{pmatrix} x\\y\end{pmatrix}$ et $\begin{pmatrix}x'\\y'\end{pmatrix}$.
+  Le \textbf{déterminant} de $\vect u$ et $\vect v$ est le réel $\det\left(\vect u;
+  \vect v\right)=xy'-yx'.$
+\end{defi}
+\begin{prop}
+  Deux vecteurs $\vect u$ et $\vect v$ sont colinéaires si, et seulement si,
+  leur déterminant est nul.
+\end{prop}
+\begin{app}
+  Les vecteurs $\vect u(4; 3)$ et $\vect v(24; 18)$ sont-ils colinéaires ?
+\end{app}
+\subsection{Parallélisme}
+\begin{prop}
+  Les droites $(AB)$ et $(CD)$ sont parallèles si, et seulement si, les vecteurs
+  $\vect{AB}$ et $\vect{CD}$ sont colinéaires.
+\end{prop}
+\begin{prop}
+  Soient $A$, $B$ et $C$ trois points distincts deux à deux. Les points $A$, $B$
+  et $C$ sont alignés si, et seulement si, les vecteurs
+  $\vect{AB}$ et $\vect{AC}$ sont colinéaires.
+\end{prop}
+\begin{app}
+  Soient $A(5; 8)$, $B(-3; -1)$ et $C(-1; 9)$ trois points dans un repère.
+  Les points sont-ils alignés ?
+\end{app}
 
 \end{document}
