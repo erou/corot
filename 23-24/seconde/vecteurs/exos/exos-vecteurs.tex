@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Information chiffrée -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+\begin{exo}~\\
+  \begin{minipage}[]{.3\textwidth}
+    On place ci-contre les points $A, B, C, D, E, F, G, H$ dans un repère.
+    \begin{enumerate}
+      \item Le quadrilatère $ABDC$ est-il un parallélogramme ?
+      \item Le quadrilatère $EFGH$ est-il un parallélogramme ?
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.7\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \foreach \x in {0, ..., 20}{
+          \draw[opacity=.5] (.5*\x, -.1) -- (.5*\x, 5.1);
+        }
+        \foreach \y in {0, ..., 10}{
+          \draw[opacity=.5] (-.1, .5*\y) -- (10.1, .5*\y);
+        }
+
+        \point{5}{2.5}{black};
+        \node at (5.25, 2.75) {$A$};
+
+        \point{3}{1.5}{black};
+        \node at (3.25, 1.75) {$B$};
+
+        \point{6}{4.5}{black};
+        \node at (6.25, 4.75) {$C$};
+
+        \point{4}{3.5}{black};
+        \node at (4.25, 3.75) {$D$};
+
+        \point{9}{0}{black};
+        \node at (9.25, 0.25) {$E$};
+
+        \point{.5}{1}{black};
+        \node at (.75, 1.25) {$F$};
+
+        \point{2}{4.5}{black};
+        \node at (2.25, 4.75) {$G$};
+
+        \point{10}{3.5}{black};
+        \node at (10.25, 3.75) {$H$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exo}
+
+\end{document}

@@ -213,14 +213,63 @@
   \end{minipage}
 \end{prop}
 
+\begin{app}
+  \begin{minipage}[]{.3\textwidth}
+    On place ci-contre les points $A, B, C, D, E, F, G, H$ dans un repère.
+    \begin{enumerate}
+      \item Le quadrilatère $ABDC$ est-il un parallélogramme ?
+      \item Le quadrilatère $EFGH$ est-il un parallélogramme ?
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.7\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \foreach \x in {0, ..., 20}{
+          \draw[opacity=.5] (.5*\x, -.1) -- (.5*\x, 5.1);
+        }
+        \foreach \y in {0, ..., 10}{
+          \draw[opacity=.5] (-.1, .5*\y) -- (10.1, .5*\y);
+        }
+
+        \point{5}{2.5}{black};
+        \node at (5.25, 2.75) {$A$};
+
+        \point{3}{1.5}{black};
+        \node at (3.25, 1.75) {$B$};
+
+        \point{6}{4.5}{black};
+        \node at (6.25, 4.75) {$C$};
+
+        \point{4}{3.5}{black};
+        \node at (4.25, 3.75) {$D$};
+
+        \point{9}{0}{black};
+        \node at (9.25, 0.25) {$E$};
+
+        \point{.5}{1}{black};
+        \node at (.75, 1.25) {$F$};
+
+        \point{2}{4.5}{black};
+        \node at (2.25, 4.75) {$G$};
+
+        \point{10}{3.5}{black};
+        \node at (10.25, 3.75) {$H$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{app}
+
 \begin{rmq}
   \textbf{Attention !} Le sens des lettres dans la propriété précédente ($ABDC$)
   n'est pas le sens habituel ($ABCD$).
-\end{rmq}%~\\[-15mm]
+\end{rmq}%~\\[-12mm]
+\vspace{-.5cm}
 \begin{rmq}
   Le parallélogramme peut éventuellement être aplati, c'est-à-dire que tous ses
   points soient alignés sur une même droite. La propriété reste vraie.
 \end{rmq}
+\vspace{-.5cm}
+
 \subsection{Vecteurs opposés}
 \begin{defi}{Vecteur opposé}
   Le \textbf{vecteur opposé} au vecteur $\vect u$, noté $-\vect u$, est le
@@ -252,6 +301,16 @@
   Pour tous points du plan $A$ et $B$, $\vect{AM}=\vect{MB}$ si et seulement si
   $M$ est le milieu de $[AB]$.
 \end{prop}
+
+\begin{app}
+  Soient $A(2; 5)$, $M(6; 7)$ et $B(10; 9)$.
+  \begin{enumerate}
+    \item Calculer les vecteurs $\vect{AM}$ et $\vect{MB}$.
+    \item Le point $M$ est-il le milieu de $\left[ AB \right]$ ?
+    \item Calculer les coordonnées du point $C$ tel que $B$ soit le milieu de
+      $\left[ AC \right]$.
+  \end{enumerate}
+\end{app}
 
 \subsection{Représentant d'un vecteur}
 \begin{defi}{Représentant}
@@ -401,6 +460,11 @@
   Deux vecteurs sont égaux si, et seulement si, ils ont les mêmes coordonnées.
 \end{prop}
 
+\begin{app}
+  Soient $A(-3; 1)$, $B(2; 2)$, $C(4; 5)$ et $D(9; 6)$. Le quadrilatère $ABDC$
+  est-il un parallélogramme ?
+\end{app}
+
 \subsection{Coordonnées d'une somme}
 \begin{prop}
   Soient $\vect r\begin{pmatrix}x\\y\end{pmatrix}$ et
@@ -408,6 +472,16 @@
   Les coordonnées de $\vect r+\vect s$ sont alors
   $\begin{pmatrix}x+x'\\y+y'\end{pmatrix}$.
 \end{prop}
+
+\begin{app}
+  Soient $A(1; 1)$, $B(-2; 3)$, $C(4; -1)$.
+  \begin{enumerate}
+    \item Calculer les coordonnées de $\vect{AB}$, $\vect{BC}$ et
+      $\vect{AC}$.
+    \item Calculer $\vect{AB}+\vect{BC}$ gr\^ace aux coordonnées.
+    \item Quelle égalité retrouve-t-on ?
+  \end{enumerate}
+\end{app}
 
 \subsection{Produit d'un vecteur par un réel}
 \begin{defi}{Produit d'un vecteur par un réel}
@@ -427,44 +501,15 @@
   \end{align*}
 \end{prop}
 
-\section{Colinéarité de deux vecteurs}
-\subsection{Définition}
-\begin{defi}{Colinéarité de deux vecteurs}
-  Deux vecteurs $\vect u$ et $\vect v$ sont dits \textbf{colinéaires}
-  lorsqu'il existe un nombre réel $\lambda\in\mathbb{R}$ tel que $\vect
-  u=\lambda\vect v$.
-\end{defi}
-\begin{prop}
-  Deux vecteurs $\vect u$ et $\vect v$ sont colinéaires si, et seulement si,
-  leurs coordonnées sont proportionnelles.
-\end{prop}
-\subsection{Déterminant}
-\begin{defi}{Déterminant}
-  Soient $\vect u$ et $\vect v$ deux vecteurs de coordonnées respectives
-  $\begin{pmatrix} x\\y\end{pmatrix}$ et $\begin{pmatrix}x'\\y'\end{pmatrix}$.
-  Le \textbf{déterminant} de $\vect u$ et $\vect v$ est le réel $\det\left(\vect u;
-  \vect v\right)=xy'-yx'.$
-\end{defi}
-\begin{prop}
-  Deux vecteurs $\vect u$ et $\vect v$ sont colinéaires si, et seulement si,
-  leur déterminant est nul.
-\end{prop}
 \begin{app}
-  Les vecteurs $\vect u(4; 3)$ et $\vect v(24; 18)$ sont-ils colinéaires ?
-\end{app}
-\subsection{Parallélisme}
-\begin{prop}
-  Les droites $(AB)$ et $(CD)$ sont parallèles si, et seulement si, les vecteurs
-  $\vect{AB}$ et $\vect{CD}$ sont colinéaires.
-\end{prop}
-\begin{prop}
-  Soient $A$, $B$ et $C$ trois points distincts deux à deux. Les points $A$, $B$
-  et $C$ sont alignés si, et seulement si, les vecteurs
-  $\vect{AB}$ et $\vect{AC}$ sont colinéaires.
-\end{prop}
-\begin{app}
-  Soient $A(5; 8)$, $B(-3; -1)$ et $C(-1; 9)$ trois points dans un repère.
-  Les points sont-ils alignés ?
+  Soit deux vecteurs $\vect u $ et $\vect v$ données par $\vect u\begin{pmatrix}
+    2\\-1\end{pmatrix}$ et $\vect v\begin{pmatrix}5\\3\end{pmatrix}$.
+  \begin{enumerate}
+    \item Calculer $2\vect u$ et $3\vect v$.
+    \item Calculer le vecteur $\vect w$ donné par $\vect w=\vect v-3\vect u$.
+    \item Soit $A(-7; 1)$. Déterminer les coordonnées du point $M$ tel que $AM =
+      \vect u-\vect v$.
+  \end{enumerate}
 \end{app}
 
 \end{document}
