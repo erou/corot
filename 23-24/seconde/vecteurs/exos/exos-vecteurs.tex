@@ -162,6 +162,128 @@
   \end{minipage}
 \end{exo}
 
+\begin{exo}~\\
+  \begin{minipage}[]{.35\textwidth}
+    On considère les vecteurs $\vect{AB}$ et $\vect{EF}$ et un point $C$.
+    \begin{enumerate}
+      \item Reproduire la figure sur papier quadrillé.
+      \item Construire les points
+        \begin{enumerate}
+          \item $D$ tel que $\vect{CD}=\vect{AB}$ ;
+          \item $G$ tel que $\vect{CG}=\vect{EF}$ ;
+          \item $H$ tel que $\vect{HC}=\vect{AB}$ ;
+          \item $I$ tel que $\vect{IC}=\vect{CG}$ ;
+          \item $J$ tel que $\vect{BJ}=\vect{JC}$.
+        \end{enumerate}
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.65\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \foreach \x in {0, ..., 20}{
+          \draw[opacity=.5] (.5*\x, -.1) -- (.5*\x, 5.1);
+        }
+        \foreach \y in {0, ..., 10}{
+          \draw[opacity=.5] (-.1, .5*\y) -- (10.1, .5*\y);
+        }
+
+        \draw[very thick, -latex] (8, 4) -- (5,4);
+        \draw[very thick, -latex] (6, 2.5) -- (5.5, 1);
+
+        \point{6}{2.5}{black};
+        \node at (6.25, 2.75) {$A$};
+
+        \point{5.5}{1}{black};
+        \node at (5.75, 1.25) {$B$};
+
+        \point{3.5}{3}{black};
+        \node at (3.75, 3.25) {$C$};
+
+        \point{8}{4}{black};
+        \node at (8.25, 4.25) {$E$};
+
+        \point{5}{4}{black};
+        \node at (5.25, 4.25) {$F$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exo}
+
+\begin{exo}
+  {\small On peut traduire de plusieurs façons une même situation. Recopier et compléter
+  ce tableau.}
+  \begin{center}
+    \includegraphics[scale=.5]{tableau.png}
+  \end{center}
+\end{exo}
+
+\begin{exo}~\\
+  \begin{minipage}[]{.35\textwidth}
+    \begin{enumerate}
+      \item Placer le point $M_1$ tel que
+        \[
+          \vect{AM_1} = \vect u+\vect v.
+        \]
+      \item Placer le point $M_2$ tel que 
+        \[
+          \vect{AM_2} = \vect v-\vect u.
+        \]
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.65\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \foreach \x in {0, ..., 10}{
+          \draw[opacity=.5] (.5*\x, -.1) -- (.5*\x, 3.6);
+        }
+        \foreach \y in {0, ..., 7}{
+          \draw[opacity=.5] (-.1, .5*\y) -- (5.1, .5*\y);
+        }
+
+        \draw[very thick, -latex] (.5, 3) -- node[above right] {$\vect{u}$}
+        (2,2.5);
+        \draw[very thick, -latex] (3.5, 1) -- node[left] {$\vect{v}$}
+        (4.5,2.5);
+
+        \point{.5}{1}{black};
+        \node at (.75, 1.25) {$A$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exo}
+
+\begin{exo}~\\[2mm]
+  \begin{minipage}[]{.5\textwidth}
+    \begin{enumerate}
+      \item Tracer la somme $\vect a=\vect u+\vect v$.
+      \item Tracer la somme $\vect b=\vect u+\vect w$.
+      \item Tracer la somme $\vect c=\vect v+\vect w$.
+      \item Tracer la différence $\vect d=\vect v-\vect v$.
+      \item Tracer la différence $\vect e=\vect w-\vect v$.
+      \item Tracer la différence $\vect f=\vect u-\vect w$.
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \foreach \x in {0, ..., 6}{
+          \draw[opacity=.5] (.5*\x, -.1) -- (.5*\x, 3.1);
+        }
+        \foreach \y in {0, ..., 6}{
+          \draw[opacity=.5] (-.1, .5*\y) -- (3.1, .5*\y);
+        }
+
+        \draw[very thick, -latex] (0, .5) -- node[above left] {$\vect{u}$}
+        (.5,1.5);
+        \draw[very thick, -latex] (1, 2.5) -- node[above] {$\vect{v}$}
+        (3,2.5);
+        \draw[very thick, -latex] (2, 0) -- node[above] {$\vect{w}$}
+        (1,.5);
+
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exo}
 
 
 \end{document}
