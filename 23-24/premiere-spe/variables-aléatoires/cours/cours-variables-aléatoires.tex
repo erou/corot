@@ -1,0 +1,228 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Variables aléatoires -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\title{\vspace{-10mm}Chapitre 5 : Variables aléatoires}
+\date{\vspace{-14mm}
+\href{https://erou.forge.aeif.fr/s11/variables-aleatoires.html}{
+  \includegraphics[scale=.6]{qrcode.png}}
+\vspace{-12mm}}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Notion de variable aléatoire réelle}
+
+\begin{defi}{Variable aléatoire}
+  Soit $\Omega$ l'ensemble des issues d'une expérience aléatoire ($\Omega$ est
+  l'\textbf{univers}). Une \textbf{variable aléatoire} sur $\Omega$ est une
+  fonction définie sur $\Omega$ à valeurs dans $\mathbb{R}$.
+\end{defi}
+
+\begin{defi}{Événement défini à partir d'une variable aléatoire}
+  Soient $X$ une variable aléatoire définie sur $\Omega$ et $x\in\mathbb{R}$ un
+  nombre réel.
+  \begin{itemize}
+    \item L'événement « \textbf{$X$ prend la valeur $x$} » est l'ensemble des
+      issues de $\Omega$ auxquelles on associe le réel $x$.
+    \item L'événement « \textbf{$X$ prend des valeurs supérieures ou égales
+      à $x$} » est l'ensemble des
+      issues de $\Omega$ auxquelles on associe un réel inférieur ou égal à $x$.
+    \item L'événement « \textbf{$X$ prend des valeurs inférieures ou égales
+      à $x$} » est l'ensemble des
+      issues de $\Omega$ auxquelles on associe un réel inférieur ou égal à $x$.
+  \end{itemize}
+\end{defi}
+\begin{notation}
+  Ces trois événements sont respectivement notés $\left\{ X=x \right\}$,
+  $\left\{ X\geq x \right\}$ et $\left\{ X\leq x \right\}$.
+\end{notation}
+
+\begin{notation}
+  L'ensemble des valeurs prises par une variable aléatoire $X$ définie sur un
+  univers $\Omega$ est noté $X(\Omega)$.
+\end{notation}
+
+\begin{exemple}
+  On lance un dé à six faces. Si on obtient un multiple de $3$, on gagne $2$
+  euros; sinon, on perd $1$ euro. On note $X$ la variable aléatoire qui, à
+  chaque lancer associe le gain obtenu (ce gain peut éventuellement être
+  négatif).
+  \begin{itemize}
+    \item L'événement $\left\{ X=2 \right\}$ est réalisé lorsque l'on obtient un
+      multiple de $3$.
+    \item L'événement $\left\{ X\leq0 \right\}$ est réalisé lorsque le gain est
+      négatif, c'est-à-dire lorsque l'on n'obtient pas un multiple de $3$.
+    \item On a ici $X\left( \Omega \right)=\left\{ 2, -1 \right\}$.
+  \end{itemize}
+\end{exemple}
+
+\begin{app}
+  Un restaurant propose trois menus dont les prix respectifs sont $10$, $12$ et
+  $18$ euros. Il y a actuellement $100$ clients dans le restaurant.
+  \begin{enumerate}
+    \item On choisit une personne au hasard dans ce restaurant et on lui
+      demande le prix de son menu. Donner l'univers $\Omega_1$ de cette
+      expérience aléatoire, ainsi que la variable aléatoire $X_1$ que l'on peut
+      définir.
+    \item On choisit un menu au hasard et on s'intéresse au nombre de personnes
+      dans le restaurant ayant choisi ce menu. Donner l'univers $\Omega_2$ de
+      cette expérience aléatoire, ainsi que la variable aléatoire $X_2$ que l'on
+      peut définir.
+  \end{enumerate}
+\end{app}
+
+\section{Loi de probabilité d'une variable aléatoire réelle}
+
+\begin{defi}{Probabilité d'un événement $\left\{ X=x_i \right\}$}
+  La \textbf{probabilité d'un événement} $\left\{ X=x_i \right\}$ est la somme
+  des probabilités des issues de $\Omega$ auxquelles on associe le réel $x_i$.
+\end{defi}
+
+\begin{defi}{Loi de probabilité}
+  Soit $X$ une variable aléatoire définie sur $\Omega$ et prenant les valeurs
+  $x_1, x_2, \ldots, x_n$. Définir la
+  \textbf{loi de probabilité} de la variable aléatoire $X$, c'est associer à
+  chaque valeur $x_i$ prise par $X$ la probabilité de l'événement $P\left(
+  \left\{ X=x_i \right\}\right)$.
+\end{defi}
+
+\begin{rmq}
+  \begin{itemize}
+    \item On présente souvent la loi de probabilité d'une variable aléatoire
+      sous la forme d'un tableau.
+      \begin{center}
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabularx}{.7\textwidth}{|Y|Y|Y|Y|Y|}
+          \hline
+          $x_i$ & $x_1$ & $x_2$ & $\cdots$ & $x_n$ \\
+          \hline
+          $P\left( X=x_i \right)$ & $p_1$ & $p_2$ & $\cdots$ & $p_n$ \\
+          \hline
+        \end{tabularx}
+      \end{center}
+    \item On note souvent uniquement $P(X=x_i)$ au lieu de $P\left( \left\{
+        X=x_i\right\}\right)$ afin de simplifier les notations.
+  \end{itemize}
+\end{rmq}
+
+\begin{app}
+  Un jeu consiste à lancer deux fois de suite une pièce de monnaie. On gagne $5$
+  euros chaque fois qu'on obtient pile et on perd $2$ euros à chaque fois qu'on
+  obtient face. Soit $X$ la variable aléatoire qui, à chaque partie, associe le
+  gain, éventuellement négatif, obtenu à la fin.
+  \begin{enumerate}
+    \item Quelles sont les valeurs prises par $X$ ?
+    \item Déterminer la loi de probabilité de $X$.
+    \item En déduire $P\left( X\leq3 \right)$ puis $P\left( X>3 \right)$.
+  \end{enumerate}
+\end{app}
+
+\section{Espérance, variance et écart-type}
+Dans toute cette partie, $X$ est une variable aléatoire réelle définie sur un
+univers $\Omega$ prenant les valeurs $x_1, x_2, \ldots, x_n$ avec les
+probabilités respectives $p_1, p_2, \ldots, p_n$.
+
+\subsection{Espérance d'une variable aléatoire}
+
+\begin{defi}{Espérance}
+  L'\textbf{espérance} de $X$ est le nombre réel, noté $E\left( X \right)$,
+  défini par
+  \begin{align*}
+    E\left( X \right) &= \sum_{i=1}^n p_ix_i \\
+    &= p_1x_1+p_2x_2+\cdots+p_nx_n.
+  \end{align*}
+\end{defi}
+
+\begin{rmq}
+  Le nombre $E\left( X \right)$ peut s'interpréter comme la moyenne des valeurs
+  prises par $X$ lorsque l'expérience aléatoire est répétée \textbf{un très
+  grand nombre de fois}.
+\end{rmq}
+
+\begin{app}
+  On considère une variable aléatoire $X$ dont la loi de probabilité est donnée
+  ci-dessous.
+  \begin{center}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{.7\textwidth}{|Y|Y|Y|Y|}
+      \hline
+      $x_i$ & $-2$ & $1$ & $4$ \\
+      \hline
+      $P\left( X = x_i \right)$ & $\frac{1}{6}$ & $\frac{1}{2}$ &
+      $\frac{1}{3}$ \\
+      \hline
+    \end{tabularx}
+  \end{center}
+  Donner l'espérance de $X$.
+\end{app}
+
+\begin{app}
+  On lance deux dés cubiques équilibrés et on additionne les nombres obtenus sur
+  chacune des faces. On définit $X$ comme la variable aléatoire égale à la somme
+  des deux résultats.
+  \begin{enumerate}
+    \item Quelles sont les valeurs prises par $X$ ?
+    \item En utilisant un tableau à double entrée, déterminer la loi de
+      probabilité de $X$.
+    \item On décide de jouer au jeu suivant : si le nombre obtenu est multiple
+      de $3$, le joueur gagne $4$ euros; sinon il perd $2$ euros. On note $Y$ la
+      variable aléatoire égale au gain du joueur.
+      \begin{enumerate}
+        \item Donner la loi de probabilité de $Y$.
+        \item Calculer l'espérance de $Y$.
+      \end{enumerate}
+  \end{enumerate}
+\end{app}
+
+\begin{rmq}
+  Lorsque les valeurs prises par $X$ représentent les gains (ou pertes) à un
+  jeu, alors $E\left( X \right)$ représente le gain moyen par partie.
+  \begin{itemize}
+    \item Si $E\left( X \right)>0$, alors le jeu est \textbf{favorable} au
+      joueur;
+    \item Si $E\left( X \right)<0$, alors le jeu est \textbf{défavorable} au
+      joueur;
+    \item Si $E\left( X \right)=0$, alors le jeu est \textbf{équitable}.
+  \end{itemize}
+\end{rmq}
+
+\subsection{Variance et écart-type d'une variable aléatoire}
+
+\begin{defi}{Variance et écart-type}
+  La \textbf{variance} de $X$ est le réel positif, noté $\Var\left( X
+  \right)$, défini par
+  \begin{align*}
+    \Var\left( X \right) &= \sum_{i=1}^n p_i(x_i-E\left( X \right))^2 \\
+    &= p_1\left(
+    x_1-E\left( X \right) \right)^2+\cdots+p_n\left( x_n-E\left( X
+    \right) \right)^2.
+  \end{align*}
+  L'\textbf{écart-type} de $X$ est le nombre positif, noté $\sigma\left( X
+  \right)$, défini par $\sigma\left( X \right)=\sqrt{\Var\left( X \right)}$.
+\end{defi}
+
+\begin{app}
+  Une roue est partagée en $10$ secteurs angulaires dont $5$ sont colorés en
+  rouges, $3$ en vert et $2$ en jaune. On mise $3$ euros pour tourner la roue et
+  elle s'arrête au hasard sur un secteur angulaire. Si celui-ci est vert, on
+  gagne $5$ euros, s'il est jaune, on gagne $10$ euros et s'il est rouge, on ne
+  gagne rien.
+  \begin{enumerate}
+    \item Donner les différentes valeurs de $X$.
+    \item Déterminer la loi de probabilité de $X$.
+    \item Calculer $E\left( X \right)$.
+    \item Interpréter le résultat précédent. Ce jeu est-il équitable ?
+    \item À l'aide de la calculatrice, déterminer $\Var\left( X \right)$ et
+      $\sigma\left( X \right)$.
+  \end{enumerate}
+\end{app}
+
+
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Variables aléatoires -- Activité d'introduction}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+\begin{center}
+  \Large Activité : variables aléatoires
+\end{center}
+
+Le jeu Shadow Hunters est un jeu dans lequel deux camps s'affrontent : les
+Shadows, créatures des ténèbres, et les Hunters, dont le but est de chasser les
+monstres.\\
+Chaque tour de jeu est divisé en deux phases : une phase de déplacement et une
+phase de combat. Lors de la phase de déplacement, le joueur lance un dé
+tétraédrique non truqué à quatre faces et un dé cubique non truqué à six faces.
+Les points de déplacement obtenus sont la somme des valeurs des deux dés.
+\begin{enumerate}
+  \item \begin{enumerate}
+      \item Quelles sont les valeurs possibles pour le dé tétraédrique ?
+      \item Quelles sont les valeurs possibles pour le dé cubique ?
+      \item En déduire les valeurs possibles pour le déplacement.
+    \end{enumerate}
+  \item Construire un arbre qui traduit cette expérience aléatoire.
+  \item On peut définir une fonction $X$ dont l'ensemble de définition est
+    l'univers (l'ensemble des issues) de l'expérience aléatoire et qui, à chaque
+    issue, associe le nombre de points de déplacement. $X$ est appelée
+    \textbf{variable aléatoire}.\\
+    L'événement $\left\{ X=x \right\}$ est l'événement « la variable aléatoire
+    $X$ prend la valeur $x$ » et est constitué de toutes les issues qui
+    permettent d'obtenir la valeur $x$.\\
+    Par exemple, l'événement $\left\{ X=2 \right\}$ est obtenu en réalisant le
+    résultat $1$ sur le dé tétraédrique et le résultat $1$ sur le dé cubique.
+    L'arbre nous donne la probabilité $P\left( X=2 \right)=\frac{1}{24}$.\\
+    L'événement $\left\{ X=1 \right\}$ est impossible car la somme des deux dés
+    ne peux pas être égale à $1$.
+    \begin{enumerate}
+      \item À l'aide de l'arbre, recopier et compléter le tableau suivant,
+        appelé \textbf{loi de probabilité}.
+        \begin{center}
+          \renewcommand{\arraystretch}{1.3}
+          \begin{tabularx}{.8\textwidth}{|c|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
+            \hline
+            $x$ & $2$ & $3$ & & & & & & & \\
+            \hline
+            $P\left( X=x \right)$ & $\frac{1}{24}$ & & & & & & & & \\
+            \hline
+          \end{tabularx}
+        \end{center}
+      \item Comment interpréter l'événement $\left\{ X\geq4 \right\}$ ?
+      \item À l'aide du tableau, calculer $P\left( X\geq4 \right)$.
+      \item Calculer de deux façons différents $P\left( X<4 \right)$.
+    \end{enumerate}
+  \item Lors de la phase d'attaque, le joueur lance également les deux dés mais
+    ses points d'attaque sont égaux à la différence des deux résultats obtenus
+    en retranchant le plus petit résultat au plus grand (la différence est donc
+    toujours positive).
+    \begin{enumerate}
+      \item Déterminer l'univers de cette expérience aléatoire.
+      \item On note $Y$ la variable aléatoire qui, à chaque issue de l'univers,
+        associe les points d'attaque correspondants. Représenter, à l'aide d'un
+        tableau, la loi de probabilité de $Y$.\\
+        \emph{Indication : on pourra s'aider d'un arbre si besoin.}
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
