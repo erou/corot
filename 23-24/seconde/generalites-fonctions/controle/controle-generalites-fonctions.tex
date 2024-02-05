@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+\begin{center}
+\textbf{\LARGE \textsc{Contrôle 2}}\\[2mm]
+
+{\large Vendredi 15 Décembre, durée : 0h55}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\vspace{2mm}
+\noindent Le barême est donné à titre indicatif.
+\vspace{2mm}
+\begin{center}
+  Bon courage !
+\end{center}
+
+\paragraph{Exercice 1. \emph{(6 points)}}~\\
+\begin{minipage}{.6\textwidth}
+  Soit $f$ la fonction définie sur l'intervalle $I=[-2; 0]$ par
+  $f(x)=0,3\times x^4-0,4\times x^3-1,2\times x^2+2$. On donne une représentation graphique de la fonction
+  $f$ ci-contre.
+  \begin{enumerate}[leftmargin=*]
+    \item Donner le tableau de variations de $f$ sur l'intervalle $I$.
+    \item La fonction $f$ admet-elle un maximum sur $I$ ? Si oui, donner la
+      valeur du maximum, ainsi qu'un antécédent.
+    \item La fonction $f$ admet-elle un minimum sur $I$ ? Si oui, donner la
+      valeur du minimum, ainsi qu'un antécédent.
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[x=1cm, y=1cm, xmin=-2.5, xmax=3.5, ymin=-0.5, ymax=5.5]
+        \addplot[thick, red, samples=101, domain=-2:0] {0.3*x^4-0.4*x^3-1.2*x^2+2};
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+\end{minipage}
+On considère toujours la fonction définie par $f(x)=0,3\times x^4-0,4\times
+x^3-1,2\times x^2+2$, que
+l'on définit sur $\mathbb{R}$ tout entier.
+\begin{enumerate}[leftmargin=*]
+    \setcounter{enumi}{3}
+  \item À l'aide de la calculatrice, représenter la fonction $f$, puis en
+    déduire son tableau de variation sur $\mathbb{R}$.
+  \item La fonction $f$ admet-elle toujours un maximum sur $\mathbb{R}$ ? Si
+    oui, donner la valeur de ce maximum, ainsi que les éventuels antécédents.
+  \item La fonction $f$ admet-elle toujours un minimum sur $\mathbb{R}$ ? Si
+    oui, donner la valeur de ce minimum, ainsi que les éventuels antécédents.
+\end{enumerate}
+
+\paragraph{Exercice 2. \emph{(4 points)}} Soit $f$ une fonction dont on donne le tableau de
+variations suivant.
+\begin{center}
+  \begin{tikzpicture}
+    \tkzTabInit{$x$/1, $f(x)$/2}{$-5$, $-1$, $2$, $7$, $+\infty$}
+    \tkzTabVar{-/-1, +/4, -/0, +/2, -/}
+  \end{tikzpicture}
+\end{center}
+\begin{enumerate}[leftmargin=*]
+  \item Donner l'ensemble de définition de $f$.
+  \item Donner, s'ils existent, le maximum et le minimum de $f$.
+  \item Comparer les nombres $f(4)$ et $f(5)$.
+  \item Dessiner une courbe susceptible de représenter la fonction $f$.
+\end{enumerate}
+
+
+\newpage
+\paragraph{Exercice 3. \emph{(10 points)}} On donne ci-dessous le relevé de consommation en
+carburant d'une voiture à boite automatique à $5$ vitesses (numérotées de $1$ à
+$5$ sur le graphique). La consommation est mesurée en L/$100$ km. Une
+consommation de $10$ L/$100$ km signifie par exemple que le véhicule utilisera $10$ L de
+carburant pour parcourir $100$ km.\\
+\begin{minipage}{.48\textwidth}
+  \begin{enumerate}[leftmargin=*]
+    \item Déterminer la consommation en carburant lorsqu'une voiture roule à
+      $30$ km/h, $50$ km/h, $80$ km/h et $130$ km/h.
+    \item À quelles vitesses la voiture consomme-t-elle $5$ L/100km ? $6$
+      L/100km ? $6,5$ L/100km ?
+    \item Une conductrice fait le plein de carburant (réservoir de $70$ L) et
+      doit parcourir $1200$ km sur autoroute.
+      \begin{enumerate}%[leftmargin=*]
+        \item Si elle roule à la vitesse constante de $130$ km/h, aura-t-elle
+          assez de carburant ?
+      \end{enumerate}
+  \end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+    \includegraphics[scale=.4]{vitesses.png}
+  \end{center}
+\end{minipage}
+\begin{enumerate}[leftmargin=*]
+    \setcounter{enumi}{3}
+  \item[]
+    \begin{enumerate}
+        \setcounter{enumii}{1}
+      \item Si elle roule à vitesse constante, à quelle vitesse peut-elle
+          rouler au maximum pour ne pas tomber en panne ?
+\end{enumerate}
+\item La conductrice se déplace entre les bornes A et D sur autoroute à une
+  vitesse constante de $130$ km/h. Cependant, entre les bornes B et C, la
+  vitesse est limitée à $90$ km/h.
+  \begin{center}
+    \includegraphics[scale=.4]{bornes.png}
+  \end{center}
+  On note $x$ la distance parcourue en km et $f(x)$ le volume de carburant
+  consommé. On a représenté ci-dessous la courbe représentative de $f$ dans un
+  repère orthogonal.
+\end{enumerate}
+\begin{minipage}{.5\textwidth}
+  \begin{enumerate}[leftmargin=*]
+    \item[] \begin{enumerate}
+        \item En utilisant les points A, B, C, et D placés sur cette courbe,
+          retrouver les consommations correspondant aux vitesses de $130$ km/h
+          et $90$ km/h.
+        \item Si la voiture contient $30$ L d'essence au départ de A, la
+          conductrice pourra-t-elle arriver en D sans avoir à remettre de
+          l'essence ?
+      \end{enumerate}
+  \end{enumerate}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \begin{center}
+    \includegraphics[scale=.4]{carburant.png}
+  \end{center}
+\end{minipage}
+\begin{enumerate}[leftmargin=*]
+  \item[] \begin{enumerate}
+        \setcounter{enumii}{2}
+      \item La conductrice a toujours $30$ L dans son réservoir au départ de A.
+        Pour éviter de se retrouver en panne, elle décide de se
+        ravitailler lorsqu'il lui reste $15$ L dans son réservoir : à quelle
+        distance de D devra-t-elle se ravitailler ?
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}

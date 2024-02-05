@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+\begin{center}
+  Prénom : \hfill Nom :\hfill~\\[1cm]
+\textbf{\LARGE \textsc{Évaluation -- Vecteurs}}\\[2mm]
+
+{\large Mercredi 31 Janvier, durée : 30 minutes}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\begin{center}
+  Bon courage !
+\end{center}
+
+\begin{exo}~\\
+  \begin{minipage}[]{.35\textwidth}
+    Pour chacun des vecteurs suivant, dessiner un représentant sur le
+    quadrillage ci-contre. \emph{Préciser à chaque fois le vecteur en mettant
+    son nom.}
+    \begin{align*}
+      \textbf{1.}\;& \vect a = \vect u - \vect t &
+      \textbf{2.}\;& \vect b = \vect u + \vect w \\
+      \textbf{3.}\;& \vect c = \vect t - \vect s &
+      \textbf{4.}\;& \vect d = \vect w - \vect x \\
+      \textbf{5.}\;& \vect e = \vect u + \vect x &
+      \textbf{6.}\;& \vect f = \vect w + \vect s
+    \end{align*}
+  \end{minipage}
+  \begin{minipage}[]{.65\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \foreach \x in {0, ..., 20}{
+          \draw[opacity=.5] (.5*\x, -.1) -- (.5*\x, 5.1);
+        }
+        \foreach \y in {0, ..., 10}{
+          \draw[opacity=.5] (-.1, .5*\y) -- (10.1, .5*\y);
+        }
+
+        \draw[very thick, -latex] (1, .5) -- node[right] {$\vect{u}$} (2.5,4);
+        \draw[very thick, -latex] (9.5, 0.5) -- node[above] {$\vect{t}$} (7.5,.5);
+        \draw[very thick, -latex] (1.5, 3.5) -- node[above left] {$\vect{x}$} (.5,2.5);
+        \draw[very thick, -latex] (2, 4) -- node[above] {$\vect{s}$} (0,4.5);
+        \draw[very thick, -latex] (7, 4.5) -- node[above right] {$\vect{w}$}
+        (8.5,2);
+
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exo}
+
+\begin{exo}
+  Simplifier les expressions suivantes en utilisant la relation de Chasles.
+  \begin{align*}
+    \textbf{1.}\;& \vect{AZ} + \vect{ZQ} &
+    \textbf{2.}\;& \vect{FG} - \vect{AG} &
+    \textbf{3.}\;& \vect{TU} + \vect{VF} + \vect{UV} \\
+    \textbf{4.}\;& \vect{AB} + \vect{MA} - \vect{MB} + \vect{BA} &
+    \textbf{5.}\;& \vect{DE} + \vect{FG} + \vect{EF} + \vect{GD} &
+    \textbf{6.}\;& \vect{AB} - \vect{AC} + \vect{DC} - \vect{DB}
+  \end{align*}
+\end{exo}
+
+\begin{exo}
+  On considère les points suivants : $A(-3; 1), B(1; -3), C(-1; 3)$.
+  \begin{enumerate}
+    \item Faire une figure. \emph{On complètera la figure au fur et à mesure.}
+    \item Quelle est la nature du triangle $ABC$ ?
+  \end{enumerate}
+  On note $D$ le symétrique de $B$ par rapport à $A$.
+  \begin{enumerate}
+      \setcounter{enumi}{2}
+    \item Traduire cette information en utilisant une égalité de vecteurs.
+    \item Prouver que le point $D$ a pour coordonnées $D(-7; 5)$.
+  \end{enumerate}
+  On note $E$ l'image de $D$ par la translation de vecteur $\vect{CB}$.
+  \begin{enumerate}
+      \setcounter{enumi}{4}
+    \item Prouver que le point $E$ a pour coordonnées $E(-5; -1)$.
+    \item Montrer que $A$ est le milieu de $\left[ CE \right]$.
+    \item Quelle est la nature du quadrilatère $BCDE$ ?
+  \end{enumerate}
+\end{exo}
+
+\end{document}

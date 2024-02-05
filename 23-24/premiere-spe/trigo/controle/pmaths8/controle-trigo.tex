@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{1cm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+%\input{layout-nb.tex}
+
+%\title{Chapitre 1 : Ensembles de nombres}
+%\date{}
+%\author{}
+
+\begin{document}
+%\maketitle\thispagestyle{fancy}
+
+%\begin{center}
+%\textbf{\LARGE \textsc{Contrôle 2}}\\[2mm]
+%
+%{\large Mardi 6 Décembre 2022, durée : 1h00}\\[1mm]
+%\noindent\rule{8cm}{0.4pt}\\[1mm]
+%\end{center}
+
+\paragraph{Exercice 1.}
+Compléter le tableau ci-dessous, en donnant les \textbf{valeurs exactes}.
+\def\arraystretch{2}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \makecell{Mesure\\en degrés} & $120$ & & $45$ &  & $90$ & \phantom{$180$} &
+  $270$ & $360$ & & $137$ & & \\
+  \hline
+  \makecell{Mesure\\en radians} & & $\cfrac{4\pi}{5}$ & & $\cfrac{7\pi}{6}$ & &
+  $\pi$ & & & $\cfrac{25\pi}{4}$ & & $\cfrac{-2\pi}{3}$ & $\cfrac{11\pi}{7}$\\
+  \hline
+\end{tabular}
+\end{center}
+\paragraph{Exercice 2.}~\\[-5mm]
+\begin{minipage}{.5\textwidth}
+  Sur le cercle trigonométrique ci-contre, quels sont les points images des
+  réels suivants ?
+  \begin{align*}
+    \textbf{1)}\;& \frac{-4\pi}{3}: &
+    \textbf{2)}\;& \frac{\pi}{4}: &
+    \textbf{3)}\;& \frac{11\pi}{6}: \\
+    \textbf{4)}\;& -7\pi: &
+    \textbf{5)}\;& \frac{3\pi}{2}: &
+    \textbf{6)}\;& \frac{-3\pi}{4}:
+  \end{align*}
+Pour chacun des points suivants sur le cercle, donner un réel correspondant.
+\begin{align*}
+    \textbf{1)}\;& K: &
+    \textbf{2)}\;& M: &
+    \textbf{3)}\;& J: \\
+    \textbf{4)}\;& A: &
+    \textbf{5)}\;& F: &
+    \textbf{6)}\;& H:
+\end{align*}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \def\r{3cm}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0,0) circle (\r);
+      \draw (-\r-.1cm, 0) -- (\r+.1cm, 0);
+      \draw (0, -\r-.1cm) -- (0, \r+.1cm);
+
+      \node at (0:\r+.3cm) {$I$};
+      \node at (90:\r+.3cm) {$J$};
+      \node at (180:\r+.3cm) {$I'$};
+      \node at (-90:\r+.3cm) {$J'$};
+
+      \draw[dashed] (0,0) -- (30:\r);
+      \draw[dashed] (0,0) -- (45:\r);
+      \draw[dashed] (0,0) -- (60:\r);
+
+      \node at (30:\r+.3cm) {$A$};
+      \node at (45:\r+.3cm) {$B$};
+      \node at (60:\r+.3cm) {$C$};
+
+      \draw[dashed] (0,0) -- (120:\r);
+      \draw[dashed] (0,0) -- (135:\r);
+      \draw[dashed] (0,0) -- (150:\r);
+
+      \node at (120:\r+.3cm) {$D$};
+      \node at (135:\r+.3cm) {$E$};
+      \node at (150:\r+.3cm) {$F$};
+
+      \draw[dashed] (0,0) -- (-120:\r);
+      \draw[dashed] (0,0) -- (-135:\r);
+      \draw[dashed] (0,0) -- (-150:\r);
+
+      \node at (-120:\r+.3cm) {$K$};
+      \node at (-135:\r+.3cm) {$H$};
+      \node at (-150:\r+.3cm) {$G$};
+
+      \draw[dashed] (0,0) -- (-30:\r);
+      \draw[dashed] (0,0) -- (-45:\r);
+      \draw[dashed] (0,0) -- (-60:\r);
+
+      \node at (-30:\r+.3cm) {$N$};
+      \node at (-45:\r+.3cm) {$M$};
+      \node at (-60:\r+.3cm) {$L$};
+    \end{tikzpicture}
+  \end{center}
+\end{minipage}
+~\\[-15mm]
+
+\paragraph{Exercice 3.} Donner les valeurs remarquables ci-dessous.
+\begin{align*}
+  \textbf{1)}\; & \cos\left( \frac{\pi}{4} \right) = &
+  \textbf{2)}\; & \cos\left( \frac{4\pi}{3} \right) = &
+  \textbf{3)}\; & \cos\left( \frac{-\pi}{6} \right) = \\
+  \textbf{4)}\; & \sin\left( \frac{3\pi}{4} \right) = &
+  \textbf{5)}\; & \sin\left( \frac{3\pi}{2} \right) = &
+  \textbf{6)}\; & \sin\left( \frac{-5\pi}{6} \right) =
+\end{align*}
+
+\vspace{1cm}
+
+\paragraph{Exercice 1.}
+Compléter le tableau ci-dessous, en donnant les \textbf{valeurs exactes}.
+\def\arraystretch{2}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \makecell{Mesure\\en degrés} & $120$ & & $45$ &  & $90$ & \phantom{$180$} &
+  $270$ & $360$ & & $137$ & & \\
+  \hline
+  \makecell{Mesure\\en radians} & & $\cfrac{4\pi}{5}$ & & $\cfrac{7\pi}{6}$ & &
+  $\pi$ & & & $\cfrac{25\pi}{4}$ & & $\cfrac{-2\pi}{3}$ & $\cfrac{11\pi}{7}$\\
+  \hline
+\end{tabular}
+\end{center}
+\paragraph{Exercice 2.}~\\[-5mm]
+\begin{minipage}{.5\textwidth}
+  Sur le cercle trigonométrique ci-contre, quels sont les points images des
+  réels suivants ?
+  \begin{align*}
+    \textbf{1)}\;& \frac{-4\pi}{3}: &
+    \textbf{2)}\;& \frac{\pi}{4}: &
+    \textbf{3)}\;& \frac{11\pi}{6}: \\
+    \textbf{4)}\;& -7\pi: &
+    \textbf{5)}\;& \frac{3\pi}{2}: &
+    \textbf{6)}\;& \frac{-3\pi}{4}:
+  \end{align*}
+Pour chacun des points suivants sur le cercle, donner un réel correspondant.
+\begin{align*}
+    \textbf{1)}\;& K: &
+    \textbf{2)}\;& M: &
+    \textbf{3)}\;& J: \\
+    \textbf{4)}\;& A: &
+    \textbf{5)}\;& F: &
+    \textbf{6)}\;& H:
+\end{align*}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \def\r{3cm}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0,0) circle (\r);
+      \draw (-\r-.1cm, 0) -- (\r+.1cm, 0);
+      \draw (0, -\r-.1cm) -- (0, \r+.1cm);
+
+      \node at (0:\r+.3cm) {$I$};
+      \node at (90:\r+.3cm) {$J$};
+      \node at (180:\r+.3cm) {$I'$};
+      \node at (-90:\r+.3cm) {$J'$};
+
+      \draw[dashed] (0,0) -- (30:\r);
+      \draw[dashed] (0,0) -- (45:\r);
+      \draw[dashed] (0,0) -- (60:\r);
+
+      \node at (30:\r+.3cm) {$A$};
+      \node at (45:\r+.3cm) {$B$};
+      \node at (60:\r+.3cm) {$C$};
+
+      \draw[dashed] (0,0) -- (120:\r);
+      \draw[dashed] (0,0) -- (135:\r);
+      \draw[dashed] (0,0) -- (150:\r);
+
+      \node at (120:\r+.3cm) {$D$};
+      \node at (135:\r+.3cm) {$E$};
+      \node at (150:\r+.3cm) {$F$};
+
+      \draw[dashed] (0,0) -- (-120:\r);
+      \draw[dashed] (0,0) -- (-135:\r);
+      \draw[dashed] (0,0) -- (-150:\r);
+
+      \node at (-120:\r+.3cm) {$K$};
+      \node at (-135:\r+.3cm) {$H$};
+      \node at (-150:\r+.3cm) {$G$};
+
+      \draw[dashed] (0,0) -- (-30:\r);
+      \draw[dashed] (0,0) -- (-45:\r);
+      \draw[dashed] (0,0) -- (-60:\r);
+
+      \node at (-30:\r+.3cm) {$N$};
+      \node at (-45:\r+.3cm) {$M$};
+      \node at (-60:\r+.3cm) {$L$};
+    \end{tikzpicture}
+  \end{center}
+\end{minipage}
+~\\[-15mm]
+
+\paragraph{Exercice 3.} Donner les valeurs remarquables ci-dessous.
+\begin{align*}
+  \textbf{1)}\; & \cos\left( \frac{\pi}{4} \right) = &
+  \textbf{2)}\; & \cos\left( \frac{4\pi}{3} \right) = &
+  \textbf{3)}\; & \cos\left( \frac{-\pi}{6} \right) = \\
+  \textbf{4)}\; & \sin\left( \frac{3\pi}{4} \right) = &
+  \textbf{5)}\; & \sin\left( \frac{3\pi}{2} \right) = &
+  \textbf{6)}\; & \sin\left( \frac{-5\pi}{6} \right) =
+\end{align*}
+
+
+\end{document}
