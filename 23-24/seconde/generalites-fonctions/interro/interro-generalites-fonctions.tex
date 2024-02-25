@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+% BARÊME
+% ======
+%
+%
+
+\begin{center}
+  Prénom : \hfill Nom :\hfill~\\[1cm]
+\textbf{\LARGE \textsc{Interrogation -- Fonctions}}\\[2mm]
+
+{\large Mardi 27 Février, durée : 15 minutes}\\[1mm]
+\noindent\rule{12cm}{0.4pt}\\[1mm]
+\end{center}
+
+\begin{center}
+  Bon courage !
+\end{center}
+
+\begin{exo}~\\%[-8mm]
+  \begin{minipage}[]{.5\textwidth}
+    On considère une fonction $f$ dont on donne ci-contre la représentation
+    graphique. Répondez aux questions suivantes en utilisant le graphique.
+    \begin{enumerate}
+      \item Déterminer l'image de $8$ par la fonction $f$ : $\ldots$
+      \item Déterminer $f(0)$ :\dotfill
+      \item Déterminer les antécédents de $1$ :\dotfill
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \includegraphics[scale=.5]{graphe.png}
+    \end{center}
+  \end{minipage}
+\end{exo}
+
+\begin{exo}~\\
+    \begin{minipage}{.5\textwidth}
+      On considère deux fonctions $f$ et $g$ dont on donne les représentations
+      graphiques $\mathscr C_f$ et $\mathscr C_g$ ci-contre.
+      \begin{enumerate}
+        \item Résoudre graphiquement l'équation $$f(x)=g(x).$$ On donnera la
+          réponse sous forme d'un ensemble de solutions.
+      \end{enumerate} 
+      $\mathscr S=$\dotfill
+      \begin{enumerate}
+          \setcounter{enumi}{1}
+        \item Résoudre graphiquement l'équation $g(x)=2$.
+      \end{enumerate}
+      $\mathscr S=$\dotfill
+  \end{minipage}
+    \begin{minipage}{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}[scale=1.5]
+        \begin{axis}[x=1cm, y=.5cm, xmin=-2.5, xmax=2.5, ymin=-6.5, ymax=3.5,
+          xtick={-2.5, -2, ..., 3.5}, ytick={-7, -6, ..., 4}]
+          \addplot[red, thick, samples=101]{2*x^3-6*x-2};
+          \addplot[green!50!black, thick, samples=101]{x^2-2};
+        \end{axis}
+        \node[green!50!black, thick] at (.6, 4.7) {\huge$\mathscr C_f$};
+        \node[red, thick] at (4.5, 1.5) {\huge$\mathscr C_g$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{exo}
+
+\end{document}
