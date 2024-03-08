@@ -2,60 +2,93 @@
 
 \newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
 \newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
-\newcommand{\pagination}{}%\thepage/\pageref{LastPage}}
-\newcommand{\topbotmargins}{1cm}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
-%\input{layout-nb.tex}
-
-%\title{Chapitre 1 : Ensembles de nombres}
-%\date{}
-%\author{}
 
 \begin{document}
-%\maketitle\thispagestyle{fancy}
 
-%\begin{center}
-%\textbf{\LARGE \textsc{Contrôle 2}}\\[2mm]
+% BARÊME
+% ======
 %
-%{\large Mardi 6 Décembre 2022, durée : 1h00}\\[1mm]
-%\noindent\rule{8cm}{0.4pt}\\[1mm]
-%\end{center}
+% I. 0.5/réponse
+%
+% II. 0.5/réponse
+%
+% III. 1. 0.5
+% III. 2. 0.5
+% III. 3. 0.5 formule + 0.5 valeur
+% III. 4. 0.5 traduction + 0.5 probabilité correcte
+% III. 5. 0.5 formule + 0.5 valeur
+%
+% IV.1 0.5 tableau
+% IV.2a 0.5 formule 0.5 calcul correct
+% IV.2b 0.5
+%
+% V.1a 0.5 tableau
+% V.1b 0.5 formule/calcul 0.5 interprétation
+% V.2a 0.5 arbre
+% V.2b 0.5 tableau
+% V.2c 0.5 formule/calcul 0.5 interprétation
+% V.3a 0.5 calcul
+% V.3b 0.5 argument A 0.5 argument B
 
-\paragraph{Exercice 1.}
+\begin{center}
+\textbf{\LARGE \textsc{Contrôle -- Trigonométrie et variables aléatoires}}\\[2mm]
+
+{\large Mercredi 28 Février 2024, durée : 1h00}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\noindent Le barême est donné à titre indicatif.
+\begin{center}
+  Bonne chance !
+\end{center}
+
+\begin{exo}[$4$ points]
 Compléter le tableau ci-dessous, en donnant les \textbf{valeurs exactes}.
 \def\arraystretch{2}
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \begin{tabularx}{\textwidth}{|c|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
   \hline
-  \makecell{Mesure\\en degrés} & $30$ & & $54$ &  & $100$ & \phantom{$180$} &
-  $215$ & $240$ & & $173$ & & \\
+  \makecell{Mesure\\en degrés} & $162$ & & $50$ & &
+  $225$ & & $73$ & \\
   \hline
-  \makecell{Mesure\\en radians} & & $\cfrac{-7\pi}{5}$ & & $\cfrac{3\pi}{4}$ & &
-  $\cfrac{\pi}{2}$ & & & $\cfrac{25\pi}{3}$ & & $\cfrac{-7\pi}{6}$ &
-  $\cfrac{7\pi}{11}$\\
+  \makecell{Mesure\\en radians} & & $\cfrac{\pi}{6}$ & &
+  $\cfrac{5\pi}{11}$ & & $\cfrac{13\pi}{3}$ & & $\cfrac{-5\pi}{4}$ \\
   \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
-\paragraph{Exercice 2.}~\\[-5mm]
+\end{exo}
+\begin{exo}[$6$ points]~\\
 \begin{minipage}{.5\textwidth}
   Sur le cercle trigonométrique ci-contre, quels sont les points images des
   réels suivants ?
   \begin{align*}
-    \textbf{1)}\;& \frac{\pi}{6}: &
-    \textbf{2)}\;& \frac{-4\pi}{3}: &
-    \textbf{3)}\;& \frac{5\pi}{6}: \\
-    \textbf{4)}\;& -11\pi: &
-    \textbf{5)}\;& \frac{\pi}{2}: &
-    \textbf{6)}\;& \frac{-5\pi}{4}:
+    \textbf{1)}\;& \frac{3\pi}{4}: &
+    \textbf{2)}\;& \frac{-2\pi}{3}: &
+    \textbf{3)}\;& \frac{7\pi}{6}: \\
+    \textbf{4)}\;& -21\pi: &
+    \textbf{5)}\;& \frac{-\pi}{2}: &
+    \textbf{6)}\;& \frac{7\pi}{4}:
   \end{align*}
 Pour chacun des points suivants sur le cercle, donner un réel correspondant.
 \begin{align*}
     \textbf{1)}\;& C: &
-    \textbf{2)}\;& L: &
-    \textbf{3)}\;& E: \\
-    \textbf{4)}\;& G: &
-    \textbf{5)}\;& J': &
-    \textbf{6)}\;& N:
+    \textbf{2)}\;& I': &
+    \textbf{3)}\;& F: \\
+    \textbf{4)}\;& E: &
+    \textbf{5)}\;& H: &
+    \textbf{6)}\;& L:
 \end{align*}
 \end{minipage}
 \begin{minipage}{.5\textwidth}
@@ -105,116 +138,94 @@ Pour chacun des points suivants sur le cercle, donner un réel correspondant.
     \end{tikzpicture}
   \end{center}
 \end{minipage}
-~\\[-15mm]
+\end{exo}
 
-\paragraph{Exercice 3.} Donner les valeurs remarquables ci-dessous.
-\begin{align*}
-  \textbf{1)}\; & \cos\left( \frac{\pi}{3} \right) = &
-  \textbf{2)}\; & \cos\left( \frac{-3\pi}{4} \right) = &
-  \textbf{3)}\; & \cos\left( \frac{\pi}{6} \right) = \\
-  \textbf{4)}\; & \sin\left( \frac{-\pi}{2} \right) = &
-  \textbf{5)}\; & \sin\left( \frac{5\pi}{6} \right) = &
-  \textbf{6)}\; & \sin\left( \frac{-2\pi}{3} \right) =
-\end{align*}
+\begin{exo}[$4$ points]
+  On considère deux dés cubiques à six
+faces, parfaitement équilibrés. On note $X$ la variable aléatoire
+représentant la somme des deux dés.
+\begin{enumerate}
+  \item Faire un tableau pour représenter les valeurs possibles de $X$.
+  \item Déterminer la loi de probabilité de $X$.
+  \item Déterminer l'espérance de $X$.
+  \item Traduire l'événement $\left\{ X\neq 12 \right\}$ en français. Quelle est la
+    probabilité de cet événement ?
+  \item Calculer $P\left( X\geq 7 \right)$.
+\end{enumerate}
+\end{exo}
 
-\vspace{1cm}
+\newpage
+\begin{exo}[$2$ points]
+  Un forain amateur de mathématiques propose le jeu suivant à ses clients : on
+  lance un dé équilibré tétraédrique (c'est-à-dire à quatre faces) dont les
+  faces sont numérotées de $1$ à $4$ et
+  \begin{itemize}
+    \item si on obtient un nombre premier, on gagne la valeur affichée par le dé ;
+    \item si le nombre n'est pas premier, on perd la valeur affichée par le dé.
+  \end{itemize}
+  On note $X$ le gain algébrique d'un client à ce jeu.
+  \begin{enumerate}
+    \item Donner la loi de probabilité de $X$.
+    \item \begin{enumerate}
+        \item Calculer $E(X)$.
+        \item Ce jeu est-il équilibré ? Favorable au client ? Favorable au
+          forain ?
+      \end{enumerate}
+  \end{enumerate}
+  \emph{Rappel : les nombres premiers entre $1$ et $4$ sont $2$ et $3$.}
+\end{exo}
 
-\paragraph{Exercice 1.}
-Compléter le tableau ci-dessous, en donnant les \textbf{valeurs exactes}.
-\def\arraystretch{2}
+\begin{exo}[$4$ points]~\\
+\begin{minipage}[t]{.5\textwidth}
+Voici les tarifs des desserts d'une brasserie.
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-  \hline
-  \makecell{Mesure\\en degrés} & $30$ & & $54$ &  & $100$ & \phantom{$180$} &
-  $215$ & $240$ & & $173$ & & \\
-  \hline
-  \makecell{Mesure\\en radians} & & $\cfrac{-7\pi}{5}$ & & $\cfrac{3\pi}{4}$ & &
-  $\cfrac{\pi}{2}$ & & & $\cfrac{25\pi}{3}$ & & $\cfrac{-7\pi}{6}$ &
-  $\cfrac{7\pi}{11}$\\
-  \hline
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{cc}
+  \toprule
+  \textbf{Dessert} & \textbf{Tarif (en euro)} \\ \midrule
+  Assortiment de macarons & $8$ \\
+  Fondant au chocolat & $6$ \\
+  Île flottante & $4$ \\ \bottomrule
 \end{tabular}
 \end{center}
-\paragraph{Exercice 2.}~\\[-5mm]
-\begin{minipage}{.5\textwidth}
-  Sur le cercle trigonométrique ci-contre, quels sont les points images des
-  réels suivants ?
-  \begin{align*}
-    \textbf{1)}\;& \frac{\pi}{6}: &
-    \textbf{2)}\;& \frac{-4\pi}{3}: &
-    \textbf{3)}\;& \frac{5\pi}{6}: \\
-    \textbf{4)}\;& -11\pi: &
-    \textbf{5)}\;& \frac{\pi}{2}: &
-    \textbf{6)}\;& \frac{-5\pi}{4}:
-  \end{align*}
-Pour chacun des points suivants sur le cercle, donner un réel correspondant.
-\begin{align*}
-    \textbf{1)}\;& C: &
-    \textbf{2)}\;& L: &
-    \textbf{3)}\;& E: \\
-    \textbf{4)}\;& G: &
-    \textbf{5)}\;& J': &
-    \textbf{6)}\;& N:
-\end{align*}
 \end{minipage}
-\begin{minipage}{.5\textwidth}
-  \def\r{3cm}
-  \begin{center}
-    \begin{tikzpicture}
-      \draw (0,0) circle (\r);
-      \draw (-\r-.1cm, 0) -- (\r+.1cm, 0);
-      \draw (0, -\r-.1cm) -- (0, \r+.1cm);
-
-      \node at (0:\r+.3cm) {$I$};
-      \node at (90:\r+.3cm) {$J$};
-      \node at (180:\r+.3cm) {$I'$};
-      \node at (-90:\r+.3cm) {$J'$};
-
-      \draw[dashed] (0,0) -- (30:\r);
-      \draw[dashed] (0,0) -- (45:\r);
-      \draw[dashed] (0,0) -- (60:\r);
-
-      \node at (30:\r+.3cm) {$A$};
-      \node at (45:\r+.3cm) {$B$};
-      \node at (60:\r+.3cm) {$C$};
-
-      \draw[dashed] (0,0) -- (120:\r);
-      \draw[dashed] (0,0) -- (135:\r);
-      \draw[dashed] (0,0) -- (150:\r);
-
-      \node at (120:\r+.3cm) {$D$};
-      \node at (135:\r+.3cm) {$E$};
-      \node at (150:\r+.3cm) {$F$};
-
-      \draw[dashed] (0,0) -- (-120:\r);
-      \draw[dashed] (0,0) -- (-135:\r);
-      \draw[dashed] (0,0) -- (-150:\r);
-
-      \node at (-120:\r+.3cm) {$K$};
-      \node at (-135:\r+.3cm) {$H$};
-      \node at (-150:\r+.3cm) {$G$};
-
-      \draw[dashed] (0,0) -- (-30:\r);
-      \draw[dashed] (0,0) -- (-45:\r);
-      \draw[dashed] (0,0) -- (-60:\r);
-
-      \node at (-30:\r+.3cm) {$N$};
-      \node at (-45:\r+.3cm) {$M$};
-      \node at (-60:\r+.3cm) {$L$};
-    \end{tikzpicture}
-  \end{center}
+\begin{minipage}[t]{.5\textwidth}
+La cheffe de cuisine estime que les choix des clients se répartissent de la
+manière suivante :
+\begin{itemize}
+  \item Assortiment de macarons : $30$\%
+  \item Fondant au chocolat : $45$\%
+  \item Île flottante : $25$\%
+\end{itemize}
 \end{minipage}
-~\\[-15mm]
-
-\paragraph{Exercice 3.} Donner les valeurs remarquables ci-dessous.
-\begin{align*}
-  \textbf{1)}\; & \cos\left( \frac{\pi}{3} \right) = &
-  \textbf{2)}\; & \cos\left( \frac{-3\pi}{4} \right) = &
-  \textbf{3)}\; & \cos\left( \frac{\pi}{6} \right) = \\
-  \textbf{4)}\; & \sin\left( \frac{-\pi}{2} \right) = &
-  \textbf{5)}\; & \sin\left( \frac{5\pi}{6} \right) = &
-  \textbf{6)}\; & \sin\left( \frac{-2\pi}{3} \right) =
-\end{align*}
-
-
+\begin{enumerate}
+  \item Pour un(e) client(e) de ce restaurant, $X$ désigne la variable aléatoire égale
+    au prix du dessert choisi.
+    \begin{enumerate}
+      \item Donner la loi de probabilité de $X$.
+      \item Déterminer et interpréter $E(X)$.
+    \end{enumerate}
+  \item Pour un couple client de ce restaurant, on note maintenant $Y$ la
+    variable aléatoire égale au montant total des desserts choisis. On suppose
+    que les deux personnes font leur choix de manière indépendante.
+    \begin{enumerate}
+      \item Modéliser cette situation à l'aide d'un arbre pondéré.
+      \item Donner la loi de probabilité de $Y$.
+      \item Déterminer et interpréter $E(Y)$.
+    \end{enumerate}
+  \item Ce restaurant sert en moyenne $30$ couverts le midi.
+    \begin{enumerate}
+      \item Quel chiffre d'affaires réalise-t-il en moyenne pour la vente de
+        desserts ?
+      \item \emph{(bonus)} Le gérant aimerait augmenter le montant total des
+        ventes de dessert de $30$ euros. Il étudie deux options :
+        \begin{itemize}
+          \item A : augmenter chaque dessert de $1$ euro ;
+          \item B : multiplier chacun des tarifs par $1,16$.
+        \end{itemize}
+        Ces deux propositions sont-elles satisfaisantes ?
+    \end{enumerate}
+\end{enumerate}
+\end{exo}
 
 \end{document}
