@@ -1,0 +1,501 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Suites arithmétiques et géométriques -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage}%/\pageref{LastPage}}
+\newcommand{\topbotmargins}{1.625cm}
+\newcommand{\spacebelowexo}{5mm}
+
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\title{Chapitre 8 : Suites arithmétiques et géométriques}
+\date{}
+\author{}
+
+\title{\vspace{-20mm}Chapitre 8 : Suites arithmétiques et géométriques}
+\date{\vspace{-14mm}
+\href{https://erou.forge.aeif.fr/spe-1e/suites-arith-geom.html}{
+  \includegraphics[scale=.6]{qrcode.png}}
+\vspace{-14mm}}
+\author{}
+
+% Note
+% ====
+%
+% TODO : ajouter un encart ``Méthode'' avec le plan pour les exercices sur les
+% suites arithmético-géométriques. Exprimer v_n+1 en fonction de u_n+1 puis
+% exprimer u_n+1 en fonction de u_n puis exprimer u_n en fonction de v_n et on a
+% alors v_n+1 en fonction de v_n. Eventuellement un truc qui ressemble à un
+% diagramme commutatif avec ça ?
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+\section{Suites arithmétiques}
+\subsection{Définition}
+\begin{defi}{Suite arithmétique}
+  On dit que la suite $(u_n)$ est \textbf{arithmétique} s'il existe un réel
+  $r$ tel que, pour tout entier $n\in\mathbb{N}$
+  \[
+    u_{n+1} = u_n + r.
+  \]
+  Le nombre $r$ est appelé la \textbf{raison} de la suite.
+
+  \begin{center}
+    \begin{tikzpicture}
+      \node[circle, draw, minimum size=12mm] (u0) at (0,0) {$u_0$};
+      \node[circle, draw, minimum size=12mm] (u1) at (3,0) {$u_1$};
+      \node[circle, draw, minimum size=12mm] (u2) at (6,0) {$u_2$};
+      \node[circle, draw, minimum size=12mm] (un) at (9,0) {$u_n$};
+      \node[circle, draw, minimum size=12mm] (un+1) at (12,0) {$u_{n+1}$};
+      \draw[-latex] (u0.north) to[out=60, in=120] (u1.north);
+      \draw[-latex] (u1.north) to[out=60, in=120] (u2.north);
+      \draw[-latex] (un.north) to[out=60, in=120] (un+1.north);
+      \node at (1.5, .8) {$+r$};
+      \node at (4.5, .8) {$+r$};
+      \node at (10.5, .8) {$+r$};
+      \node at (7.5,0) {$\dots$};
+      \node at (13.5,0) {$\dots$};
+    \end{tikzpicture}
+  \end{center}
+\end{defi}
+
+\begin{rmq}
+  \begin{itemize}
+    \item Pour passer d'un terme à l'autre, on ajoute la raison $r$, on a donc
+      $\forall n\in\mathbb{N},\;r=u_{n+1}-u_n$.
+    \item La raison $r$ ne dépend pas de $n$.
+  \end{itemize}
+\end{rmq}
+
+\begin{app}
+  Pour chacune des suites suivantes, déterminer si elles sont arithmétiques ou
+  non. Si oui, déterminer la raison et le premier terme.
+  \begin{enumerate}
+    \item La suite $(a_n)$ définie sur $\mathbb{N}$ par $a_0=1$ et
+      $a_{n+1}=a_n-8$.
+    \item La suite $(b_n)$ définie sur $\mathbb{N}$ par $b_n=n^2+2n+4$.
+    \item La suite $(c_n)$ définie sur $\mathbb{N}$ par $c_n=3n+1$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Expression}
+\begin{prop}
+  Soit $(u_n)$ une suite arithmétique de raison $r$ et de premier terme $u_0$.
+  Pour tout entier $n\in\mathbb{N}$, on a $u_n = u_0 +n\times r$.\\
+  Plus généralement, on a
+  \[
+    \forall p,n\in\mathbb{N},\; u_n = u_p + (n-p)\times r.
+  \]
+  
+  \begin{center}
+    \begin{tikzpicture}
+      \node[circle, draw, minimum size=12mm] (u0) at (0,0) {$u_0$};
+      \node[circle, draw, minimum size=12mm] (u1) at (3,0) {$u_1$};
+      \node[circle, draw, minimum size=12mm] (u2) at (6,0) {$u_2$};
+      \node[circle, draw, minimum size=12mm] (un) at (9,0) {$u_n$};
+      \node[circle, draw, minimum size=12mm] (un+1) at (12,0) {$u_{n+1}$};
+      \draw[-latex] (u0.north) to[out=60, in=120] (u1.north);
+      \draw[-latex] (u1.north) to[out=60, in=120] (u2.north);
+      \draw[-latex] (un.north) to[out=60, in=120] (un+1.north);
+      \node at (1.5, .8) {$+r$};
+      \node at (4.5, .8) {$+r$};
+      \node at (10.5, .8) {$+r$};
+      \node at (7.5,0) {$\dots$};
+      \node at (13.5,0) {$\dots$};
+
+      \draw[-latex] (u0.south) to[out=-30, in=-150] (un.south);
+      \node at (4.5, -1.5) {$+\;n\times r$};
+    \end{tikzpicture}
+  \end{center}
+
+\end{prop}
+
+\begin{app}
+  Soit $(u_n)$ une suite arithmétique de raison $0,5$ et de premier terme
+  $u_0=2$.
+  \begin{enumerate}
+    \item Exprimer $u_{n+1}$ en fonction de $u_n$.
+    \item Calculer $u_1$ et $u_2$.
+    \item Déterminer l'expression de $u_n$ en fonction de $n$, pour tout entier
+      naturel $n$.
+    \item En déduire la valeur de $u_{50}$.
+    \item Déterminer la plus petite valeur de $n$ telle que $u_n\geq8$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Représentation graphique}
+\begin{prop}
+  Soit $\left( u_n \right)$ une suite arithmétique de raison $r$ et de premier
+  terme $u_0$. Les points de sa représentation graphique se situent sur la
+  droite d'équation $y=r\times x+u_0$. On parle d'évolution linéaire.
+\end{prop}
+
+\begin{exemple}~\\[-5mm]
+  \begin{minipage}[]{.5\textwidth}
+    Soit $u$ la suite arithmétique de premier terme $u_0=2$ et de raison $r=3$.
+    On a donc
+    \[
+      u_n = 2+3n,
+    \]
+    et les termes de la suite sont sur la droite d'équation $y = 3x+2$.
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+      \begin{center}
+        \begin{tikzpicture}[scale=.85]
+ \draw (-.1, 0) -- (6.2, 0);
+ \draw (0, -.1) -- (0, 5.7);
+ \foreach \x in {1, ..., 11} \draw (-.1, .5*\x) -- (0, .5*\x);
+ \foreach \x in {1, ..., 11} \draw[blue!20!white] (0, .5*\x) -- (6.2, .5*\x);
+ \foreach \x in {1, 3,..., 11} \node (\x) at (-.3, .5*\x) {$\x$};
+ \foreach \x in {1,...,3} \draw (2*\x, -.1) node[below] {$\x$} -- (2*\x, 0);
+ \foreach \x in {1, ..., 3} \draw[blue!20!white] (2*\x, 0) -- (2*\x, 5.7);
+ \foreach \x in {0,...,3} \draw[fill, opacity=.5] (2*\x, 1+1.5*\x) circle (.05);
+ \draw[dashed, black, opacity=.5] (0,1) -- (6, 5.5);
+ \foreach \x in {0,...,2} \draw[-stealth, red!70!black] (2*\x, 1+1.5*\x) -- (2*\x+2, 1+1.5*\x);
+ \foreach \x in {0, ..., 2} \node[red!70!black] (\x) at (1+2*\x, .7+1.5*\x) {\small{$+1$}};
+ \foreach \x in {1,...,3} \draw[-stealth, blue!70!black] (2*\x, -.5+1.5*\x) -- (2*\x, 1+1.5*\x);
+ \foreach \x in {1, ...,3} \node[blue!70!black] (\x) at (2*\x+.3, .25+1.5*\x) {\small{$+r$}};
+ \node (u0) at (-.8, 1) {$u_0$};
+\end{tikzpicture}
+  \end{center}
+  \end{minipage}
+\end{exemple}
+
+\subsection{Sens de variation}
+\begin{prop}
+  Soit $\left( u_n \right)$ une suite arithmétique de raison $r$.
+  \begin{itemize}
+    \item Si $r>0$, alors la suite est strictement \textbf{croissante}.
+    \item Si $r<0$, alors la suite est strictement \textbf{décroissante}.
+    \item Si $r=0$, alors la suite est \textbf{constante}.
+  \end{itemize}
+\end{prop}
+
+\begin{app}
+  Soit $u$ la suite définie par $u_0=-1$ et, pour tout $n\in\mathbb{N}$,
+  $u_{n+1}=u_n+5$. Soit également $w$ la suite définie, pour tout
+  $n\in\mathbb{N}$, par $w_n = 8-7n$. Déterminer la nature de chaque suite, puis
+  en déduire son sens de variation.
+\end{app}
+
+\subsection{Suite auxiliaire et suite arithmétique}
+\begin{app}
+  Soit la suite numérique $\left( u_n \right)$ définie sur $\mathbb{N}$ par
+  $u_0=1$ et, pour tout entier naturel $n$, par $u_{n+1} = \frac{2u_n}{2+3u_n}$.
+  On désigne par $\left( w_n \right)$ la suite définie sur $\mathbb{N}$ par $v_n
+  = \frac{2}{u_n}$.
+  \begin{enumerate}
+    \item Démontrer que la suite $w$ est une suite arithmétique dont on
+      précisera la raison.
+    \item En déduire l'expression de $w$, puis celle de $\left( u_n \right)$ en
+      fonction de $n$.
+  \end{enumerate}
+\end{app}
+
+\section{Suites géométriques}
+\subsection{Définition}
+\begin{defi}{Suites géométriques}
+  On dit qu'une suite $\left( u_n \right)$ est \textbf{géométrique} s'il existe
+  un réel $q\in\mathbb{R}$ tel que, pour tout entier naturel $n\in\mathbb{N}$
+  \[
+    u_{n+1} = q\times u_n.
+  \]
+  Le nombre $q$ est appelé la \textbf{raison} de la suite.
+
+  \begin{center}
+    \begin{tikzpicture}
+      \node[circle, draw, minimum size=12mm] (u0) at (0,0) {$u_0$};
+      \node[circle, draw, minimum size=12mm] (u1) at (3,0) {$u_1$};
+      \node[circle, draw, minimum size=12mm] (u2) at (6,0) {$u_2$};
+      \node[circle, draw, minimum size=12mm] (un) at (9,0) {$u_n$};
+      \node[circle, draw, minimum size=12mm] (un+1) at (12,0) {$u_{n+1}$};
+      \draw[-latex] (u0.north) to[out=60, in=120] (u1.north);
+      \draw[-latex] (u1.north) to[out=60, in=120] (u2.north);
+      \draw[-latex] (un.north) to[out=60, in=120] (un+1.north);
+      \node at (1.5, .8) {$\times q$};
+      \node at (4.5, .8) {$\times q$};
+      \node at (10.5, .8) {$\times q$};
+      \node at (7.5,0) {$\dots$};
+      \node at (13.5,0) {$\dots$};
+    \end{tikzpicture}
+  \end{center}
+\end{defi}
+
+\begin{rmq}
+  \begin{itemize}
+    \item Pour passer d'un terme à l'autre, on multiplie par la raison $q$, on a
+      donc, pour une suite $(u_n)_n$ de termes non nuls,
+      $\forall n\in\mathbb{N},\;q=\frac{u_{n+1}}{u_n}$.
+    \item La raison $q$ ne dépend pas de $n$.
+  \end{itemize}
+\end{rmq}
+
+\begin{app}
+  Pour chacune des suites suivantes, dire si elles sont géométriques ou non. Si
+  oui, déterminer la raison et le premier terme.
+  \begin{enumerate}
+    \item La suite $\left( a_n \right)$ définie sur $\mathbb{N}$ par $a_0=12$ et
+      $a_{n+1} = \frac{1}{2}a_n$.
+    \item La suite $\left( b_n \right)$ définie sur $\mathbb{N}$ par $b_n =
+      \frac{7}{2^n}$.
+    \item La suite $\left( c_n \right)$ définie sur $\mathbb{N}$ par $c_n =
+      \frac{3n+2}{n+1}$.
+  \end{enumerate}
+\end{app}
+
+\subsection{Expression}
+\begin{prop}
+  Soit $(u_n)$ une suite géométrique de raison $q$ et de premier terme $u_0$.
+  Pour tout entier $n\in\mathbb{N}$, on a $u_n = u_0 \times q^r$.\\
+  Plus généralement, on a
+  \[
+    \forall p,n\in\mathbb{N},\; u_n = u_p \times q^{n-p}.
+  \]
+  
+  \begin{center}
+    \begin{tikzpicture}
+      \node[circle, draw, minimum size=12mm] (u0) at (0,0) {$u_0$};
+      \node[circle, draw, minimum size=12mm] (u1) at (3,0) {$u_1$};
+      \node[circle, draw, minimum size=12mm] (u2) at (6,0) {$u_2$};
+      \node[circle, draw, minimum size=12mm] (un) at (9,0) {$u_n$};
+      \node[circle, draw, minimum size=12mm] (un+1) at (12,0) {$u_{n+1}$};
+      \draw[-latex] (u0.north) to[out=60, in=120] (u1.north);
+      \draw[-latex] (u1.north) to[out=60, in=120] (u2.north);
+      \draw[-latex] (un.north) to[out=60, in=120] (un+1.north);
+      \node at (1.5, .8) {$\times q$};
+      \node at (4.5, .8) {$\times q$};
+      \node at (10.5, .8) {$\times q$};
+      \node at (7.5,0) {$\dots$};
+      \node at (13.5,0) {$\dots$};
+
+      \draw[-latex] (u0.south) to[out=-30, in=-150] (un.south);
+      \node at (4.5, -1.5) {$\times \;q^n$};
+    \end{tikzpicture}
+  \end{center}
+\end{prop}
+
+\begin{app}
+  Une ville comptait $10\;000$ habitants en $2018$. Chaque année, le nombre
+  d'habitants augmente de $8$\% par rapport à l'année précédente. On note $u_n$
+  le nombre d'habitants en $2018+n$.
+  \begin{enumerate}
+    \item Donner les valeurs de $u_0$ et $u_1$.
+    \item Justifier que la suite $\left( u_n \right)$ est une suite géométrique,
+      et préciser la raison.
+    \item Exprimer $u_n$ en fonction de $n$.
+    \item Quel sera le nombre d'habitants de cette ville en $2032$ ?
+    \item En quelle année le nombre d'habitants de la ville dépassera-t-il
+      $25\;000$ habitants ?
+  \end{enumerate}
+\end{app}
+
+\subsection{Représentation graphique}
+
+\begin{prop}
+  Pour les représentations graphiques des suites géométriques, on parle
+  d'\textbf{évolution exponentielle}.
+\end{prop}
+
+\begin{exemple}
+  \begin{minipage}{.45\textwidth}
+    Soit $u$ la suite géométrique de premier terme $u_0=\frac{1}{2}$ et de
+    raison $q=2$.
+    On a donc
+    \[
+      u_n = \frac{1}{2}\times2^n.
+    \]
+    \begin{center}
+      \includegraphics[scale=.6]{croissant.png}
+    \end{center}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.45\textwidth}
+    Soit $u$ la suite géométrique de premier terme $u_0=5$ et de raison
+    $r=\frac{1}{3}$.
+    On a donc
+    \[
+      u_n = 5\times \frac{1}{3^n}.
+    \]
+    \begin{center}
+      \includegraphics[scale=.6]{decroissant.png}
+    \end{center}
+  \end{minipage}
+\end{exemple}
+
+\subsection{Sens de variation}
+
+\begin{prop}
+  Soit $\left( u_n \right)$ une suite géométrique de raison $q$ dont les termes
+  sont strictement positifs.
+  \begin{itemize}
+    \item Si $q>1$, alors la suite est strictement \textbf{croissante}.
+    \item Si $q=1$, alors la suite est \textbf{constante}.
+    \item Si $0<q<1$, alors la suite est \textbf{décroissante}.
+  \end{itemize}
+\end{prop}
+
+\begin{rmq}
+  Soit $\left( u_n \right)$ une suite géométrique de raison $q$.
+  \begin{itemize}
+    \item Si $q>0$ mais que les termes de la suite $(u_n)$ sont strictement
+      négatifs, les sens de variations sont inversés par rapport à la propriété
+      ci-dessus.
+    \item Si $q=0$, la suite est presque toujours nulle, excepté éventuellement
+      pour $u_0$.
+    \item Si $q<0$, alors la suite n'est \textbf{pas monotone}.
+  \end{itemize}
+\end{rmq}
+
+\subsection{Suite auxiliaire et suite arithmético-géométrique}
+\begin{app}
+  Un youtubeur compte $75$ abonnés le $1^\text{er}$ Janvier $2019$. Il remarque
+  que, chaque mois, il en perd $40$\% et $100$ nouvelles personnes le suivent.
+  On souhaite déterminer l'évolution de son nombre d'abonnés. On modélise la
+  situation par une suite $\left( u_n \right)$, où $u_n$ est le nombre d'abonnés
+  $n$ mois après Janvier $2019$.
+  \begin{enumerate}
+    \item Calculer le nombre d'abonnés au $1^\text{er}$ Février $2019$.
+    \item Justifier que, pour tout entier $n\in\mathbb{N}$,
+      $u_{n+1}=0,6u_n+100$.
+    \item À l'aide de la calculatrice, déterminer le nombre de mois nécessaires
+      pour dépasser les $230$ abonnés.
+    \item Pour tout entier naturel $n\in\mathbb{N}$, on note $\left( v_n
+      \right)$ la suite définie par $v_n = u_n-250$.
+      \begin{enumerate}
+        \item Exprimer $v_{n+1}$ en fonction de $v_n$. En déduire la nature de
+          la suite $\left( v_n \right)$.
+        \item Exprimer $v_n$ en fonction de $n$, puis $u_n$ en fonction de $n$.
+        \item Déterminer le nombre d'abonnés au $1^\text{er}$ Décembre $2019$.
+      \end{enumerate}
+  \end{enumerate}
+\end{app}
+
+\section{Calculs de sommes}
+\subsection{Propriétés générales}
+\begin{notation}
+  La \textbf{somme} des $n$ termes $x_1$, $x_2$, $\dots$, $x_n$ se note
+  \[
+    \sum_{k=1}^n x_k = x_1 + x_2 + \cdots + x_n.
+  \]
+\end{notation}
+\begin{rmq}
+  La lettre utilisée comme indice de sommation n'a pas d'importance : il s'agit
+  d'une \textbf{variable «~muette~»}. On a donc
+  \[
+    \sum_{k=1}^n x_k =
+    \sum_{i=1}^n x_i =
+    \sum_{j=1}^n x_j
+  \]
+\end{rmq}
+\begin{prop}
+S'il n'y a pas d'indice de sommation dans la somme, c'est que le terme sommé
+est constant.
+  \[
+    \sum_{k=1}^{n} 1 = \underbrace{1+1+\dots+1}_{n\text{ termes égaux à }1} = n
+  \]
+\end{prop}
+\begin{app}
+  Calculer les sommes suivantes.
+  \begin{align*}
+    \textbf{a)}\; & \sum_{k=1}^{15} 1 = &
+    \textbf{b)}\; & \sum_{k=1}^{n} 1 = &
+    \textbf{c)}\; & \sum_{k=0}^{15} 1 = &
+    \textbf{d)}\; & \sum_{k=0}^{n} 1 =
+  \end{align*}
+\end{app}
+\begin{prop}
+  Soient $\left\{ x_k \right\}_{1\leq k \leq n}$ et $\left\{ y_k \right\}_{1\leq
+  k \leq n}$ deux familles de $n$ nombres rééls et soit $\lambda\in\mathbb{R}$
+  un réel. On a alors
+  \begin{align*}
+    \sum_{k=1}^n\left( x_k+y_k \right) &= \sum_{k=1}^nx_k+\sum_{k=1}^ny_k &
+    &\text{et}&
+    \sum_{k=1}^n\lambda x_k &= \lambda\sum_{k=1}^nx_k.
+  \end{align*}
+\end{prop}
+\subsection{Somme des termes d'une suite arithmétique}
+\begin{thm}
+  Soit $n\in\mathbb{N}^*$ un entier naturel non nul, on a alors
+  \begin{align*}
+    1+2+\cdots+n &= \frac{n(n+1)}{2} &
+    &\text{ou encore} &
+    \sum_{k=1}^n k = \frac{n(n+1)}{2}.
+  \end{align*}
+\end{thm}
+%\begin{proof}[Démonstration (à connaître)]
+%  ~\vspace{4cm}\\
+%\end{proof}
+\begin{app}
+  Soit $n\in\mathbb{N}^*$. Calculer les sommes suivantes.
+  \begin{align*}
+    \textbf{a)}\;& \sum_{k=1}^{10} k &
+    \textbf{b)}\;& \sum_{i=0}^{50} \left( 2i+1 \right) &
+    \textbf{c)}\;& \sum_{k=0}^{n} (nk+3)
+  \end{align*}
+\end{app}
+
+\subsection{Somme des termes d'une suite géométrique}
+\begin{thm}
+  Soit $n\in\mathbb{N}^*$ un entier naturel non nul et
+  $q\in\mathbb{R}\setminus\left\{ 1 \right\}$ un réel différent de $1$, on a
+  alors
+  \begin{align*}
+    1+q+q^2+\cdots+q^n &= \frac{1-q^{n+1}}{1-q} &
+    &\text{ou encore} &
+    \sum_{k=0}^n q^k &= \frac{1-q^{n+1}}{1-q}.
+  \end{align*}
+\end{thm}
+%\begin{proof}[Démonstration (à connaître)]
+%  ~\vspace{4cm}\\
+%\end{proof}
+\begin{app}
+  Soit $n\in\mathbb{N}^*$. Calculer les sommes suivantes.
+  \begin{align*}
+    \textbf{a)}\;& \sum_{k=0}^{8} \left( 3\times2^k \right) &
+    \textbf{b)}\;& \sum_{i=0}^{n} \left( \left( -\frac{1}{2} \right)^k-5\right)
+  \end{align*}
+\end{app}
+
+\begin{app}
+  Durant l'année $2020$, un constructeur automobile a construit $15\,000$
+  voitures. Sa production augmente de $120$ unités par an. On note $u_n$ le
+  nombre de voitures construites durant l'année $2020+n$.
+  \begin{enumerate}
+    \item Donner $u_0$ et préciser la nature de la suite $\left( u_n
+      \right)$.
+    \item Exprimer $u_n$ en fonction de $n$.
+    \item Calculer le nombre de voitures fabriquées par ce constructeur entre
+      $2020$ et $2030$.
+  \end{enumerate}~\\[-8mm]
+  \begin{minipage}[t]{.5\textwidth}
+  \begin{enumerate}
+      \setcounter{enumi}{3}
+    \item Compléter le programme Python suivant permettant de calculer le nombre
+      total de voitures fabriquées par ce constructeur $n$ années après $2020$.
+  \end{enumerate}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{.4\textwidth}
+    \begin{center}
+\begin{lstlisting}[language=Python]
+def somme(n):
+    u =            # A remplir
+    S =            # A remplir
+    for i in range(1, n+1):
+        u =           # A remplir
+        S =           # A remplir
+    return           # A remplir
+\end{lstlisting}
+    \end{center}
+  \end{minipage}
+\end{app}
+\begin{app}
+  Une entreprise décide de soutenir une association caritative par des dons
+  mensuels. Le premier janvier $2021$, l'entreprise fait un don de $150$ euros
+  et chaque mois, elle rajoute $10$\% de plus. On note $u_n$ la valeur du don
+  mensuel $n$ mois après le premier janvier $2021$. Quelle somme totale
+  l'association aura-t-elle reçue de l'entreprise au bout de $1$ an ?
+\end{app}
+
+\end{document}
