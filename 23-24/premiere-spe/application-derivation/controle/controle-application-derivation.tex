@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
+\newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{2cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\begin{document}
+
+% BARÊME
+% ======
+%
+% I.1 0.5
+% I.2 delta et racines 0.5 conclusion 0.5
+% I.3  allure 0.5 valeurs 0.5
+%
+% II.1 0.5 minmax 0.5 justification
+% II.2 allure minmax 0.5 dérivées nulles 0.5
+
+
+\begin{center}
+\textbf{\LARGE \textsc{Interrogation -- Application de la dérivation}}\\[2mm]
+
+{\large Mardi 7 Mai, durée : 0h20}\\[1mm]
+\noindent\rule{8cm}{0.4pt}\\[1mm]
+\textbf{\textsc{Consignes à respecter}}
+\begin{enumerate}[label=\textbf{\arabic*/}]
+\item \textbf{Toutes les réponses doivent être justifiées.}
+\item Une grande importance sera accordée à la rédaction de la
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
+\item La calculatrice est \textbf{autorisée}.
+    \end{enumerate}
+\noindent\rule{12cm}{0.4pt}
+\end{center}
+
+\noindent La correction de la copie et la rédaction comptent ($1$ point). Le
+barême est donné à titre indicatif.
+\begin{center}
+  Bonne chance !
+\end{center}
+
+\begin{exo}[$5$ points]
+  Soit $f$ la fonction dérivable définie sur $[-3; 3]$ par
+  \[
+    f(x) = 2x^3 + 2x^2 - 2x + 1.
+  \]
+  \begin{enumerate}
+    \item Déterminer $f'(x)$, où $f'$ est la fonction dérivée de $f$ sur $[-3;
+      3]$.
+    \item Étudier le signe de $f'(x)$ sur $[-3; 3]$.
+    \item Dresser le tableau de variations de $f$ sur $[-3; 3]$. Les valeurs aux
+      bornes pourront être données en valeur approchée à $10^{-2}$ près.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[$4$ points]
+  Soit $f$ une fonction définie et dérivable sur l'intervalle $\mathbb{R}$. Le
+  tableau ci-dessous donne le signe de $f'(x)$ sur $\mathbb{R}$.
+  \begin{center}
+    \begin{tikzpicture}%[scale=.8]
+      \tkzTabInit{$x$ / .8 , $f'(x)$ / .8}{$-\infty$, $-3$, $1$, $4$, $+\infty$}
+      \tkzTabLine{, +, z, -, z, +, z, +}
+    \end{tikzpicture}
+  \end{center}
+  \begin{enumerate}
+    \item La fonction $f$ admet-elle des extremums locaux ? Si oui, précisez
+      leur nature (maximum ou minimum) ainsi que leurs antécédents.
+    \item Tracer une courbe susceptible de représenter $f$.
+  \end{enumerate}
+\end{exo}
+
+\end{document}
