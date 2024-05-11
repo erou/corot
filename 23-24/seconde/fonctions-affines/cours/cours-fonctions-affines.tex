@@ -1,0 +1,270 @@
+\documentclass[11pt]{article}
+
+\newcommand{\titrechapitre}{Fonctions affines -- Cours}
+\newcommand{\titreclasse}{Lycée Jean-Baptiste \textsc{Corot}}
+\newcommand{\pagination}{\thepage/\pageref{LastPage}}
+\newcommand{\topbotmargins}{1.4cm}
+\newcommand{\spacebelowexo}{5mm}
+\input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\newcommand{\Cf}{\mathscr{C}_f}
+\newcommand{\Cg}{\mathscr{C}_g}
+\title{\vspace{-15mm}Chapitre 9 : Fonctions affines}
+\date{\vspace{-14mm}
+\href{https://erou.forge.aeif.fr/s11/affine.html}{
+  \includegraphics[scale=.7]{qrcode.png}}
+\vspace{-12mm}}
+\author{}
+
+\begin{document}
+\maketitle\thispagestyle{fancy}
+
+% TODO:
+%
+% + Ajouter une application sur *le signe* d'un produit, avant de parler
+% d'inéquation ?
+% + Ajouter une application sur le signe d'un quotient ?
+
+
+\section{Caractérisation des fonctions affines}
+\subsection{Définitions}
+
+\begin{defi}{Fonction affine}
+  Une fonction $f$ est dite \textbf{affine} lorsqu'il existe deux réels $m$ et
+  $p$ tels que, pour tout $x\in\mathbb{R}$, $$f(x)=mx+p.$$
+  \begin{itemize}
+    \item Le nombre $m$ est appelé le \textbf{coefficient directeur} de $f$.
+    \item Le nombre $p$ est appelé l'\textbf{ordonnée à l'origine} de $f$.
+  \end{itemize}
+\end{defi}
+
+\begin{defi}{Fonction constante}
+  Si $f$ est une fonction affine telle que $m=0$, alors la fonction $f$ est une
+  fonction \textbf{constante}.
+\end{defi}
+
+\begin{defi}{Fonction linéaire}
+  Si $f$ est une fonction affine telle que $p=0$, alors la fonction $f$ est une
+  fonction \textbf{linéaire}.
+\end{defi}
+
+\subsection{Représentation graphique}
+\begin{prop}
+  Dans un repère orthonormé $(O; I, J)$, la courbe représentative d'une fonction
+  $f$ est une droite (non parallèle à l'axe des ordonnées) si, et seulement si, $f$
+  est une fonction affine.
+\end{prop}
+\begin{exemple}
+  Les représentations graphiques suivantes sont issues de fonctions affines.
+  \begin{center}
+    \begin{tikzpicture}[scale=.97]
+      \begin{axis}
+        \addplot[red, samples=101, very thick] {2*x+1};
+      \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=.97]
+      \begin{axis}
+        \addplot[red, samples=101, very thick] {-1.23*x+1.37};
+      \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=.97]
+      \begin{axis}
+        \addplot[red, samples=101, very thick] {2};
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+\end{exemple}
+\begin{prop}
+  Soit $f$ une fonction affine définie pour tout $x\in\mathbb{R}$ par
+  $f(x)=mx+p$. Pour représenter $f$, il suffit de placer deux points $A(x_A,
+  y_A)$ et $B(x_B, y_B)$ avec $y_A=mx_A+p$ et $y_B=mx_B+p$ puis de tracer la
+  droite passant par ces deux points.
+\end{prop}
+
+\begin{app}
+  Représenter dans un repère orthonormé $(O; I, J)$ la fonction affine $h$
+  définie par $h(x) = \frac{4}{3}x - 2$.
+\end{app}
+
+\subsection{Propriétés des fonctions affines}
+
+\begin{prop}
+  \begin{minipage}[]{.5\textwidth}
+  Soit $f$ une fonction définie sur $\mathbb{R}$. La fonction $f$ est une
+  fonction affine si, et seulement si, pour tous réels distincts $a$ et $b$, le
+  rapport
+  \[
+    \frac{f(b)-f(a)}{b-a}
+  \]
+  est constant.
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}
+        \addplot[red, samples=101, thick] {1.5*x};
+        \end{axis}
+        \draw[thick] (3.25, 3.5) -- (4.25, 3.5) -- (4.25, 5);
+        \node at (3.75, 3.25) {\footnotesize $b-a$};
+        \node at (5.25, 4.25) {\footnotesize $f(b)-f(a)$};
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{prop}
+
+\begin{app}
+  Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x)=2x-3$.
+  \begin{enumerate}
+    \item La fonction $f$ est-elle affine ? Si oui, donner son ordonnée à
+      l'origine et son coefficient directeur.
+    \item Calculer le nombre 
+  \[
+    \frac{f(b)-f(a)}{b-a}
+  \]
+  pour
+  \begin{align*}
+    \textbf{1)}\;& a=1, b=3 &
+    \textbf{2)}\;& a=-1, b=2 &
+    \textbf{3)}\;& a=7, b=-5
+  \end{align*}
+  \end{enumerate}
+\end{app}
+
+\begin{prop}
+  \begin{minipage}[]{.5\textwidth}
+  Soient $f$ une fonction affine définie sur $\mathbb{R}$ par $f(x)=mx+p$ et $a,
+  b$ deux réels distincts. Alors
+  \[
+    m=\frac{f(b)-f(a)}{b-a}\text{ et } p = f(0).
+  \]
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[red, thick, samples=101] {2*x-2};
+        \end{axis}
+        \draw[thick] (3.75, 3.75) -- (4.25, 3.75) -- (4.25, 4.75);
+        \node at (4, 3.5) {$1$};
+        \node at (4.5, 4.25) {$m$};
+        \node at (3.15, 1.75) {$p$};
+        \fill (2.75, 1.75) circle (1mm);
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+\end{prop}
+
+\begin{app}
+  Soit $f$ une fonction affine telle que $f(0)=-5$ et $f(1)=-2$. Donner
+  l'ordonnée à l'origine et le coefficient directeur de $f$.
+\end{app}
+
+\begin{app}
+  Les fonctions suivantes sont-elles affines ? Justifier.
+  \begin{align*}
+    \textbf{1)}\;& f(x) = x+1 &
+    \textbf{2)}\;& g(x) = x^2 - 1
+  \end{align*}
+\end{app}
+
+
+
+\newpage
+\section{Étude d'une fonction affine}
+
+Soit $f$ une fonction affine définie sur $\mathbb{R}$ par $f(x)=mx+p$ où $m$ et
+$p$ sont des nombres réels.
+
+
+\subsection{Sens de variation}
+\begin{prop}~\\[-5mm]
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      {\LARGE Si $m\geq0$}
+    \end{center}~\\[-7mm]
+      La fonction $f$ est croissante.
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[red, very thick, samples=101] {1.2*x-.5};
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      {\LARGE Si $m\leq0$}
+    \end{center}~\\[-7mm]
+      La fonction $f$ est décroissante.
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[red, very thick, samples=101,domain=-5.5:5.5] {-.2*x+.3};
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+
+  \end{minipage}
+\end{prop}
+
+\begin{app}
+  Soit $a\in\left[ -3;-2 \right]$ et $g$ une fonction affine définie sur
+  $\mathbb{R}$ par $g(x)=-4x+5$. Déterminer un encadrement de $g(a)$.
+\end{app}
+
+\subsection{Signes}
+\begin{prop}
+  Si $m\neq0$, alors $f(x)=0\Longleftrightarrow mx+p = 0 \Longleftrightarrow x =
+  -\frac{p}{m}$. On a ainsi les tableaux de signes suivants.\\[2mm]
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      {\LARGE Si $m>0$}\\[2mm]
+
+      \begin{tikzpicture}[scale=.9]
+      \tkzTabInit{$x$/1, $f(x)$/1}{$-\infty$, $-\frac{p}{m}$, $+\infty$}
+      \tkzTabLine{, -, z, +, }
+    \end{tikzpicture}
+
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[blue, very thick, samples=101,domain=-5.5:1.43] {0.7*x-1};
+          \addplot[red, very thick, samples=101,domain=1.43:5.5] {0.7*x-1};
+        \end{axis}
+        \node[blue, circle, draw, minimum size=1cm] at (.75, 1.75) {\Large \textbf{-}};
+        \node[red, circle, draw, minimum size=1cm] at (4.75, 4.5) {\Large \textbf{+}};
+      \end{tikzpicture}
+
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[]{.5\textwidth}
+    \begin{center}
+      {\LARGE Si $m<0$}\\[2mm]
+    \begin{tikzpicture}[scale=.9]
+      \tkzTabInit{$x$/1, $f(x)$/1}{$-\infty$, $-\frac{p}{m}$, $+\infty$}
+      \tkzTabLine{, +, z, -, }
+    \end{tikzpicture}
+
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[red, very thick, samples=101,domain=-5.5:-1] {-1.5*x-1.5};
+          \addplot[blue, very thick, samples=101,domain=-1:5.5] {-1.5*x-1.5};
+        \end{axis}
+        \node[blue, circle, draw, minimum size=1cm] at (3.75, 1.75) {\Large \textbf{-}};
+        \node[red, circle, draw, minimum size=1cm] at (.75, 3.5) {\Large \textbf{+}};
+      \end{tikzpicture}
+
+    \end{center}
+  \end{minipage}
+\end{prop}
+
+\begin{app}
+  Dresser le tableau de signes de la fonction $h$ définie sur $\mathbb{R}$ par
+  $h(x)=-3x+4$.
+\end{app}
+
+\begin{app}
+  Résoudre l'inéquation $(3x+2)(-2x-1)\leq 0$. \emph{On pourra faire un tableau
+  de signes.}
+\end{app}
+
+\end{document}
