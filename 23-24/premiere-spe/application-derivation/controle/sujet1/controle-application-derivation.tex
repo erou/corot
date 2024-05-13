@@ -12,25 +12,24 @@
 % BARÊME
 % ======
 %
-% I.1 0.5
-% I.2 delta et racines 0.5 conclusion 0.5
-% I.3  allure 0.5 valeurs 0.5
+% I.1 1 
+% I.2 delta et racines 1 conclusion 1
+% I.3  allure 1 valeurs 1 
 %
-% II.1 0.5 minmax 0.5 justification
-% II.2 allure minmax 0.5 dérivées nulles 0.5
+% II.1 1 minmax 1 justification
+% II.2 allure minmax 1 dérivées nulles 1
 
 
 \begin{center}
 \textbf{\LARGE \textsc{Interrogation -- Application de la dérivation}}\\[2mm]
 
-{\large Mercredi 15 Mai, durée : 0h25}\\[1mm]
+{\large Mardi 7 Mai, durée : 0h20}\\[1mm]
 \noindent\rule{8cm}{0.4pt}\\[1mm]
 \textbf{\textsc{Consignes à respecter}}
 \begin{enumerate}[label=\textbf{\arabic*/}]
 \item \textbf{Toutes les réponses doivent être justifiées.}
 \item Une grande importance sera accordée à la rédaction de la
-  copie.
-\item \underline{\textbf{Soulignez ou encadrez vos résultats}}.
+  copie. \textbf{Soulignez ou encadrez vos résultats}.
 \item La calculatrice est \textbf{autorisée}.
     \end{enumerate}
 \noindent\rule{12cm}{0.4pt}
@@ -43,18 +42,16 @@ barême est donné à titre indicatif.
 \end{center}
 
 \begin{exo}[$5$ points]
-  On considère la fonction $f$ définie et dérivable sur l'intervalle $[0;
-    +\infty[$ par
+  Soit $f$ la fonction dérivable définie sur $[-3; 3]$ par
   \[
-    f(x) = x^3 - x^2 - x - 1.
+    f(x) = 2x^3 + 2x^2 - 2x + 1.
   \]
-  On note $f'$ la fonction dérivée de $f$.
   \begin{enumerate}
-    \item Montrer que, pour tout réel $x$, $f'(x)=3\left( x+\frac{1}{3}
-      \right)(x-1)$.
-    \item En déduire le tableau de variation de $f$ sur $[0; +\infty[$.
-      \item Déterminer l'abscisse du point de la courbe représentative de $f$
-        pour lequel le coefficient directeur de la tangente vaut $7$.
+    \item Déterminer $f'(x)$, où $f'$ est la fonction dérivée de $f$ sur $[-3;
+      3]$.
+    \item Étudier le signe de $f'(x)$ sur $[-3; 3]$.
+    \item Dresser le tableau de variations de $f$ sur $[-3; 3]$. Les valeurs aux
+      bornes pourront être données en valeur approchée à $10^{-2}$ près.
   \end{enumerate}
 \end{exo}
 
@@ -63,8 +60,8 @@ barême est donné à titre indicatif.
   tableau ci-dessous donne le signe de $f'(x)$ sur $\mathbb{R}$.
   \begin{center}
     \begin{tikzpicture}%[scale=.8]
-      \tkzTabInit{$x$ / .8 , $f'(x)$ / .8}{$-\infty$, $-5$, $-1$, $2$, $+\infty$}
-      \tkzTabLine{, -, z, -, z, +, z, -}
+      \tkzTabInit{$x$ / .8 , $f'(x)$ / .8}{$-\infty$, $-3$, $1$, $4$, $+\infty$}
+      \tkzTabLine{, +, z, -, z, +, z, +}
     \end{tikzpicture}
   \end{center}
   \begin{enumerate}
