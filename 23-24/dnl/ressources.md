@@ -50,3 +50,8 @@ Ethiopian multiplication
 https://www.youtube.com/watch?v=Nc4yrFXw20Q
 
 Séance sur https://afdm.apmep.fr/rubriques/eleves/la-multiplication-decouvertes-en-dnl/#more-415
+
+IREM de La Réunion
+------------------
+
+https://iremi.univ-reunion.fr/spip.php?rubrique61
