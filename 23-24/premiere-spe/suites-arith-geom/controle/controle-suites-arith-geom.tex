@@ -1,11 +1,16 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 \newcommand{\titrechapitre}{}%Ensembles de nombres -- Exercices}
 \newcommand{\titreclasse}{}%Lycée Jean-Baptiste \textsc{Corot}}
 \newcommand{\pagination}{\thepage/\pageref{LastPage}}
 \newcommand{\topbotmargins}{2cm}
 \newcommand{\spacebelowexo}{5mm}
+
 \input{/home/erou/teaching/corot/latex/layout-color.tex}
+
+\usepackage{helvet}
+\renewcommand\familydefault{\sfdefault}
+\renewcommand{\baselinestretch}{1.5}
 
 \usepackage{dirtytalk}
 
@@ -22,6 +27,7 @@
 % 3.    0.5 formule 0.5 valeur : arrondi pas au 1/100 -0.5 et pareil pas de conclusion
 % 4.    0.5 méthode 0.5 conclusion : -0.5 si on ne dit pas qu'à 23 ans elle n'a
 % pas sont argent.
+%
 
 \begin{center}
 \textbf{\LARGE \textsc{Interrogation -- Suites arithmétiques et
@@ -65,7 +71,7 @@ On admet dans la suite de l'exercice que, pour tout entier naturel $n$,
 \begin{enumerate}
     \setcounter{enumi}{1}
   \item On considère la suite $(v_n)$, définie pour tout entier naturel $n$, par
-    $v_n=u_n=300$.
+    $v_n=u_n+300$.
     \begin{enumerate}
       \item Calculer $v_0$, puis montrer que la suite $(v_n)$ est géométrique de
         raison $q=1,05$.
